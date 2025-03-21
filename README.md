@@ -13,19 +13,19 @@
 
 #### Desenvolvedores:
 
-* [Trainee 1](coloque o link do github)
-* [Trainee 2](coloque o link do github)
-* [Trainee 3](coloque o link do github)
-* [Trainee 4](coloque o link do github)
+* Caio Ribeiro (coloque o link do github)
+* Luiza Caldeira (coloque o link do github)
+* Amanda Alvaro (coloque o link do github)
+* Mickaell de Oliveira (coloque o link do github)
 
 
 #### Scrum Master:
 
-* [Nome do Scrum](coloque o link do github).
+* Guilherme Braz (https://github.com/G-Braz).
 
 #### Links Úteis:
 
-* [Trello]()
+* [Trello](https://trello.com/invite/b/67dbaac038e6f629a38db0dc/ATTI5ad5f40e871fe962f51e2fa4f07cb08dF3803E33/251-trello-do-scrum-rastros-de-rua)
 
 
 
