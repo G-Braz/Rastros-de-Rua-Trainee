@@ -1,0 +1,175 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url(../assets/ImagemRastrosDeRua.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: grid;
+    place-items: center;
+    height: 100vh;
+}
+
+.fundo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 40%;
+    height: 70%;
+    background-color: #000000;
+    opacity: 0.75;
+    border-radius: 25px;
+}
+
+
+.login{
+    
+    width: 40%;
+    height: 60%;
+    text-align: center;
+}
+
+.texto {
+    
+    font-family: "Staatliches", sans-serif;
+    font-weight: 200;
+    font-size: 30px;
+    font-style: normal;
+    align-content: center;
+    opacity: 0.9;
+    background: linear-gradient(to bottom, #FF6F00 30%, #8A2BE2 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.infos{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: "Urbanist", sans-serif;
+    font-weight: 200;
+    font-size: 100%;
+    font-style: normal;
+    width: 100%;
+    
+}
+
+.email{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: start ;
+    padding-top: 10%;
+}
+
+.senha{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: start ;
+}
+
+.tituloEmail{
+    color: white;
+    padding-left: 10px;
+}
+
+.tituloSenha{
+    color: white;
+    padding-left: 8px;
+}
+
+#email{
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    background-color: white;
+}
+
+#senha{
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    background-color: white;
+
+}
+
+.botao{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 30%;
+    font-family: "Urbanist", sans-serif;
+    font-weight: 200;
+    font-size: 100%;
+    font-style: normal;
+}
+
+.entrarBotao{
+    border-radius: 8px;
+    height: 30%;
+    width: 30%;
+}
+
+.textoBotao{
+
+    background: linear-gradient(to bottom, #FF6F00 30%, #8A2BE2 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
+
+
+
+@media only screen and (min-width: 0px) and (max-width: 425px) {
+    .fundo{
+        width: 80%;
+        height: 40%;
+    }
+}
+
+@media only screen and (min-width: 321px) and (max-width: 768px) {
+    .fundo{
+        width: 55%;
+        height: 60%;
+    }
+    .botao{
+        width: 55%;
+        height: 20%;
+    }
+}
+
+@media only screen and (min-width: 769px) and (max-width: 1440px) {
+    .fundo{
+        width: 40%;
+        height: 60%;
+    }
+    .email{
+        width: 50%;
+        height: 100%;
+    }
+    .senha{
+        width: 50%;
+        height: 100%;
+    }
+    .entrarBotao{
+        width: 20%;
+        height: 25%;
+        background-color: white;
+    }
+    .textoBotao{
+        width: 100%;
+        height: 100%;
+        align-content: center ;
+        font-size:larger;
+    }
+}
