@@ -18,10 +18,9 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 40%;
+    width: 30%;
     height: 70%;
-    background-color: #000000;
-    opacity: 0.75;
+    background-color: rgba(0, 0, 0, 0.75); 
     border-radius: 25px;
 }
 
@@ -37,7 +36,7 @@ body {
     
     font-family: "Staatliches", sans-serif;
     font-weight: 200;
-    font-size: 30px;
+    font-size: 400%;
     font-style: normal;
     align-content: center;
     opacity: 0.9;
@@ -56,7 +55,8 @@ body {
     font-weight: 200;
     font-size: 100%;
     font-style: normal;
-    width: 100%;
+    width: 80%;
+    height: 70%;
     
 }
 
@@ -65,7 +65,9 @@ body {
     flex-direction: column;
     justify-content: flex-start;
     align-items: start ;
-    padding-top: 10%;
+    width: 100%;
+    height: 22%;
+    
 }
 
 .senha{
@@ -73,16 +75,20 @@ body {
     flex-direction: column;
     justify-content: flex-start;
     align-items: start ;
+    width: 100%;
+    height: 22%;
 }
 
 .tituloEmail{
     color: white;
     padding-left: 10px;
+    font-size: 200%;
 }
 
 .tituloSenha{
     color: white;
     padding-left: 8px;
+    font-size: 200%;
 }
 
 #email{
@@ -109,13 +115,17 @@ body {
     font-family: "Urbanist", sans-serif;
     font-weight: 200;
     font-size: 100%;
-    font-style: normal;
+    
 }
 
 .entrarBotao{
     border-radius: 8px;
-    height: 30%;
-    width: 30%;
+    height: 35%;
+    width: 35%;
+    background-color: white;
+    font-size:240%;
+    font-family: "Urbanist", sans-serif;
+;
 }
 
 .textoBotao{
@@ -129,47 +139,109 @@ body {
 
 
 
-
-@media only screen and (min-width: 0px) and (max-width: 425px) {
+/*celulares*/
+@media only screen and (min-width: 0px) and (max-width: 430px) {
     .fundo{
-        width: 80%;
-        height: 40%;
-    }
-}
-
-@media only screen and (min-width: 321px) and (max-width: 768px) {
-    .fundo{
-        width: 55%;
+        width: 70%;
         height: 60%;
+        font-size: 60%;
+    }
+    .infos{
+        height: 70%;
+        width: 80%;
     }
     .botao{
+        width: 80%;
+        height: 25%;
+    }
+    .entrarBotao
+    {
         width: 55%;
-        height: 20%;
+    }
+    .tituloEmail{
+        font-size: 300%;
+    }
+    .tituloSenha{
+        font-size: 300%;
+    }
+    .email{
+        height: 18%;
+    }
+    .senha{
+    
+        height: 18%;
     }
 }
-
-@media only screen and (min-width: 769px) and (max-width: 1440px) {
+/*tablets*/
+@media only screen and (min-width: 431px) and (max-width: 1024px) {
+    .fundo{
+        width: 70%;
+        height: 60%;
+        font-size: 100%;
+        
+    }
+    .infos{
+        height: 70%;
+        width: 80%;
+    }
+    .botao{
+        width: 50%;
+        height: 32%;
+    }
+    .entrarBotao
+    {
+        width: 70%;
+    }
+    .textoBotao{
+        font-size: 150%;
+    }
+    .tituloEmail{
+        font-size: 350%;
+    }
+    .tituloSenha{
+        font-size: 350%;
+    }
+    .email{
+        height: 28%;
+    }
+    .senha{
+        height: 28%;
+    }
+}
+/*laptops*/
+@media only screen and (min-width: 1025px) and (max-width: 1440px) {
     .fundo{
         width: 40%;
         height: 60%;
+        font-size: 100%;
     }
-    .email{
-        width: 50%;
-        height: 100%;
+    .infos{
+        height: 70%;
     }
-    .senha{
-        width: 50%;
-        height: 100%;
+    .botao{
+        width: 25%;
+        height: 35%;
     }
-    .entrarBotao{
-        width: 20%;
-        height: 25%;
-        background-color: white;
+    .entrarBotao
+    {
+        width: 100%;
+        height: 45%;
     }
     .textoBotao{
-        width: 100%;
-        height: 100%;
-        align-content: center ;
-        font-size:larger;
+        font-size: 90%;
+    }
+    .tituloEmail{
+        font-size: 200%;
+    }
+    .tituloSenha{
+        font-size: 200%;
+    }
+    .email{
+        
+        height: 30%;
+    }
+    .senha{
+    
+        height: 30%;
     }
 }
