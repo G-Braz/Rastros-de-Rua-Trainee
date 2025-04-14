@@ -1,0 +1,62 @@
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+
+}
+
+body{
+    background-image: url(../assets/fundoListaPosts.jpg);
+    background-repeat: no-repeat;
+    
+    background-size: cover;
+}
+
+body * {
+    font-family: "Urbanist", sans-serif;
+    color: #F5F5F5;
+
+}
+
+#conteudo{
+    width: auto;
+    height: 1017px;
+    display: block;
+    gap: 40px;
+    padding: 25px 40px;
+}
+
+#barraDePesquisa{
+    height: 79px;
+    padding: 10px;
+    margin: auto;
+}
+
+#caixaDePesquisa{
+    padding: 10px 30px;
+    width: 558px;
+    height: 59px;
+    border-radius: 200px;
+    background-color: #000B1A;
+    opacity: 80%;
+    margin: auto;
+}
+
+
+#caixaDePesquisa p{
+    width: 410px;
+    display: inline-block;
+    font-weight: 300;
+    font-size: 16;
+    line-height: 20px;
+    padding: 10px;
+}
+
+.bi{
+    font-size: 20px;
+    padding: 10px;
+}
+.bi-x-lg{
+
+}
+
