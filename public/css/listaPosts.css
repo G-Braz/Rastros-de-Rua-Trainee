@@ -8,8 +8,8 @@
 body{
     background-image: url(../assets/fundoListaPosts.jpg);
     background-repeat: no-repeat;
-    
     background-size: cover;
+    
 }
 
 body * {
@@ -20,8 +20,9 @@ body * {
 
 #conteudo{
     width: auto;
-    height: 1017px;
-    display: block;
+    height: auto;
+    display: flex;
+    flex-direction: column;
     gap: 40px;
     padding: 25px 40px;
 }
@@ -37,26 +38,106 @@ body * {
     width: 558px;
     height: 59px;
     border-radius: 200px;
-    background-color: #000B1A;
-    opacity: 80%;
+    background: rgb(0,11,26,0.7);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
     margin: auto;
+    filter: drop-shadow(0 4px 15px #0D0D0D);
 }
 
 
-#caixaDePesquisa p{
+#inputPesquisa{
+    background-color: transparent;
     width: 410px;
     display: inline-block;
     font-weight: 300;
     font-size: 16;
     line-height: 20px;
     padding: 10px;
+    border-color: transparent;
+    outline: none;
 }
 
 .bi{
     font-size: 20px;
     padding: 10px;
+    color: #427AC4;
 }
 .bi-x-lg{
 
 }
 
+ul{
+    list-style: none;
+}
+
+#listaDePosts{
+    display: flex;
+    flex-direction: column;
+    padding: 10px 40px;
+    gap: 50px;
+    height: auto;
+    align-items: center;
+    justify-content: center;
+}
+
+.caixaPosts{
+    display: flex;
+    flex-direction: row;
+    gap: 60px;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.post{
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    width: 370px;
+    text-align: center;
+    font-size: 16px;
+    background: rgb(12, 28, 49, 0.8);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border-radius: 8px;
+    text-decoration: none;
+    transition: all .5s;
+    box-shadow: 0 4px 15px #0D0D0D;
+}
+.post img{
+    padding: 10px 15px;
+}
+
+.textoPost{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.textoPost h1{
+    font-family: "Staatliches", sans-serif;
+    font-size: 28px;
+    font-weight: 400;
+}
+
+.textoPost p{
+    font-weight: 400;
+    padding: 12px;
+}
+
+.post:hover{
+    border: 1px solid rgb(245, 245, 245, 0.5);
+    width: 390px;
+}
+
+#paginacao{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+#paginacao button{
+    width: 50px;
+    height: 34px;
+}
