@@ -18,7 +18,7 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 30%;
+    width: 40%;
     height: 70%;
     background-color: rgba(0, 0, 0, 0.75); 
     border-radius: 25px;
@@ -55,7 +55,7 @@ body {
     font-weight: 200;
     font-size: 100%;
     font-style: normal;
-    width: 80%;
+    width: 90%;
     height: 70%;
     
 }
@@ -66,7 +66,7 @@ body {
     justify-content: flex-start;
     align-items: start ;
     width: 100%;
-    height: 22%;
+    height: 30%;;
     
 }
 
@@ -76,33 +76,37 @@ body {
     justify-content: flex-start;
     align-items: start ;
     width: 100%;
-    height: 22%;
+    height: 30%;
+    position: relative;
 }
 
 .tituloEmail{
     color: white;
     padding-left: 10px;
-    font-size: 200%;
+    font-size: 350%;
 }
 
 .tituloSenha{
     color: white;
     padding-left: 8px;
-    font-size: 200%;
+    font-size: 350%;
 }
 
 #email{
     width: 100%;
     height: 100%;
-    border-radius: 8px;
+    border-radius: 12px;
     background-color: white;
+    opacity: 0.8;
 }
 
 #senha{
+    display: flex;
     width: 100%;
     height: 100%;
-    border-radius: 8px;
+    border-radius: 12px;
     background-color: white;
+    opacity: 0.8;
 
 }
 
@@ -110,7 +114,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 100%;
+    width: 40%;
     height: 30%;
     font-family: "Urbanist", sans-serif;
     font-weight: 200;
@@ -119,11 +123,14 @@ body {
 }
 
 .entrarBotao{
-    border-radius: 8px;
-    height: 35%;
-    width: 35%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    height: 40%;
+    width: 100%;
     background-color: white;
-    font-size:240%;
+    font-size:280%;
     font-family: "Urbanist", sans-serif;
 ;
 }
@@ -134,6 +141,16 @@ body {
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
+    align-items: center;
+}
+
+.senha i{
+    font-size: 300%;
+    position: absolute;
+    top: 55%;
+    right: 5%;
+    color: black;
+    
 }
 
 
@@ -165,11 +182,14 @@ body {
         font-size: 300%;
     }
     .email{
-        height: 18%;
+        height: 20%;
     }
     .senha{
     
-        height: 18%;
+        height: 20%;
+    }
+    .senha i{
+        font-size: 240%;  
     }
 }
 /*tablets*/
@@ -207,12 +227,15 @@ body {
     .senha{
         height: 28%;
     }
+    .senha i{
+        font-size: 280%;
+    }
 }
 /*laptops*/
 @media only screen and (min-width: 1025px) and (max-width: 1440px) {
     .fundo{
         width: 40%;
-        height: 60%;
+        height: 70%;
         font-size: 100%;
     }
     .infos{
@@ -243,5 +266,9 @@ body {
     .senha{
     
         height: 30%;
+    }
+    .senha i{
+        font-size: 200%;
+        top: 52%;
     }
 }
