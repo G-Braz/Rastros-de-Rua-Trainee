@@ -59,6 +59,10 @@ body * {
     outline: none;
 }
 
+#inputPesquisa::placeholder{
+    color: rgb(245, 245, 245, 0.55)
+}
+
 .bi{
     font-size: 20px;
     padding: 10px;
@@ -87,7 +91,7 @@ ul{
     flex-direction: row;
     gap: 60px;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
 }
 
 
@@ -105,6 +109,7 @@ ul{
     text-decoration: none;
     transition: all .5s;
     box-shadow: 0 4px 15px #0D0D0D;
+    border: 1px solid transparent;
 }
 .post img{
     padding: 10px 15px;
@@ -129,7 +134,7 @@ ul{
 
 .post:hover{
     border: 1px solid rgb(245, 245, 245, 0.5);
-    width: 390px;
+    scale: 1.05;
 }
 
 #paginacao{
@@ -141,7 +146,8 @@ ul{
     justify-content: center;
 }
 
-#paginacao button{
+#paginacao a{
+    display: flex;
     width: 47px;
     height: 34px;
     background: rgb(0,11,26,0.8);
@@ -149,8 +155,11 @@ ul{
     box-shadow: 0 4px 15px #0D0D0D;
     backdrop-filter: blur(15px);
     -webkit-backdrop-filter: blur(15px);
-    border:none;
+    text-decoration: none;
     font-size: 20px;
+    justify-content: center;
+    align-items: center;
+    transition: background 0.2s;
 }
 
 #paginacao .bi{
@@ -164,7 +173,7 @@ ul{
     font-weight: 300;
 }
 
-#paginacao button:hover{
+#paginacao a:hover{
     background: rgb(0,11,26,0.3);
-    border:1px solid rgb(245, 245, 245, 0.5);
+    border:1px solid rgb(245, 245, 245, 0.4);
 }
