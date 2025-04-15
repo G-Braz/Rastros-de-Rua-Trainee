@@ -23,8 +23,8 @@ body * {
     height: auto;
     display: flex;
     flex-direction: column;
-    gap: 40px;
-    padding: 25px 40px;
+    gap: 30px;
+    padding: 20px 40px;
 }
 
 #barraDePesquisa{
@@ -38,11 +38,12 @@ body * {
     width: 558px;
     height: 59px;
     border-radius: 200px;
-    background: rgb(0,11,26,0.7);
+    background: rgb(0,11,26,0.8);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     margin: auto;
-    filter: drop-shadow(0 4px 15px #0D0D0D);
+    box-shadow: 0 4px 15px #0D0D0D;
+    /*filter: drop-shadow(0 4px 15px #0D0D0D);*/
 }
 
 
@@ -135,9 +136,35 @@ ul{
     display: flex;
     flex-direction: row;
     gap: 10px;
+    padding: 10px 0;
+    align-items: center;
+    justify-content: center;
 }
 
 #paginacao button{
-    width: 50px;
+    width: 47px;
     height: 34px;
+    background: rgb(0,11,26,0.8);
+    border-radius: 200px;
+    box-shadow: 0 4px 15px #0D0D0D;
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border:none;
+    font-size: 20px;
+}
+
+#paginacao .bi{
+    color:#F5F5F5;
+    font-weight: 400;
+    padding: 10px;
+}
+
+#paginacao .paginas{
+    padding: 5px 18px;
+    font-weight: 300;
+}
+
+#paginacao button:hover{
+    background: rgb(0,11,26,0.3);
+    border:1px solid rgb(245, 245, 245, 0.5);
 }
