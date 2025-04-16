@@ -29,7 +29,6 @@ body {
     font-size: 10vw;
     line-height: 0.9;
     margin-bottom: 0%;
-    margin-top: auto;
 }
 .descricao {
     color: #F5F5F5;
@@ -39,13 +38,24 @@ body {
     line-height: 1.2;
 }
 .ultimasPublicacoes {
-    color: #F5F5F5;
-    padding: 10px 20px;
+    margin: 6vw;
+    padding: 10px 60px;
     max-width: 100%;
-    letter-spacing: 1px;
-    background-color:rgba(0, 0, 0, 0.6);
+    background: rgba(13, 13, 13, 0.7);
     border-radius: 8px;
+    border: 1px solid rgba(13, 13, 13, 0.23);
+}
+
+.botaoCarrossel{
+    display: block;
+}
+
+.tituloUP {
+    color: #F5F5F5;
+    letter-spacing: 2px;
+    font-size: 2.7vw;
     text-align: center;
+    filter: drop-shadow(5px 5px 10px #000000);
 }
 .botaoVerMais{
     font-family: "Staatliches", sans-serif;
