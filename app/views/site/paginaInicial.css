@@ -5,7 +5,7 @@
 body {
     background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
         url('../../../public/assets/pagina-inicial-background.jpg') center/cover no-repeat fixed;
-    padding: 50px 40px;
+    padding: 10px 40px;
     width: 100%;
     min-height: 100vh;
     overflow-x: hidden;
@@ -22,6 +22,7 @@ body {
 .heroSection {
     padding: 20px 20px;
 }
+
 .titulo {
     font-family: "Staatliches", sans-serif;
     filter: drop-shadow(5px 5px 24px #000000);
@@ -29,6 +30,7 @@ body {
     font-size: 10vw;
     line-height: 0.9;
     margin-bottom: 0%;
+    margin-top: 10%;
 }
 .descricao {
     color: #F5F5F5;
@@ -38,24 +40,72 @@ body {
     line-height: 1.2;
 }
 .ultimasPublicacoes {
-    margin: 6vw;
-    padding: 10px 60px;
-    max-width: 100%;
+    margin-top: 0%;
+    margin-bottom: 0%;
+    padding: 10px 20px;
+    margin-left: 6vw;
+    margin-right: 6vw;
     background: rgba(13, 13, 13, 0.7);
     border-radius: 8px;
     border: 1px solid rgba(13, 13, 13, 0.23);
 }
-
-.botaoCarrossel{
+.card{
+    padding: 3px 3px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 8px;
     display: block;
+    background: rgba(13, 13, 13, 0.7);
+    border-radius: 8px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px);
+    border: 1px solid rgba(13, 13, 13, 0.23);
+    box-shadow: inset 0px 4px 8px rgba(241, 236, 236, 0.2);
+}
+.imagem {
+    width: 100%;
+    height: 25vh;
+    overflow: hidden;
+    display: block;
+    border-radius: 8px;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
 }
 
+.imagemObra {
+    width: 100%;
+    object-fit: fill;
+}
+.nomeObra{
+    color: #F5F5F5;
+    letter-spacing: 2px;
+    font-size: 1.5vw;
+    text-align: center;
+    filter: drop-shadow(5px 5px 10px #000000);
+    margin-bottom: 0%;
+    margin-top: 0%;
+    padding: 5px 15px;
+}
+.descricaoObra{
+    font-family: "Urbanist", sans-serif;
+    color: #F5F5F5;
+    font-size: 1vw;
+    text-align: justify;
+    filter: drop-shadow(5px 5px 10px #000000);
+    margin-top: 0%;
+    margin-bottom: 2%;
+    padding: 0px 15px;
+}
 .tituloUP {
     color: #F5F5F5;
     letter-spacing: 2px;
-    font-size: 2.7vw;
+    font-size: 2vw;
     text-align: center;
     filter: drop-shadow(5px 5px 10px #000000);
+    margin-top: 2px;
+    margin-bottom: 2px;
 }
 .botaoVerMais{
     font-family: "Staatliches", sans-serif;
@@ -76,11 +126,44 @@ body {
 }
 
 @media (max-width: 425px) {
+    .titulo{
+        margin-top: 5%;
+    }
+    .heroSection{
+        margin-top: 0%;
+        padding: 10px 10px;
+    }
     .grade {
+        gap: 20px;
         grid-template-columns: 1fr;
     }
 
     .titulo {
         font-size: 14vw;
+    }
+
+    .imagem {
+        width: 100%;
+        height: auto;
+    }
+    .ultimasPublicacoes {
+        margin-top: 0%;
+        padding: 1vw 5vw;
+        margin-left: 16vw;
+        margin-right: 16vw;
+    }
+    .nomeObra {
+        font-size: 3vw;
+        padding: 3px 15px;
+    }
+
+    .descricaoObra {
+        font-size: 2vw;
+        text-align: justify;
+        padding: 0px 10px;
+    }
+
+    .tituloUP {
+        font-size: 4vh;
     }
 }
