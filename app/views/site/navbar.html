@@ -11,6 +11,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap" rel="stylesheet">
 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
 </head>
 <body>
     <header>
@@ -18,14 +20,27 @@
             <img src="../../../public/assets/Logo Branca.png" alt="Logo Branca">
         </div>
 
-        <div class="links">
+        <div class="links" id="links">
             <a class="HomeButton" href="/home">Home</a>
             <a class= "publicacoesButton" href="/publicacoes">Publicações</a>
             <a class= "LoginButton" href="/login">Login</a>
         </div>
 
+        <div class="sanduiche">
+            <i class="bi bi-list" onclick="clickMenu()"></i>
+        </div>
+
     </header>
     
-    
+    <script>
+        function clickMenu() {
+            if(links.style.display === 'flex') {
+                links.style.display = 'none';
+            } else {
+                links.style.display = 'flex';
+            }
+        }
+    </script>
+
 </body>
 </html>

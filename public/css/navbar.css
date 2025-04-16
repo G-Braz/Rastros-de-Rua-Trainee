@@ -4,10 +4,11 @@
     box-sizing: border-box;
 }
 
+
 header {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items:center;
     width: 100%;
     height: 10vh;
     background-color: #1E3A5F;
@@ -15,7 +16,7 @@ header {
 
 .logo-navbar {
     margin-left: 12px;
-    width: 24%;
+    width: 12%;
 }
 
 .logo-navbar img{
@@ -26,8 +27,8 @@ header {
     font-family: "Staatliches", sans-serif;
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    width: 40%;
+    align-items:center;
+    width: 20%;
     height: 100%;
     margin-right: 12px;
 }
@@ -35,7 +36,7 @@ header {
 .links a{
     text-decoration: none;
     font-size: 150%;
-    height: 36%;
+    height: 40%;
 }
 
 .HomeButton{
@@ -45,8 +46,8 @@ header {
     color :#FF6F00;
     background-color: white;
     border-radius: 12px;
-    width: 76%;
-    margin-right: 10px;
+    width: 36%;
+    margin-right: 12px;
 }
 
 .publicacoesButton{
@@ -56,8 +57,8 @@ header {
     color :#8A2BE2;
     background-color: white;
     border-radius: 12px;
-    width: 100%;
-    margin-right: 10px;
+    width: 42%;
+    margin-right: 12px;
 }
 
 .LoginButton{
@@ -67,5 +68,64 @@ header {
     color :#41BF76;
     background-color: white;
     border-radius: 12px;
-    width: 76%;
+    width: 36%;
+}
+
+
+
+/*celulares*/
+@media only screen and (min-width: 0px) and (max-width: 430px) {
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items:center;
+        width: 100%;
+        height: 10vh;
+        background-color: #1E3A5F;
+    }
+    
+    .logo-navbar{
+        margin-left: 12px;
+        width: 30%;
+    }
+
+    .sanduiche {
+        display: block;
+        margin-right: 10%;
+        width: 10%;
+        font-size: 300%;
+        color:#F5F5F5;
+    }
+    .links{
+        width: 100%;
+        height: 100%;
+        margin-top: 43%;
+        margin-right: 0px;
+        background-color: #1E3A5F;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items:center;
+    }
+    .HomeButton{
+        color: #F5F5F5;
+        background-color: transparent;
+        box-shadow: 0px 0px 5px #0c1c31ab;
+        margin-bottom: 3%;
+        width: 80%;
+    }
+    .publicacoesButton{
+        color: #F5F5F5;
+        background-color: transparent;
+        box-shadow: 0px 0px 5px #0c1c31ab;
+        margin-bottom: 3%;
+        width: 80%;
+    }
+    .LoginButton{
+        color: #F5F5F5;
+        background-color: transparent;
+        box-shadow: 0px 0px 5px #0c1c31ab;
+        width: 80%;
+        margin-right: 5%;
+    }
 }
