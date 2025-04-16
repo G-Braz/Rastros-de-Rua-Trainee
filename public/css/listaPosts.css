@@ -119,16 +119,17 @@ ul{
 }
 .post #fotoCapa{
     padding: 10px 15px;
+
 }
 
-/*.post #fotoTag{
+.post #fotoTag{
     position: absolute;
     left:60.7%;
     top: 40.5%;
     border-radius: 16px;
     width: 135px;
     height: 67px;
-}*/
+}
 
 .textoPost{
     display: flex;
@@ -207,16 +208,20 @@ ul{
     }
     .post{
         width: 279px;
-        gap:10px;
+        height: 374px;
     }
     .post #fotoCapa{
         padding: 8px 13px;
+        width: 279px;
+        height: 204px;
+        object-fit: cover;
+        
     }
     .post #fotoTag{
-        left:49%;
-        top: 29.9%;
+        left:50.4%;
+        top: 39.2%;
         width: 130px;
-        height: 60px;
+        height: 57px;
     }
     #paginacao{
         gap:7px;
