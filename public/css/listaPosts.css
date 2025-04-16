@@ -25,6 +25,8 @@ body * {
     flex-direction: column;
     gap: 30px;
     padding: 20px 40px;
+    justify-content: center;
+    align-items: center;
 }
 
 #barraDePesquisa{
@@ -34,6 +36,9 @@ body * {
 }
 
 #caixaDePesquisa{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     padding: 10px 30px;
     width: 558px;
     height: 59px;
@@ -98,8 +103,9 @@ ul{
 .post{
     display: flex;
     flex-direction: column;
-    gap: 0;
+    gap: 5px;
     width: 370px;
+    height: 330px;
     text-align: center;
     font-size: 16px;
     background: rgb(12, 28, 49, 0.8);
@@ -111,14 +117,24 @@ ul{
     box-shadow: 0 4px 15px #0D0D0D;
     border: 1px solid transparent;
 }
-.post img{
+.post #fotoCapa{
     padding: 10px 15px;
 }
+
+/*.post #fotoTag{
+    position: absolute;
+    left:60.7%;
+    top: 40.5%;
+    border-radius: 16px;
+    width: 135px;
+    height: 67px;
+}*/
 
 .textoPost{
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 7px;
+
 }
 
 .textoPost h1{
@@ -133,7 +149,7 @@ ul{
 }
 
 .post:hover{
-    border: 1px solid rgb(245, 245, 245, 0.5);
+    /*border: 1px solid rgb(245, 245, 245, 0.5);*/
     scale: 1.05;
 }
 
@@ -148,8 +164,7 @@ ul{
 
 #paginacao a{
     display: flex;
-    width: 47px;
-    height: 34px;
+
     background: rgb(0,11,26,0.8);
     border-radius: 200px;
     box-shadow: 0 4px 15px #0D0D0D;
@@ -169,11 +184,55 @@ ul{
 }
 
 #paginacao .paginas{
+    width: 51px;
+    height: 38px;
     padding: 5px 18px;
     font-weight: 300;
 }
-
+#paginacao .skip{
+    width: 54px;
+    height: 38px;
+}
 #paginacao a:hover{
     background: rgb(0,11,26,0.3);
     border:1px solid rgb(245, 245, 245, 0.4);
+}
+
+@media screen and (min-width:0) and (max-width:470px){
+    #caixaDePesquisa{
+        width: 310px;
+    }
+    .caixaPosts{
+        flex-direction: column;
+    }
+    .post{
+        width: 279px;
+        gap:10px;
+    }
+    .post #fotoCapa{
+        padding: 8px 13px;
+    }
+    .post #fotoTag{
+        left:49%;
+        top: 29.9%;
+        width: 130px;
+        height: 60px;
+    }
+    #paginacao{
+        gap:7px;
+    }
+    #paginacao a{
+        font-size: 15px;
+    }
+    #paginacao .paginas{
+        width: 44px;
+        height: 34px;
+    }
+    #paginacao .bi{
+        font-size: 15px;
+    }
+    #paginacao .skip{
+        width: 49px;
+        height: 35px;
+    }
 }
