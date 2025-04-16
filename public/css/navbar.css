@@ -1,0 +1,71 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 10vh;
+    background-color: #1E3A5F;
+}
+
+.logo-navbar {
+    margin-left: 12px;
+    width: 24%;
+}
+
+.logo-navbar img{
+    width: 100%;
+    
+}
+.links{
+    font-family: "Staatliches", sans-serif;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 40%;
+    height: 100%;
+    margin-right: 12px;
+}
+
+.links a{
+    text-decoration: none;
+    font-size: 150%;
+    height: 36%;
+}
+
+.HomeButton{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color :#FF6F00;
+    background-color: white;
+    border-radius: 12px;
+    width: 76%;
+    margin-right: 10px;
+}
+
+.publicacoesButton{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color :#8A2BE2;
+    background-color: white;
+    border-radius: 12px;
+    width: 100%;
+    margin-right: 10px;
+}
+
+.LoginButton{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color :#41BF76;
+    background-color: white;
+    border-radius: 12px;
+    width: 76%;
+}
