@@ -1,11 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Staatliches&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Staatliches&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
-
 
 body {
-    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
         url('../../../public/assets/pagina-inicial-background.jpg') center/cover no-repeat fixed;
-    padding: 10px 40px;
+    padding: 10px 5vw;
     width: 100%;
     min-height: 100vh;
     overflow-x: hidden;
@@ -13,101 +11,40 @@ body {
     margin: 0;
     font-family: "Staatliches", sans-serif;
 }
-.grade{
+
+.grade {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 50px;
-    max-width: 100%;
+    width: 100%;
+    place-items: center;
 }
+
 .heroSection {
-    padding: 20px 20px;
+    padding: 2vw 3vw;
 }
 
 .titulo {
     font-family: "Staatliches", sans-serif;
     filter: drop-shadow(5px 5px 24px #000000);
     color: #F5F5F5;
-    font-size: 10vw;
+    font-size: 135px;
     line-height: 0.9;
-    margin-bottom: 0%;
+    margin-bottom: 3%;
     margin-top: 10%;
 }
+
 .descricao {
+    margin-top: 0%;
+    margin-bottom: 3.5%;
     color: #F5F5F5;
-    font-size: 2vw;
+    font-size: 26px;
     filter: drop-shadow(5px 5px 24px #000000);
     letter-spacing: 1px;
     line-height: 1.2;
 }
-.ultimasPublicacoes {
-    margin-top: 0%;
-    margin-bottom: 0%;
-    padding: 10px 20px;
-    margin-left: 6vw;
-    margin-right: 6vw;
-    background: rgba(13, 13, 13, 0.7);
-    border-radius: 8px;
-    border: 1px solid rgba(13, 13, 13, 0.23);
-}
-.card{
-    padding: 3px 3px;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    border-radius: 8px;
-    display: block;
-    background: rgba(13, 13, 13, 0.7);
-    border-radius: 8px;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(2px);
-    -webkit-backdrop-filter: blur(2px);
-    border: 1px solid rgba(13, 13, 13, 0.23);
-    box-shadow: inset 0px 4px 8px rgba(241, 236, 236, 0.2);
-}
-.imagem {
-    width: 100%;
-    height: 25vh;
-    overflow: hidden;
-    display: block;
-    border-radius: 8px;
-    align-items: center;
-    justify-content: center;
-    margin: auto;
-}
 
-.imagemObra {
-    width: 100%;
-    object-fit: fill;
-}
-.nomeObra{
-    color: #F5F5F5;
-    letter-spacing: 2px;
-    font-size: 1.5vw;
-    text-align: center;
-    filter: drop-shadow(5px 5px 10px #000000);
-    margin-bottom: 0%;
-    margin-top: 0%;
-    padding: 5px 15px;
-}
-.descricaoObra{
-    font-family: "Urbanist", sans-serif;
-    color: #F5F5F5;
-    font-size: 1vw;
-    text-align: justify;
-    filter: drop-shadow(5px 5px 10px #000000);
-    margin-top: 0%;
-    margin-bottom: 2%;
-    padding: 0px 15px;
-}
-.tituloUP {
-    color: #F5F5F5;
-    letter-spacing: 2px;
-    font-size: 2vw;
-    text-align: center;
-    filter: drop-shadow(5px 5px 10px #000000);
-    margin-top: 2px;
-    margin-bottom: 2px;
-}
-.botaoVerMais{
+.botaoVerMais {
     font-family: "Staatliches", sans-serif;
     background-color: #1E3A5F;
     color: #F5F5F5;
@@ -115,55 +52,198 @@ body {
     font-size: 2.3vw;
     border: none;
     box-shadow: 0 6px 9px rgba(0, 0, 0, 0.7);
-    padding: 3px 12px;
+    padding: 0.5vh 1vw;
     transition: all 0.2s ease-in-out;
 }
 
 .botaoVerMais:hover {
     box-shadow: 0 6px 12px rgba(0, 0, 0, 1);
-    transform:scale(1.05);    
+    transform: scale(1.05);
     background-color: #254a73;
 }
 
-@media (max-width: 425px) {
-    .titulo{
-        margin-top: 5%;
-    }
-    .heroSection{
-        margin-top: 0%;
-        padding: 10px 10px;
-    }
+.ultimasPublicacoes {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 60%;
+    height: 100vh;
+    padding: 2% 3%;
+    background: rgba(13, 13, 13, 0.6);
+    border-radius: 8px;
+    border: 1px solid rgba(13, 13, 13, 0.23);
+}
+.swiper {
+    row-gap: 10px;
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+}
+
+.swiper-button-prev::after {
+    transform: rotate(90deg);
+    color: #F5F5F5;
+    align-self: start;
+}
+
+.swiper-button-next::after {
+    transform: rotate(90deg);
+    color: #F5F5F5;
+}
+.card-carrossel {
+    width: 90%;
+    height: 35vh;
+    margin: auto; 
+    padding: 5%;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: rgba(13, 13, 13, 0.7);
+    border-radius: 8px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px);
+    border: 1px solid rgba(13, 13, 13, 0.23);
+    box-shadow: inset 0px 4px 8px rgba(241, 236, 236, 0.3);
+}
+
+.titulo-carrossel {
+    color: #F5F5F5;
+    letter-spacing: 2px;
+    font-size: 30px;
+    text-align: center;
+    filter: drop-shadow(5px 5px 10px #000000);
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+}
+
+.imagem-card{
+    width: 100%;
+    min-height: auto;
+    overflow: hidden;
+    border-radius: 8px;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+}
+
+.imagem-obra {
+    width: 100%;
+    object-fit: fill;
+}
+
+.titulo-card {
+    color: #F5F5F5;
+    letter-spacing: 2px;
+    font-size: 25px;
+    text-align: center;
+    filter: drop-shadow(5px 5px 10px #000000);
+    padding: 3px 15px;
+    margin-bottom: 0;
+    margin-top: 1%;
+}
+
+.descricao-card {
+    font-family: "Urbanist", sans-serif;
+    color: #F5F5F5;
+    font-size: 12px;
+    text-align: justify;
+    filter: drop-shadow(5px 5px 10px #000000);
+    margin-top: 0%;
+    margin-bottom: 2%;
+    padding: 0px 15px;
+}
+
+/* Tablets */
+@media only screen and (max-width: 768px) {
     .grade {
-        gap: 20px;
-        grid-template-columns: 1fr;
+        gap: 10px;
     }
 
     .titulo {
+        font-size: 100px;
+    }
+
+    .descricao {
+        font-size: 20px;
+    }
+
+    .titulo-carrossel {
+        font-size: 25px;
+    }
+
+    .titulo-card {
+        font-size: 15px;
+    }
+
+    .descricao-card {
+        font-size: 10px;
+    }
+
+    .ultimasPublicacoes {
+        padding: 10px 30px;
+    }
+}
+
+/* Celulares */
+@media (max-width: 425px) {
+    .body {
+        height: auto;
+    }
+
+    .titulo {
+        margin-top: 0%;
         font-size: 14vw;
     }
 
-    .imagem {
+    .heroSection {
+        margin-top: 0%;
+        padding: 4vw 5vw;
+    }
+
+    .grade {
+        grid-template-columns: 1fr;
+        place-items: center;
+        width: 100%;
+        gap: 3vh;
+    }
+
+    .imagem-card {
         width: 100%;
         height: auto;
     }
-    .ultimasPublicacoes {
-        margin-top: 0%;
-        padding: 1vw 5vw;
-        margin-left: 16vw;
-        margin-right: 16vw;
-    }
-    .nomeObra {
-        font-size: 3vw;
+
+    .titulo-card {
+        font-size: 15px;
         padding: 3px 15px;
     }
 
-    .descricaoObra {
+    .descricao-card {
         font-size: 2vw;
         text-align: justify;
         padding: 0px 10px;
     }
 
-    .tituloUP {
-        font-size: 4vh;
+    .descricao {
+        margin-top: 1vh;
+        margin-bottom: 1vh;
+        font-size: 3vw;
+    }
+
+    .botaoVerMais {
+        font-size: 4vw;
+        padding: 2px 5px;
+        border-radius: 5px;
+    }
+
+    .titulo-carrossel {
+        font-size: 20px;
+    }
+
+    .ultimasPublicacoes {
+        height: auto;
+        padding: 4vw 9vw;
     }
 }

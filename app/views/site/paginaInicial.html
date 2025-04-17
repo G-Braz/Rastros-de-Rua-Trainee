@@ -5,6 +5,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Página Inicial</title>
 		<link rel="stylesheet" href="./paginaInicial.css">
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 	</head>
 	<body>
 		<div class="grade">
@@ -14,29 +15,59 @@
 				<button class="botaoVerMais">Ver Mais</button>
 			</div>
 			<div class="ultimasPublicacoes">
-				<h1 class="tituloUP">Últimas Publicações</h1>
-				<div class="carrossel">
-					<div class="conteudo">
-						<div class="card">
-							<div class=" imagem">
-								<img class = "imagemObra" src="../../../public/assets/graffiti-sea-monster.jpg">
+				<h1 class="titulo-carrossel">Últimas Publicações</h1>
+				<div class="swiper-button-prev"></div>
+				<div class="swiper">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide">
+							<div class="card-carrossel">
+								<div class="imagem-card">
+									<img class = "imagem-obra" src="../../../public/assets/graffiti-sea-monster.jpg">
+								</div>
+								<h2 class="titulo-card"> Arte 1 </h2>
+								<p class="descricao-card">Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts
+								and visual mockups.</p>
 							</div>
-							<h2 class="nomeObra"> Título </h2>
-							<p class="descricaoObra">Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts
-							and visual mockups.</p>
 						</div>
-
-						<div class="card">
-							<div class=" imagem">
-								<img class="imagemObra" src="../../../public/assets/graffiti-sea-monster.jpg">
+						<div class="swiper-slide">
+							<div class="card-carrossel">
+								<div class="imagem-card">
+									<img class="imagem-obra" src="../../../public/assets/graffiti-sea-monster.jpg">
+								</div>
+								<h2 class="titulo-card"> Arte 2 </h2>
+								<p class="descricao-card">Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing
+									industries for previewing layouts
+									and visual mockups.</p>
 							</div>
-							<h2 class="nomeObra"> Título </h2>
-							<p class="descricaoObra">Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts
-							and visual mockups.</p>
+						</div>
+						<div class="swiper-slide">
+							<div class="card-carrossel">
+								<div class="imagem-card">
+									<img class="imagem-obra" src="../../../public/assets/graffiti-sea-monster.jpg">
+								</div>
+								<h2 class="titulo-card"> Arte 2 </h2>
+								<p class="descricao-card">Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing
+									industries for previewing layouts
+									and visual mockups.</p>
+							</div>
 						</div>
 					</div>
 				</div>
+				<div class="swiper-button-next"></div>
 			</div>
 		</div>
+		<script>
+			window.onload = () => {
+				const swiper = new Swiper('.swiper', {
+					slidesPerView: 2,
+					direction: "vertical",
+					navigation: {
+						nextEl: ".swiper-button-next",
+						prevEl: ".swiper-button-prev",
+					},
+				});
+			};
+		</script>
+		<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 	</body>
 </html>
