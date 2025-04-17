@@ -1,6 +1,6 @@
 .footer {
     margin-top: auto;
-    max-width: 100%;
+    max-width: 100vw;
     background-color: #1E3A5F;
     padding: 2vh 2vw;
     box-shadow: 0 4px 6vw rgba(0, 0, 0, 0.6); 
@@ -79,15 +79,15 @@ i.bi {
 
 .assinatura-ej .imagem {
     width: 5vw;
-    height: 5vw;
+    height: auto;
 }
 
 .parte-02 {
     width: 95%;
     border-top: 0.2vw solid #F5F5F5;
-    padding: 3vh 1vh;
+    padding: 3vh 1vw;
     display: flex;
-    gap: 3vh;
+    gap: 3vw;
     justify-content: space-between;
     align-items: flex-start;
 }
