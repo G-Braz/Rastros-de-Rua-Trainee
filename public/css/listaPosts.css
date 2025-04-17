@@ -30,7 +30,7 @@ body * {
 }
 
 #barraDePesquisa{
-    height: 79px;
+    height: 12vh;
     padding: 10px;
     margin: auto;
 }
@@ -40,8 +40,8 @@ body * {
     justify-content: center;
     align-items: center;
     padding: 10px 30px;
-    width: 558px;
-    height: 59px;
+    width: 100%;
+    height: 9vh;
     border-radius: 200px;
     background: rgb(0,11,26,0.8);
     backdrop-filter: blur(10px);
@@ -54,7 +54,7 @@ body * {
 
 #inputPesquisa{
     background-color: transparent;
-    width: 410px;
+    width: 60vh;
     display: inline-block;
     font-weight: 300;
     font-size: 16;
@@ -104,8 +104,8 @@ ul{
     display: flex;
     flex-direction: column;
     gap: 5px;
-    width: 370px;
-    height: 330px;
+    width: 59vh;
+    height: 100%;
     text-align: center;
     font-size: 16px;
     background: rgb(12, 28, 49, 0.8);
@@ -124,11 +124,11 @@ ul{
 
 .post #fotoTag{
     position: absolute;
-    left:60.7%;
-    top: 40.5%;
+    left:59.7%;
+    top: 40%;
     border-radius: 16px;
-    width: 135px;
-    height: 67px;
+    width: 22vh;
+    height: 11vh;
 }
 
 .textoPost{
@@ -185,14 +185,14 @@ ul{
 }
 
 #paginacao .paginas{
-    width: 51px;
-    height: 38px;
+    width: 8vh;
+    height: 6vh;
     padding: 5px 18px;
     font-weight: 300;
 }
 #paginacao .skip{
-    width: 54px;
-    height: 38px;
+    width: 9vh;
+    height: 6vh;
 }
 #paginacao a:hover{
     background: rgb(0,11,26,0.3);
@@ -201,27 +201,27 @@ ul{
 
 @media screen and (min-width:0) and (max-width:470px){
     #caixaDePesquisa{
-        width: 310px;
+        width: 53vh;
     }
     .caixaPosts{
         flex-direction: column;
     }
     .post{
-        width: 279px;
-        height: 374px;
+        width: 100%;
+        height: 100%;
     }
     .post #fotoCapa{
         padding: 8px 13px;
-        width: 279px;
-        height: 204px;
+        width: 51vh;
+        height: 38vh;
         object-fit: cover;
         
     }
     .post #fotoTag{
         left:50.4%;
         top: 39.2%;
-        width: 130px;
-        height: 57px;
+        width: 24vh;
+        height: 11vh;
     }
     #paginacao{
         gap:7px;
@@ -230,14 +230,14 @@ ul{
         font-size: 15px;
     }
     #paginacao .paginas{
-        width: 44px;
-        height: 34px;
+        width: 8vh;
+        height: 6vh;
     }
     #paginacao .bi{
         font-size: 15px;
     }
     #paginacao .skip{
-        width: 49px;
-        height: 35px;
+        width: 8vh;
+        height: 6vh;
     }
 }
