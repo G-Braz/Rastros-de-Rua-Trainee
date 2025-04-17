@@ -13,3 +13,76 @@
     min-width: 320px;
 }
 
+.titulo {
+    font-size: 2rem;;
+    font-weight: bold;
+    text-align: center;
+    color: #F5F5F5;
+}
+
+.parte-01 {
+    width: 95%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+}
+
+.redes-sociais {
+    width: 329px;
+    height: 146px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    padding: 10px;
+}
+
+.redes-sociais .logos {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    padding: 10px;
+}
+
+i.bi {
+    font-size: 40px;
+    color: #F5F5F5;
+    transition: color 0.3s ease-in-out;
+}
+
+.assinatura {
+    width: 328.91px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding-bottom: 30px;
+}
+
+.assinatura .mascote {
+    width: 95px;
+    transform: scaleX(-1);
+}
+
+.assinatura .logo-branca {
+    width: 233.91px;
+    height: 137.74px;
+}
+
+.assinatura-ej {
+    width: 328.91px;
+    height: 146px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    padding: 10px;
+}
+
+.assinatura-ej .imagem {
+    width: 70px;
+    height: 70px;
+}
+
+
