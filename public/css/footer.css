@@ -1,0 +1,15 @@
+.footer {
+    margin-top: auto;
+    width: 100vw;
+    background-color: #1E3A5F;
+    padding: 20px 40px;
+    box-shadow: 0 4px 60px rgba(0, 0, 0, 0.6);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Urbanist', sans-serif;
+    gap: 40px;
+    max-width: 100vw;
+    min-width: 320px;
+}
+
