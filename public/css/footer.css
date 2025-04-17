@@ -1,20 +1,18 @@
 .footer {
     margin-top: auto;
-    width: 100vw;
+    max-width: 100%;
     background-color: #1E3A5F;
-    padding: 20px 40px;
-    box-shadow: 0 4px 60px rgba(0, 0, 0, 0.6);
+    padding: 2vh 2vw;
+    box-shadow: 0 4px 6vw rgba(0, 0, 0, 0.6); 
     display: flex;
     flex-direction: column;
     align-items: center;
-    font-family: 'Urbanist', sans-serif;
-    gap: 40px;
-    max-width: 100vw;
-    min-width: 320px;
+    font-family: "Urbanist", sans-serif; 
+    gap: 3vh;
 }
 
 .titulo {
-    font-size: 2rem;;
+    font-size: 2vw;
     font-weight: bold;
     text-align: center;
     color: #F5F5F5;
@@ -25,92 +23,91 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 40px;
+    gap: 3vw;
 }
 
 .redes-sociais {
-    width: 329px;
-    height: 146px;
+    width: 22vw;
+    height: 15vh;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 15px;
-    padding: 10px;
+    gap: 1vh;
+    padding: 1vh;
 }
 
 .redes-sociais .logos {
     display: flex;
-    gap: 10px;
+    gap: 1vw;
     align-items: center;
-    padding: 10px;
+    padding: 1vh;
 }
 
 i.bi {
-    font-size: 40px;
+    font-size: 3vw;
     color: #F5F5F5;
-    transition: color 0.3s ease-in-out;
 }
 
 .assinatura {
-    width: 328.91px;
+    width: 22vw;
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 10px;
-    padding-bottom: 30px;
+    gap: -1vw; /* Conferir se é uma má prática */
+    padding-bottom: 3vh;
 }
 
 .assinatura .mascote {
-    width: 95px;
+    width: 6vw;
     transform: scaleX(-1);
 }
 
 .assinatura .logo-branca {
-    width: 233.91px;
-    height: 137.74px;
+    width: 16vw;
+    height: auto;
 }
 
 .assinatura-ej {
-    width: 328.91px;
-    height: 146px;
+    width: 22vw;
+    height: 15vh;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 5px;
-    padding: 10px;
+    gap: 1vh;
+    padding: 1vh;
 }
 
 .assinatura-ej .imagem {
-    width: 70px;
-    height: 70px;
+    width: 5vw;
+    height: 5vw;
 }
 
 .parte-02 {
-    width: 1360px;
-    border-top: 2px solid #F5F5F5;
-    padding: 30px 10px;
+    width: 95%;
+    border-top: 0.2vw solid #F5F5F5;
+    padding: 3vh 1vh;
     display: flex;
-    gap: 40px;
+    gap: 3vh;
     justify-content: space-between;
     align-items: flex-start;
 }
 
 .missao, .visao, .valores {
-    width: 328.91px;
+    width: 22vw;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 5px;
-    padding: 10px;
+    gap: 1vh; 
+    padding: 1vh;
 }
 
 .missao .conteudo, .visao .conteudo, .valores .conteudo {
     display: none;
-    font-size: 24px;
+    font-size: 1.5vw;
     font-weight: semibold;
     text-align: center;
     color: #F5F5F5;
-    margin-top: 10px;
+    margin-top: 1vh;
 }
 
 .missao:hover .conteudo, .visao:hover .conteudo, .valores:hover .conteudo {
