@@ -108,8 +108,8 @@ body {
     border-radius: 12px;
     background-color: white;
     opacity: 0.8;
-    
-
+    font-size: 260%;
+    padding-left: 1.5%;
 }
 
 .botao{
@@ -149,12 +149,11 @@ body {
 .senha i{
     font-size: 280%;
     position: absolute;
-    top: 57%;
-    right: 3%;
+    top: 59%;
+    right: 1.5%;
     color: black;
-    
+    z-index: 1;
 }
-
 
 
 
@@ -189,6 +188,14 @@ body {
     .senha{
     
         height: 20%;
+    }
+    #email{
+        font-size: 200%;
+        padding-left: 3%;
+    }
+    #senha{
+        font-size: 200%;
+        padding-left: 3%;
     }
     .senha i{
         font-size: 240%;  
@@ -229,6 +236,16 @@ body {
     .senha{
         height: 28%;
     }
+
+    #email{
+        font-size: 200%;
+        padding-left: 3%;
+    }
+    #senha{
+        font-size: 200%;
+        padding-left: 3%;
+    }
+
     .senha i{
         font-size: 280%;
     }
@@ -269,6 +286,16 @@ body {
     
         height: 30%;
     }
+
+    #email{
+        font-size: 160%;
+        padding-left: 3%;
+    }
+    #senha{
+        font-size: 160%;
+        padding-left: 3%;
+    }
+
     .senha i{
         font-size: 200%;
         top: 52%;
