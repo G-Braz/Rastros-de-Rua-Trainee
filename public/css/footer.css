@@ -119,12 +119,12 @@ i.bi {
 /* Tablet */
 @media (max-width: 834px) {
     .footer {
-        gap: 4vh;
+        gap: 10vh;
     }
     .parte-01 {
         flex-direction: column;
         align-items: center;
-        gap: 2vh;
+        gap: 3vh;
         width: 90%;
     }
     .redes-sociais, .assinatura, .assinatura-ej, .missao, .visao, .valores {
