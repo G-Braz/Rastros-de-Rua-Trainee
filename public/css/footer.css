@@ -124,7 +124,7 @@ i.bi {
     .parte-01 {
         flex-direction: column;
         align-items: center;
-        gap: 2vh; /* Espaçamento maior entre as seções */
+        gap: 2vh;
         width: 90%;
     }
     .redes-sociais, .assinatura, .assinatura-ej, .missao, .visao, .valores {
@@ -153,5 +153,50 @@ i.bi {
     }
     .missao .conteudo, .visao .conteudo, .valores .conteudo {
         font-size: 3vw;
+    }
+}
+
+/* Celular */
+@media (max-width: 390px) {
+    .footer {
+        gap: 4vh;
+        padding: 3vh 2vw;
+    }
+    .parte-01 {
+        flex-direction: column;
+        align-items: center;
+        gap: 3vh;
+        width: 90%;
+    }
+    .parte-02 {
+        flex-direction: column;
+        align-items: center;
+        gap: 0vh;
+        width: 90%;
+        margin-top: 4vh; 
+    }
+    .titulo {
+        font-size: 6vw; 
+    }
+    .redes-sociais, .assinatura, .assinatura-ej, .missao, .visao, .valores {
+        width: 90%;
+    }
+    .redes-sociais .logos{
+        gap: 1vh;
+    }
+    .redes-sociais .logos i.bi {
+        font-size: 9vw;
+    }
+    .assinatura .mascote {
+        width: 20vw; 
+    }
+    .assinatura .logo-branca {
+        width: 40vw; 
+    }
+    .assinatura-ej .imagem {
+        width: 16vw; 
+    }
+    .missao .conteudo, .visao .conteudo, .valores .conteudo {
+        font-size: 4.5vw;
     }
 }
