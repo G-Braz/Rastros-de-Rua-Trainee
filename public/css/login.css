@@ -66,8 +66,8 @@ body {
     justify-content: flex-start;
     align-items: start ;
     width: 100%;
-    height: 30%;;
-    
+    height: 32%;;
+    margin-bottom: 4%;
 }
 
 .senha{
@@ -76,7 +76,7 @@ body {
     justify-content: flex-start;
     align-items: start ;
     width: 100%;
-    height: 30%;
+    height: 32%;
     position: relative;
 }
 
@@ -98,15 +98,17 @@ body {
     border-radius: 12px;
     background-color: white;
     opacity: 0.8;
+    font-size: 260%;
+    padding-left: 1.5%;
 }
 
 #senha{
-    display: flex;
     width: 100%;
     height: 100%;
     border-radius: 12px;
     background-color: white;
     opacity: 0.8;
+    
 
 }
 
@@ -145,10 +147,10 @@ body {
 }
 
 .senha i{
-    font-size: 300%;
+    font-size: 280%;
     position: absolute;
-    top: 55%;
-    right: 5%;
+    top: 57%;
+    right: 3%;
     color: black;
     
 }
