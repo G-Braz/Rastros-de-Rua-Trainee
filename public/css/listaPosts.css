@@ -30,7 +30,7 @@ body * {
 }
 
 #barraDePesquisa{
-    height: 12vh;
+    width: 45%;
     padding: 10px;
     margin: auto;
 }
@@ -41,7 +41,7 @@ body * {
     align-items: center;
     padding: 10px 30px;
     width: 100%;
-    height: 9vh;
+    height: 10vh;
     border-radius: 200px;
     background: rgb(0,11,26,0.8);
     backdrop-filter: blur(10px);
@@ -54,8 +54,8 @@ body * {
 
 #inputPesquisa{
     background-color: transparent;
-    width: 60vh;
-    display: inline-block;
+    width: 100%;
+    display: flex;
     font-weight: 300;
     font-size: 16;
     line-height: 20px;
@@ -65,7 +65,7 @@ body * {
 }
 
 #inputPesquisa::placeholder{
-    color: rgb(245, 245, 245, 0.55)
+    color: rgba(245, 245, 245, 0.55)
 }
 
 .bi{
@@ -82,53 +82,50 @@ ul{
 }
 
 #listaDePosts{
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
     padding: 10px 40px;
     gap: 50px;
     height: auto;
+    width: 100%;
     align-items: center;
-    justify-content: center;
+    
 }
 
-.caixaPosts{
-    display: flex;
-    flex-direction: row;
-    gap: 60px;
-    align-items: center;
-    justify-content: space-between;
-}
 
 
 .post{
     display: flex;
     flex-direction: column;
     gap: 5px;
-    width: 59vh;
-    height: 100%;
     text-align: center;
+    justify-content: center;
+    text-decoration: none;
+    width: 100%;
+    height: 100%;
     font-size: 16px;
-    background: rgb(12, 28, 49, 0.8);
+    background: rgba(12, 28, 49, 0.8);
     backdrop-filter: blur(15px);
     -webkit-backdrop-filter: blur(15px);
     border-radius: 8px;
-    text-decoration: none;
     transition: all .5s;
     box-shadow: 0 4px 15px #0D0D0D;
-    border: 1px solid transparent;
+    position: relative;
 }
+
 .post #fotoCapa{
     padding: 10px 15px;
-
+    width: 100%;
+    object-fit: cover;
 }
 
 .post #fotoTag{
     position: absolute;
     left:59.7%;
-    top: 40%;
+    top: 38%;
     border-radius: 16px;
-    width: 22vh;
-    height: 11vh;
+    width: 38%;
+    height: 10.5vh;
 }
 
 .textoPost{
@@ -161,6 +158,7 @@ ul{
     padding: 10px 0;
     align-items: center;
     justify-content: center;
+    width:100%
 }
 
 #paginacao a{
@@ -199,12 +197,20 @@ ul{
     border:1px solid rgb(245, 245, 245, 0.4);
 }
 
-@media screen and (min-width:0) and (max-width:470px){
-    #caixaDePesquisa{
-        width: 53vh;
+@media screen and (min-width:0) and (max-width:440px){
+    #barraDePesquisa{
+        width: 100%;
     }
-    .caixaPosts{
+    #inputPesquisa{
+        font-size: 80%;
+    }
+    #inputPesquisa .bi{
+        font-size: 80%;
+    }
+    #listaDePosts{
+        display: flex;
         flex-direction: column;
+        width: 100%;
     }
     .post{
         width: 100%;
@@ -239,5 +245,11 @@ ul{
     #paginacao .skip{
         width: 8vh;
         height: 6vh;
+    }
+}
+
+@media only screen and (min-width: 431px) and (max-width: 1024px) {
+    #listaDePosts{
+        grid-template-columns: repeat(2,1fr);
     }
 }
