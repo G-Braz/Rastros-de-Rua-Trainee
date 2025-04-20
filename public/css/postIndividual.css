@@ -1,0 +1,22 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.pagina {
+    width: 100%;
+    height: 100%;
+    padding: 75px 150px;
+    background: url('/public/assets/postIndividual-fundo.jpg') no-repeat center center;
+    background-size: cover;
+    opacity: 0.9;
+    font-family: 'Urbanist', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+
+
