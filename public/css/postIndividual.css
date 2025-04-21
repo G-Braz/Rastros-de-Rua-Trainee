@@ -115,3 +115,55 @@ p {
     font-size: 4vh;
     color: #F5F5F5;
 }
+
+/* Responsividade Tablet */
+@media (max-width: 834px) {
+    .publicacao {
+        width: 90vw;
+        padding: 3vh;
+    }
+
+    .conteudo-principal {
+        flex-direction: column;
+        gap: 2vh;
+        align-items: flex-start; 
+        width: 100%;
+    }
+    .imagem {
+        width: 100%;
+        height: auto;
+    }
+    .informacoes {
+        width: 80vw;
+        height: 55vh;
+        align-items: flex-start;
+    }
+
+    .tag {
+        width: 25vw;
+        height: 15vh;
+    }
+    
+    
+    .titulo {
+        font-size: 9vh;
+    }
+
+    .autor, .data, .local {
+        font-size: 3.5vh;
+    }
+
+    .materiais, .descricao {
+        width: 85vw;
+        font-size: 3vh;
+        padding: 3px;
+    }
+
+    h2 {
+        font-size: 5vh;
+    }
+
+    p {
+        font-size: 3vh;
+    }
+}
