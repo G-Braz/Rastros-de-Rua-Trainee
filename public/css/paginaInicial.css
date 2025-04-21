@@ -87,7 +87,6 @@ body {
     flex-direction: column;
 }
 
-/* Botões como blocos */
 .navegacao-cima,
 .navegacao-baixo {
     position: static;
@@ -101,7 +100,6 @@ body {
     cursor: pointer;
 }
 
-/* Ícones do swiper */
 .swiper-button-prev::after,
 .swiper-button-next::after {  
     font-size: 25px;
