@@ -1,7 +1,7 @@
 //mostrar senha
 function mostrarSenha(idImput,idOlinho){
     const input = document.getElementById(idImput); // campo senha
-    const Olinho =document.getElementById(idOlinho); // icone do olho
+    const olinho =document.getElementById(idOlinho); // icone do olho
 
     //verifica o estado do texto
     if(input.type==="password"){
