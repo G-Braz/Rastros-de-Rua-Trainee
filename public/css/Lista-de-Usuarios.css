@@ -1,0 +1,65 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: #4B4B4B;
+    display: grid;
+    place-items: center;
+    height: 100vh;
+
+}
+
+.descricao{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.botoes{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 30%;
+    height: 100%;
+
+}
+.admButton{
+    background: white;
+    border-radius: 5px;
+    font-size: 120%;
+    height: 10%;
+    width: 100%;
+    text-align: center;
+}   
+.userButton{
+    background: white;
+    border-radius: 5px;
+    font-size: 120%;
+    height: 10%;
+    width: 80%;
+    text-align: center;
+}
+.createButton{
+    background: white;
+    border-radius: 5px;
+    font-size: 120%;
+    height: fit-content;
+}
+
+table{
+    background: rgba(245, 245, 245, 0.7);
+    width: 80%;
+    height: 100%;
+    border-radius: 5px;
+    text-align: center;
+}
+td{
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 10px;
+}
