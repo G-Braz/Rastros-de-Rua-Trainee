@@ -5,21 +5,34 @@
 }
 
 body{
-    background: #4B4B4B;
+    background-image: url(../assets/FundoUsuários.png);
+    background-repeat: no-repeat;
+    background-size: cover;
     display: grid;
     place-items: center;
     height: 100vh;
 
 }
+.fundo{
+    display: grid;
+    place-items: center;
+    
+    width: 100%;
+    height: 100%;
+    background: rgba(13, 13, 13, 0.8);
+    font-family: "urbanist", sans-serif;
+}
+.descricao img{
+    width: 28%;
+    padding-right: 5%;
+}
 
 .descricao{
     display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 80%;
-    height: 100%;
-    display: flex;
     justify-content: space-between;
+    align-items: center;
+    width: 95%;
+    height: 100%;
 }
 .botoes{
     display: flex;
@@ -27,39 +40,80 @@ body{
     align-items: center;
     width: 30%;
     height: 100%;
-
 }
 .admButton{
+    display: flex;
     background: white;
     border-radius: 5px;
-    font-size: 120%;
-    height: 10%;
-    width: 100%;
-    text-align: center;
+    font-size: 140%;
+    height: 16%;
+    width: 40%;
+    justify-content: center;
+    align-items: center;
+    margin-right: 5%;
 }   
 .userButton{
+    display: flex;
     background: white;
     border-radius: 5px;
-    font-size: 120%;
-    height: 10%;
-    width: 80%;
-    text-align: center;
+    font-size: 140%;
+    height: 16%;
+    width: 30%;
+    justify-content: center;
+    align-items: center;
 }
 .createButton{
+    display: flex;
     background: white;
+    justify-content: center;
+    align-items: center;
     border-radius: 5px;
-    font-size: 120%;
-    height: fit-content;
+    font-size: 140%;
+    height: 16%;
+    width: 12%;
 }
 
 table{
-    background: rgba(245, 245, 245, 0.7);
-    width: 80%;
+    background: #1E3A5F;
+    width: 95%;
     height: 100%;
     border-radius: 5px;
     text-align: center;
+    font-size: 140%;
+}
+tr{
+    color: white;
+    font-size: 140%;
+    height: 10%;
 }
 td{
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
     padding: 10px;
+}
+td i{
+    background-color: white;
+    color: black;
+    font-size: 110%;
+    cursor: pointer;
+    border-radius: 15px;
+}
+
+.paginacao{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: 1%;
+
+}
+
+.skip, .paginas{
+    display: flex;
+    justify-content: center;
+    background-color: white;
+    color:black;
+    border-radius: 20px;
+    width: 4%;
+    height: 20%;
+    font-size: 240%;
 }
