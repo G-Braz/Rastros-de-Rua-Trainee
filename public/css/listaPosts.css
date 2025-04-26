@@ -195,13 +195,13 @@ ul{
 
 #paginacao .paginas{
     width: 4.5%;
-    height: 6vh;
+    height: 6.5vh;
     padding: 5px 18px;
     font-weight: 300;
 }
 #paginacao .skip{
     width: 4.5%;
-    height: 6vh;
+    height: 6.5vh;
 }
 #paginacao a:hover{
     background: rgb(0,11,26,0.3);
@@ -626,9 +626,9 @@ ul{
         object-fit: cover;
     }
     .post #fotoTag{
-        height: 21%;
+        height: 18%;
         width: 43%;
-        top: 40%;
+        top: 42%;
         left: 54%;
     }
     #paginacao{
