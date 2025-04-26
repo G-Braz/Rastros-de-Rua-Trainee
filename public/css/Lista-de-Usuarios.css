@@ -22,7 +22,7 @@ body{
     font-family: "urbanist", sans-serif;
 }
 .descricao img{
-    width: 28%;
+    width: 12%;
 }
 
 .descricao{
@@ -40,9 +40,7 @@ body{
     width: 50%;
     height: 80%;
 }
-.Titulo img{
-    width: 12%;
-}
+
 .Titulo h1{
     font-family: "staatliches", sans-serif;
     color: white;
@@ -125,3 +123,252 @@ th{
 .bi-eye-fill, .bi-pencil-square, .bi-trash3-fill{
     margin:1%;
 }
+
+
+
+/*Responsividades*/
+/*Celulares*/
+
+/*Iphone SE*/
+@media only screen and (max-width: 375px) {
+    .descricao {
+        flex-direction: column;
+    }
+
+    .Titulo {
+        width: 100%;
+    }
+
+    .Titulo h1 {
+        font-size: 200%; 
+        padding-left: 0;
+        text-align: center;
+        width: 70%;
+    }
+
+    .Titulo img {
+        width: 36%;
+        padding-left: 10%;
+    }
+
+    .createButton {
+        width: 52%;
+        height: 20%;
+        font-size: 120%;
+        margin-bottom: 8%;
+    }
+
+    table {
+        width: 99%;
+        font-size: 70%;
+    }
+
+    td i {
+        font-size: 100%;
+        padding: 5%;
+        border-radius: 30%;
+    }
+
+    .paginacao {
+        gap:10px;
+        width: 60%;
+        height: 30%;
+    }
+
+    .skip, .paginas {
+        align-items: center;
+        width: 15%;
+        height: 100%;
+        font-size: 100%;
+        border-radius: 10px;
+    }
+    .operacoes{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 5%;
+    }
+}
+
+/*Iphone XR*/
+@media only screen and (min-width: 376px) and (max-width: 430px) {
+    .descricao {
+        flex-direction: column;
+    }
+    .Titulo {
+        width: 100%;
+        height: 60%;
+    }
+
+    .Titulo h1 {
+        font-size: 230%; 
+        padding-left: 0;
+        text-align: center;
+        width: 70%;
+    }
+
+    .Titulo img {
+        width: 40%;
+        padding-left: 10%;
+    }
+
+    .createButton {
+        justify-content: center;
+        width: 60%;
+        height: 16%;
+        font-size: 160%;
+        margin-bottom: 8%;
+    }
+
+    table {
+        width: 99%;
+        font-size: 70%;
+    }
+
+    td i {
+        font-size: 100%;
+        padding: 5%;
+        border-radius: 30%;
+    }
+
+    .paginacao {
+        gap: 8px;
+        width: 60%;
+        height: 20%;
+    }
+
+    .skip, .paginas {
+        align-items: center;
+        width: 15%;
+        height: 100%;
+        font-size: 100%;
+        border-radius: 10px;
+    }
+    .operacoes{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 5%;
+    }
+}
+
+/*Tablets*/
+/*Ipad mini/ Ipad Air*/
+@media only screen and (min-width: 431px) and (max-width: 1023px){
+    .descricao {
+        flex-direction: column;
+    }
+    .Titulo {
+        
+        width: 100%;
+        height: 60%;
+        padding-top: 10%;
+    }
+
+    .Titulo h1 {
+        font-size: 320%; 
+        padding-left: 0;
+        text-align: center;
+        width: 100%;
+    }
+
+    .Titulo img {
+        width: 30%;
+        padding-left: 10%;
+    }
+
+    .createButton {
+        width: 40%;
+        height: 12%;
+        font-size: 180%;
+        margin-bottom: 8%;
+    }
+
+    td i {
+        font-size: 100%;
+        padding: 3%;
+        border-radius: 30%;
+    }
+
+    .paginacao {
+        gap: 8px;
+        width: 50%;
+        height: 34%;
+    }
+
+    .skip, .paginas {
+        align-items: center;
+        width: 13%;
+        height: 100%;
+        font-size:160%;
+        border-radius: 14px;
+    }
+    .operacoes{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 5%;
+        font-size: 80%;
+    }
+}
+
+/*Ipad Pro*/
+@media only screen and (min-width: 1024px) and (max-width: 1024px){
+    .descricao {
+        flex-direction: column;
+    }
+    .Titulo {
+        
+        width: 100%;
+        height: 48%;
+        padding-top: 10%;
+    }
+
+    .Titulo h1 {
+        font-size: 380%; 
+        padding-left: 0;
+        text-align: center;
+        width: 100%;
+    }
+
+    .Titulo img {
+        width: 36%;
+        padding-left: 10%;
+    }
+
+    .createButton {
+        width: 43%;
+        height: 13%;
+        font-size: 280%;
+        margin-bottom: 8%;
+    }
+
+
+    td i {
+        font-size: 100%;
+        padding: 5%;
+        border-radius: 30%;
+    }
+
+    .paginacao {
+        gap: 8px;
+        width: 60%;
+        height: 40%;
+    }
+
+    .skip, .paginas {
+        align-items: center;
+        width: 13%;
+        height: 100%;
+        font-size: 200%;
+        border-radius: 14px;
+    }
+    .operacoes{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 5%;
+    }
+}
+
+/*Surface Duo*/
