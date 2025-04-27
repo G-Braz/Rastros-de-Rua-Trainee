@@ -55,8 +55,8 @@ h1 {
 
 /* Botão Criar Publicação */
 .botaoadicionar {
-    width: 22%;
-    height: 9vh;
+    width: 21%;
+    height: 8vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -64,11 +64,6 @@ h1 {
     background-color: #F5F5F5;
     border-radius: 0.4vw;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-}
-
-.botaoadicionar .icone {
-    font-size: 2vw;
-    color: #0C1C31;
 }
 
 .botaoadicionar .texto-botao {
@@ -90,6 +85,7 @@ h1 {
 table {
     width: 100%; 
     text-align: center;
+    border-collapse: collapse;
 }
 
 th {
@@ -101,7 +97,7 @@ th {
 
 td {
     font-size: 2vw;
-    font-weight: 600;
+    font-weight: 700;
     color: #F5F5F5; 
     padding: 1.8vh 1vw;
 }
@@ -175,7 +171,7 @@ button i {
     width: 4.5%;
     height: 6.5vh;
     padding: 3vh 1vw;
-    font-weight: 500;
+    font-weight: 600;
 }
 
 .paginacao .skip {
@@ -189,8 +185,7 @@ button i {
 }
 
 .paginacao a:hover {
-    background: rgb(0, 11, 26, 0.3);
+    background: rgb(12, 28, 49, 0.8);
     border: 1px solid rgb(245, 245, 245, 0.4);
     color: #F5F5F5;
 }
-
