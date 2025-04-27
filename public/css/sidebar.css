@@ -13,7 +13,7 @@ body{
 }
 .conteudo:hover{
     width: 260px;
-    align-items: left;
+    align-items: start;
     .texto{
         opacity: 100;
         font-size: 20px;
@@ -40,6 +40,7 @@ body{
     .texto {
         opacity: 0;
         font-size: 0px;
+        transition: font-size none;
     }
 }
 .redirecionamento{
@@ -47,10 +48,13 @@ body{
     flex-direction: column;
     row-gap: 5vh;
     width: 100%;
+    overflow: hidden;
 }
+
 .dashboard,
 .gerenciar-publicacoes,
 .gerenciar-usuarios {
+    white-space: nowrap;
     margin: 10px 0;
     padding: 5% 5%;
     align-items: center;
@@ -58,6 +62,18 @@ body{
     display: flex;
     gap: 10px;
     overflow: hidden;
+}
+
+.dashboard:hover,
+.gerenciar-publicacoes:hover,
+.gerenciar-usuarios:hover {
+    transition: all 0.2s ease;
+    background-color: #0C1C31;
+    border-left: 5px solid #F5F5F5; 
+}
+
+.botao-logout:hover{
+    transform: scale(1.06);
 }
 
 .botao-logout{
@@ -74,6 +90,7 @@ body{
     box-shadow: 0 10px 10px rgba(0, 0, 0, 0.4);
     position: absolute;
     bottom: 35px;
+    transition: all 0.2s ease-in-out;
 }
 .texto-botao{
     font-size: 0px;
