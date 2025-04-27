@@ -9,38 +9,53 @@
 <body>
     <div class="sidebar">
         <div class="conteudo">
-            <div>LOGO</div>
-            <div class="dashboard">
-                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                    stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"
-                    class="lucide lucide-layout-dashboard-icon lucide-layout-dashboard">
-                    <rect width="7" height="9" x="3" y="3" rx="1" />
-                    <rect width="7" height="5" x="14" y="3" rx="1" />
-                    <rect width="7" height="9" x="14" y="12" rx="1" />
-                    <rect width="7" height="5" x="3" y="16" rx="1" />
-                </svg>
-                <span class="texto">Dashboard</span>
+            <div class="logotipo">
+                <img src="../../../public/assets/logo-sidebar.png   ">
             </div>
-            <div class="gerenciar-publicacoes">
-                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                    stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-files-icon lucide-files">
-                    <path d="M20 7h-3a2 2 0 0 1-2-2V2" />
-                    <path d="M9 18a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h7l4 4v10a2 2 0 0 1-2 2Z" />
-                    <path d="M3 7.6v12.8A1.6 1.6 0 0 0 4.6 22h9.8" />
-                </svg>
-                <span class="texto">Gerenciar Publicações</span>
+            <div class="redirecionamento">
+                <div class="dashboard">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"
+                        class="lucide lucide-layout-dashboard-icon lucide-layout-dashboard">
+                        <rect width="7" height="9" x="3" y="3" rx="1" />
+                        <rect width="7" height="5" x="14" y="3" rx="1" />
+                        <rect width="7" height="9" x="14" y="12" rx="1" />
+                        <rect width="7" height="5" x="3" y="16" rx="1" />
+                    </svg>
+                    <span class="texto">Dashboard</span>
+                </div>
+                <div class="gerenciar-publicacoes">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-files-icon lucide-files">
+                        <path d="M20 7h-3a2 2 0 0 1-2-2V2" />
+                        <path d="M9 18a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h7l4 4v10a2 2 0 0 1-2 2Z" />
+                        <path d="M3 7.6v12.8A1.6 1.6 0 0 0 4.6 22h9.8" />
+                    </svg>
+                    <span class="texto">Gerenciar Publicações</span>
+                </div>
+                <div class="gerenciar-usuarios">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-users-icon lucide-users">
+                        <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
+                        <circle cx="9" cy="7" r="4" />
+                        <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
+                        <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+                    </svg>
+                    <span class="texto">Gerenciar Usuários</span>
+                </div>
             </div>
-            <div class="gerenciar-usuarios">
-                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                    stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-users-icon lucide-users">
-                    <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
-                    <circle cx="9" cy="7" r="4" />
-                    <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
-                    <path d="M16 3.13a4 4 0 0 1 0 7.75" />
-                </svg>
-                <span class="texto">Gerenciar Usuários</span>
-            </div>
-            <button>LOGOUT</button>
+            <button class="botao-logout">
+                <div logo-logout>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"
+                        class="lucide lucide-log-out-icon lucide-log-out">
+                        <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4" />
+                        <polyline points="16 17 21 12 16 7" />
+                        <line x1="21" x2="9" y1="12" y2="12" />
+                    </svg>
+                </div>
+                    <span class="texto-botao">Logout</span>
+            </button>
         </div>
     </div>
 </body>

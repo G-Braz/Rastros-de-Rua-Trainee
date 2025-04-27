@@ -7,25 +7,76 @@ body{
 .sidebar{
     padding: 0;
     display: grid;
-    grid-template-columns: 270px 1fr;
+    grid-template-columns: auto 1fr;
     height: 100vh;
+    font-family: "Staatliches", sans-serif;
+}
+.conteudo:hover{
+    width: 260px;
+    align-items: left;
+    .texto{
+        opacity: 100;
+        font-size: 20px;
+    };
+    .botao-logout {
+        grid-template-columns: 1fr 1fr;
+    }
+    .texto-botao{
+        font-size: 20px;
+    }
 }
 .conteudo{
-    color: white;
-    font-size: 20px;
+    color: #F5F5F5;
+    gap:20px;
+    width: 80px;
     padding: 5% 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-top: 20px;
     background-color: #1E3A5F;
-    font-family: "Staatliches", sans-serif;
     letter-spacing: 0.3px;
+    overflow: hidden;
+    .texto {
+        opacity: 0;
+        font-size: 0px;
+    }
+}
+.redirecionamento{
+    display: flex;
+    flex-direction: column;
+    row-gap: 5vh;
+    width: 100%;
 }
 .dashboard,
 .gerenciar-publicacoes,
 .gerenciar-usuarios {
     margin: 10px 0;
     padding: 5% 5%;
-    text-align: left;
-    padding-left: 10px;
-    display: flex;
     align-items: center;
+    padding-left: 24px;
+    display: flex;
     gap: 10px;
+    overflow: hidden;
+}
+
+.botao-logout{
+    color: #0C1C31;
+    font-family: "Staatliches", sans-serif;
+    align-self: center;
+    border-radius: 8px;
+    background-color:#F5F5F5;
+    display: grid;
+    grid-template-columns: 1fr 0fr;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.4);
+    position: absolute;
+    bottom: 35px;
+}
+.texto-botao{
+    font-size: 0px;
+    justify-content: center;
+    align-items: center;
 }
