@@ -10,7 +10,6 @@ body{
     background-size: cover;
     height: 100%;
     width: 100%;
-    overflow: hidden;
 }
 /* Fundo */
 .pagina {
@@ -34,20 +33,22 @@ body{
     padding: 1vh 0vw;
 }
 
-.mascote img {
-    width: 5.7vw;
-    transform: scaleX(-1); /* Inverte horizontalmente a imagem */
-}
-
+/* Mascote e Titulo */
 .nome-tabela {
     display: flex;
     align-items: center;
     gap: 1vw;
 }
 
+.mascote img {
+    width: 5.4vw;
+    transform: scaleX(-1); /* Inverte horizontalmente a imagem */
+}
+
+/* Titulo Tabela */
 h1 {
     font-family: 'Staatliches', sans-serif;
-    font-size: 5vw;
+    font-size: 4.8vw;
     font-weight: 100;
     color: #F5F5F5;
     padding: 1vh 0;
@@ -56,13 +57,13 @@ h1 {
 /* Botão Criar Publicação */
 .botaoadicionar {
     width: 21%;
-    height: 8vh;
+    height: 7vh;
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 1vw;
     background-color: #F5F5F5;
-    border-radius: 0.4vw;
+    border-radius: 0.7vw;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
@@ -76,9 +77,8 @@ h1 {
 /* Parte 02: Tabela */
 .tabela {
     width: 90%;
-    padding: 2vh;
     background-color: #1E3A5F;
-    border-radius: 0.4vw;
+    border-radius: 0.7vw;
     box-shadow: 0px 4px 4px rgba(12, 28, 49, 0.8);
 }
 
@@ -88,18 +88,21 @@ table {
     border-collapse: collapse;
 }
 
+/*Linhas da tabela*/
 th {
-    font-size: 2.5vw;
+    font-size: 2.4vw;
     color: #F5F5F5;
     border-bottom: 0.1vh solid #F5F5F5; 
-    padding: 1vh 1vw; 
+    padding: 2vh 1.5vw; 
 }
 
+/*Cabeçalho da tabela*/
 td {
     font-size: 2vw;
-    font-weight: 700;
+    font-weight: 500;
     color: #F5F5F5; 
-    padding: 1.8vh 1vw;
+    padding: 2vh 1.5vw;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 /* Muda a cor do fundo ao passar o mouse */
@@ -119,7 +122,7 @@ button {
     height: 6vh;
     background-color: #F5F5F5; 
     border: none; 
-    border-radius: 0.4vw;
+    border-radius: 0.7vw;
     padding: 1vh; 
     display: flex;
     align-items: center; 
@@ -128,6 +131,7 @@ button {
     cursor: pointer;
 }
 
+/* Ícones operações */
 button i {
     color: #0C1C31; 
     font-size: 2vw; 
@@ -149,10 +153,8 @@ button i {
     display: flex;
     background: #F5F5F5;
     /* border-radius: 2vw;  */
-    border-radius: 0.4vw; /* Mudei para padronizar com  a tabela e com os botões */
+    border-radius: 0.7vw; /* Mudei para padronizar com  a tabela e com os botões */
     box-shadow: 0 4px 15px #0D0D0D;
-    backdrop-filter: blur(15px);
-    -webkit-backdrop-filter: blur(15px);
     font-size: 2vw;
     color: #0C1C31;
     justify-content: center;
@@ -160,7 +162,7 @@ button i {
     text-decoration: none;
 }
 
-/* Ícones */
+/* Ícones paginação */
 .paginacao .bi {
     font-weight: 900;
     padding: 2%;
@@ -168,7 +170,7 @@ button i {
 }
 
 .paginacao .paginas {
-    width: 4.5%;
+    width: 5%;
     height: 6.5vh;
     padding: 3vh 1vw;
     font-weight: 600;
@@ -188,4 +190,376 @@ button i {
     background: rgb(12, 28, 49, 0.8);
     border: 1px solid rgb(245, 245, 245, 0.4);
     color: #F5F5F5;
+}
+
+/*Responsividade para Tablets*/
+/* Ipad mini / Ipad air / Ipad Pro / Surface Pro 7 / Surface Duo / Asus Zenbook Fold*/
+@media screen and (min-width: 431px) and (max-width: 1124px) and (min-height: 720px) {
+    .pagina {
+        padding: 3vh 0vw;
+        gap: 2vh;
+    }
+
+    .descricao {
+        width: 96%;
+        flex-direction: column;
+        gap: 2vh;
+    }
+
+    .mascote img {
+        width: 14vw;
+    }
+    
+    .nome-tabela {
+        gap: 1vw;
+    }
+    
+    h1 {
+        font-size: 13vw;
+    }
+
+    .botaoadicionar {
+        width: 60%;
+        height: 5vh;
+        padding: 1vh;
+        gap: 2vw;
+        border-radius: 0.7vw;
+    }
+    
+    .botaoadicionar .texto-botao {
+        font-size: 5.8vw;
+    }
+
+    .tabela {
+        width: 96%;
+    }
+    
+    th {
+        font-size: 4.7vw;
+        padding: 2vh 1vw; 
+        height: 10vh;
+    }
+    
+    td {
+        font-size: 4.5vw;
+        padding: 2vh 1vw;
+        height: 11vh;
+    }
+
+    .operacoes{
+        gap: 0.8vw; 
+        padding: 3vh 3vw;
+    }
+    
+    button { 
+        width: 7vw;
+        height: 5vh;
+    }
+    
+    button i {
+        font-size: 5vw; 
+    }
+
+    .paginacao {
+        gap: 1.5vw;
+        padding: 2vh 0;
+    }
+
+    .paginacao a {
+        font-size: 4.5vw;
+    }
+    
+    .paginacao .bi {
+        padding: 2%;
+        font-size: 4.5vw;
+    }
+    
+    .paginacao .paginas {
+        width: 13%;
+        height: 4.5vh;
+        padding: 2vh 1vw;
+    }
+    
+    .paginacao .skip {
+        width: 13%;
+        height: 4.5vh;
+    }
+}
+
+
+/*Responsividade para Celular*/
+/* Galaxy Z Fold 5 */
+@media screen and (min-width:0px) and (max-width: 344px) {
+    .pagina {
+        padding: 3vh 0vw;
+        gap: 2vh;
+    }
+
+    .descricao {
+        width: 96%;
+        flex-direction: column;
+        gap: 2vh;
+    }
+
+    .mascote img {
+        width: 14vw;
+    }
+    
+    .nome-tabela {
+        gap: 1vw;
+    }
+    
+    h1 {
+        font-size: 13vw;
+    }
+
+    .botaoadicionar {
+        width: 58%;
+        height: 3vh;
+        padding: 1vh;
+        gap: 2vw;
+        border-radius: 0.7vw;
+    }
+    
+    .botaoadicionar .texto-botao {
+        font-size: 5.8vw;
+    }
+
+    .tabela {
+        width: 96%;
+    }
+    
+    th {
+        font-size: 4.7vw;
+        padding: 2vh 2vw; 
+        height: 10vh;
+    }
+    
+    td {
+        font-size: 4.5vw;
+        padding: 2vh 2vw;
+        height: 11vh;
+    }
+
+    .operacoes{
+        gap: 0.8vw; 
+        padding: 3.5vh 3vw;
+    }
+    
+    button { 
+        width: 7vw;
+        height: 3vh;
+    }
+    
+    button i {
+        font-size: 5vw; 
+    }
+
+    .paginacao {
+        gap: 1.5vw;
+        padding: 2vh 0;
+    }
+
+    .paginacao a {
+        font-size: 4.5vw;
+    }
+    
+    .paginacao .bi {
+        padding: 2%;
+        font-size: 4.5vw;
+    }
+    
+    .paginacao .paginas {
+        width: 13%;
+        height: 4vh;
+        padding: 2vh 1vw;
+    }
+    
+    .paginacao .skip {
+        width: 13%;
+        height: 4vh;
+    }
+}
+
+/* Iphone SE */
+@media screen and (min-width:345px) and (max-width: 375px) {
+    .pagina {
+        padding: 3vh 0vw;
+        gap: 2vh;
+    }
+
+    .descricao {
+        width: 95%;
+        flex-direction: column;
+        gap: 2vh;
+    }
+
+    .mascote img {
+        width: 12vw;
+    }
+    
+    .nome-tabela {
+        gap: 1vw;
+    }
+    
+    h1 {
+        font-size: 12.5vw;
+    }
+
+    .botaoadicionar {
+        width: 48%;
+        height: 4vh;
+        padding: 0vh;
+        gap: 2vw;
+        border-radius: 0.7vw;
+    }
+    
+    .botaoadicionar .texto-botao {
+        font-size: 4.6vw;
+    }
+
+    .tabela {
+        width: 95%;
+    }
+    
+    th {
+        font-size: 4vw;
+        padding: 2vh 2vw; 
+    }
+    
+    td {
+        font-size: 3.4vw;
+        padding: 2vh 2vw;
+    }
+
+    .operacoes{
+        gap: 0.8vw; 
+        padding: 3vh 2vw;
+    }
+    
+    button { 
+        width: 6vw;
+        height: 4vh;
+    }
+    
+    button i {
+        font-size: 4vw; 
+    }
+
+    .paginacao {
+        gap: 1.5vw;
+        padding: 3vh 0;
+    }
+
+    .paginacao a {
+        font-size: 4vw;
+    }
+    
+    .paginacao .bi {
+        padding: 2%;
+        font-size: 4vw;
+    }
+    
+    .paginacao .paginas {
+        width: 9%;
+        height: 4.5vh;
+        padding: 2vh 1vw;
+    }
+    
+    .paginacao .skip {
+        width: 9%;
+        height: 4.5vh;
+    }
+
+}
+
+/* Iphone XR */
+@media screen and (min-width:376px) and (max-width: 430px) {
+    .pagina {
+        padding: 3vh 0vw;
+        gap: 2vh;
+    }
+
+    .descricao {
+        width: 96%;
+        flex-direction: column;
+        gap: 2vh;
+    }
+
+    .mascote img {
+        width: 13vw;
+    }
+    
+    .nome-tabela {
+        gap: 1vw;
+    }
+    
+    h1 {
+        font-size: 13.5vw;
+    }
+
+    .botaoadicionar {
+        width: 48%;
+        height: 4vh;
+        padding: 0vh;
+        gap: 2vw;
+        border-radius: 0.7vw;
+    }
+    
+    .botaoadicionar .texto-botao {
+        font-size: 5vw;
+    }
+
+    .tabela {
+        width: 96%;
+    }
+    
+    th {
+        font-size: 5vw;
+        padding: 2vh 2vw; 
+    }
+    
+    td {
+        font-size: 4.4vw;
+        padding: 2vh 2vw;
+    }
+
+    .operacoes{
+        gap: 0.8vw; 
+        padding: 3vh 2vw;
+    }
+    
+    button { 
+        width: 7vw;
+        height: 4vh;
+    }
+    
+    button i {
+        font-size: 4vw; 
+    }
+
+    .paginacao {
+        gap: 2vw;
+        padding: 3vh 0;
+    }
+
+    .paginacao a {
+        font-size: 5vw;
+    }
+    
+    .paginacao .bi {
+        padding: 2%;
+        font-size: 5vw;
+    }
+    
+    .paginacao .paginas {
+        width: 12%;
+        height: 4.5vh;
+        padding: 2vh 1vw;
+    }
+    
+    .paginacao .skip {
+        width: 12%;
+        height: 4.5vh;
+    }
 }
