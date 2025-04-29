@@ -1,3 +1,8 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
 .footer {
     margin-top: auto;
     max-width: 100%;
@@ -8,9 +13,10 @@
     flex-direction: column;
     align-items: center;
     font-family: "Urbanist", sans-serif; 
-    gap: 2vh;
+    gap: 5vh;
 }
 
+/* Estilo dos títulos */
 .titulo {
     font-size: 2vw;
     font-weight: bold;
@@ -18,6 +24,7 @@
     color: #F5F5F5;
 }
 
+/* Primeira linha do footer */
 .parte-01 {
     width: 95%;
     display: flex;
@@ -26,6 +33,7 @@
     gap: 3vw;
 }
 
+/* Seção com o título e os ícones das redes sociais */
 .redes-sociais {
     width: 22vw;
     height: 15vh;
@@ -34,39 +42,45 @@
     align-items: center;
     gap: 1vh;
     padding: 1vh;
+    justify-content: center;
 }
 
+/* Seção com todos os ícones das redes sociais */
 .redes-sociais .logos {
     display: flex;
-    gap: 1vw;
+    gap: 0.6vw;
     align-items: center;
     padding: 1vh;
 }
 
+/* Ícones Redes Sociais */
 i.bi {
     font-size: 3vw;
     color: #F5F5F5;
 }
 
+/* Seção com as imagens do Mascote e da Logo Rastros de Rua */
 .assinatura {
     width: 22vw;
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: -1vw; /* Conferir se é uma má prática */
-    padding-bottom: 3vh;
+    padding: 1vh;
 }
 
+/* Imagem Mascote Rastros de Rua */
 .assinatura .mascote {
-    width: 6vw;
+    width: 6.5vw;
     transform: scaleX(-1);
 }
 
+/* Imagem Logo Rastros de Rua */
 .assinatura .logo-branca {
-    width: 16vw;
+    width: 16.5vw;
     height: auto;
 }
 
+/* Seção com o título e a imagem da assinatura Code Jr */
 .assinatura-ej {
     width: 22vw;
     height: 15vh;
@@ -75,13 +89,16 @@ i.bi {
     align-items: center;
     gap: 1vh;
     padding: 1vh;
+    justify-content: center;
 }
 
+/* Imagem Assinatura Code Jr */
 .assinatura-ej .imagem {
     width: 5vw;
     height: auto;
 }
 
+/* Segunda Linha do footer */
 .parte-02 {
     width: 95%;
     border-top: 0.2vw solid #F5F5F5;
@@ -92,15 +109,17 @@ i.bi {
     align-items: flex-start;
 }
 
+/* Seção com os títulos e com os conteúdos de missão, visão e valores */
 .missao, .visao, .valores {
     width: 22vw;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 1vh; 
-    padding: 1vh;
+    padding: 3vh 0vw;
 }
 
+/* Textos do conteúdo de missão, visão e valores */
 .missao .conteudo, .visao .conteudo, .valores .conteudo {
     display: none;
     font-size: 1.5vw;
@@ -110,70 +129,114 @@ i.bi {
     margin-top: 1vh;
 }
 
+/* Mostra o conteúdo ao passar o mouse */
 .missao:hover .conteudo, .visao:hover .conteudo, .valores:hover .conteudo {
     display: block;
 }
 
-/* Responsividade */
-
-/* Tablet */
-@media (max-width: 834px) {
+/*Responsividade para Tablets*/
+/* Ipad mini / Ipad air / Ipad Pro / Surface Pro 7 / Surface Duo / Asus Zenbook Fold*/
+@media screen and (min-width: 431px) and (max-width: 1124px) and (min-height: 720px) {
     .footer {
-        gap: 10vh;
+        gap: 2vh;
     }
     .parte-01 {
         flex-direction: column;
         align-items: center;
-        gap: 3vh;
-        width: 90%;
+        gap: 2vh;
+        width: 95%;
     }
     .redes-sociais, .assinatura, .assinatura-ej, .missao, .visao, .valores {
-        width: 85%;
+        width: 90%;
     }
+    .redes-sociais .logos {
+        gap: 1.5vw;
+    }    
     .redes-sociais .logos i.bi {
-        font-size: 5vw; 
+        font-size: 6vw; 
     }
     .titulo {
-        font-size: 4vw;
+        font-size: 5vw;
     }
     .assinatura .mascote {
-        width: 14vw;
+        width: 15vw;
     }
     .assinatura .logo-branca {
-        width: 26vw;
+        width: 27vw;
     }
     .assinatura-ej .imagem {
-        width: 10vw;
+        width: 11vw;
     }
     .parte-02 {
         flex-direction: column;
         align-items: center;
-        gap: 0vh; 
+        gap: 2vh; 
         width: 90%;
     }
     .missao .conteudo, .visao .conteudo, .valores .conteudo {
-        font-size: 3vw;
+        font-size: 4vw;
     }
 }
 
-/* Celular */
-@media (max-width: 390px) {
+
+/*Responsividade para Celular*/
+/* Galaxy Z Fold 5 */
+@media screen and (min-width:0px) and (max-width: 344px) {
     .footer {
-        gap: 4vh;
+        gap: 2vh;
         padding: 3vh 2vw;
     }
     .parte-01 {
         flex-direction: column;
         align-items: center;
-        gap: 3vh;
+        gap: 1vh;
         width: 90%;
+    }
+    .titulo {
+        font-size: 7vw; 
+    }
+    .redes-sociais, .assinatura, .assinatura-ej, .missao, .visao, .valores {
+        width: 95%;
+    }
+    .redes-sociais .logos{
+        gap: 1vh;
+    }
+    
+    .redes-sociais .logos i.bi {
+        font-size: 9vw;
+    }
+
+    .assinatura .mascote {
+        width: 22vw; 
+    }
+    .assinatura .logo-branca {
+        width: 42vw; 
+    }
+    .assinatura-ej .imagem {
+        width: 18vw; 
     }
     .parte-02 {
         flex-direction: column;
         align-items: center;
-        gap: 0vh;
+        gap: 2vh;
+        width: 95%;
+    }
+    .missao .conteudo, .visao .conteudo, .valores .conteudo {
+        font-size: 5vw;
+    }
+}
+
+/* Iphone SE / Iphone XR / Iphone 12 Pro / Iphone 14 Pro Max / Pixel 7*/
+@media screen and (min-width:345px) and (max-width: 430px) {
+    .footer {
+        gap: 3vh;
+        padding: 3vh 2vw;
+    }
+    .parte-01 {
+        flex-direction: column;
+        align-items: center;
+        gap: 0%;
         width: 90%;
-        margin-top: 4vh; 
     }
     .titulo {
         font-size: 6vw; 
@@ -185,7 +248,7 @@ i.bi {
         gap: 1vh;
     }
     .redes-sociais .logos i.bi {
-        font-size: 9vw;
+        font-size: 8vw;
     }
     .assinatura .mascote {
         width: 20vw; 
@@ -195,6 +258,12 @@ i.bi {
     }
     .assinatura-ej .imagem {
         width: 16vw; 
+    }
+    .parte-02 {
+        flex-direction: column;
+        align-items: center;
+        gap: 2vh;
+        width: 90%;
     }
     .missao .conteudo, .visao .conteudo, .valores .conteudo {
         font-size: 4.5vw;
