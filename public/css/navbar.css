@@ -29,7 +29,7 @@ header {
     justify-content: space-between;
     align-items:center;
     width: 30%;
-    height: fit-content;
+    height: 100%;
     margin-right: 12px;
     font-family: "Staatliches", sans-serif;
 }
@@ -37,7 +37,7 @@ header {
 .links a{ /*Botões*/
     text-decoration: none;
     font-size: 200%;
-    height: 40%;
+    height: 36%;
 }
 
 .HomeButton{ /*Botão Home*/
@@ -117,11 +117,12 @@ header {
         width: 100%;
         padding-bottom: 4%;
         background-color: #1E3A5F;
-
+        height: fit-content; ;
     }
 
     .links a{
         font-size: 140%;
+        height: fit-content;
     }
 
     .HomeButton{
@@ -189,7 +190,7 @@ header {
         width: 100%;
         padding-bottom: 4%;
         background-color: #1E3A5F;
-
+        height: fit-content;
     }
     .links a{
         font-size: 180%;
@@ -260,7 +261,7 @@ header {
         width: 100%;
         padding-bottom: 4%;
         background-color: #1E3A5F;
-
+        height: fit-content;
     }
     .links a{
         font-size: 280%;
@@ -330,7 +331,7 @@ header {
         width: 100%;
         padding-bottom: 0px;
         background-color: #1E3A5F;
-
+        height: fit-content;
     }
     .links a{
         font-size: 150%;
@@ -380,5 +381,47 @@ header {
     }
     .LoginButton{
         width: 40%;
+    }
+}
+
+/*Laptops*/
+
+@media only screen and (min-width: 1024px) and (max-width: 1280px) and (min-height: 867px) and (max-height: 1000px) {
+    Header{
+        height: 14vh;
+    }
+    .logo-navbar i{
+        display: none;
+    }
+
+    .links {
+        width: 40%;
+    }
+
+    .HomeButton , .LoginButton{
+        width: 32%;
+    }
+    .publicacoesButton{
+        width: 55%;
+    }
+}
+
+@media only screen and (min-width: 1289px) and (max-width: 1440px) and (min-height: 867px) {
+    Header{
+        height: 14vh;
+    }
+    .logo-navbar i{
+        display: none;
+    }
+
+    .links {
+        width: 30%;
+    }
+
+    .HomeButton , .LoginButton{
+        width: 34%;
+    }
+    .publicacoesButton{
+        width: 55%;
     }
 }
