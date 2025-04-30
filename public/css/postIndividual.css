@@ -4,6 +4,7 @@
     box-sizing: border-box;
 }
 
+/* Fundo */
 .pagina {
     width: 100%;
     height: 100%;
@@ -16,6 +17,7 @@
     align-items: center;
 }
 
+/* Seção da Publicação / fundo azul */
 .publicacao {
     width: 78vw;
     padding: 3vh 2vw;
@@ -27,19 +29,20 @@
     gap: 2vh;
 }
 
+/* Seção com a imagem principal e as informações */
 .conteudo-principal {
     display: flex;
     gap: 1.3vw;
     align-items: center;
 }
 
+/* Imagem Principal do Post */
 .imagem {
     width: 43vw;
     height: 75vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    overflow: hidden;
 }
 
 .imagem img {
@@ -50,6 +53,7 @@
     box-shadow: 0 0.6vh 0.6vh #1E1E1E;
 }
 
+/* Seção com título, autor, data, local e tag */
 .informacoes {
     width: 29vw;
     height: 75vh; 
@@ -65,6 +69,7 @@
     color: #F5F5F5;
 }
 
+/* Seção com autor, data e local */
 .dados {
     display: flex;
     flex-direction: column;
@@ -78,6 +83,7 @@
     color: #F5F5F5;
 }
 
+/* Assinatura do artista */
 .tag {
     width: 14vw;
     height: 15vh;
@@ -91,6 +97,7 @@
     box-shadow: 0 0.6vh 0.6vh #0D0D0D;
 }
 
+/* Seção com materiais e descrição */
 .conteudo-complementar {
     display: flex;
     flex-direction: column;
@@ -103,6 +110,7 @@
     padding: 1vh;
 }
 
+/* Títulos materiais e descrição */
 h2 {
     font-size: 5.5vh;
     font-weight: 800; 
@@ -110,17 +118,24 @@ h2 {
     color: #F5F5F5;
 }
 
+/* Textos materiais e descrição */
 p {
     font-size: 3.5vh;
     font-weight: 500; 
     color: #F5F5F5;
 }
 
-/* Responsividade Tablet */
-@media (max-width: 834px) {
+/*Responsividade para Tablets*/
+/* Ipad mini / Ipad air / Ipad Pro / Surface Pro 7 / Surface Duo / Asus Zenbook Fold*/
+@media screen and (min-width: 431px) and (max-width: 1024px) and (min-height: 700px) {
+    .pagina {
+        padding: 5vh;
+    }
+
     .publicacao {
         width: 90vw;
-        padding: 3vh;
+        padding: 1vh;
+        border-radius: 3vw;
     }
 
     .conteudo-principal {
@@ -129,10 +144,15 @@ p {
         align-items: flex-start; 
         width: 100%;
     }
+
     .imagem {
         width: 100%;
-        height: auto;
+        height: 100%;
     }
+    .imagem img {
+        border-radius: 3vw;
+    }
+
     .informacoes {
         width: 80vw;
         height: 55vh;
@@ -140,13 +160,15 @@ p {
     }
 
     .tag {
-        width: 25vw;
-        height: 15vh;
+        width: 35vw;
+        height: 12vh;
     }
-    
-    
+    .tag img {
+        border-radius: 3vw;
+    }
+
     .titulo {
-        font-size: 9vh;
+        font-size: 7vh;
     }
 
     .autor, .data, .local {
@@ -155,12 +177,11 @@ p {
 
     .materiais, .descricao {
         width: 85vw;
-        font-size: 3vh;
         padding: 3px;
     }
 
     h2 {
-        font-size: 5vh;
+        font-size: 3.5vh;
     }
 
     p {
@@ -168,15 +189,254 @@ p {
     }
 }
 
+/* Tablet "padrão" - Dimensions:Responsive */
+@media screen and (min-width: 768px) and (max-width: 768px) and (min-height: 546px) and (max-height: 546px) {
+    .pagina {
+        padding: 5vh;
+    }
+
+    .publicacao {
+        width: 90vw;
+        padding: 1vh;
+        border-radius: 3vw;
+    }
+
+    .conteudo-principal {
+        flex-direction: column;
+        gap: 2vh;
+        align-items: flex-start; 
+        width: 100%;
+    }
+
+    .imagem {
+        width: 100%;
+        height: 100%;
+    }
+    .imagem img {
+        border-radius: 3vw;
+    }
+
+    .informacoes {
+        width: 80vw;
+        height: 80vh;
+        align-items: flex-start;
+    }
+
+    .tag {
+        width: 28vw;
+        height: 18vh;
+    }
+    .tag img {
+        border-radius: 3vw;
+    }
+
+    .titulo {
+        font-size: 12vh;
+    }
+
+    .conteudo-complementar {
+        margin-top: 3vh;
+    }
+
+    .autor, .data, .local {
+        font-size: 6vh;
+    }
+
+    .materiais, .descricao {
+        width: 85vw;
+        padding: 3px;
+    }
+
+    h2 {
+        font-size: 6vh;
+    }
+
+    p {
+        font-size: 4vh;
+    }
+}
+
+/*NextHub / NextHub Max*/
+@media screen and (min-width: 1025px) and (max-width: 1280px) and (min-height: 600px) and (max-height: 1200px) {
+    .publicacao {
+        width: 85vw;
+    }
+
+    .titulo {
+        font-size: 10vh;
+    }
+
+    .imagem {
+        width: 48vw;
+        height: 75vh;
+    }
+
+    .tag {
+        width: 15vw;
+        height: 12vh;
+    }
+    
+    .materiais, .descricao {
+        width: 100%;
+        padding: 3px;
+    }
+}
+
 /* Responsividade Celular */
-@media (max-width: 390px) {
+/* Mobile S */
+@media screen and (min-width:0px) and (max-width: 320px) {
     .pagina {
         padding: 3vh 5vw;
     }
 
     .publicacao {
         width: 93vw;
+        padding: 0.5vh;
+        border-radius: 3vw;
+        box-shadow: 0 0.4vh 0.4vh #000000;
+    }
+
+    .conteudo-principal {
+        flex-direction: column;
+        gap: 3vh;
+        align-items: flex-start; 
+        width: 100%;
+    }
+
+    .imagem {
+        width: 90vw;
+        height: 50vh;
+    }
+
+    .imagem img {
+        border-radius: 3vw;
+    }
+
+    .informacoes {
+        width: 88vw;
+        height: 45vh;
         padding: 1vh;
+        align-items: flex-start;
+    }
+
+    .titulo {
+        font-size: 6vh;
+    }
+
+    .autor, .data, .local {
+        font-size: 3.3vh;
+        padding: 0%;
+    }
+
+    .tag {
+        width: 40vw;
+        height: 13vh;
+    }
+
+    .tag img {
+        border-radius: 3vw;
+    }
+
+    .conteudo-complementar {
+        margin-top: 0%;
+    }
+
+    .materiais, .descricao {
+        width: 88vw;
+        padding: 1vh;
+    }
+
+    h2 {
+        font-size: 3.3vh;
+    }
+
+    p {
+        font-size: 2.8vh;
+    }
+}
+
+/* Galaxy Z Fold 5 */
+@media screen and (min-width:321px) and (max-width: 344px) {
+    .pagina {
+        padding: 3vh 5vw;
+    }
+
+    .publicacao {
+        width: 93vw;
+        padding: 0.5vh;
+        border-radius: 3vw;
+        box-shadow: 0 0.4vh 0.4vh #000000;
+    }
+
+    .conteudo-principal {
+        flex-direction: column;
+        gap: 3vh;
+        align-items: flex-start; 
+        width: 100%;
+    }
+
+    .imagem {
+        width: 90vw;
+        height: 35vh;
+    }
+
+    .imagem img {
+        border-radius: 3vw;
+    }
+
+    .informacoes {
+        width: 88vw;
+        height: 35vh;
+        padding: 1vh;
+        align-items: flex-start;
+    }
+
+    .titulo {
+        font-size: 4vh;
+    }
+
+    .autor, .data, .local {
+        font-size: 2.5vh;
+        padding: 0%;
+    }
+
+    .tag {
+        width: 42vw;
+        height: 9vh;
+    }
+
+    .tag img {
+        border-radius: 3vw;
+    }
+
+    .conteudo-complementar {
+        margin-top: 0%;
+    }
+
+    .materiais, .descricao {
+        width: 88vw;
+        font-size: 2.8vh;
+        padding: 1vh;
+    }
+
+    h2 {
+        font-size: 3vh;
+    }
+
+    p {
+        font-size: 2vh;
+    }
+}
+
+/* Iphone SE */
+@media screen and (min-width:345px) and (max-width: 375px) {
+    .pagina {
+        padding: 3vh 5vw;
+    }
+
+    .publicacao {
+        width: 93vw;
+        padding: 0.5vh;
         border-radius: 3vw;
         box-shadow: 0 0.4vh 0.4vh #000000;
     }
@@ -190,7 +450,10 @@ p {
 
     .imagem {
         width: 90.5vw;
-        height: 60vh;
+        height: 50vh;
+    }
+
+    .imagem img {
         border-radius: 3vw;
     }
 
@@ -202,35 +465,108 @@ p {
     }
 
     .titulo {
-        font-size: 6.5vh;
+        font-size: 6vh;
     }
 
     .autor, .data, .local {
-        font-size: 3vh;
+        font-size: 3.5vh;
     }
 
     .tag {
         width: 35vw;
         height: 12vh;
+    }
+
+    .tag img {
         border-radius: 3vw;
     }
 
     .conteudo-complementar {
-        gap: 2vh;
-        margin-top: 2vh;
+        margin-top: 1vh;
     }
 
     .materiais, .descricao {
         width: 88vw;
-        font-size: 2.8vh;
         padding: 1vh;
     }
 
     h2 {
-        font-size: 3.5vh;
+        font-size: 4vh;
     }
 
     p {
-        font-size: 2.8vh;
+        font-size: 3vh;
+    }
+}
+
+/* Iphone XR / Iphone 12 Pro / Iphone 14 Pro Max / Pixel 7*/
+@media screen and (min-width:376px) and (max-width: 430px) {
+    .pagina {
+        padding: 3vh 5vw;
+    }
+
+    .publicacao {
+        width: 93vw;
+        padding: 0.5vh;
+        border-radius: 3vw;
+        box-shadow: 0 0.4vh 0.4vh #000000;
+    }
+
+    .conteudo-principal {
+        flex-direction: column;
+        gap: 3vh;
+        align-items: flex-start; 
+        width: 100%;
+    }
+
+    .imagem {
+        width: 90.5vw;
+        height: 42vh;
+    }
+
+    .imagem img {
+        border-radius: 3vw;
+    }
+
+    .informacoes {
+        width: 88vw;
+        height: 42vh;
+        padding: 1vh;
+        align-items: flex-start;
+    }
+
+    .titulo {
+        font-size: 4.8vh;
+    }
+
+    .autor, .data, .local {
+        font-size: 3vh;
+        padding: 0%;
+    }
+
+    .tag {
+        width: 40vw;
+        height: 10vh;
+    }
+
+    .tag img {
+        border-radius: 3vw;
+    }
+
+    .conteudo-complementar {
+        margin-top: 1vh;
+    }
+
+    .materiais, .descricao {
+        width: 88vw;
+        padding: 1vh;
+    }
+
+    h2 {
+        font-size: 3.3vh;
+    }
+
+    p {
+        font-size: 2.5vh;
     }
 }
