@@ -18,6 +18,9 @@ body{
     background: rgba(0, 0, 0, 0.6);
     font-family: "urbanist", sans-serif;
 }
+.descricao img{
+    width: 12%;
+}
 
 
 .descricao{ /*organiza o título e do botão de criar*/
@@ -35,11 +38,8 @@ body{
     width: 50%;
     height: 80%;
 }
-.Titulo img{/* Ajusta a Logo*/
-    width: 12%;
-    transform: scaleX(-1); /*Espelha a imagem*/
-}
-.Titulo h1{ /*Parte escrita do título*/
+
+.Titulo h1{
     font-family: "staatliches", sans-serif;
     color: #F5F5F5;
     font-size: 360%;
