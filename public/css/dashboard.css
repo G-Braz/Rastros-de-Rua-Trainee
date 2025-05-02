@@ -8,8 +8,11 @@
 body{
     background-image: url(../assets/FundoDashboard.jpg);
     background-repeat: no-repeat;
-    background-size:cover;
+    background-size: cover;
     background-position-y: -70px;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
 }
 
 body * {
@@ -84,36 +87,116 @@ body * {
 
 
 
-@media (max-width:440px){
+@media (max-width:380px){
     body{
         background-position-y:0 ;
         background-position-x: 20%;
     }
     .conteudo{
-        padding:20% 0;
+        padding:10% 0;
         justify-content: center;
-        gap:50px;
+        gap:40px;
+        overflow: hidden;
     }
     .logo{
-        
-        width: 80vh;
+        scale:1.20;
+        width: 100%;
     }
 
     .container{
         flex-direction: column;
         align-items: center;
         height: 100%;
+        gap:25px;
     }
     .caixaBotao{
         padding: 6%;
-        width: 43%;
-        height: 100%;
+        width: 35%;
+        height: 20vh;
 
     }
     .caixaBotao .titulo{
-        font-size: 25px;
+        font-size: 90%;
     }
     .caixaBotao .bi{
-        font-size: 50px;
+        font-size: 40px;
+    }
+}
+
+@media screen and (min-width:380px) and (max-width:440px){
+    body{
+        background-position-y: 0;
+        background-position-x: 20%;
+        
+    }
+    .conteudo{
+        padding:17% 0;
+        justify-content: center;
+        gap:60px;
+        overflow: hidden;
+    }
+    .logo{
+        scale:1.40;
+        width: 100%;
+    }
+
+    .container{
+        flex-direction: column;
+        align-items: center;
+        height: 100%;
+        gap:40px;
+        justify-content: center;
+        align-items: center;
+    }
+    .caixaBotao{
+        padding: 6%;
+        width: 40%;
+        height: 18vh;
+
+    }
+    .caixaBotao .titulo{
+        font-size: 24px;
+    }
+    .caixaBotao .bi{
+        font-size: 60px;
+    }
+}
+@media screen and (min-width:541px) and (max-width:1000px){
+    body{
+        background-position-y: 0;
+        background-position-x: 20%;
+        overflow: hidden;
+    }
+    .conteudo{
+        padding:7% 0;
+        justify-content: center;
+        align-items: center;
+        gap:60px;
+        overflow: hidden;
+    }
+    .logo{
+        scale: 1.20;
+        width: 100%;
+    }
+
+    .container{
+        flex-direction: column;
+        align-items: center;
+        height: 100%;
+        gap:40px;
+        justify-content: center;
+        align-items: center;
+    }
+    .caixaBotao{
+        padding: 6%;
+        width: 35%;
+        height: 20vh;
+
+    }
+    .caixaBotao .titulo{
+        font-size: 30px;
+    }
+    .caixaBotao .bi{
+        font-size: 70px;
     }
 }
