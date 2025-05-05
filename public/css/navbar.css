@@ -14,9 +14,9 @@ header {
     background-color: #1E3A5F;
 }
 
-.logo-navbar { /*Logo do site*/
+.logo-navbar img{ /*Logo do site*/
     margin-left: 12px;
-    width: 12%;
+    width: 80%;
 }
 
 .logo-navbar i{ /*Icone Hamburger*/
@@ -292,7 +292,7 @@ header {
     }
 }
 /*nest hub*/
-@media only screen and (min-width: 1024px) and (min-height: 600px) and (max-height: 799px) {
+@media only screen and (min-width: 1024px) and (min-height: 600px) and (max-height: 767px) {
     header {
         position: relative;
         flex-direction: column;
@@ -363,12 +363,12 @@ header {
 }
 
 /*Nest Hub Max*/ /*Usa a mesma configuração do desktop, pois o tamanho da tela permite*/
-@media only screen and (min-width: 1280px) and (max-height: 800px) {
+@media only screen and (min-width: 1280px) and (max-width:1280px)and (min-height: 800px) {
     .Header{
         height: 14vh;
     }
     .logo-navbar img{
-        width: 100%;
+        width: 76%;
     }
     .links a{
         font-size: 150%;
@@ -386,16 +386,19 @@ header {
 
 /*Laptops*/
 
-@media only screen and (min-width: 1024px) and (max-width: 1280px) and (min-height: 867px) and (max-height: 1000px) {
+@media only screen and (min-width: 1024px) and (max-width: 1366px) and (min-height: 768px) and (max-height: 799px) {
     Header{
         height: 14vh;
     }
     .logo-navbar i{
         display: none;
     }
-
+    .logo-navbar img{
+        width: 80%;
+    }
     .links {
-        width: 40%;
+        width: 33%;;
+        height: fit-content;
     }
 
     .HomeButton , .LoginButton{
@@ -406,7 +409,7 @@ header {
     }
 }
 
-@media only screen and (min-width: 1289px) and (max-width: 1440px) and (min-height: 867px) {
+@media only screen and (min-width: 1367px) and (max-width: 1440px) and (min-height: 867px) {
     Header{
         height: 14vh;
     }
