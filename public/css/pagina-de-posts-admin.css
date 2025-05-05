@@ -74,6 +74,12 @@ h1 {
     color: #0C1C31;
 }
 
+/*Deixa o botão de criar publicação maior ao passar o mouse*/
+.botaoadicionar:hover{ 
+    transform: scale(1.05);
+    transition: transform 0.2s ease-in-out;
+}
+
 /* Parte 02: Tabela */
 .tabela {
     width: 90%;
@@ -131,10 +137,16 @@ button {
     cursor: pointer;
 }
 
-/* Ícones operações */
+/* Ícones */
 button i {
     color: #0C1C31; 
     font-size: 2vw; 
+}
+
+/*Efeito ao passar o mouse nos ícones de operações*/
+button:hover{ 
+    transform: scale(1.1);
+    transition: transform 0.2s ease-in-out;
 }
 
 /* Parte 03: Paginação */
@@ -153,7 +165,7 @@ button i {
     display: flex;
     background: #F5F5F5;
     /* border-radius: 2vw;  */
-    border-radius: 0.7vw; /* Mudei para padronizar com  a tabela e com os botões */
+    border-radius: 0.7vw; 
     box-shadow: 0 4px 15px #0D0D0D;
     font-size: 2vw;
     color: #0C1C31;
@@ -182,14 +194,12 @@ button i {
 }
 
 /* Muda ao passar o mouse */
-.paginacao .bi:hover {
-    color: #F5F5F5;
-}
-
 .paginacao a:hover {
-    background: rgb(12, 28, 49, 0.8);
+    background: rgb(12, 28, 49, 0.8); /* Fundo muda (transparente) ao passar o mouse */
     border: 1px solid rgb(245, 245, 245, 0.4);
     color: #F5F5F5;
+    transform: scale(1.05); /* Aumenta ao passar o mouse */
+    transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
 }
 
 /*Responsividade para Tablets*/
