@@ -154,7 +154,7 @@ button:hover{
     display: flex;
     flex-direction: row;
     gap: 0.6vw;
-    padding: 2vh 0;
+    padding: 3vh;
     align-items: center;
     justify-content: center;
     width: 100%;
@@ -183,7 +183,7 @@ button:hover{
 
 .paginacao .paginas {
     width: 5%;
-    height: 6.5vh;
+    height: 6vh;
     padding: 3vh 1vw;
     font-weight: 600;
 }
