@@ -206,13 +206,13 @@ td{ /*Corpo da tabela*/
 
     .operacoes i {
         font-size: 80%;
-        padding: 5%;
+        padding: 3%;
         border-radius: 7px;
     }
 
     .paginacao {
         gap:5px;
-        width:80%;
+        width:70%;
         height: 6%;
     }
 
@@ -605,7 +605,7 @@ td{ /*Corpo da tabela*/
 }
 
 /*Laptops*/
-@media only screen and (min-width: 1025px) and (max-width: 1440px) and (min-height: 768px) {
+@media only screen and (min-width: 1025px) and (max-width: 1440px) and (min-height: 680px) {
     .createButton{
         width:23%;
         height: 55%;
