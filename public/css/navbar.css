@@ -292,7 +292,7 @@ header {
     }
 }
 /*nest hub*/
-@media only screen and (min-width: 1024px) and (min-height: 600px) and (max-height: 699px) {
+@media only screen and (min-width: 1024px) and (max-width:1200px) and (min-height: 600px) and (max-height: 699px) {
     header {
         position: relative;
         flex-direction: column;
@@ -386,7 +386,7 @@ header {
 
 /*Laptops*/
 
-@media only screen and (min-width: 1024px) and (max-width: 1366px) and (min-height: 700px) and (max-height: 799px) {
+@media only screen and (min-width: 1025px) and (max-width: 1366px) and (min-height: 600px) and (max-height: 799px) {
     Header{
         height: 14vh;
     }
@@ -409,22 +409,24 @@ header {
     }
 }
 
-@media only screen and (min-width: 1367px) and (max-width: 1440px) and (min-height: 867px) {
+@media only screen and (min-width: 1367px) and (max-width: 1800px) and (min-height: 600px) {
     Header{
-        height: 14vh;
+        height: 16vh;
     }
     .logo-navbar i{
         display: none;
     }
 
     .links {
-        width: 30%;
+        width: 34%;
     }
 
     .HomeButton , .LoginButton{
         width: 34%;
+        padding:4%;
     }
     .publicacoesButton{
         width: 55%;
+        padding :4%;
     }
 }
