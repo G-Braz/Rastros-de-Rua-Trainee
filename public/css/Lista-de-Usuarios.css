@@ -160,6 +160,7 @@ td{ /*Corpo da tabela*/
 
 /* Modal Visualizar */
 .modalUsuarioVisualizar {
+    z-index: 1;
     width: 28vw;
     height: fit-content;
     position: absolute;
@@ -270,6 +271,7 @@ td{ /*Corpo da tabela*/
 
 /* Modal Excluir */
 .modalUsuarioExcluir {
+    z-index: 1;
     width: 28vw;
     height: fit-content;
     position: absolute;
@@ -342,6 +344,16 @@ td{ /*Corpo da tabela*/
     transform: scale(1.05);
     transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
 }
+#tela{
+    z-index: 1;
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.4);
+    backdrop-filter: blur(3px);
+}
+
 
 /* Responsividade */
 

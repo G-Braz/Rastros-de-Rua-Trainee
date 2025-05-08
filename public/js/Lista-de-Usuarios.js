@@ -76,10 +76,14 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 // Abrir e Fechar Modal 
-function abrirModal(idModal) {
-    document.getElementById(idModal).style.display = "flex";
+const tela = document.querySelector('#tela');
+
+function abrirModal(idModal){
+    document.getElementById(idModal).style.display="flex";
+    tela.style.display = "block";
 }
 
-function fecharModal(idModal) {
-    document.getElementById(idModal).style.display = "none";
+function fecharModal(idModal){
+    document.getElementById(idModal).style.display="none";
+    tela.style.display = "none";
 }
