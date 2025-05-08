@@ -158,6 +158,115 @@ td{ /*Corpo da tabela*/
     transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
 }
 
+/* Modal Visualizar */
+.modalUsuarioVisualizar {
+    width: 28vw;
+    height: fit-content;
+    position: absolute;
+    top: 6%;
+    left: 35%;
+    background: #F5F5F5;
+    border-radius: 0.6vw;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+    display: none;
+    flex-direction: column;
+    align-items: center;
+}
+
+.topo-info { /* Cabeçalho azul com o ícone e com o título */
+    width: 100%;
+    text-align: center;
+    background: #1E3A5F;
+    padding: 1vh;
+    border-top-right-radius: 0.5vw;
+    border-top-left-radius: 0.5vw;
+}
+
+.icone-info i { /* Ícone usuário*/
+    font-size: 11vh;
+    color: #F5F5F5;
+}
+
+.titulo-info h2 { /* Título Informações */
+    font-size: 4.5vh;
+    font-family: "Staatliches", sans-serif;
+    color: #F5F5F5;
+}
+
+.conteiner-info {  /* Parte com os dados do usuário */
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    gap: 3vh;
+    padding: 3vh;
+}
+
+.item-info { /* Parte de cada dado do usuário */
+    display: flex;
+    flex-direction: column;
+    gap: 0.5vh;
+}
+
+.titulo {
+    font-size: 3.5vh;
+    font-family: "Urbanist", sans-serif;
+    font-weight: bold;
+    color: #0C1C31;
+}
+
+.box { /* Caixa de texto com a informação */
+    background: #1E3A5F;
+    padding: 1vh;
+    border-radius: 0.6vw;
+    color: #F5F5F5;
+    font-size: 3.2vh;
+    box-shadow: 0 4px 4px rgba(0,0,0,0.25);
+}
+
+.box:hover { /* Muda a cor da caixa de texto com a informação ao passar o mouse */
+    background: #0C1C31;
+}
+
+.senha-box { /* Caixa de texto com a senha e o ícone */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 1vw;
+}
+
+.icone-senha i { /* Ícone olho */
+    color: #F5F5F5;
+    font-size: 3.2vh;
+    cursor: pointer;
+}
+
+.icone-senha:hover { /* Efeito no ícone ao passar o mouse */
+    transform: scale(1.05);
+    transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+
+.botao-modal { /* Parte com o botão de fechar */
+    padding: 2vh;
+}
+
+.fechar { /* botão fechar */
+    background: #1E3A5F;
+    color: #F5F5F5;
+    padding: 1vh 2vh;
+    font-size: 3.5vh;
+    font-family: "Staatliches", sans-serif;
+    border-radius: 0.6vw;
+    cursor: pointer;
+    border: none;
+    box-shadow: 0 4px 4px rgba(0,0,0,0.25);
+}
+
+.fechar:hover { /* Efeito no botão fechar ao passar o mouse */
+    background: #0C1C31;
+    transform: scale(1.05);
+    transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+
 /* Responsividade */
 
 /*Celulares*/
