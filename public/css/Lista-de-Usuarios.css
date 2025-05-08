@@ -191,6 +191,7 @@ td{ /*Corpo da tabela*/
     font-size: 4.5vh;
     font-family: "Staatliches", sans-serif;
     color: #F5F5F5;
+    font-weight: 200;
 }
 
 .conteiner-info {  /* Parte com os dados do usuário */
@@ -277,7 +278,7 @@ td{ /*Corpo da tabela*/
     background: #F5F5F5;
     border-radius: 0.6vw;
     box-shadow: 0 4px 10px rgba(0,0,0,0.25);
-    display: flex;
+    display: none;
     flex-direction: column;
     align-items: center;
 }
@@ -310,6 +311,7 @@ td{ /*Corpo da tabela*/
     color: #0C1C31;
     margin-top: 3vh;
     padding: 1vh;
+    text-align: center;
 }
 
 .pergunta:hover { /* Efeito na pergunta ao passar o mouse  */
@@ -410,6 +412,67 @@ td{ /*Corpo da tabela*/
         gap:2%;
         font-size: 120%;
     }
+    
+    /* Modal Visualizar */
+    .modalUsuarioVisualizar {
+        width: 85vw;
+        top: 12%;
+        left: 8%;
+    }
+
+    .icone-info i { /* Ícone usuário*/
+        font-size: 8vh;
+        color: #F5F5F5;
+    }
+
+    .titulo-info h2 { /* Título Informações */
+        font-size: 3.5vh;
+    }
+
+    .titulo {
+        font-size: 2.8vh;
+    }
+
+    .box { /* Caixa de texto com a informação */
+        padding: 1vh;
+        font-size: 2.5vh;
+    }
+
+    .icone-senha i { /* Ícone olho */
+        font-size: 2.8vh;
+    }
+
+    .fechar { /* botão fechar */
+        font-size: 3vh
+    }
+
+    /* Modal Excluir */
+    .modalUsuarioExcluir {
+        width: 70vw;
+        top: 30%;
+        left: 15%;
+    }
+
+    .icone-excluir i { /* Ícone excluir*/
+        font-size: 8vh;
+    }
+    
+    .titulo-excluir h2 { /* Título Excluir Usuário */
+        font-size: 3vh;
+    }
+
+    .pergunta { /* Pergunta de alerta */
+        font-size: 2.2vh;
+        text-align: center;
+    }
+
+    .botoes-modal { /* Parte com os botões */
+        flex-direction: column;
+    }
+    
+    .cancelar, .excluir{ /* Botões de cancelar e excluir */
+        font-size: 2.5vh;
+    }
 }
 
 
@@ -471,6 +534,63 @@ td{ /*Corpo da tabela*/
         height: 100%;
         font-size: 128%;
         border-radius: 6px;
+    }
+
+    /* Modal Visualizar */
+    .modalUsuarioVisualizar {
+        width: 85vw;
+        top: 12%;
+        left: 8%;
+    }
+
+    .icone-info i { /* Ícone usuário*/
+        font-size: 8vh;
+        color: #F5F5F5;
+    }
+
+    .titulo-info h2 { /* Título Informações */
+        font-size: 3.5vh;
+    }
+
+    .titulo {
+        font-size: 2.8vh;
+    }
+
+    .box { /* Caixa de texto com a informação */
+        padding: 1vh;
+        font-size: 2.5vh;
+    }
+
+    .icone-senha i { /* Ícone olho */
+        font-size: 2.8vh;
+    }
+
+    .fechar { /* botão fechar */
+        font-size: 3vh
+    }
+
+    /* Modal Excluir */
+    .modalUsuarioExcluir {
+        width: 70vw;
+        top: 35%;
+        left: 15%;
+    }
+
+    .icone-excluir i { /* Ícone excluir*/
+        font-size: 8vh;
+    }
+    
+    .titulo-excluir h2 { /* Título Excluir Usuário */
+        font-size: 3vh;
+    }
+
+    .pergunta { /* Pergunta de alerta */
+        font-size: 2.2vh;
+        text-align: center;
+    }
+    
+    .cancelar, .excluir{ /* Botões de cancelar e excluir */
+        font-size: 2.5vh;
     }
 }
 
@@ -534,6 +654,63 @@ td{ /*Corpo da tabela*/
     .operacoes{
         gap: 3%;
     }
+
+    /* Modal Visualizar */
+    .modalUsuarioVisualizar {
+        width: 85vw;
+        top: 12%;
+        left: 8%;
+    }
+
+    .icone-info i { /* Ícone usuário*/
+        font-size: 8vh;
+        color: #F5F5F5;
+    }
+
+    .titulo-info h2 { /* Título Informações */
+        font-size: 3.5vh;
+    }
+
+    .titulo {
+        font-size: 2.8vh;
+    }
+
+    .box { /* Caixa de texto com a informação */
+        padding: 1vh;
+        font-size: 2.5vh;
+    }
+
+    .icone-senha i { /* Ícone olho */
+        font-size: 2.8vh;
+    }
+
+    .fechar { /* botão fechar */
+        font-size: 3vh
+    }
+
+    /* Modal Excluir */
+    .modalUsuarioExcluir {
+        width: 65vw;
+        top: 40%;
+        left: 17%;
+    }
+
+    .icone-excluir i { /* Ícone excluir*/
+        font-size: 8vh;
+    }
+    
+    .titulo-excluir h2 { /* Título Excluir Usuário */
+        font-size: 3vh;
+    }
+
+    .pergunta { /* Pergunta de alerta */
+        font-size: 2.2vh;
+        text-align: center;
+    }
+    
+    .cancelar, .excluir{ /* Botões de cancelar e excluir */
+        font-size: 2.5vh;
+    }
 }
 /*Tablets*/
 /*Ipad mini/ Ipad Air/ Surface Pro 7*/
@@ -595,6 +772,63 @@ td{ /*Corpo da tabela*/
         gap: 3%;
         font-size: 80%;
     }
+    
+    /* Modal Visualizar */
+    .modalUsuarioVisualizar {
+        width: 70vw;
+        top: 12%;
+        left: 15%;
+    }
+    
+    .icone-info i { /* Ícone usuário*/
+        font-size: 8vh;
+        color: #F5F5F5;
+    }
+    
+    .titulo-info h2 { /* Título Informações */
+        font-size: 3.5vh;
+    }
+    
+    .titulo {
+        font-size: 2.8vh;
+    }
+    
+    .box { /* Caixa de texto com a informação */
+        padding: 1vh;
+        font-size: 2.5vh;
+    }
+    
+    .icone-senha i { /* Ícone olho */
+        font-size: 2.8vh;
+    }
+    
+    .fechar { /* botão fechar */
+        font-size: 3vh
+    }
+    
+    /* Modal Excluir */
+    .modalUsuarioExcluir {
+        width: 65vw;
+        top: 35%;
+        left: 20%;
+    }
+    
+    .icone-excluir i { /* Ícone excluir*/
+        font-size: 9vh;
+    }
+        
+    .titulo-excluir h2 { /* Título Excluir Usuário */
+        font-size: 3.5vh;
+    }
+    
+    .pergunta { /* Pergunta de alerta */
+        font-size: 2.8vh;
+        text-align: center;
+    }
+        
+    .cancelar, .excluir{ /* Botões de cancelar e excluir */
+        font-size: 3vh;
+    }
 }
 
 /*Ipad Pro*/
@@ -654,6 +888,63 @@ td{ /*Corpo da tabela*/
     }
     .operacoes{
         gap: 5%;
+    }
+
+    /* Modal Visualizar */
+    .modalUsuarioVisualizar {
+        width: 70vw;
+        top: 12%;
+        left: 15%;
+    }
+
+    .icone-info i { /* Ícone usuário*/
+        font-size: 8vh;
+        color: #F5F5F5;
+    }
+
+    .titulo-info h2 { /* Título Informações */
+        font-size: 3.5vh;
+    }
+
+    .titulo {
+        font-size: 2.8vh;
+    }
+
+    .box { /* Caixa de texto com a informação */
+        padding: 1vh;
+        font-size: 2.5vh;
+    }
+
+    .icone-senha i { /* Ícone olho */
+        font-size: 2.8vh;
+    }
+
+    .fechar { /* botão fechar */
+        font-size: 3vh
+    }
+
+    /* Modal Excluir */
+    .modalUsuarioExcluir {
+        width: 70vw;
+        top: 35%;
+        left: 15%;
+    }
+
+    .icone-excluir i { /* Ícone excluir*/
+        font-size: 9vh;
+    }
+    
+    .titulo-excluir h2 { /* Título Excluir Usuário */
+        font-size: 3.5vh;
+    }
+
+    .pergunta { /* Pergunta de alerta */
+        font-size: 2.8vh;
+        text-align: center;
+    }
+    
+    .cancelar, .excluir{ /* Botões de cancelar e excluir */
+        font-size: 3vh;
     }
 }
 
@@ -715,6 +1006,63 @@ td{ /*Corpo da tabela*/
     }
     .operacoes{
         gap: 5%;
+    }
+
+    /* Modal Visualizar */
+    .modalUsuarioVisualizar {
+        width: 70vw;
+        top: 12%;
+        left: 15%;
+    }
+
+    .icone-info i { /* Ícone usuário*/
+        font-size: 8vh;
+        color: #F5F5F5;
+    }
+
+    .titulo-info h2 { /* Título Informações */
+        font-size: 3.5vh;
+    }
+
+    .titulo {
+        font-size: 2.8vh;
+    }
+
+    .box { /* Caixa de texto com a informação */
+        padding: 1vh;
+        font-size: 2.5vh;
+    }
+
+    .icone-senha i { /* Ícone olho */
+        font-size: 2.8vh;
+    }
+
+    .fechar { /* botão fechar */
+        font-size: 3vh
+    }
+
+    /* Modal Excluir */
+    .modalUsuarioExcluir {
+        width: 65vw;
+        top: 35%;
+        left: 20%;
+    }
+
+    .icone-excluir i { /* Ícone excluir*/
+        font-size: 9vh;
+    }
+    
+    .titulo-excluir h2 { /* Título Excluir Usuário */
+        font-size: 3.5vh;
+    }
+
+    .pergunta { /* Pergunta de alerta */
+        font-size: 2.8vh;
+        text-align: center;
+    }
+    
+    .cancelar, .excluir{ /* Botões de cancelar e excluir */
+        font-size: 3vh;
     }
 }
 
