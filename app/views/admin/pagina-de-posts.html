@@ -11,6 +11,7 @@
     <title>Tabela de Publicações</title>
     <link rel="stylesheet" href="/public/css/pagina-de-posts-admin.css">
     <link rel="stylesheet" href="/public/css/modalVisualizar.css">
+    <link rel="stylesheet" href="/public/css/modalEditar.css">
 </head>
 <body>
     <div class="pagina">
@@ -50,8 +51,8 @@
                         <td>Lorem Ipsum</td>
                         <td>01/01/2025</td>
                         <td class="operacoes">
-                            <button><i class="bi bi-eye-fill" onclick="abrirModal('fundo','modal')"></i></button>
-                            <button><i class="bi bi-pencil-square"></i></button>
+                            <button><i class="bi bi-eye-fill" onclick="abrirModal('fundoVisualizar','modalVisualizar')"></i></button>
+                            <button><i class="bi bi-pencil-square" onclick="abrirModal('fundoEditar','modalEditar')"></i></button>
                             <button><i class="bi bi-trash-fill"></i></button>
                         </td>
                     </tr>
@@ -61,8 +62,8 @@
                         <td>Lorem Ipsum</td>
                         <td>02/01/2025</td>
                         <td class="operacoes">
-                            <button><i class="bi bi-eye-fill"  onclick="abrirModal('fundo','modal')"></i></button>
-                            <button><i class="bi bi-pencil-square"></i></button>
+                            <button><i class="bi bi-eye-fill"  onclick="abrirModal('fundoVisualizar','modalVisualizar')"></i></button>
+                            <button><i class="bi bi-pencil-square" onclick="abrirModal('fundoEditar','modalEditar')"></i></button>
                             <button><i class="bi bi-trash-fill"></i></button>
                         </td>
                     </tr>
@@ -72,8 +73,8 @@
                         <td>Lorem Ipsum</td>
                         <td>03/01/2025</td>
                         <td class="operacoes">
-                            <button><i class="bi bi-eye-fill"  onclick="abrirModal('fundo','modal')"></i></button>
-                            <button><i class="bi bi-pencil-square"></i></button>
+                            <button><i class="bi bi-eye-fill"  onclick="abrirModal('fundoVisualizar','modalVisualizar')"></i></button>
+                            <button><i class="bi bi-pencil-square" onclick="abrirModal('fundoEditar','modalEditar')"></i></button>
                             <button><i class="bi bi-trash-fill"></i></button>
                         </td>
                     </tr>
@@ -83,8 +84,8 @@
                         <td>Lorem Ipsum</td>
                         <td>04/01/2025</td>
                         <td class="operacoes">
-                            <button><i class="bi bi-eye-fill"  onclick="abrirModal('fundo','modal')"></i></button>
-                            <button><i class="bi bi-pencil-square"></i></button>
+                            <button><i class="bi bi-eye-fill"  onclick="abrirModal('fundoVisualizar','modalVisualizar')"></i></button>
+                            <button><i class="bi bi-pencil-square" onclick="abrirModal('fundoEditar','modalEditar')"></i></button>
                             <button><i class="bi bi-trash-fill"></i></button>
                         </td>
                     </tr>
@@ -94,8 +95,8 @@
                         <td>Lorem Ipsum</td>
                         <td>05/01/2025</td>
                         <td class="operacoes">
-                            <button><i class="bi bi-eye-fill"  onclick="abrirModal('fundo','modal')"></i></button>
-                            <button><i class="bi bi-pencil-square"></i></button>
+                            <button><i class="bi bi-eye-fill"  onclick="abrirModal('fundoVisualizar','modalVisualizar')"></i></button>
+                            <button><i class="bi bi-pencil-square" onclick="abrirModal('fundoEditar','modalEditar')"></i></button>
                             <button><i class="bi bi-trash-fill"></i></button>
                         </td>
                     </tr>
@@ -156,36 +157,112 @@
         </div>
     </div>
     <!--Modal visualizar-->
-    <div class="modalVisualizar" id="fundo">
-        <div class="modal" id="modal">
-            <div class="tituloModal">
+    <div class="modalVisualizar" id="fundoVisualizar">
+        <div class="Visualizar" id="modalVisualizar">
+            <div class="tituloModalVisualizar">
                 <i class="bi bi-window"></i>
                 <p>visualizar Publicação</p>
             </div>
-            <div class="imagem">   
-                <img src="/public/assets/imagemTeste.jpg" alt="Mascote">
+            <div class="imagensVisualizar">   
+                <div class="arteVisualizar">
+                    <h1>arte</h1>
+                    <img src="/public/assets/imagemTeste.jpg" alt="Mascote">
+                </div>
+                <div class="tagVisualizar">
+                    <h1>tag</h1>
+                    <img src="/public/assets/Imagem Tag.png" alt="Tag do autor">
+                </div>
             </div>
-            <div class="tituloPublicacao">
+            <div class="tituloPublicacaoVisualizar">
                 <h1>Título</h1>
                 <p>Lorem Ipsum</p>
             </div>
-            <div class="descricaoModal">
+            <div class="descricaoModalVisualizar">
                 <h1>Descrição</h1>
                 <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ad nobis quod fuga obcaecati beatae aperiam temporibus dolor voluptatem et, saepe fugit. Totam quod error pariatur explicabo animi provident voluptas veniam?</p>
             </div>
-            <div class="autor">
+            <div class="autorVisualizar">
                 <h1>Autor</h1>
                 <p>Lorem Ipsum</p>
             </div>
-            <div class="data">
+            <div class="localVisualizar">
+                <h1>Local</h1>
+                <p>Lorem Ipsum</p>
+            </div>
+            <div class="dataVisualizar">
                 <h1>Data de Criação</h1>
                 <p>01/01/2025</p>
             </div>   
-            <div class="botao">
-                <button class="botaoFechar" onclick="fecharModal('fundo','modal')">Fechar</button>
+            <div class="botaoVisualizar">
+                <button class="botaoFecharVisualizar" onclick="fecharModal('fundoVisualizar','modalVisualizar')">Fechar</button>
             </div>
         </div>
     </div>
+        <!--Modal editar-->
+        <div class="modalEditar" id="fundoEditar">
+            <div class="editar" id="modalEditar">
+                <div class="tituloModalEditar">
+                    <i class="bi bi-pencil-fill"></i>
+                    <p>Editar Publicação</p>
+                </div>
+                <div class="imagensEditar">   
+                    <div class="arteEditar">
+                        <h1>arte</h1>
+                        <div class="conteudoArteEditar">
+                            <img src="/public/assets/imagemTeste.jpg" alt="Mascote" >
+                            <i class="bi bi-pencil-square">Selecionar nova imagem</i>
+                        </div>
+                    </div>
+                    <div class="tagEditar">
+                        <h1>tag</h1>
+                        <div class="conteudoTagEditar">
+                            <img src="/public/assets/Imagem Tag.png" alt="Tag do autor">
+                            <i class="bi bi-pencil-square">Selecionar nova imagem</i>
+                        </div>
+                    </div>
+                </div>
+                <div class="tituloPublicacaoEditar">
+                    <h1>Título</h1>
+                    <div class="conteudoTituloEditar">
+                        <p>Lorem Ipsum</p>
+                        <i class="bi bi-pencil-square"></i>
+                    </div>
+                </div>
+                <div class="descricaoModalEditar">
+                    <h1>Descrição</h1>
+                    <div class="conteudoDescricaoEditar">
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ad nobis quod fuga obcaecati beatae aperiam temporibus dolor voluptatem et, saepe fugit. Totam quod error pariatur explicabo animi provident voluptas veniam?</p>
+                        <i class="bi bi-pencil-square"></i>
+                    </div>
+                </div>
+                <div class="autorEditar">
+                    <h1>Autor</h1>
+
+                    <div class="conteudoAutorEditar">
+                        <p>Lorem Ipsum</p>
+                        <i class="bi bi-pencil-square"></i>
+                    </div>
+                </div>
+                <div class="localEditar">
+                    <h1>Local</h1>
+                    <div class="conteudoLocalEditar">
+                        <p>Lorem Ipsum</p>
+                        <i class="bi bi-pencil-square"></i>
+                    </div>
+                    
+                </div>
+                <div class="dataEditar">
+                    <h1>Data de Criação</h1>
+                    <div class="conteudoDataEditar">
+                        <p>01/01/2025</p>
+                        <i class="bi bi-pencil-square"></i>
+                </div>   
+                <div class="botoesEditar">
+                    <button class="botaoCancelarEditar" onclick="fecharModal('fundoEditar','modalEditar')">Cancelar</button>
+                    <button class="botaoSalvarEditar" onclick="fecharModal('fundoEditar','modalEditar')">Salvar</button>
+                </div>
+            </div>
+        </div>
 </body>
 <script src="../../../public/js/modal.js"></script>
 </html>

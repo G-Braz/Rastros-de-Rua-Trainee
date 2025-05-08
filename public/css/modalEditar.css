@@ -1,14 +1,15 @@
-.modalVisualizar{
+.modalEditar{
     width: 100%;
     height: 100%;
-    display: none;
+    display: flex;
     justify-content: center;
     align-items: center;
+
 }
-.Visualizar{
+.editar{
     width: 40%;
     height: fit-content;
-    display: none;
+    display: flex;
     align-items: center;
     flex-direction: column;
     position: absolute;
@@ -18,7 +19,7 @@
     filter: drop-shadow(5px 5px 10px #000000);
     font-family: 'Staatliches', sans-serif;
 }
-.tituloModalVisualizar{
+.tituloModalEditar{
     width: 100%;
     height: fit-content;
     display: flex;
@@ -28,43 +29,41 @@
     color: #ffffff;
     border-radius: 8px 8px 0 0;
 }
-.tituloModalVisualizar i{
+.tituloModalEditar i{
     font-size: 300%;
 }
-.tituloModalVisualizar p{
+.tituloModalEditar p{
     font-size: 200%;
 }
-.imagensVisualizar{
+.imagensEditar{
     display: flex;
-    justify-content: space-evenly;
-    width: 100%;
+    width:100%;
 }
-.arteVisualizar{
+.arteEditar{
     display: flex;
-    align-items: flex-start;
-    align-content: start;
-    justify-content:start;
+    align-items: center;
+    justify-content: center;
     flex-direction: column;
     width: 60%;
 }
-.arteVisualizar img{
+.arteEditar img{
     background-color: #1E3A5F;
     width: 70%;
     padding: 1.5%;
     border-radius: 8px;
 }
-.tituloPublicacaoVisualizar, .descricaoModalVisualizar, .autorVisualizar, .dataVisualizar, .localVisualizar{
+.tituloPublicacaoEditar, .descricaoModalEditar, .autorEditar, .dataEditar, .localEditar{
     width: 100%;
     display: flex;
     align-items: start;
     flex-direction: column;
     padding: 0 0 0 26px;
 }
-.tituloPublicacaoVisualizar h1, .descricaoModalVisualizar h1, .autorVisualizar h1, .dataVisualizar h1, .localVisualizar h1 ,.tagVisualizar h1, .arteVisualizar h1{
+.tituloPublicacaoEditar h1, .descricaoModalEditar h1, .autorEditar h1, .dataEditar h1, .localEditar h1 ,.tagEditar h1, .arteEditar h1{
     font-size: 150%;
     color: #0C1C31;
 }
-.tituloPublicacaoVisualizar p, .descricaoModalVisualizar p, .autorVisualizar p, .dataVisualizar p, .localVisualizar p{
+.tituloPublicacaoEditar p, .descricaoModalEditar p, .autorEditar p, .dataEditar p, .locaEditar p{
     width: 95%;
     background-color: #1E3A5F ;
     font-family: 'Urbanist', sans-serif;
@@ -75,26 +74,33 @@
     border: 2px solid #ccc;
     padding: 6px 10px;
 }
-.tagVisualizar{
+.tagEditar{
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
     padding: 0 20px 0 0;
 }
-.tagVisualizar img{
+.tagEditar img{
     background-color: #1E3A5F;
     border-radius: 8px;
     padding: 3% 1% 1% 1%;
     width: 100%;
 }
-.botaoVisualizar{
+.botoesEditar{
     display: flex;
     justify-content: center;
     margin: 16px 0 16px 0;
     width: 100%;
+    gap: 24px;
 }
-.botaoFecharVisualizar{
+.botaoCancelarEditar{
+    width: 26%;
+    background-color: #1E3A5F;
+    color: white;
+    font-size: 200%;
+}
+.botaoSalvarEditar{
     width: 26%;
     background-color: #1E3A5F;
     color: white;
