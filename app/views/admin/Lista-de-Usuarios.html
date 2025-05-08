@@ -42,9 +42,9 @@
                     <td>Email@email.com</td>
                     <td>Usuário</td>
                     <td class="operacoes">
-                        <i class="bi bi-eye-fill"></i>
+                        <i class="bi bi-eye-fill" onclick="abrirModal('visualizar')"></i>
                         <i class="bi bi-pencil-square"></i>
-                        <i class="bi bi-trash-fill"></i>
+                        <i class="bi bi-trash-fill" onclick="abrirModal('excluir')"></i>
                     </td>
                 </tr>
                 <tr class="Usuario">
@@ -52,9 +52,9 @@
                     <td>Email@email.com</td>
                     <td>Usuário</td>
                     <td class="operacoes">
-                        <i class="bi bi-eye-fill"></i>
+                        <i class="bi bi-eye-fill" onclick="abrirModal('visualizar')"></i>
                         <i class="bi bi-pencil-square"></i>
-                        <i class="bi bi-trash-fill"></i>
+                        <i class="bi bi-trash-fill" onclick="abrirModal('excluir')"></i>
                     </td>
                 </tr>
                 <tr class="Usuario">
@@ -62,9 +62,9 @@
                     <td>Email@email.com</td>
                     <td>Usuário</td>
                     <td class="operacoes">
-                        <i class="bi bi-eye-fill"></i>
+                        <i class="bi bi-eye-fill" onclick="abrirModal('visualizar')"></i>
                         <i class="bi bi-pencil-square"></i>
-                        <i class="bi bi-trash-fill"></i>
+                        <i class="bi bi-trash-fill" onclick="abrirModal('excluir')"></i>
                     </td>
                 </tr>
                 <tr class="Usuario">
@@ -72,9 +72,9 @@
                     <td>Email@email.com</td>
                     <td>Usuário</td>
                     <td class="operacoes">
-                        <i class="bi bi-eye-fill"></i>
+                        <i class="bi bi-eye-fill" onclick="abrirModal('visualizar')"></i>
                         <i class="bi bi-pencil-square"></i>
-                        <i class="bi bi-trash-fill"></i>
+                        <i class="bi bi-trash-fill" onclick="abrirModal('excluir')"></i>
                     </td>
                 </tr>
                 <tr class="Usuario">
@@ -82,9 +82,9 @@
                     <td>Email@email.com</td>
                     <td>Usuário</td>
                     <td class="operacoes" >
-                        <i class="bi bi-eye-fill"></i>
+                        <i class="bi bi-eye-fill" onclick="abrirModal('visualizar')"></i>
                         <i class="bi bi-pencil-square"></i>
-                        <i class="bi bi-trash-fill"></i>
+                        <i class="bi bi-trash-fill" onclick="abrirModal('excluir')"></i>
                     </td>
                 </tr>
             </table>
@@ -144,10 +144,28 @@
             </div>
         </div>
         <div class="botao-modal">
-            <button class="fechar">fechar</button>
+            <button class="fechar" onclick="fecharModal('visualizar')">fechar</button>
         </div>
     </div>    
 
+    <!-- Modal Excluir -->
+    <div id="excluir" class="modalUsuarioExcluir">
+        <div class="topo-excluir">
+            <div class="icone-excluir">
+                <i class="bi bi-trash-fill"></i>
+            </div>
+            <div class="titulo-excluir">
+                <h2>Excluir Usuário</h2>
+            </div>
+        </div>
+        <div class="pergunta">
+            <p>Tem certeza que deseja excluir o usuário?</p>
+        </div>
+        <div class="botoes-modal">
+            <button class="cancelar" onclick="fecharModal('excluir')">Cancelar</button>
+            <button class="excluir">Excluir</button>
+        </div>
+    </div> 
 </div>
 </body>
 <script src="../../../public/js/Lista-de-Usuarios.js"></script>

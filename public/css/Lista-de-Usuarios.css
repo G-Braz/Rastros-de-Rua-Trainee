@@ -267,6 +267,80 @@ td{ /*Corpo da tabela*/
     transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
 }
 
+/* Modal Excluir */
+.modalUsuarioExcluir {
+    width: 28vw;
+    height: fit-content;
+    position: absolute;
+    top: 30%;
+    left: 35%;
+    background: #F5F5F5;
+    border-radius: 0.6vw;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.topo-excluir { /* Cabeçalho azul com o ícone e com o título */
+    width: 100%;
+    text-align: center;
+    background: #1E3A5F;
+    padding: 1vh;
+    border-top-right-radius: 0.5vw;
+    border-top-left-radius: 0.5vw;
+}
+
+.icone-excluir i { /* Ícone excluir*/
+    font-size: 11vh;
+    color: #F5F5F5;
+}
+
+.titulo-excluir h2 { /* Título Excluir Usuário */
+    font-size: 4vh;
+    font-family: "Staatliches", sans-serif;
+    color: #F5F5F5;
+    font-weight: 200;
+}
+
+.pergunta { /* Pergunta de alerta */
+    font-size: 2.6vh;
+    font-family: "Urbanist", sans-serif;
+    font-weight: bold;
+    color: #0C1C31;
+    margin-top: 3vh;
+    padding: 1vh;
+}
+
+.pergunta:hover { /* Efeito na pergunta ao passar o mouse  */
+    transform: scale(1.05);
+    transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+
+.botoes-modal { /* Parte com os botões */
+    display: flex;
+    gap: 2vh;
+    padding: 3vh;
+}
+
+.cancelar, .excluir{ /* Botões de cancelar e excluir */
+    background: #1E3A5F;
+    color: #F5F5F5;
+    padding: 1vh 2vh;
+    font-size: 3.5vh;
+    font-family: "Staatliches", sans-serif;
+    border-radius: 0.6vw;
+    cursor: pointer;
+    border: none;
+    box-shadow: 0 4px 4px rgba(0,0,0,0.25);
+}
+
+.cancelar:hover, .excluir:hover { /* Efeito nos botões de cancelar e excluir ao passar o mouse*/
+    background: #0C1C31;
+    transform: scale(1.05);
+    transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+
 /* Responsividade */
 
 /*Celulares*/
