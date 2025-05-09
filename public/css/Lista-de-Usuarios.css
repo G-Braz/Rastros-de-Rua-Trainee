@@ -486,7 +486,7 @@ td{ /*Corpo da tabela*/
     }
     
     /* Modal Visualizar */
-    .modalUsuarioVisualizar {
+    .modalUsuario {
         width: 85vw;
         top: 12%;
         left: 8%;
@@ -609,10 +609,10 @@ td{ /*Corpo da tabela*/
     }
 
     /* Modal Visualizar */
-    .modalUsuarioVisualizar {
-        width: 85vw;
+    .modalUsuario {
+        width: 75vw;
         top: 12%;
-        left: 8%;
+        left: 13%;
     }
 
     .icone-info i { /* Ícone usuário*/
@@ -632,6 +632,8 @@ td{ /*Corpo da tabela*/
         padding: 1vh;
         font-size: 2.5vh;
     }
+
+    
 
     .icone-senha i { /* Ícone olho */
         font-size: 2.8vh;
@@ -728,7 +730,7 @@ td{ /*Corpo da tabela*/
     }
 
     /* Modal Visualizar */
-    .modalUsuarioVisualizar {
+    .modalUsuario {
         width: 85vw;
         top: 12%;
         left: 8%;
@@ -763,7 +765,7 @@ td{ /*Corpo da tabela*/
     /* Modal Excluir */
     .modalUsuarioExcluir {
         width: 65vw;
-        top: 40%;
+        top: 30%;
         left: 17%;
     }
 
@@ -846,8 +848,8 @@ td{ /*Corpo da tabela*/
     }
     
     /* Modal Visualizar */
-    .modalUsuarioVisualizar {
-        width: 70vw;
+    .modalUsuario {
+        width: 100vw;
         top: 12%;
         left: 15%;
     }
@@ -963,7 +965,7 @@ td{ /*Corpo da tabela*/
     }
 
     /* Modal Visualizar */
-    .modalUsuarioVisualizar {
+    .modalUsuario {
         width: 70vw;
         top: 12%;
         left: 15%;
@@ -1018,6 +1020,7 @@ td{ /*Corpo da tabela*/
     .cancelar, .excluir{ /* Botões de cancelar e excluir */
         font-size: 3vh;
     }
+
 }
 
 /*Surface Duo*/
@@ -1081,7 +1084,7 @@ td{ /*Corpo da tabela*/
     }
 
     /* Modal Visualizar */
-    .modalUsuarioVisualizar {
+    .modalUsuario {
         width: 70vw;
         top: 12%;
         left: 15%;
