@@ -26,7 +26,7 @@
                 <img src="../../../public/assets/LogoRastrosDeRua.png" alt="Logo Rastros de Rua Rato">
                 <h1>Tabela de Usuários</h1>
             </div>
-            <div class="createButton">
+            <div class="createButton" onclick="abrirModal('criar')">
                 <i class="bi bi-plus-square-fill"></i>
                 Criar Usuário
             </div>
@@ -44,7 +44,7 @@
                     <td>Usuário</td>
                     <td class="operacoes">
                         <i class="bi bi-eye-fill" onclick="abrirModal('visualizar')"></i>
-                        <i class="bi bi-pencil-square"></i>
+                        <i class="bi bi-pencil-square" onclick="abrirModal('editar')"></i>
                         <i class="bi bi-trash-fill" onclick="abrirModal('excluir')"></i>
                     </td>
                 </tr>
@@ -54,7 +54,7 @@
                     <td>Usuário</td>
                     <td class="operacoes">
                         <i class="bi bi-eye-fill" onclick="abrirModal('visualizar')"></i>
-                        <i class="bi bi-pencil-square"></i>
+                        <i class="bi bi-pencil-square" onclick="abrirModal('editar')"></i>
                         <i class="bi bi-trash-fill" onclick="abrirModal('excluir')"></i>
                     </td>
                 </tr>
@@ -64,7 +64,7 @@
                     <td>Usuário</td>
                     <td class="operacoes">
                         <i class="bi bi-eye-fill" onclick="abrirModal('visualizar')"></i>
-                        <i class="bi bi-pencil-square"></i>
+                        <i class="bi bi-pencil-square" onclick="abrirModal('editar')"></i>
                         <i class="bi bi-trash-fill" onclick="abrirModal('excluir')"></i>
                     </td>
                 </tr>
@@ -74,7 +74,7 @@
                     <td>Usuário</td>
                     <td class="operacoes">
                         <i class="bi bi-eye-fill" onclick="abrirModal('visualizar')"></i>
-                        <i class="bi bi-pencil-square"></i>
+                        <i class="bi bi-pencil-square" onclick="abrirModal('editar')"></i>
                         <i class="bi bi-trash-fill" onclick="abrirModal('excluir')"></i>
                     </td>
                 </tr>
@@ -84,7 +84,7 @@
                     <td>Usuário</td>
                     <td class="operacoes" >
                         <i class="bi bi-eye-fill" onclick="abrirModal('visualizar')"></i>
-                        <i class="bi bi-pencil-square"></i>
+                        <i class="bi bi-pencil-square" onclick="abrirModal('editar')"></i>
                         <i class="bi bi-trash-fill" onclick="abrirModal('excluir')"></i>
                     </td>
                 </tr>
@@ -112,7 +112,7 @@
     </div>
 
     <!-- Modal Visualizar -->
-    <div id="visualizar" class="modalUsuarioVisualizar">
+    <div id="visualizar" class="modalUsuario">
         <div class="topo-info">
             <div class="icone-info">
                 <i class="bi bi-person-circle"></i>
@@ -145,9 +145,81 @@
             </div>
         </div>
         <div class="botao-modal">
-            <button class="fechar" onclick="fecharModal('visualizar')">fechar</button>
+            <button class="botao" onclick="fecharModal('visualizar')">fechar</button>
         </div>
     </div>    
+
+    <!-- Modal Criar -->
+    <div id="criar" class="modalUsuario">
+        <div class="topo-info">
+            <div class="icone-info">
+                <i class="bi bi-person-plus-fill"></i>
+            </div>
+            <div class="titulo-info">
+                <h2>Criar usuário</h2>
+            </div>
+        </div>
+        <div class="conteiner-info">
+            <div class="item-info">
+                <p class="titulo">Nome:</p>
+                <input type="text" class="boxCriar" name="text" placeholder="Usuário">
+            </div>
+            <div class="item-info">
+                <p class="titulo">E-mail:</p>
+                <input type="text" class="boxCriar" name="text" placeholder="email@email.com">
+            </div>
+            <div class="item-info">
+                <p class="titulo">Senha:</p>
+                <div class="boxCriar senha-box-criar">
+                    <input type="text" class="boxSenha" name="text" placeholder="senha">
+                    <div class="icone-senha">
+                        <i class="bi bi-eye-fill"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="botao-modal">
+            <button class="botao">salvar</button>
+            <button class="botao" onclick="fecharModal('criar')">cancelar</button>
+        </div>
+    </div>
+    
+    <!-- Modal Editar -->
+    <div id="editar" class="modalUsuario">
+        <div class="topo-info">
+            <div class="icone-info">
+                <i class="bi bi-person-fill"></i>
+                <i class="bi bi-pencil-square"></i>
+            </div>
+            <div class="titulo-info">
+                <h2>Editar usuário</h2>
+            </div>
+        </div>
+        <div class="conteiner-info">
+            <div class="item-info">
+                
+                <p class="titulo">Nome:</p>
+                <input type="text" class="boxEditar" name="text" value="Usuário">
+            </div>
+            <div class="item-info">
+                <p class="titulo">E-mail:</p>
+                <input type="text" class="boxEditar" name="text" value="email@email.com">
+            </div>
+            <div class="item-info">
+                <p class="titulo">Senha:</p>
+                <div class="boxCriar senha-box-criar">
+                    <input type="text" class="boxSenha" name="text" value="senha">
+                    <div class="icone-senha">
+                        <i class="bi bi-eye-fill"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="botao-modal">
+            <button class="botao">salvar</button>
+            <button class="botao" onclick="fecharModal('editar')">cancelar</button>
+        </div>
+    </div>
 
     <!-- Modal Excluir -->
     <div id="excluir" class="modalUsuarioExcluir">

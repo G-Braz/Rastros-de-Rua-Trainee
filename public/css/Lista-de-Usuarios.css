@@ -57,6 +57,7 @@ body{
     font-size: 170%;
     height:44%;
     width: 16%;
+    cursor: pointer;
 }
 
 .createButton:hover{ /*Deixa o botão de criar usuário maior ao passar o mouse*/
@@ -159,8 +160,8 @@ td{ /*Corpo da tabela*/
     transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
 }
 
-/* Modal Visualizar */
-.modalUsuarioVisualizar {
+/* Modal Visualizar, Criar e Editar */
+.modalUsuario {
     z-index: 1;
     width: 28vw;
     height: fit-content;
@@ -182,6 +183,12 @@ td{ /*Corpo da tabela*/
     padding: 1vh;
     border-top-right-radius: 0.5vw;
     border-top-left-radius: 0.5vw;
+}
+
+.icone-info{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .icone-info i { /* Ícone usuário*/
@@ -249,10 +256,12 @@ td{ /*Corpo da tabela*/
 }
 
 .botao-modal { /* Parte com o botão de fechar */
-    padding: 2vh;
+    padding: 2vh; 
+    display: flex;
+    gap:2vh;
 }
 
-.fechar { /* botão fechar */
+.botao { /* botão fechar */
     background: #1E3A5F;
     color: #F5F5F5;
     padding: 1vh 2vh;
@@ -264,10 +273,60 @@ td{ /*Corpo da tabela*/
     box-shadow: 0 4px 4px rgba(0,0,0,0.25);
 }
 
-.fechar:hover { /* Efeito no botão fechar ao passar o mouse */
+.botao:hover { /* Efeito no botão fechar ao passar o mouse */
     background: #0C1C31;
     transform: scale(1.05);
     transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+
+/*Modal Editar e Criar*/
+.boxCriar{
+    background: #1E3A5F;
+    padding: 1vh;
+    border-radius: 0.6vw;
+    color: #F5F5F5;
+    font-size: 3.2vh;
+    box-shadow: 0 4px 4px rgba(0,0,0,0.25);
+    outline: none;
+    border-color: transparent;
+}
+.senha-box-criar{  /* Caixa de texto com a senha e o ícone */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1vw;
+    
+}
+.boxSenha{
+    background: #1E3A5F;
+    border-radius: 0.6vw;
+    color: #F5F5F5;
+    font-size: 3.2vh;
+    outline: none;
+    border-color: transparent;
+}
+
+.boxCriar::placeholder{
+    color: rgba(255,255,255,0.55);
+}
+.boxSenha::placeholder{
+    color: rgba(255,255,255,0.55);
+}
+/*Modal Editar*/
+.topo-info .bi-pencil-square { /* Cabeçalho azul com o ícone e com o título */
+    font-size: 6vh;
+    
+}
+.boxEditar{
+    background: #1E3A5F;
+    padding: 1vh;
+    border-radius: 0.6vw;
+    color: #F5F5F5;
+    font-size: 3.2vh;
+    box-shadow: 0 4px 4px rgba(0,0,0,0.25);
+    outline: none;
+    border-color: transparent;
 }
 
 /* Modal Excluir */
