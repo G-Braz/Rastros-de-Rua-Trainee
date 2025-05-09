@@ -305,6 +305,7 @@ td{ /*Corpo da tabela*/
     font-size: 3.2vh;
     outline: none;
     border-color: transparent;
+    width: 100%;
 }
 
 .boxCriar::placeholder{
@@ -404,6 +405,7 @@ td{ /*Corpo da tabela*/
     transform: scale(1.05);
     transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
 }
+/*Tela de fundo Modais*/
 #tela{
     z-index: 1;
     display: none;
@@ -514,9 +516,25 @@ td{ /*Corpo da tabela*/
         font-size: 2.8vh;
     }
 
-    .fechar { /* botão fechar */
+    .botao { /* botão fechar */
         font-size: 3vh
     }
+
+    /*Modal Editar*/
+    .boxEditar{
+        padding:1vh;
+        font-size: 2.5vh;
+    }
+    .boxSenha{
+        font-size: 2.5vh;
+    }
+
+    /*Modal Criar*/ 
+    .boxCriar{
+        padding:1vh;
+        font-size: 2.5vh;
+    }
+
 
     /* Modal Excluir */
     .modalUsuarioExcluir {
@@ -639,8 +657,22 @@ td{ /*Corpo da tabela*/
         font-size: 2.8vh;
     }
 
-    .fechar { /* botão fechar */
+    .botao { /* botão fechar */
         font-size: 3vh
+    }
+   /*Modal Editar*/
+    .boxEditar{
+        padding:1vh;
+        font-size: 2.5vh;
+    }
+    .boxSenha{
+        font-size: 2.5vh;
+    }
+
+    /*Modal Criar*/ 
+    .boxCriar{
+        padding:1vh;
+        font-size: 2.5vh;
     }
 
     /* Modal Excluir */
@@ -758,8 +790,23 @@ td{ /*Corpo da tabela*/
         font-size: 2.8vh;
     }
 
-    .fechar { /* botão fechar */
+    .botao { /* botão fechar */
         font-size: 3vh
+    }
+
+    /*Modal Editar*/
+    .boxEditar{
+        padding:1vh;
+        font-size: 2.5vh;
+    }
+    .boxSenha{
+        font-size: 2.5vh;
+    }
+
+    /*Modal Criar*/ 
+    .boxCriar{
+        padding:1vh;
+        font-size: 2.5vh;
     }
 
     /* Modal Excluir */
@@ -876,10 +923,25 @@ td{ /*Corpo da tabela*/
         font-size: 2.8vh;
     }
     
-    .fechar { /* botão fechar */
+    .botao { /* botão fechar */
         font-size: 3vh
     }
     
+    /*Modal Editar*/
+    .boxEditar{
+        padding:1vh;
+        font-size: 2.5vh;
+    }
+    .boxSenha{
+        font-size: 2.5vh;
+    }
+
+    /*Modal Criar*/ 
+    .boxCriar{
+        padding:1vh;
+        font-size: 2.5vh;
+    }
+
     /* Modal Excluir */
     .modalUsuarioExcluir {
         width: 65vw;
@@ -993,8 +1055,22 @@ td{ /*Corpo da tabela*/
         font-size: 2.8vh;
     }
 
-    .fechar { /* botão fechar */
+    .botao { /* botão fechar */
         font-size: 3vh
+    }
+    /*Modal Editar*/
+    .boxEditar{
+        padding:1vh;
+        font-size: 2.5vh;
+    }
+    .boxSenha{
+        font-size: 2.5vh;
+    }
+
+    /*Modal Criar*/ 
+    .boxCriar{
+        padding:1vh;
+        font-size: 2.5vh;
     }
 
     /* Modal Excluir */
@@ -1112,10 +1188,25 @@ td{ /*Corpo da tabela*/
         font-size: 2.8vh;
     }
 
-    .fechar { /* botão fechar */
+    .botao { /* botão fechar */
         font-size: 3vh
     }
 
+    /*Modal Editar*/
+    .boxEditar{
+        padding:1vh;
+        font-size: 2.5vh;
+    }
+    .boxSenha{
+        font-size: 2.5vh;
+    }
+
+    /*Modal Criar*/ 
+    .boxCriar{
+        padding:1vh;
+        font-size: 2.5vh;
+    }
+    
     /* Modal Excluir */
     .modalUsuarioExcluir {
         width: 65vw;
