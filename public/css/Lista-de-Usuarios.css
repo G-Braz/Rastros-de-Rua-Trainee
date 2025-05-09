@@ -163,7 +163,7 @@ td{ /*Corpo da tabela*/
 /* Modal Visualizar, Criar e Editar */
 .modalUsuario {
     z-index: 1;
-    width: 28vw;
+    width: 30%;
     height: fit-content;
     position: absolute;
     top: 6%;
@@ -333,7 +333,7 @@ td{ /*Corpo da tabela*/
 /* Modal Excluir */
 .modalUsuarioExcluir {
     z-index: 1;
-    width: 28vw;
+    width: 30%;
     height: fit-content;
     position: absolute;
     top: 30%;
@@ -896,7 +896,7 @@ td{ /*Corpo da tabela*/
     
     /* Modal Visualizar */
     .modalUsuario {
-        width: 100vw;
+        width:72%;
         top: 12%;
         left: 15%;
     }
@@ -1206,7 +1206,7 @@ td{ /*Corpo da tabela*/
         padding:1vh;
         font-size: 2.5vh;
     }
-    
+
     /* Modal Excluir */
     .modalUsuarioExcluir {
         width: 65vw;
