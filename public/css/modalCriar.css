@@ -1,0 +1,190 @@
+/*----- Estilização dos Modais -----*/
+/*Criar*/
+.modal-criar{
+    width: 100%;
+    height: 100%;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    background-color: rgba(26, 26, 26, 0.466);
+    opacity: 0;
+    transition: all 0.5s ease;
+    top: 0%;
+}
+
+.conteudo-modal{
+    font-size: 20px;
+    color: #1E3A5F;
+    font-family: 'Staatliches', sans-serif;
+    width: 50vw;
+    height: fit-content;
+    background-color: #F5F5F5;
+    border-radius: 8px;
+    padding: 0px;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    align-items: center;
+    filter: drop-shadow(5px 5px 10px #000000);
+    row-gap: 10px;
+    top:7%;
+}
+.opacidade {
+    opacity: 1;
+    transition: all 0.3s ease-in;
+}
+.titulo-modal{
+    font-size: 28px;
+    padding: 5px 5px;
+    text-align: center;
+    width: 100%;
+    background-color: #1E3A5F;
+    color: #F5F5F5;
+    border-top-right-radius: 8px;
+    border-top-left-radius: 8px ;
+}
+.botao-modal{
+    font-family: 'Staatliches', sans-serif;
+    width: fit-content;
+    height: fit-content;
+    background-color: #1E3A5F;
+    color: #F5F5F5;
+    font-size: 20px;
+    padding: 4px 16px;
+}
+.botao-modal-cancelar:hover{
+    background-color: #B22222;
+    transition: all 0.3s;
+}
+.botao-modal-criar:hover {
+    background-color: #05AC4B;
+    transition: all 0.3s;
+}
+.botoes-modal{
+    display: flex;
+    flex-direction: row;
+    align-self: center;
+    gap: 10%;
+    padding-top: 5px;
+    padding-bottom: 20px;
+}
+.input-arte,
+.input-tag {
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 8px;
+    height: fit-content;
+    width: fit-content;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Urbanist', sans-serif;
+    border: 4px;
+    border: 1.5px solid #1E3A5F;
+    font-size: 14px;
+    border-style: dashed;
+}
+.custom-input-img{
+    display: none;
+}
+#previewArte,
+#previewTag {
+    object-fit: cover;
+    margin-top: 10px;
+    height: 27.7vh;
+    width: 230px;
+    display: none;
+    border-radius: 8px;
+}
+#previewTag{
+    height: 10vh;
+}
+.custom-label-art,
+.custom-label-tag {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    color:#0C1C31;
+    cursor: pointer;
+}
+.local-e-data{
+    display: flex;
+    flex-direction: row;
+    width: 90%;
+    gap: 3%;
+}
+.input-titulo,
+.input-descricao,
+.input-autor,
+.input-local,
+.input-data-automatica{
+    background-color: #1E3A5F;
+    width: 100%;
+    padding: 8px 10px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    font-family: 'Urbanist', sans-serif;
+    color: #F5F5F5;
+}
+.input-data-automatica{
+    width: fit-content;
+    padding: 7px 10px;
+}
+.input-local{
+    width: 100%;
+}
+.campo-titulo,
+.campo-autor{
+    width: 100%;
+    color: #1E3A5F;
+}
+.campo-data {
+    width: fit-content;
+    height: 100%;
+}
+.campo-local {
+    width: 80%;
+    height: 100%;
+}
+.campo-descricao{
+    width: 90%;
+    color:#1E3A5F;
+}
+
+.input-descricao{
+    resize: none;
+    overflow: auto;
+    display: block;
+    width: 100%;
+}
+
+.adicionar-arte,
+.adicionar-tag{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.imagens-inputs{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 90%;
+    align-items: center;
+    gap: 3%;
+}
+.adicionar-tag{
+    align-items: start;
+}
+
+.campos-direita{
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+}

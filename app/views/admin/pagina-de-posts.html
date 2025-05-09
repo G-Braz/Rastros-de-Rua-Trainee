@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="/public/css/pagina-de-posts-admin.css">
     <link rel="stylesheet" href="/public/css/modalVisualizar.css">
     <link rel="stylesheet" href="/public/css/modalEditar.css">
+    <link rel="stylesheet" href="/public/css/modalCriar.css">
 </head>
 <body>
     <div class="pagina">
@@ -24,7 +25,7 @@
                     <h1>Tabela de Posts</h1>
                 </div>
             </div>
-            <button class="botaoadicionar">
+            <button class="botaoadicionar" onclick="abrirModal('fundo-modal-criar', 'id-modal-criar')">
                 <div class="icone">
                     <i class="bi bi-plus-square-fill"></i>
                 </div>
@@ -125,37 +126,75 @@
         </div>
     </div>
     <!--Modal Criar-->
-    <div class="modal-criar">
-        <div class="conteudo-modal">
+    <div class="modal-criar" id="fundo-modal-criar">
+        <div class="conteudo-modal" id="id-modal-criar">
             <div class="titulo-modal">
                 <p>Criar Publicação</p>
             </div>
-            <div class="adicionar-imagem">   
-                <input id="inputImagem" class="custom-input-img" type="file ">
-                <label for="inputImagem" class="custom-label">Selecionar arquivo de imagem</label>
-            </div>
-            <div class="campo-titulo">
-                <p>Título</p>
-                <input class="input-titulo" type="text" placeholder="Insira o Título">
-            </div>
+            <div class="imagens-inputs">
+                <div class="adicionar-arte">
+                    <div>Arte</div>
+                    <div class="input-arte"> 
+                        <input id="inputArte" class="custom-input-img" type="file">
+                        <label id="labelArte"for="inputArte" class="custom-label-art">Selecionar imagem da arte <img src="/public/assets/icone-imagem.svg" style="height: 70px" /> 
+                        </label>
+                        
+                        <img id="previewArte" src="" alt="Pré-visualização" style="display: none;"/>
+                    </div>
+                </div>
+                <div class="campos-direita">
+                    <div class="campo-titulo">
+                        <p>Título</p>
+                        <input class="input-titulo" type="text" placeholder="Insira o Título">
+                    </div>
+                    <div class="campo-autor">
+                        <p>Autor</p>
+                        <input class="input-autor" type="text" placeholder="Insira o Autor">
+                    </div>
+                    <div class="adicionar-tag">
+                        <p>Tag</p>
+                        <div class="input-tag">
+                            <input id="inputTag" class="custom-input-img" type="file">
+                            <label id="labelTag" for="inputTag" class="custom-label-tag">Selecionar imagem da tag <img src="/public/assets/icone-imagem.svg" style="height: 40px; display: block;" />
+                            </label>
+                            <img id="previewTag" src="" alt="Pré-visualização" style="display: none;" />
+                        </div>
+                    </div>
+                </div>
+            </div>  
             <div class="campo-descricao">
                 <p>Descrição</p>
-                <input class="input-descricao" type="text" placeholder="Insira a Descrição">
+                <textarea class="input-descricao" rows="5" cols="10" placeholder="Insira a Descrição"></textarea>
             </div>
-            <div class="campo-autor">
-                <p>Autor</p>
-                <input class="input-autor" type="text" placeholder="Insira o Autor">
+            <div class="local-e-data">
+                <div class="campo-local">
+                    <p>Local</p>
+                    <input class="input-local" type="text" placeholder="Insira o Local">
+                </div>
+                <div class="campo-data">
+                    <p>Data de Criação</p>
+                    <input class="input-data-automatica" type="date" readonly>
+                </div>
             </div>
-            <div class="campo-data">
-                <p>Data de Criação</p>
-                <input class="input-data-automatica" type="date" readonly>
-            </div>   
             <div class="botoes-modal">
-                <button class="botao-modal">Criar</button>
-                <button class="botao-modal">Cancelar</button>
+                <button class="botao-modal botao-modal-criar">Criar</button>
+                <button class="botao-modal botao-modal-cancelar" onclick="fecharModal('fundo-modal-criar','id-modal-criar')">Cancelar</button>
             </div>
         </div>
     </div>
+    <!-- Modal Deletar -->
+    <!-- <div class="modal-deletar" id="fundo-modal-deletar">
+        <div class="conteudo-modal" id="id-modal-criar">
+            <div class="titulo-modal">
+                <p>Excluir Publicação</p>
+            </div>
+            <div class="botoes-modal">
+                <button class="botao-modal botao-modal-criar">Criar</button>
+                <button class="botao-modal botao-modal-cancelar"
+                    onclick="fecharModal('fundo-modal-criar','id-modal-criar')">Cancelar</button>
+            </div>
+        </div>
+    </div> -->
     <!--Modal visualizar-->
     <div class="modalVisualizar" id="fundoVisualizar">
         <div class="Visualizar" id="modalVisualizar">
@@ -265,4 +304,5 @@
         </div>
 </body>
 <script src="../../../public/js/modal.js"></script>
+<script src="../../../public/js/exibirPreview.js"></script>
 </html>
