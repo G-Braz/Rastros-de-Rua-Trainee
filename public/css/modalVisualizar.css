@@ -4,100 +4,165 @@
     display: none;
     justify-content: center;
     align-items: center;
-}
-.Visualizar{
-    width: 40%;
-    height: fit-content;
-    display: none;
-    align-items: center;
-    flex-direction: column;
     position: absolute;
-    top:1%;
+    background-color: rgba(26, 26, 26, 0.466);
+    opacity: 0;
+    transition: all 0.5s ease;
+    top: 0%;
+}
+
+.visualizar{
+    font-size: 20px;
+    color: #1E3A5F;
+    font-family: 'Staatliches', sans-serif;
+    width: 50vw;
+    height: fit-content;
     background-color: #F5F5F5;
     border-radius: 8px;
+    padding: 0px;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    align-items: center;
     filter: drop-shadow(5px 5px 10px #000000);
-    font-family: 'Staatliches', sans-serif;
+    row-gap: 10px;
+    top:7%;
 }
 .tituloModalVisualizar{
+    font-size: 28px;
+    padding: 5px 5px;
+    text-align: center;
     width: 100%;
-    height: fit-content;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     background-color: #1E3A5F;
-    color: #ffffff;
-    border-radius: 8px 8px 0 0;
-}
-.tituloModalVisualizar i{
-    font-size: 300%;
-}
-.tituloModalVisualizar p{
-    font-size: 200%;
-}
-.imagensVisualizar{
-    display: flex;
-    justify-content: space-evenly;
-    width: 100%;
-}
-.arteVisualizar{
-    display: flex;
-    align-items: flex-start;
-    align-content: start;
-    justify-content:start;
-    flex-direction: column;
-    width: 60%;
-}
-.arteVisualizar img{
-    background-color: #1E3A5F;
-    width: 70%;
-    padding: 1.5%;
-    border-radius: 8px;
-}
-.tituloPublicacaoVisualizar, .descricaoModalVisualizar, .autorVisualizar, .dataVisualizar, .localVisualizar{
-    width: 100%;
-    display: flex;
-    align-items: start;
-    flex-direction: column;
-    padding: 0 0 0 26px;
-}
-.tituloPublicacaoVisualizar h1, .descricaoModalVisualizar h1, .autorVisualizar h1, .dataVisualizar h1, .localVisualizar h1 ,.tagVisualizar h1, .arteVisualizar h1{
-    font-size: 150%;
-    color: #0C1C31;
-}
-.tituloPublicacaoVisualizar p, .descricaoModalVisualizar p, .autorVisualizar p, .dataVisualizar p, .localVisualizar p{
-    width: 95%;
-    background-color: #1E3A5F ;
-    font-family: 'Urbanist', sans-serif;
-    font-size: 120%;
     color: #F5F5F5;
-    border-radius: 8px;
-    font-size: 18px;
-    border: 2px solid #ccc;
-    padding: 6px 10px;
+    border-top-right-radius: 8px;
+    border-top-left-radius: 8px ;
 }
-.tagVisualizar{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    padding: 0 20px 0 0;
-}
-.tagVisualizar img{
+.visualizarBotao{
+    font-family: 'Staatliches', sans-serif;
+    width: fit-content;
+    height: fit-content;
     background-color: #1E3A5F;
-    border-radius: 8px;
-    padding: 3% 1% 1% 1%;
-    width: 100%;
+    color: #F5F5F5;
+    font-size: 20px;
+    padding: 4px 16px;
+}
+
+.visualizarBotao:hover {
+    transition: all 0.3s;
 }
 .botaoVisualizar{
     display: flex;
+    flex-direction: row;
+    align-self: center;
+    gap: 10%;
+    padding-top: 5px;
+    padding-bottom: 20px;
+}
+.conteudoTagVisualizar {
+    padding: 5px 0 0 0;
+    display: flex;
+    flex-direction: column;
+    border-radius: 8px;
+    height: fit-content;
+    width: fit-content;
+    align-items: center;
     justify-content: center;
-    margin: 16px 0 16px 0;
+}
+.conteudoTagVisualizar img{
+    width: 182px;
+}
+.conteudoArteVisualizar{
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 8px;
+    height: fit-content;
+    width: fit-content;
+    align-items: start;
+    justify-content: center;
+}
+.arteVisualizar{
+    width: 400px;
+}
+.arteVisualizar img{
+    width:100%;
+    border-radius: 8px;
+}
+.dataLocalVisualizar{
+    display: flex;
+    flex-direction: row;
+    width: 90%;
+    justify-content: space-between;
+    gap: 3%;
+}
+.conteudoTituloVisualizar,
+.conteudoAutorVisualizar,
+.conteudoDescricaoVisualizar,
+.conteudoLocalVisualizar,
+.conteudoDataVisualizar{
+    background-color: #1E3A5F;
+    width: 100%;
+    padding: 8px 10px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    font-family: 'Urbanist', sans-serif;
+    color: #F5F5F5;
+}
+.conteudoDataVisualizar{
+    width: 100%;
+    padding: 7px 10px;
+    text-align: center;
+}
+.conteudoLocalVisualizar{
     width: 100%;
 }
-.botaoFecharVisualizar{
-    width: 26%;
-    background-color: #1E3A5F;
-    color: white;
-    font-size: 200%;
+.arteContent{
+    display: flex;
+    justify-content: center;
+}
+.autorVisualizar{
+    width: 100%;
+    color: #1E3A5F;
+}
+.dataVisualizar {
+    width: fit-content;
+    height: 100%;
+    
+}
+.localVisualizar {
+    width: 80%;
+    height: 100%;
+}
+.descricaoModalVisualizar{
+    width: 90%;
+    color:#1E3A5F;
 }
 
+.conteudoDescricaoVisualizar{
+    resize: none;
+    overflow: auto;
+    display: block;
+    width: 100%;
+}
+
+.imagensVisualizar{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 90%;
+    align-items: center;
+    gap: 3%;
+}
+.tagVisualizar{
+    align-items: start;
+    width: 200px;;
+}
+
+.campos{
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+}

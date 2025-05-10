@@ -197,43 +197,50 @@
     </div> -->
     <!--Modal visualizar-->
     <div class="modalVisualizar" id="fundoVisualizar">
-        <div class="Visualizar" id="modalVisualizar">
+        <div class="visualizar" id="modalVisualizar">
             <div class="tituloModalVisualizar">
-                <i class="bi bi-window"></i>
-                <p>visualizar Publicação</p>
+                <p>Visualizar Publicação</p>
             </div>
-            <div class="imagensVisualizar">   
+            <div class="imagensVisualizar">
                 <div class="arteVisualizar">
-                    <h1>arte</h1>
-                    <img src="/public/assets/imagemTeste.jpg" alt="Mascote">
+                    <div class="arteContent">Arte</div>
+                    <div class="conteudoArteVisualizar"> 
+                        <img src="../../../public/assets/imagemTeste.jpg" alt="Arte">
+                    </div>
                 </div>
-                <div class="tagVisualizar">
-                    <h1>tag</h1>
-                    <img src="/public/assets/Imagem Tag.png" alt="Tag do autor">
+                <div class="campos">
+                    <div class="tituloPublicacaoVisualizar">
+                        <p>Título</p>
+                        <p class="conteudoTituloVisualizar">Lorem ipsum</p>
+                    </div>
+                    <div class="autorVisualizar">
+                        <p>Autor</p>
+                        <p class="conteudoAutorVisualizar">Lorem ipsum</p>
+                    </div>
+                    <div class="tagVisualizar">
+                        <p>Tag</p>
+                        <div class="conteudoTagVisualizar">
+                            <img src="../../../public/assets/Imagem Tag.png" alt="Tag">
+                        </div>
+                    </div>
                 </div>
-            </div>
-            <div class="tituloPublicacaoVisualizar">
-                <h1>Título</h1>
-                <p>Lorem Ipsum</p>
-            </div>
+            </div>  
             <div class="descricaoModalVisualizar">
-                <h1>Descrição</h1>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ad nobis quod fuga obcaecati beatae aperiam temporibus dolor voluptatem et, saepe fugit. Totam quod error pariatur explicabo animi provident voluptas veniam?</p>
+                <p>Descrição</p>
+                <p class="conteudoDescricaoVisualizar">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ratione eius molestiae voluptas nihil reiciendis quasi fugiat, quas corrupti impedit distinctio praesentium? Delectus, expedita? Praesentium quia sequi alias neque natus esse?</p>
             </div>
-            <div class="autorVisualizar">
-                <h1>Autor</h1>
-                <p>Lorem Ipsum</p>
+            <div class="dataLocalVisualizar">
+                <div class="localVisualizar">
+                    <p>Local</p>
+                    <p class="conteudoLocalVisualizar">Juiz de Fora</p>
+                </div>
+                <div class="dataVisualizar">
+                    <p>Data de Criação</p>
+                    <p class="conteudoDataVisualizar">01/01/2025</p>
+                </div>
             </div>
-            <div class="localVisualizar">
-                <h1>Local</h1>
-                <p>Lorem Ipsum</p>
-            </div>
-            <div class="dataVisualizar">
-                <h1>Data de Criação</h1>
-                <p>01/01/2025</p>
-            </div>   
             <div class="botaoVisualizar">
-                <button class="botaoFecharVisualizar" onclick="fecharModal('fundoVisualizar','modalVisualizar')">Fechar</button>
+                <button class="visualizarBotao" onclick="fecharModal('fundoVisualizar','modalVisualizar')">Fechar</button>
             </div>
         </div>
     </div>
