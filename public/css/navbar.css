@@ -37,7 +37,7 @@ header {
 .links a{ /*Botões*/
     text-decoration: none;
     font-size: 200%;
-    height: 36%;
+    height: 42%;
 }
 
 .HomeButton{ /*Botão Home*/
@@ -131,7 +131,7 @@ header {
         box-shadow: 0px 0px 5px #0c1c31ab;
         margin-bottom: 3%;
         margin-right: 0;
-        width: 80%;
+        width: 95%;
     }
     .publicacoesButton{
         color: #F5F5F5;
@@ -139,13 +139,13 @@ header {
         box-shadow: 0px 0px 5px #0c1c31ab;
         margin-bottom: 3%;
         margin-right: 0;
-        width: 80%;
+        width: 95%;
     }
     .LoginButton{
         color: #F5F5F5;
         background-color: transparent;
         box-shadow: 0px 0px 5px #0c1c31ab;
-        width: 80%;
+        width: 95%;
         
     }
 }
@@ -202,7 +202,7 @@ header {
         box-shadow: 0px 0px 5px #0c1c31ab;
         margin-bottom: 2%;
         margin-right: 0;
-        width: 56%;
+        width: 90%;
     }
     .publicacoesButton{
         color: #F5F5F5;
@@ -210,13 +210,13 @@ header {
         box-shadow: 0px 0px 5px #0c1c31ab;
         margin-bottom: 2%;
         margin-right: 0;
-        width: 56%;
+        width: 90%;
     }
     .LoginButton{
         color: #F5F5F5;
         background-color: transparent;
         box-shadow: 0px 0px 5px #0c1c31ab;
-        width: 56%;
+        width: 90%;
         
     }
 }
@@ -273,7 +273,7 @@ header {
         box-shadow: 0px 0px 5px #0c1c31ab;
         margin-bottom: 2%;
         margin-right: 0;
-        width: 56%;
+        width: 90%;
     }
     .publicacoesButton{
         color: #F5F5F5;
@@ -281,13 +281,13 @@ header {
         box-shadow: 0px 0px 5px #0c1c31ab;
         margin-bottom: 2%;
         margin-right: 0;
-        width: 56%;
+        width: 90%;
     }
     .LoginButton{
         color: #F5F5F5;
         background-color: transparent;
         box-shadow: 0px 0px 5px #0c1c31ab;
-        width: 56%;
+        width: 90%;
         
     }
 }
@@ -343,7 +343,7 @@ header {
         box-shadow: 0px 0px 5px #0c1c31ab;
         margin-bottom: 2%;
         margin-right: 0;
-        width: 50%;
+        width: 90%;
     }
     .publicacoesButton{
         color: #F5F5F5;
@@ -351,13 +351,13 @@ header {
         box-shadow: 0px 0px 5px #0c1c31ab;
         margin-bottom: 2%;
         margin-right: 0;
-        width: 50%;
+        width: 90%;
     }
     .LoginButton{
         color: #F5F5F5;
         background-color: transparent;
         box-shadow: 0px 0px 5px #0c1c31ab;
-        width: 50%;
+        width: 90%;
         margin-bottom: 2%;
     }
 }
