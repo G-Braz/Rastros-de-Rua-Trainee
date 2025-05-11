@@ -210,11 +210,11 @@
                 </div>
                 <div class="campos">
                     <div class="tituloPublicacaoVisualizar">
-                        <p>Título</p>
+                        <p class="TituloTituloVisualizar">Título</p>
                         <p class="conteudoTituloVisualizar">Lorem ipsum</p>
                     </div>
                     <div class="autorVisualizar">
-                        <p>Autor</p>
+                        <p class="tituloAutorVisualizar">Autor</p>
                         <p class="conteudoAutorVisualizar">Lorem ipsum</p>
                     </div>
                     <div class="tagVisualizar">
@@ -226,16 +226,16 @@
                 </div>
             </div>  
             <div class="descricaoModalVisualizar">
-                <p>Descrição</p>
+                <p class="tituloDescricaoVisualizar">Descrição</p>
                 <p class="conteudoDescricaoVisualizar">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ratione eius molestiae voluptas nihil reiciendis quasi fugiat, quas corrupti impedit distinctio praesentium? Delectus, expedita? Praesentium quia sequi alias neque natus esse?</p>
             </div>
             <div class="dataLocalVisualizar">
                 <div class="localVisualizar">
-                    <p>Local</p>
+                    <p class="TituloLocalVisualizar">Local</p>
                     <p class="conteudoLocalVisualizar">Juiz de Fora</p>
                 </div>
                 <div class="dataVisualizar">
-                    <p>Data de Criação</p>
+                    <p class="visualizarData">Data de Criação</p>
                     <p class="conteudoDataVisualizar">01/01/2025</p>
                 </div>
             </div>
@@ -244,71 +244,71 @@
             </div>
         </div>
     </div>
-        <!--Modal editar-->
-        <div class="modalEditar" id="fundoEditar">
-            <div class="editar" id="modalEditar">
-                <div class="tituloModalEditar">
-                    <i class="bi bi-pencil-fill"></i>
-                    <p>Editar Publicação</p>
+    <!--Modal editar-->
+    <div class="modalEditar" id="fundoEditar">
+        <div class="editar" id="modalEditar">
+            <div class="tituloModalEditar">
+                <p>Editar Publicação</p>
+            </div>
+            <div class="imagensEditar">
+                <div class="arteEditar">
+                    <div>Arte</div>
+                    <div class="arteInput"> 
+                        <input id="inputArte" class="inputImg" type="file">
+                        <label id="labelArte"for="inputArte" class="labelImgArte"><img src="../../../public/assets/imagemTeste.jpg"/>
+                            <div class="conteudoArteInput">
+                                <p>Selecionar nova imagem</p>
+                                <i class="bi bi-upload"></i>
+                            </div>
+                        </label>
+                        <img id="previewArte" src="" alt="Pré-visualização" style="display: none;"/>
+                    </div>
                 </div>
-                <div class="imagensEditar">   
-                    <div class="arteEditar">
-                        <h1>arte</h1>
-                        <div class="conteudoArteEditar">
-                            <img src="/public/assets/imagemTeste.jpg" alt="Mascote" >
-                            <i class="bi bi-pencil-square">Selecionar nova imagem</i>
-                        </div>
+                <div class="camposEditar">
+                    <div class="tituloPublicacaoEditar">
+                        <p>Título</p>
+                        <input class="tituloInput" id="tituloPublicacaoEditar" type="text" value="Lorem ipsum">
+                    </div>
+                    <div class="autorEditar">
+                        <p>Autor</p>
+                        <input class="inputAutor" id="inputAutor" type="text" value="Lorem ipsum">
                     </div>
                     <div class="tagEditar">
-                        <h1>tag</h1>
-                        <div class="conteudoTagEditar">
-                            <img src="/public/assets/Imagem Tag.png" alt="Tag do autor">
-                            <i class="bi bi-pencil-square">Selecionar nova imagem</i>
+                        <p>Tag</p>
+                        <div class="tagInput">
+                            <input id="inputTag" class="inputImg" type="file">
+                            <label id="labelTag" for="inputTag" class="labelImgTag"><img src="../../../public/assets/Imagem Tag.png"/>
+                                <div class="conteudoTagInput">
+                                    <p>Selecionar nova tag</p>
+                                    <i class="bi bi-upload"></i>
+                                </div>
+                            </label>
+                            <img id="previewTag" src="" alt="Pré-visualização" style="display: none;"/>
+                            
                         </div>
                     </div>
                 </div>
-                <div class="tituloPublicacaoEditar">
-                    <h1>Título</h1>
-                    <div class="conteudoTituloEditar">
-                        <p>Lorem Ipsum</p>
-                        <i class="bi bi-pencil-square"></i>
-                    </div>
-                </div>
-                <div class="descricaoModalEditar">
-                    <h1>Descrição</h1>
-                    <div class="conteudoDescricaoEditar">
-                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ad nobis quod fuga obcaecati beatae aperiam temporibus dolor voluptatem et, saepe fugit. Totam quod error pariatur explicabo animi provident voluptas veniam?</p>
-                        <i class="bi bi-pencil-square"></i>
-                    </div>
-                </div>
-                <div class="autorEditar">
-                    <h1>Autor</h1>
-
-                    <div class="conteudoAutorEditar">
-                        <p>Lorem Ipsum</p>
-                        <i class="bi bi-pencil-square"></i>
-                    </div>
-                </div>
+            </div>  
+            <div class="descricaoModalEditar">
+                <p>Descrição</p>
+                <textarea class="inputDescricao" id="inputDescricao" rows="5" cols="10" >Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ratione eius molestiae voluptas nihil reiciendis quasi fugiat, quas corrupti impedit distinctio praesentium? Delectus, expedita? Praesentium quia sequi alias neque natus esse?</textarea>
+            </div>
+            <div class="dataLocalEditar">
                 <div class="localEditar">
-                    <h1>Local</h1>
-                    <div class="conteudoLocalEditar">
-                        <p>Lorem Ipsum</p>
-                        <i class="bi bi-pencil-square"></i>
-                    </div>
-                    
+                    <p>Local</p>
+                    <input class="inputLocal" id="inputLocal" type="text" value="Juiz de Fora">
                 </div>
                 <div class="dataEditar">
-                    <h1>Data de Criação</h1>
-                    <div class="conteudoDataEditar">
-                        <p>01/01/2025</p>
-                        <i class="bi bi-pencil-square"></i>
-                </div>   
-                <div class="botoesEditar">
-                    <button class="botaoCancelarEditar" onclick="fecharModal('fundoEditar','modalEditar')">Cancelar</button>
-                    <button class="botaoSalvarEditar" onclick="fecharModal('fundoEditar','modalEditar')">Salvar</button>
+                    <p>Data de Criação</p>
+                    <input class="inputData" id="inputData" type="date" value="16/05/2025" >
                 </div>
             </div>
+            <div class="botoesEditar">
+                <button class="botaoModal botaoSalvar" onclick="salvarAlteracoes()">Salvar</button>
+                <button class="botaoModal botaoCancelar" onclick="fecharModal('fundoEditar','modalEditar')">Cancelar</button>
+            </div>
         </div>
+    </div>
 </body>
 <script src="../../../public/js/modal.js"></script>
 <script src="../../../public/js/exibirPreview.js"></script>

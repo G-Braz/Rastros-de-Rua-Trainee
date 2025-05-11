@@ -4,106 +4,228 @@
     display: none;
     justify-content: center;
     align-items: center;
-
-}
-.editar{
-    width: 40%;
-    height: fit-content;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
     position: absolute;
-    top:1%;
+    background-color: rgba(26, 26, 26, 0.466);
+    opacity: 0;
+    transition: all 0.5s ease;
+    top: 0%;
+}
+
+.editar{
+    font-size: 20px;
+    color: #1E3A5F;
+    font-family: 'Staatliches', sans-serif;
+    width: 50vw;
+    height: fit-content;
     background-color: #F5F5F5;
     border-radius: 8px;
+    padding: 0px;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    align-items: center;
     filter: drop-shadow(5px 5px 10px #000000);
-    font-family: 'Staatliches', sans-serif;
+    row-gap: 10px;
+    top:16%;
 }
 .tituloModalEditar{
+    font-size: 28px;
+    padding: 5px 5px;
+    text-align: center;
     width: 100%;
-    height: fit-content;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     background-color: #1E3A5F;
-    color: #ffffff;
-    border-radius: 8px 8px 0 0;
-}
-.tituloModalEditar i{
-    font-size: 300%;
-}
-.tituloModalEditar p{
-    font-size: 200%;
-}
-.imagensEditar{
-    display: flex;
-    width:100%;
-}
-.arteEditar{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    width: 60%;
-}
-.arteEditar img{
-    background-color: #1E3A5F;
-    width: 70%;
-    padding: 1.5%;
-    border-radius: 8px;
-}
-.tituloPublicacaoEditar, .descricaoModalEditar, .autorEditar, .dataEditar, .localEditar{
-    width: 100%;
-    display: flex;
-    align-items: start;
-    flex-direction: column;
-    padding: 0 0 0 26px;
-}
-.tituloPublicacaoEditar h1, .descricaoModalEditar h1, .autorEditar h1, .dataEditar h1, .localEditar h1 ,.tagEditar h1, .arteEditar h1{
-    font-size: 150%;
-    color: #0C1C31;
-}
-.tituloPublicacaoEditar p, .descricaoModalEditar p, .autorEditar p, .dataEditar p, .locaEditar p{
-    width: 95%;
-    background-color: #1E3A5F ;
-    font-family: 'Urbanist', sans-serif;
-    font-size: 120%;
     color: #F5F5F5;
-    border-radius: 8px;
-    font-size: 18px;
-    border: 2px solid #ccc;
-    padding: 6px 10px;
+    border-top-right-radius: 8px;
+    border-top-left-radius: 8px ;
 }
-.tagEditar{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    padding: 0 20px 0 0;
-}
-.tagEditar img{
+.botaoModal{
+    font-family: 'Staatliches', sans-serif;
+    width: fit-content;
+    height: fit-content;
     background-color: #1E3A5F;
-    border-radius: 8px;
-    padding: 3% 1% 1% 1%;
-    width: 100%;
+    color: #F5F5F5;
+    font-size: 20px;
+    padding: 4px 16px;
+}
+.botaoCancelar:hover{
+    background-color: #B22222;
+    transition: all 0.3s;
+}
+.botaoSalvar:hover {
+    background-color: #05AC4B;
+    transition: all 0.3s;
 }
 .botoesEditar{
     display: flex;
+    flex-direction: row;
+    align-self: center;
+    gap: 10%;
+    padding-top: 5px;
+    padding-bottom: 20px;
+}
+.arteInput,
+.tagInput {
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+    width: fit-content;
+    align-items: center;
     justify-content: center;
-    margin: 16px 0 16px 0;
+    font-family: 'Urbanist', sans-serif;
+    font-size: 14px;
+}
+.arteInput img{
+    padding: 3%;
+    background-color: #1E3A5F;
+    border-radius: 8px;
     width: 100%;
-    gap: 24px;
 }
-.botaoCancelarEditar{
-    width: 26%;
+.tagInput img{
+    padding: 4% 2% 2% 2%;
     background-color: #1E3A5F;
-    color: white;
-    font-size: 200%;
+    border-radius: 8px;
+    width: 100%;
 }
-.botaoSalvarEditar{
-    width: 26%;
+.inputImg{
+    display: none;
+}
+#previewArte,
+#previewTag {
+    object-fit: cover;
+    margin-top: 10px;
+    height: 27.7vh;
+    width: 230px;
+    display: none;
+    border-radius: 8px;
+}
+#previewTag{
+    height: 10vh;
+}
+.labelImgArte,
+.labelImgTag {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    color:#0C1C31;
+    cursor: pointer;
+    font-size:20px;
+}
+.dataLocalEditar{
+    display: flex;
+    flex-direction: row;
+    width: 90%;
+    gap: 3%;
+}
+.tituloInput,
+.inputAutor,
+.inputDescricao,
+.inputLocal,
+.inputData{
     background-color: #1E3A5F;
-    color: white;
-    font-size: 200%;
+    width: 100%;
+    padding: 8px 10px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    font-family: 'Urbanist', sans-serif;
+    color: #F5F5F5;
+}
+.inputData{
+    width: fit-content;
+    padding: 7px 10px;
+}
+.inputLocal{
+    width: 100%;
+}
+.tituloPublicacaoEditar,
+.autorEditar{
+    width: 100%;
+    color: #1E3A5F;
+}
+.dataEditar {
+    width: fit-content;
+    height: 100%;
+}
+.localEditar {
+    width: 80%;
+    height: 100%;
+}
+.descricaoModalEditar{
+    width: 90%;
+    color:#1E3A5F;
 }
 
+.inputDescricao{
+    resize: none;
+    overflow: auto;
+    display: block;
+    width: 100%;
+}
+
+.arteEditar,
+.tagEditar{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 400px;
+}
+
+.imagensEditar{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 90%;
+    align-items: center;
+    gap: 3%;
+}
+.tagEditar{
+    align-items: start;
+}
+
+.camposEditar{
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+}
+input[type="date"]::-webkit-calendar-picker-indicator {
+    filter: invert(1); /*Deixa o simbolo de calendario no input da data branco*/
+}
+.labelArte{
+    height: 350px;
+}
+.labelTag{
+    height: 100px;
+    display: block;
+}
+.conteudoArteInput, .conteudoTagInput{
+    display: flex;
+    width: 60%;
+    justify-content: space-around;
+    background-color: #1E3A5F;
+    color: white;
+    border-radius: 8px;
+    margin-top: 4px;
+    padding: 2%;
+    gap: 3.4%;
+}
+.conteudoArteInput p{
+    font-size: 80%;
+}
+.conteudoArteInput i{
+    font-size: 80%;
+}
+.conteudoTagInput{
+    width: 80%;
+    padding: 3%;
+}
+.conteudoTagInput p{
+    font-size: 70%;
+}
+.conteudoTagInput i{
+    font-size: 70%;
+}
