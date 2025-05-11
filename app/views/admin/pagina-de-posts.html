@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="/public/css/modalVisualizar.css">
     <link rel="stylesheet" href="/public/css/modalEditar.css">
     <link rel="stylesheet" href="/public/css/modalCriar.css">
+    <link rel="stylesheet" href="/public/css/modalExcluir.css">
 </head>
 <body>
     <div class="pagina">
@@ -54,7 +55,7 @@
                         <td class="operacoes">
                             <button><i class="bi bi-eye-fill" onclick="abrirModal('fundoVisualizar','modalVisualizar')"></i></button>
                             <button><i class="bi bi-pencil-square" onclick="abrirModal('fundoEditar','modalEditar')"></i></button>
-                            <button><i class="bi bi-trash-fill"></i></button>
+                            <button><i class="bi bi-trash-fill" onclick="abrirModal('fundo-modal-excluir','modal-excluir')"></i></button>
                         </td>
                     </tr>
                     <tr class="post">
@@ -65,7 +66,7 @@
                         <td class="operacoes">
                             <button><i class="bi bi-eye-fill"  onclick="abrirModal('fundoVisualizar','modalVisualizar')"></i></button>
                             <button><i class="bi bi-pencil-square" onclick="abrirModal('fundoEditar','modalEditar')"></i></button>
-                            <button><i class="bi bi-trash-fill"></i></button>
+                            <button><i class="bi bi-trash-fill" onclick="abrirModal('fundo-modal-excluir','modal-excluir')"></i></button>
                         </td>
                     </tr>
                     <tr class="post">
@@ -76,7 +77,7 @@
                         <td class="operacoes">
                             <button><i class="bi bi-eye-fill"  onclick="abrirModal('fundoVisualizar','modalVisualizar')"></i></button>
                             <button><i class="bi bi-pencil-square" onclick="abrirModal('fundoEditar','modalEditar')"></i></button>
-                            <button><i class="bi bi-trash-fill"></i></button>
+                            <button><i class="bi bi-trash-fill" onclick="abrirModal('fundo-modal-excluir','modal-excluir')"></i></button>
                         </td>
                     </tr>
                     <tr class="post">
@@ -87,7 +88,7 @@
                         <td class="operacoes">
                             <button><i class="bi bi-eye-fill"  onclick="abrirModal('fundoVisualizar','modalVisualizar')"></i></button>
                             <button><i class="bi bi-pencil-square" onclick="abrirModal('fundoEditar','modalEditar')"></i></button>
-                            <button><i class="bi bi-trash-fill"></i></button>
+                            <button><i class="bi bi-trash-fill" onclick="abrirModal('fundo-modal-excluir','modal-excluir')"></i></button>
                         </td>
                     </tr>
                     <tr class="post">
@@ -98,7 +99,7 @@
                         <td class="operacoes">
                             <button><i class="bi bi-eye-fill"  onclick="abrirModal('fundoVisualizar','modalVisualizar')"></i></button>
                             <button><i class="bi bi-pencil-square" onclick="abrirModal('fundoEditar','modalEditar')"></i></button>
-                            <button><i class="bi bi-trash-fill"></i></button>
+                            <button><i class="bi bi-trash-fill" onclick="abrirModal('fundo-modal-excluir','modal-excluir')"></i></button>
                         </td>
                     </tr>
                 </tbody>
@@ -182,19 +183,26 @@
             </div>
         </div>
     </div>
-    <!-- Modal Deletar -->
-    <!-- <div class="modal-deletar" id="fundo-modal-deletar">
-        <div class="conteudo-modal" id="id-modal-criar">
-            <div class="titulo-modal">
-                <p>Excluir Publicação</p>
+    <!-- Modal Excluir -->
+    <div class="excluir" id="fundo-modal-excluir"></div>
+    <div class="conteudo-modal-excluir" id="modal-excluir">
+        <div class="topo-excluir">
+            <div class="icone-excluir">
+                <i class="bi bi-trash-fill"></i>
             </div>
-            <div class="botoes-modal">
-                <button class="botao-modal botao-modal-criar">Criar</button>
-                <button class="botao-modal botao-modal-cancelar"
-                    onclick="fecharModal('fundo-modal-criar','id-modal-criar')">Cancelar</button>
+            <div class="titulo-excluir">
+                <h2>Excluir Publicação</h2>
             </div>
         </div>
-    </div> -->
+        <div class="pergunta">
+            <p>Tem certeza que deseja excluir a publicação?</p>
+        </div>
+        <div class="botoes-modal">
+            <button class="botao-modal botao-modal-excluir">Excluir</button>
+            <button class="botao-modal botao-modal-cancelar"
+                onclick="fecharModal('fundo-modal-excluir','modal-excluir')">Cancelar</button>
+        </div>
+    </div>
     <!--Modal visualizar-->
     <div class="modalVisualizar" id="fundoVisualizar">
         <div class="visualizar" id="modalVisualizar">

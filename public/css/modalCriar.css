@@ -28,7 +28,9 @@
     align-items: center;
     filter: drop-shadow(5px 5px 10px #000000);
     row-gap: 10px;
-    top:7%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 .opacidade {
     opacity: 1;
@@ -133,7 +135,7 @@
 }
 .input-data-automatica{
     width: fit-content;
-    padding: 7px 10px;
+    padding: 7px 1px;
 }
 .input-local{
     width: 100%;
