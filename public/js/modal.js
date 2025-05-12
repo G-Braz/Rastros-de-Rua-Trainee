@@ -35,28 +35,28 @@ function salvarAlteracoes() {
 
     fecharModal('fundoEditar','modalEditar'); // Fecha o modal
 }
-document.addEventListener('DOMContentLoaded', function() {
-    const inputArte = document.getElementById('inputArte');
-    const labelArte = document.getElementById('labelArte');
-    const previewArte = document.getElementById('previewArte');
+// document.addEventListener('DOMContentLoaded', function() {
+//     const inputArte = document.getElementById('inputArte');
+//     const labelArte = document.getElementById('labelArte');
+//     const previewArte = document.getElementById('previewArte');
 
-    inputArte.addEventListener('change', function(e) {
-        const file = e.target.files[0];
+//     inputArte.addEventListener('change', function(e) {
+//         const file = e.target.files[0];
         
-        if (file) {
-            const reader = new FileReader();
+//         if (file) {
+//             const reader = new FileReader();
             
-            reader.onload = function(event) {
-                previewArte.src = event.target.result;
-                previewArte.style.display = 'flex';
-            };
-            labelArte.textContent='imagem selecionada'
+//             reader.onload = function(event) {
+//                 previewArte.src = event.target.result;
+//                 previewArte.style.display = 'flex';
+//             };
+//             labelArte.textContent='imagem selecionada'
             
-            reader.readAsDataURL(file);
-        }else{
-            previewArte.style.display='none';
-            previewArte.src='';
-        }
-    });
-});
+//             reader.readAsDataURL(file);
+//         }else{
+//             previewArte.style.display='none';
+//             previewArte.src='';
+//         }
+//     });
+// });
 

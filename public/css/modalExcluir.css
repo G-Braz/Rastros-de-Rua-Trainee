@@ -38,8 +38,8 @@
         text-align: center;
         background: #1E3A5F;
         padding: 1vh;
-        border-top-right-radius: 0.5vw;
-        border-top-left-radius: 0.5vw;
+        border-top-right-radius: 0.6vw;
+        border-top-left-radius: 0.6vw;
 }
 
 .icone-excluir i {
@@ -95,4 +95,142 @@
 .botao-modal-excluir:hover {
         background-color: #05AC4B;
         transition: all 0.3s;
+}
+@media only screen and (max-width: 445px){
+        .conteudo-modal-excluir {
+                width: 70%;
+                height: fit-content;
+                border-radius: 1vh;
+        }
+        .topo-excluir{
+                border-top-left-radius: 1vh;
+                border-top-right-radius: 1vh;
+        }
+        .botao-modal{
+                border-radius: 10px;
+        }
+        .icone-excluir i {
+                font-size: 8vh;
+        }
+}
+@media only screen and (min-width: 431px) and (max-width: 768px) {
+        .conteudo-modal-excluir {
+                width: 60%;
+                height: fit-content;
+                border-radius: 1vh;
+        }
+                
+        .topo-excluir {
+                border-top-left-radius: 1vh;
+                border-top-right-radius: 1vh;
+        }
+        .icone-excluir i {
+                font-size: 7vh;
+        }
+        .botao-modal{
+                font-size: 25px;
+        }
+}
+
+@media only screen and (min-width: 769px) and (max-width:820px) and (min-height:601px) {
+        .conteudo-modal-excluir {
+                width: 60%;
+                height: fit-content;
+                border-radius: 12px;
+        }
+        .icone-excluir i {
+                font-size: 7vh;
+        }
+        .botao-modal{
+                font-size: 30px;
+        }
+        .pergunta{
+                margin-top: 10px;
+        }
+}
+@media only screen and (min-width: 821px) and (max-width: 1366px) {
+        .conteudo-modal-excluir {
+                width: 30%;
+                height: fit-content;
+                border-radius: 12px;
+        }
+
+        .icone-excluir i {
+                font-size: 7vh;
+        }
+
+        .botao-modal {
+                font-size: 22px;
+        }
+
+        .pergunta {
+                margin-top: 8px;
+        }
+}
+@media only screen and (min-width: 1024px) and (max-width:1024px) and (min-height:1366px) and (max-height:1366px) {
+        .conteudo-modal-excluir {
+                width: 60%;
+        }
+        .botao-modal{
+                font-size: 30px;
+        }
+}
+@media only screen and (min-width: 912px) and (max-width:912px) and (min-height:1368px) and (max-height:1368px) {
+        .conteudo-modal-excluir{
+                width: 60%;
+        }
+        .botao-modal{
+                font-size: 30px;
+        }
+}
+@media only screen and (min-width: 853px) and (max-width:853px) and (min-height:1280px) and (max-height:1280px) {
+        .conteudo-modal-excluir {
+                width: 60%;
+        }
+
+        .botao-modal {
+                font-size: 30px;
+        }
+}
+@media only screen and (min-width: 0px) and (max-width: 344px) {
+        .conteudo-modal-excluir {
+                width: 80%;
+                height: fit-content;
+                border-radius: 12px;
+        }
+        .titulo-excluir h2{
+                font-size: 30px;
+        }
+        .icone-excluir i {
+                font-size: 7vh;
+        }
+        .botao-modal {
+                font-size: 24px;
+        }
+        .pergunta {
+                margin-top: 10px;
+        }
+}
+@media only screen and (min-width:1020px) and (max-width: 1030px) and (max-height:720px) {
+        .conteudo-modal-excluir {
+                width: 30%;
+                height: fit-content;
+                border-radius: 12px;
+        }
+
+        .titulo-excluir h2 {
+                font-size: 28px;
+        }
+
+        .icone-excluir i {
+                font-size: 7vh;
+        }
+
+        .botao-modal {
+                font-size: 24px;
+        }
+
+        .pergunta {
+                margin-top: 10px;
+        }
 }
