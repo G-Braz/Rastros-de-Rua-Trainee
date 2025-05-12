@@ -94,7 +94,7 @@ table {
     border-collapse: collapse;
 }
 
-/*Linhas da tabela*/
+/*Cabeçalho da tabela*/
 th {
     font-size: 2.4vw;
     color: #F5F5F5;
@@ -102,7 +102,7 @@ th {
     padding: 2vh 1.5vw; 
 }
 
-/*Cabeçalho da tabela*/
+/*Celulas da tabela*/ 
 td {
     font-size: 2vw;
     font-weight: 500;
@@ -163,29 +163,31 @@ button:hover{
 /* Links Paginação */
 .paginacao a {
     display: flex;
-    background: #F5F5F5;
-    /* border-radius: 2vw;  */
-    border-radius: 0.7vw; 
+    background:rgb(0,11,26,0.8);
+    border-radius: 1.5vw; 
     box-shadow: 0 4px 15px #0D0D0D;
-    font-size: 2vw;
-    color: #0C1C31;
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    font-size: 4vh;
+    color:#F5F5F5;
     justify-content: center;
     align-items: center;
     text-decoration: none;
+    transition: background 0.2s;
 }
 
 /* Ícones paginação */
 .paginacao .bi {
-    font-weight: 900;
+    font-weight: 400;
     padding: 2%;
-    font-size: 2vw;
+    font-size: 4vh;
 }
 
 .paginacao .paginas {
-    width: 5%;
-    height: 6vh;
+    width: 4.5%;
+    height: 6.5vh;
     padding: 3vh 1vw;
-    font-weight: 600;
+    font-weight: 400;
 }
 
 .paginacao .skip {
@@ -195,10 +197,10 @@ button:hover{
 
 /* Muda ao passar o mouse */
 .paginacao a:hover {
-    background: rgb(12, 28, 49, 0.8); /* Fundo muda (transparente) ao passar o mouse */
+    background: rgb(12, 28, 49, 0.8); /* Ficou mais bonito assim nessa página */
+    /* background: rgb(0,11,26,0.3); backgrond que está na páginação padrão do site */
     border: 1px solid rgb(245, 245, 245, 0.4);
-    color: #F5F5F5;
-    transform: scale(1.05); /* Aumenta ao passar o mouse */
+    transform: scale(1.05);
     transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
 }
 
