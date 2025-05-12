@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,6 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Staatliches&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
     <title>Tabela de Publicações</title>
+
     <link rel="stylesheet" href="/public/css/pagina-de-posts-admin.css">
     <link rel="stylesheet" href="/public/css/modalVisualizar.css">
     <link rel="stylesheet" href="/public/css/modalEditar.css">
@@ -127,23 +128,22 @@
         </div>
     </div>
     <!--Modal Criar-->
-    <div class="modal-criar" id="fundo-modal-criar">
-        <div class="conteudo-modal" id="id-modal-criar">
-            <div class="titulo-modal">
+    <div class="overlay-criar" id="fundo-modal-criar">
+        <div class="modal-criar" id="id-modal-criar">
+            <div class="titulo-modal-criar">
                 <p>Criar Publicação</p>
             </div>
-            <div class="imagens-inputs">
+            <div class="container-superior-modal">
                 <div class="adicionar-arte">
                     <div>Arte</div>
                     <div class="input-arte"> 
-                        <input id="inputArte" class="custom-input-img" type="file">
+                        <input id="inputArte" class="custom-input-img" type="file" style="display: none;">
                         <label id="labelArte"for="inputArte" class="custom-label-art">Selecionar imagem da arte <img src="/public/assets/icone-imagem.svg" style="height: 70px" /> 
-                        </label>
-                        
+                        </label> 
                         <img id="previewArte" src="" alt="Pré-visualização" style="display: none;"/>
                     </div>
                 </div>
-                <div class="campos-direita">
+                <div class="campos-superior-direita">
                     <div class="campo-titulo">
                         <p>Título</p>
                         <input class="input-titulo" type="text" placeholder="Insira o Título">
@@ -155,7 +155,7 @@
                     <div class="adicionar-tag">
                         <p>Tag</p>
                         <div class="input-tag">
-                            <input id="inputTag" class="custom-input-img" type="file">
+                            <input id="inputTag" class="custom-input-img" type="file" style="display: none;">
                             <label id="labelTag" for="inputTag" class="custom-label-tag">Selecionar imagem da tag <img src="/public/assets/icone-imagem.svg" style="height: 40px; display: block;" />
                             </label>
                             <img id="previewTag" src="" alt="Pré-visualização" style="display: none;" />
@@ -184,7 +184,7 @@
         </div>
     </div>
     <!-- Modal Excluir -->
-    <div class="overlay-excluir" id="fundo-modal-excluir"></div>
+    <div onclick="fecharModal('fundo-modal-excluir','modal-excluir')" class="overlay-excluir" id="fundo-modal-excluir"></div>
     <div class="modal-excluir" id="modal-excluir">
         <div class="cabecalho-modal-excluir">
             <div class="icone-modal-excluir">
