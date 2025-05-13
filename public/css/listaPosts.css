@@ -28,7 +28,44 @@ body * {
     justify-content: center;
     align-items: center;
 }
+.topo{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width:100%;
 
+}
+.filtro{
+    position: absolute;
+    left: 84%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgb(0,11,26,0.75);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    height: 8vh;
+    width: 10%;
+    gap:10px;
+    border-radius: 32px;
+    transition: all .5s;
+    border:1px solid transparent;
+    cursor:pointer;
+    box-shadow: 0 4px 15px #0D0D0D;
+}
+.filtro:hover{
+    scale:1.05;
+}
+
+.textoFiltro{
+    font-size: 18px;
+    font-weight: 600;
+    color: #427AC4;
+}
+.filtro .bi{
+    padding: 0;
+}
 .barraDePesquisa{
     width: 45%;
     padding: 10px;
@@ -209,6 +246,9 @@ ul{
 }
 
 @media (max-width:345px) {
+    .conteudo{
+        gap:5px;
+    }
     .barraDePesquisa{
         width: 100%;
     }
@@ -220,6 +260,15 @@ ul{
     }
     .inputPesquisa .bi{
         font-size: 80%;
+    }
+    .topo{
+        flex-direction: column;
+        gap:10px;
+    }
+    .filtro{
+        position: static;
+        width:50%;
+        height: 5vh;
     }
     .listaDePosts{
         display: flex;
@@ -260,6 +309,9 @@ ul{
 }
 
 @media screen and (min-width:346px) and (max-width:380px) {
+    .conteudo{
+        gap:5px;
+    }
     .barraDePesquisa{
         width: 100%;
     }
@@ -268,6 +320,15 @@ ul{
     }
     .inputPesquisa .bi{
         font-size: 80%;
+    }
+    .topo{
+        flex-direction: column;
+        gap:10px;
+    }
+    .filtro{
+        position: static;
+        width:43%;
+        height: 6vh;
     }
     .listaDePosts{
         display: flex;
@@ -313,6 +374,9 @@ ul{
 
 
 @media screen and (min-width:389px) and (max-width:429px){
+    .conteudo{
+        gap:5px;
+    }
     .barraDePesquisa{
         width: 100%;
     }
@@ -321,6 +385,15 @@ ul{
     }
     .inputPesquisa .bi{
         font-size: 80%;
+    }
+    .topo{
+        flex-direction: column;
+        gap:10px;
+    }
+    .filtro{
+        position: static;
+        width:45%;
+        height: 5.5vh;
     }
     .listaDePosts{
         display: flex;
@@ -362,6 +435,9 @@ ul{
     }
 }
 @media screen and (min-width:430px) and (max-width:440px){
+    .conteudo{
+        gap:5px;
+    }
     .barraDePesquisa{
         width: 100%;
     }
@@ -370,6 +446,15 @@ ul{
     }
     .inputPesquisa .bi{
         font-size: 80%;
+    }
+    .topo{
+        flex-direction: column;
+        gap:10px;
+    }
+    .filtro{
+        position: static;
+        width:43%;
+        height: 5vh;
     }
     .listaDePosts{
         display: flex;
@@ -412,6 +497,9 @@ ul{
 
 
 @media screen and (min-width:441px) and (max-width:540px){
+    .conteudo{
+        gap:20px;
+    }
     .barraDePesquisa{
         width: 90%;
     }
@@ -423,6 +511,15 @@ ul{
     }
     .inputPesquisa .bi{
         font-size: 90%;
+    }
+    .topo{
+        flex-direction: column;
+        gap:10px;
+    }
+    .filtro{
+        position: static;
+        width:35%;
+        height: 6.5vh;
     }
     .listaDePosts{
         display: flex;
@@ -466,6 +563,11 @@ ul{
     }
     .caixaDePesquisa{
         height: 7.5vh;
+    }
+    .filtro{
+        width:14%;
+        height: 5vh;
+        left: 79%;
     }
     .listaDePosts{
         grid-template-columns: repeat(2,1fr);
@@ -512,6 +614,11 @@ ul{
     .caixaDePesquisa{
         height: 7.5vh;
     }
+    .filtro{
+        width:14%;
+        height: 4.5vh;
+        left:79%;
+    }
     .listaDePosts{
         grid-template-columns: repeat(2,1fr);
     }
@@ -550,11 +657,20 @@ ul{
     }
 }
 @media screen and (min-width: 821px) and (max-width: 1024px) {
+    .conteudo{
+        gap:10px;
+    }
     .barraDePesquisa{
-        width: 60%;
+        width: 55%;
     }
     .caixaDePesquisa{
         height: 7.5vh;
+    }
+    .filtro{
+        width:14%;
+        height: 4.5vh;
+        left:80%;
+        
     }
     .listaDePosts{
         grid-template-columns: repeat(2,1fr);
@@ -606,6 +722,11 @@ ul{
         grid-template-columns: repeat(2,1fr);
         padding: 4%;
     }
+    .filtro{
+        height: 8vh;
+        width:12%;
+        left:84%;
+    }
     .post{
         width: 95%;
         height: 100%;
@@ -648,6 +769,7 @@ ul{
     .caixaDePesquisa{
         height: 12vh;
     }
+    .filtro{}
     .listaDePosts{
         grid-template-columns: repeat(3,1fr);
         padding: 4%;
