@@ -63,9 +63,10 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    align-self: center;
 }
 .adicionar-tag {
-    align-items: start;
+    align-self: start;
 }
 .input-arte,
 .input-tag {
@@ -113,7 +114,12 @@
     background-color: #1E3A5F;
     color: #F5F5F5;
     font-size: 20px;
-    padding: 4px 16px;
+    padding: 4px 10px;
+    font-size: 18px;
+    border-radius: 6px;
+    box-sizing: border-box;
+    max-width: 100%;
+    white-space: nowrap;
 }
 .botao-modal-cancelar:hover{
     background-color: #B22222;
@@ -126,10 +132,12 @@
 .botoes-modal{
     display: flex;
     flex-direction: row;
-    align-self: center;
-    gap: 10%;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
     padding-top: 5px;
     padding-bottom: 20px;
+    width: 100%;
 }
 
 .local-e-data{
@@ -154,9 +162,10 @@
     color: #F5F5F5;
 }
 .input-data-automatica{
-    width: fit-content;
+    max-width: 130px;
     padding: 7px 1px;
     text-align: center;
+
 }
 .input-local{
     width: 100%;
@@ -167,8 +176,7 @@
     color: #1E3A5F;
 }
 .campo-data {
-    width: fit-content;
-    height: 100%;
+    align-items: center;
 }
 .campo-local {
     width: 80%;
