@@ -263,12 +263,17 @@ td{ /*Corpo da tabela*/
 }
 
 .botao-modal { /* Parte com o botão de fechar */
-    padding: 2vh; 
+    padding: 1vh 0 3vh 0; 
     display: flex;
     gap:2vh;
+    justify-content: center;
+    align-items: center;
 }
 
 .botao { /* botão fechar */
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background: #1E3A5F;
     color: #F5F5F5;
     padding: 1vh 2vh;
@@ -278,12 +283,19 @@ td{ /*Corpo da tabela*/
     cursor: pointer;
     border: none;
     box-shadow: 0 4px 4px rgba(0,0,0,0.25);
+    
 }
 
 .botao:hover { /* Efeito no botão fechar ao passar o mouse */
     background: #0C1C31;
     transform: scale(1.05);
-    transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+    transition: all 0.3s;
+}
+#salvar:hover{
+    background: rgb(5, 172, 75);
+}
+#cancelar:hover{
+    background: rgb(178, 34, 34);
 }
 
 /*Modal Editar e Criar*/
