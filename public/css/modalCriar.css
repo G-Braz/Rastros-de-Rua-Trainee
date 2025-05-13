@@ -84,6 +84,12 @@
     font-size: 14px;
     border-style: dashed;
 }
+.custom-label-art img {
+    height: 70px;
+}
+.custom-label-tag img {
+    height: 40px;
+}
 #previewArte,
 #previewTag {
     object-fit: cover;
@@ -150,7 +156,8 @@
 .input-descricao,
 .input-autor,
 .input-local,
-.input-data-automatica{
+.input-data-automatica,
+.input-materiais{
     background-color: #1E3A5F;
     width: 100%;
     padding: 8px 10px;
@@ -165,7 +172,7 @@
     max-width: 130px;
     padding: 7px 1px;
     text-align: center;
-
+    font-size: 14px;
 }
 .input-local{
     width: 100%;
@@ -176,21 +183,98 @@
     color: #1E3A5F;
 }
 .campo-data {
+    width: 20%;
     align-items: center;
 }
 .campo-local {
     width: 80%;
     height: 100%;
 }
-.campo-descricao{
+.campo-descricao,
+.campo-materiais{
     width: 90%;
     color:#1E3A5F;
 }
 
-.input-descricao{
+.input-descricao,
+.input-materiais{
     resize: none;
     overflow: auto;
     display: block;
     width: 100%;
 }
 
+@media only screen and (max-width: 445px) {
+    .modal-criar{
+        width: 60vw;
+        font-size: 16px;
+    }
+    .titulo-modal-criar {
+        font-size: 22px;
+    }
+    .container-superior-modal {
+        flex-direction:column;
+        gap: 0;
+        justify-content: center;
+    }
+    .campos-superior-direita {
+        width: 100%;   
+    }
+    .adicionar-arte,
+    .adicionar-tag{
+        height: fit-content;
+        width: 100%;
+        align-self: center;
+    }
+    #previewArte,
+    #previewTag {
+        object-fit: cover;
+        margin-top: 10px;
+        height: 14vh;
+        width: 100%;
+        display: none;
+        border-radius: 8px;
+    }
+    #previewTag {
+        height: 6vh;
+        width: 70%;
+    }
+    .input-titulo,
+    .input-descricao,
+    .input-autor,
+    .input-local,
+    .input-data-automatica,
+    .input-materiais {
+        padding: 6px 8px;
+        border-radius: 8px;
+        font-size: 12px;
+    }
+    .input-arte,
+    .input-tag{
+        width: 100%;
+        font-size: 12px;
+    }
+    .custom-label-art img {
+        height: 50px;
+    }
+
+    .custom-label-tag img {
+        height: 30px;   
+    }
+
+    .local-e-data {
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+        gap: 2vh;
+    }
+    .campo-data, .campo-local{
+        width: 100%;
+    }
+    .input-data-automatica {
+        max-width: 100%;
+        padding: 5px 1px;
+        text-align: center;
+        font-size: 12px;   
+    }
+}
