@@ -49,13 +49,20 @@ body * {
     width: 10%;
     gap:10px;
     border-radius: 32px;
-    transition: all .5s;
+    transition: all .4s;
     border:1px solid transparent;
     cursor:pointer;
     box-shadow: 0 4px 15px #0D0D0D;
 }
 .filtro:hover{
     scale:1.05;
+    border: 0.2px solid #427ac4
+}
+.filtro:hover .textoFiltro{
+    
+}
+.filtro:hover .bi{
+    
 }
 
 .textoFiltro{
