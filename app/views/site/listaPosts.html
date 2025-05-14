@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 </head>
 <body>
+    <div id="tela" onclick="fecharFiltro('tiposFiltro')"></div>
     <div class="conteudo">
         <div class="topo">
             <div class="barraDePesquisa">
@@ -21,9 +22,14 @@
                         <i class="bi bi-x-lg" onclick= "apagarTexto('inputPesquisa')"></i>
                 </div>
             </div>
-            <div class="filtro">
+            <div class="filtro" onclick="abrirFiltro('tiposFiltro')">
                 <i class="bi bi-filter-circle-fill"></i>
                 <p class="textoFiltro">Filtro</p>
+            </div>
+            <div class="tiposFiltro" id="tiposFiltro">
+                    <p>tipo1</p>
+                    <p>tipo2</p>
+                    <p>tipo3</p>
             </div>
         </div>
         <ul class="listaDePosts">

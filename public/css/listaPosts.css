@@ -36,13 +36,14 @@ body * {
     width:100%;
 
 }
+
 .filtro{
     position: absolute;
     left: 84%;
     display: flex;
     align-items: center;
     justify-content: center;
-    background: rgb(0,11,26,0.75);
+    background: rgb(0,11,26,0.80);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     height: 8vh;
@@ -54,6 +55,38 @@ body * {
     cursor:pointer;
     box-shadow: 0 4px 15px #0D0D0D;
 }
+.tiposFiltro{
+    position: absolute;
+    left: 81.5%;
+    top:15%;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 15%;
+    height: 20vh;
+    gap:1.5vh;
+    padding: 2vh;
+    border-radius: 16px;
+    background: rgb(0,11,26,0.80);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    z-index: 1;
+}
+.tiposFiltro p{
+    border-radius: 32px;
+    text-align: center;
+    width: 100%;
+    border:1px solid transparent;
+    padding: 0.5vh;
+    color: #427AC4;
+    font-weight: 500;
+    cursor: pointer;
+}
+.tiposFiltro p:hover{
+    border: 0.2px solid #427AC4;
+}
+
 .filtro:hover{
     scale:1.05;
     border: 0.2px solid #427ac4
@@ -72,6 +105,13 @@ body * {
 }
 .filtro .bi{
     padding: 0;
+}
+
+#tela{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: none;
 }
 .barraDePesquisa{
     width: 45%;
@@ -277,6 +317,13 @@ ul{
         width:50%;
         height: 5vh;
     }
+    .tiposFiltro{
+        top:19%;
+        left: 25%;
+        width: 50%;
+        padding: 1vh;
+        height: 18vh;
+    }
     .listaDePosts{
         display: flex;
         flex-direction: column;
@@ -336,6 +383,12 @@ ul{
         position: static;
         width:43%;
         height: 6vh;
+    }
+    .tiposFiltro{
+        top:25%;
+        left: 25%;
+        width: 50%;
+        padding: 1vh;
     }
     .listaDePosts{
         display: flex;
@@ -402,6 +455,13 @@ ul{
         width:45%;
         height: 5.5vh;
     }
+    .tiposFiltro{
+        top:20%;
+        left: 25%;
+        width: 50%;
+        height: 18vh;
+        font-size: 18px;
+    }
     .listaDePosts{
         display: flex;
         flex-direction: column;
@@ -462,6 +522,13 @@ ul{
         position: static;
         width:43%;
         height: 5vh;
+    }
+    .tiposFiltro{
+        top:19.5%;
+        left: 25%;
+        width: 50%;
+        height: 17.5vh;
+        font-size: 20px;
     }
     .listaDePosts{
         display: flex;
@@ -528,6 +595,12 @@ ul{
         width:35%;
         height: 6.5vh;
     }
+    .tiposFiltro{
+        top:24%;
+        left: 25%;
+        width: 50%;
+        font-size: 20px;
+    }
     .listaDePosts{
         display: flex;
         flex-direction: column;
@@ -575,6 +648,13 @@ ul{
         width:14%;
         height: 5vh;
         left: 79%;
+    }
+    .tiposFiltro{
+        left: 75.9%;
+        top:10.2%;
+        width: 20%;
+        height: 15vh;
+
     }
     .listaDePosts{
         grid-template-columns: repeat(2,1fr);
@@ -629,6 +709,13 @@ ul{
     .listaDePosts{
         grid-template-columns: repeat(2,1fr);
     }
+    .tiposFiltro{
+        left: 75.9%;
+        top:9.5%;
+        width: 20%;
+        height: 15vh;
+
+    }
     .post{
         width: 100%;
         height: 100%;
@@ -678,6 +765,14 @@ ul{
         height: 4.5vh;
         left:80%;
         
+    }
+    .tiposFiltro{
+        left: 76.8%;
+        top:9%;
+        width: 20%;
+        height: 13vh;
+        font-size: 18px;
+
     }
     .listaDePosts{
         grid-template-columns: repeat(2,1fr);
