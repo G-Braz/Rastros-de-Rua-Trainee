@@ -287,7 +287,7 @@ td{ /*Corpo da tabela*/
 }
 
 .botao:hover { /* Efeito no botão fechar ao passar o mouse */
-    background: #0C1C31;
+    background:  rgb(178, 34, 34);
     transform: scale(1.05);
     transition: all 0.3s;
 }
@@ -419,8 +419,14 @@ td{ /*Corpo da tabela*/
     box-shadow: 0 4px 4px rgba(0,0,0,0.25);
 }
 
-.cancelar:hover, .excluir:hover { /* Efeito nos botões de cancelar e excluir ao passar o mouse*/
-    background: #0C1C31;
+.cancelar:hover { /* Efeito no botão de cancelar ao passar o mouse*/
+    background:  rgb(178, 34, 34);
+    transform: scale(1.05);
+    transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+
+.excluir:hover { /* Efeito no botão de excluir ao passar o mouse*/
+    background: #d85f02; /* Cor parecida com a pumpkin #FF6F00*/
     transform: scale(1.05);
     transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
 }
