@@ -157,7 +157,7 @@
     width: 60%;
     padding-top: 4px;
 }
-textArea{/*Configura o numero de linhas que serão mostradas na descrição e materiais*/
+.conteudoDescricaoVisualizar,.conteudoMateriaisVisualizar{/*Configura o numero de linhas que serão mostradas na descrição e materiais*/
     line-height:1rem;
     height: calc(1rem*4.5);
 }
@@ -170,7 +170,7 @@ textArea{/*Configura o numero de linhas que serão mostradas na descrição e ma
         font-size: 20px;
     }
     .visualizar{
-        top: 2.5%;
+        top: 4%;
         width: 95vw;
         row-gap: 1px;
     }
@@ -192,7 +192,7 @@ textArea{/*Configura o numero de linhas que serão mostradas na descrição e ma
         padding: 1.5%;
     }   
     .conteudoArteVisualizar img{
-        width:80%;
+        width:100%;
         margin-left: 0;
     }   
     .conteudoArteVisualizar{
@@ -308,7 +308,7 @@ textArea{/*Configura o numero de linhas que serão mostradas na descrição e ma
         font-size: 18px;
         border-radius: 8px;
     }
-    textArea{
+    .conteudoDescricaoVisualizar,.conteudoMateriaisVisualizar{
         line-height: 1rem;
         height: calc(1rem*4);
     }
@@ -383,7 +383,7 @@ textArea{/*Configura o numero de linhas que serão mostradas na descrição e ma
         font-size: 14px;
         border-radius: 8px;
     }
-    textArea{
+    .conteudoDescricaoVisualizar,.conteudoMateriaisVisualizar{
         line-height: 1rem;
         height: calc(1rem*3);
     }
@@ -459,7 +459,7 @@ textArea{/*Configura o numero de linhas que serão mostradas na descrição e ma
         font-size: 70%;
         border-radius: 9px;
     }
-    textArea{
+    .conteudoDescricaoVisualizar,.conteudoMateriaisVisualizar{
         line-height: 1rem;
         height: calc(1rem*5);
     }
@@ -535,7 +535,7 @@ textArea{/*Configura o numero de linhas que serão mostradas na descrição e ma
         font-size: 20px;
         border-radius: 9px;
     }
-    textArea{
+    .conteudoDescricaoVisualizar,.conteudoMateriaisVisualizar{
         line-height: 1.2rem;
         height: calc(1rem*5);
     }
@@ -609,7 +609,7 @@ textArea{/*Configura o numero de linhas que serão mostradas na descrição e ma
         font-size: 20px;
         border-radius: 9px;
     }
-    textArea{
+    .conteudoDescricaoVisualizar,.conteudoMateriaisVisualizar{
         line-height: 1.2rem;
         height: calc(1.1rem*5);
     }
@@ -687,7 +687,7 @@ textArea{/*Configura o numero de linhas que serão mostradas na descrição e ma
         font-size: 100%;
         border-radius: 9px;
     }
-    textArea{
+    .conteudoDescricaoVisualizar,.conteudoMateriaisVisualizar{
         line-height:1.4rem;
         height: calc(1rem*6.65);
     }
@@ -764,7 +764,7 @@ textArea{/*Configura o numero de linhas que serão mostradas na descrição e ma
         font-size:28px;
         border-radius: 9px;
     }
-    textArea{
+    .conteudoDescricaoVisualizar,.conteudoMateriaisVisualizar{
         line-height:1.5rem;
         height: calc(1rem*7.1);
     }
@@ -839,7 +839,7 @@ textArea{/*Configura o numero de linhas que serão mostradas na descrição e ma
         font-size:36px;
         border-radius: 9px;
     }
-    textArea{
+    .conteudoDescricaoVisualizar,.conteudoMateriaisVisualizar{
         line-height:2rem;
         height: calc(2rem*5);
     }
@@ -907,7 +907,7 @@ textArea{/*Configura o numero de linhas que serão mostradas na descrição e ma
         font-size:20px;
         border-radius: 9px;
     }
-    textArea{
+    .conteudoDescricaoVisualizar,.conteudoMateriaisVisualizar{
         line-height:1rem;
         height: calc(1rem*4);
     }
@@ -982,7 +982,7 @@ textArea{/*Configura o numero de linhas que serão mostradas na descrição e ma
     .imagensVisualizar{
         flex-direction: row ;
     }
-    textArea{
+    .conteudoDescricaoVisualizar,.conteudoMateriaisVisualizar{
         line-height:1rem;
         height: calc(1rem*4);
     }
@@ -1052,7 +1052,7 @@ textArea{/*Configura o numero de linhas que serão mostradas na descrição e ma
     .imagensVisualizar{
         flex-direction: row;
     }
-    textArea{
+    .conteudoDescricaoVisualizar,.conteudoMateriaisVisualizar{
         line-height:1rem;
         height: calc(1rem*4);
     }
@@ -1124,7 +1124,7 @@ textArea{/*Configura o numero de linhas que serão mostradas na descrição e ma
     .imagensVisualizar{
         flex-direction: row;
     }
-        textArea{
+    .conteudoDescricaoVisualizar,.conteudoMateriaisVisualizar{
         line-height:1rem;
         height: calc(1rem*4.2);
     }
