@@ -121,17 +121,19 @@ i.bi {
 
 /* Textos do conteúdo de missão, visão e valores */
 .missao .conteudo, .visao .conteudo, .valores .conteudo {
-    display: none;
-    font-size: 1.5vw;
-    font-weight: semibold;
+    opacity: 0;
+    font-size: 0;
     text-align: center;
     color: #F5F5F5;
-    margin-top: 1vh;
+    transition: all 0.3s ease;
 }
 
 /* Mostra o conteúdo ao passar o mouse */
 .missao:hover .conteudo, .visao:hover .conteudo, .valores:hover .conteudo {
-    display: block;
+    opacity: 1;
+    font-size: 1.5vw;
+    font-weight: semibold;
+    margin-top: 1vh;
 }
 
 /*Responsividade para Tablets*/
