@@ -19,6 +19,7 @@ function exibirPreview( inputArquivo, labelArquivo, preview){
       } else {
       preview.style.display = 'none';
       preview.src = '';
+      labelArquivo.textContent = "Selecione uma imagem";
       }
    });
 }
