@@ -298,12 +298,106 @@ button:hover{
     }
 }
 
+/*Responsividade para Tablets*/
+/* Ipad mini / Ipad air / Ipad Pro / Surface Pro 7 / Surface Duo / Asus Zenbook Fold*/
+@media screen and (min-width: 431px) and (max-width: 1124px) and (min-height: 720px) {
+    .pagina {
+        padding: 0.5vh 0vw;
+        gap: 3vh;
+    }
+
+    .descricao {
+        width: 96%;
+        flex-direction: column;
+        gap: 2vh;
+    }
+
+    .mascote img {
+        width: 18vw;
+    }
+    
+    .nome-tabela {
+        gap: 1vw;
+    }
+    
+    h1 {
+        font-size: 10vw;
+    }
+
+    .botaoadicionar {
+        width: 60%;
+        height: 5vh;
+        padding: 1vh;
+        gap: 2vw;
+        border-radius: 0.7vw;
+    }
+    
+    .botaoadicionar .texto-botao {
+        font-size: 5.8vw;
+    }
+
+    .tabela {
+        width: 96%;
+    }
+    
+    th {
+        font-size: 4.5vw;
+        padding: 1vh 1vw; 
+        height: 8vh;
+    }
+    
+    td {
+        font-size: 4vw;
+        padding: 1vh 1vw;
+        height: 10vh;
+    }
+
+    .operacoes{
+        gap: 0.8vw; 
+        padding: 2.5vh 1vw;
+    }
+    
+    button { 
+        width: 7vw;
+        height: 5vh;
+    }
+    
+    button i {
+        font-size: 5vw; 
+    }
+
+    .paginacao {
+        gap: 1.5vw;
+        padding: 0;
+    }
+
+    .paginacao a {
+        font-size: 4vw;
+        border-radius: 3vw; 
+    }
+    
+    .paginacao .bi {
+        padding: 2%;
+        font-size: 4.5vw;
+    }
+    
+    .paginacao .paginas {
+        width: 9%;
+        height: 5vh;
+        padding: 2vh 1vw;
+    }
+    
+    .paginacao .skip {
+        width: 9%;
+        height: 5vh;
+    }
+}
 
 /*Responsividade para Celular*/
 /* Galaxy Z Fold 5 */
 @media screen and (min-width:0px) and (max-width: 344px) {
     .pagina {
-        padding: 3vh 0vw;
+        padding: 2vh 0vw;
         gap: 2vh;
     }
 
@@ -314,15 +408,15 @@ button:hover{
     }
 
     .mascote img {
-        width: 14vw;
+        width: 22vw;
     }
     
     .nome-tabela {
-        gap: 1vw;
+        gap: 3vw;
     }
     
     h1 {
-        font-size: 13vw;
+        font-size: 12vw;
     }
 
     .botaoadicionar {
@@ -374,6 +468,7 @@ button:hover{
 
     .paginacao a {
         font-size: 4.5vw;
+        border-radius: 3vw; 
     }
     
     .paginacao .bi {
@@ -382,13 +477,13 @@ button:hover{
     }
     
     .paginacao .paginas {
-        width: 13%;
-        height: 4vh;
+        width: 10%;
+        height: 3vh;
         padding: 2vh 1vw;
     }
     
     .paginacao .skip {
-        width: 13%;
+        width: 10%;
         height: 4vh;
     }
 }
@@ -396,7 +491,7 @@ button:hover{
 /* Iphone SE */
 @media screen and (min-width:345px) and (max-width: 375px) {
     .pagina {
-        padding: 3vh 0vw;
+        padding: 1vh 0vw;
         gap: 2vh;
     }
 
@@ -407,7 +502,7 @@ button:hover{
     }
 
     .mascote img {
-        width: 12vw;
+        width: 23vw;
     }
     
     .nome-tabela {
@@ -415,7 +510,7 @@ button:hover{
     }
     
     h1 {
-        font-size: 12.5vw;
+        font-size: 12vw;
     }
 
     .botaoadicionar {
@@ -465,6 +560,7 @@ button:hover{
 
     .paginacao a {
         font-size: 4vw;
+        border-radius: 3vw; 
     }
     
     .paginacao .bi {
@@ -475,7 +571,7 @@ button:hover{
     .paginacao .paginas {
         width: 9%;
         height: 4.5vh;
-        padding: 2vh 1vw;
+        padding: 1vh 1vw;
     }
     
     .paginacao .skip {
@@ -488,7 +584,7 @@ button:hover{
 /* Iphone XR */
 @media screen and (min-width:376px) and (max-width: 430px) {
     .pagina {
-        padding: 3vh 0vw;
+        padding: 2vh 0vw;
         gap: 2vh;
     }
 
@@ -499,7 +595,7 @@ button:hover{
     }
 
     .mascote img {
-        width: 13vw;
+        width: 23vw;
     }
     
     .nome-tabela {
@@ -507,7 +603,7 @@ button:hover{
     }
     
     h1 {
-        font-size: 13.5vw;
+        font-size: 12vw;
     }
 
     .botaoadicionar {
@@ -557,6 +653,7 @@ button:hover{
 
     .paginacao a {
         font-size: 5vw;
+        border-radius: 3vw; 
     }
     
     .paginacao .bi {
@@ -565,13 +662,13 @@ button:hover{
     }
     
     .paginacao .paginas {
-        width: 12%;
-        height: 4.5vh;
+        width: 10%;
+        height: 4vh;
         padding: 2vh 1vw;
     }
     
     .paginacao .skip {
-        width: 12%;
-        height: 4.5vh;
+        width: 10%;
+        height: 4vh;
     }
 }
