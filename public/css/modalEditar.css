@@ -140,7 +140,7 @@
     color: #F5F5F5;
 }
 .inputData{
-    width: fit-content;
+    width: -webkit-fill-available;
     padding: 5.74%;
 }
 
