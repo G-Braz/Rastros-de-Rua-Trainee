@@ -669,8 +669,9 @@ ul{
         left: 75.9%;
         top:10.2%;
         width: 20%;
-        height: 15vh;
-
+        height: 13.5vh;
+        padding: 1vh;
+        gap:1vh;
     }
     .listaDePosts{
         grid-template-columns: repeat(2,1fr);
@@ -729,8 +730,16 @@ ul{
         left: 75.9%;
         top:9.5%;
         width: 20%;
-        height: 15vh;
-
+        height: 13vh;
+        padding: 1vh;
+        gap:1vh;
+        font-size: 17px;
+    }
+    .tiposFiltro::-webkit-scrollbar{
+        width:1.5vh;
+    }
+    .tiposFiltro::-webkit-scrollbar-thumb{
+        border: 0.5vh solid #0D0D0D;
     }
     .post{
         width: 100%;
@@ -788,7 +797,14 @@ ul{
         width: 20%;
         height: 13vh;
         font-size: 18px;
-
+        padding: 1vh;
+        gap:1vh;
+    }
+    .tiposFiltro::-webkit-scrollbar{
+        width:1.5vh;
+    }
+    .tiposFiltro::-webkit-scrollbar-thumb{
+        border: 0.5vh solid #0D0D0D;
     }
     .listaDePosts{
         grid-template-columns: repeat(2,1fr);
