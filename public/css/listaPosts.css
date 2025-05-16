@@ -338,7 +338,7 @@ ul{
         left: 25%;
         width: 50%;
         padding: 1vh;
-        height: 18vh;
+        height: 15.5vh;
     }
     .listaDePosts{
         display: flex;
@@ -405,6 +405,7 @@ ul{
         left: 25%;
         width: 50%;
         padding: 1vh;
+        height: 18vh;
     }
     .listaDePosts{
         display: flex;
