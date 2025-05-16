@@ -140,7 +140,8 @@ i.bi {
 /* Ipad mini / Ipad air / Ipad Pro / Surface Pro 7 / Surface Duo / Asus Zenbook Fold*/
 @media screen and (min-width: 431px) and (max-width: 1124px) and (min-height: 720px) {
     .footer {
-        gap: 2vh;
+        gap: 1vh;
+        padding: 1vh 2vw;
     }
     .parte-01 {
         flex-direction: column;
@@ -172,10 +173,11 @@ i.bi {
     .parte-02 {
         flex-direction: column;
         align-items: center;
-        gap: 2vh; 
+        gap: 0.5vh; 
         width: 90%;
     }
-    .missao .conteudo, .visao .conteudo, .valores .conteudo {
+
+    .missao:hover .conteudo, .visao:hover .conteudo, .valores:hover .conteudo {
         font-size: 4vw;
     }
 }
@@ -220,10 +222,10 @@ i.bi {
     .parte-02 {
         flex-direction: column;
         align-items: center;
-        gap: 2vh;
+        gap: 1vh;
         width: 95%;
     }
-    .missao .conteudo, .visao .conteudo, .valores .conteudo {
+    .missao:hover .conteudo, .visao:hover .conteudo, .valores:hover .conteudo {
         font-size: 5vw;
     }
 }
@@ -264,10 +266,10 @@ i.bi {
     .parte-02 {
         flex-direction: column;
         align-items: center;
-        gap: 2vh;
+        gap: 1vh;
         width: 90%;
     }
-    .missao .conteudo, .visao .conteudo, .valores .conteudo {
+    .missao:hover .conteudo, .visao:hover .conteudo, .valores:hover .conteudo {
         font-size: 4.5vw;
     }
 }
