@@ -336,7 +336,7 @@
         align-items: center;
     }
     .conteudoTagVisualizar img{
-        width:45%;
+        width:38%;
         background-color: #1E3A5F;
         padding: 1%;
         border-radius: 8px;
@@ -385,7 +385,7 @@
     }
     .conteudoDescricaoVisualizar,.conteudoMateriaisVisualizar{
         line-height: 1rem;
-        height: calc(1rem*3);
+        height: calc(1rem*3.5);
     }
 }
 /*Iphone 12 Pro*/
@@ -542,11 +542,11 @@
 }
 /*Iphone Xr / Iphone 14 pro max*/
 @media only screen and (min-width: 414px) and (max-width: 430px){
-        .tituloModalVisualizar{
+    .tituloModalVisualizar{
         font-size:22px;
     }
     .visualizar{
-        top: 1%;
+        top: 1.3%;
         width: 95vw;
         row-gap: 1px;
     }
@@ -591,7 +591,7 @@
     }
     p.conteudoAutorVisualizar,p.conteudoTituloVisualizar,.conteudoDescricaoVisualizar,.ConteudoLocalVisualizar,.conteudoLocalVisualizar,.conteudoDataVisualizar,textArea.conteudoMateriaisVisualizar{
         padding: 2%;
-        font-size: 18px;
+        font-size: 16px;
     }
     .arteContent,.tituloPublicacaoVisualizar,.autorVisualizar,p.tituloAutorVisualizar,.tagVisualizar p,p.tituloDescricaoVisualizar,p.TituloLocalVisualizar,p.visualizarData,p.tituloMateriaisVisualizar{
         font-size: 20px;
@@ -647,7 +647,7 @@
         align-items: center;
     }
     .conteudoArteVisualizar img{
-        width: 60%;
+        width: 50%;
         margin-left: 0;
         padding: 1%;
     }   
@@ -689,7 +689,7 @@
     }
     .conteudoDescricaoVisualizar,.conteudoMateriaisVisualizar{
         line-height:1.4rem;
-        height: calc(1rem*6.65);
+        height: calc(1rem*5);
     }
 }
 /*Ipad air / surface pro 7*/
@@ -698,12 +698,12 @@
      font-size: 30px;
     }
     .visualizar{
-        top: 1%;
+        top: 0.5%;
         width: 95vw;
         row-gap: 4px;
     }
     .arteVisualizar{
-        width: 85%;
+        width: 73%;
         align-content: center;
     }
     .tagVisualizar{
@@ -775,7 +775,7 @@
         font-size: 40px;
     }
     .visualizar{
-        top: 1%;
+        top: 0.6%;
         width: 95vw;
         row-gap: 4px;
     }
@@ -841,7 +841,7 @@
     }
     .conteudoDescricaoVisualizar,.conteudoMateriaisVisualizar{
         line-height:2rem;
-        height: calc(2rem*5);
+        height: calc(2rem*3);
     }
 }
 /*surface duo*/

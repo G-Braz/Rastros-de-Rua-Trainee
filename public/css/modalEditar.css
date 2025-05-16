@@ -428,7 +428,7 @@
         width: 100%;
     }
     .conteudoArteInput img{
-       width:70%;
+       width:60%;
        
     }  
     .imagensEditar{
@@ -471,7 +471,7 @@
         
     }
     .conteudoTagInput{
-        width: 42%;
+        width: 41%;
     }
     .labelImgTag{
         align-items: center;
@@ -705,12 +705,12 @@
         font-size: 120%;
     }
     .editar{
-        top:0.5%;
+        top:0.2%;
         width: 95vw;
         row-gap: 4px;
     }
     .arteEditar{
-        width: 65%;
+        width: 53%;
         align-content: center;
         text-align: center;
     }
@@ -718,17 +718,17 @@
         text-align: center;
     }
     .conteudoTagInput{
-        width:37.6%;
+        width:30%;
         align-items: center;
         padding: 1%;
     }
     .conteudoArteInput{
         padding: 1%;
         align-items: center;
-        width:65%;
+        width:78%;
     }
     .conteudoArteInput img{
-        width:70%;
+        width:50%;
         padding: 3% 3% 3% 3%;
         margin-left: 0;
         justify-items: left;
@@ -744,10 +744,10 @@
         width: 100%;
         align-items: start;
     }
-    .arteEditar p,.tituloPublicacaoEditar p,.autorEditar p,.tagEditar p,.descricaoModalEditar p,.LocalEditar p,.dataEditar p{
+    .arteEditar p,.tituloPublicacaoEditar p,.autorEditar p,.tagEditar p,.descricaoModalEditar p,.localEditar p,.dataEditar p,.MateriaisModalEditar p{
         font-size: 22px;
     }
-    .tituloInput,.inputAutor,.inputDescricao,.inputLocal,.inputData{
+    .tituloInput,.inputAutor,.inputDescricao,.inputLocal,.inputData,.inputMateriaisEditar{
         font-size: 18px;
     }
     .botaoModal{
@@ -767,7 +767,14 @@
         align-items: center;
     }
     .tagInput img{
-        width: 38%;
+        width: 30.5%;
+    }
+    .inputMateriaisEditar,.inputDescricaoEditar{
+        line-height: 1.1rem;
+        height: calc(1.1rem*4);
+    }
+    .inputData{
+        padding: 3.05%;
     }
 }
 /*Ipad air / surface pro 7*/
