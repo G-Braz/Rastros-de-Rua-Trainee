@@ -1,0 +1,26 @@
+.leaflet-control-attribution a {
+        display: none;   
+}
+.leaflet-control-zoom-in,
+.leaflet-control-zoom-out {
+        background-color: #1E3A5F !important;
+        color: white !important;
+        border: none !important;
+        border-radius: 20px !important;
+        width: 30px !important;
+        height: 30px !important;
+}       
+
+.leaflet-control-zoom-in:hover,
+.leaflet-control-zoom-out:hover {
+        background-color: #0C1C31 !important;
+        filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.5)) !important;
+}
+.leaflet-control-zoom,
+.leaflet-bar 
+.leaflet-control{
+        display: flex !important;
+        flex-direction: column !important;
+        gap:5px !important;
+        border:none !important;
+}
