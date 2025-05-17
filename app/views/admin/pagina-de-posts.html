@@ -27,7 +27,7 @@
                     <h1>Tabela de Posts</h1>
                 </div>
             </div>
-            <button class="botaoadicionar" onclick="abrirModal('fundo-modal-criar', 'id-modal-criar')">
+            <button class="botaoadicionar" onclick="abrirModal('fundo-modal-criar-post','id-modal-criar-post')">
                 <div class="icone">
                     <i class="bi bi-plus-square-fill"></i>
                 </div>
@@ -56,7 +56,7 @@
                         <td class="operacoes">
                             <button><i class="bi bi-eye-fill" onclick="abrirModal('fundoVisualizar','modalVisualizar')"></i></button>
                             <button><i class="bi bi-pencil-square" onclick="abrirModal('fundoEditar','modalEditar')"></i></button>
-                            <button><i class="bi bi-trash-fill" onclick="abrirModal('fundo-modal-excluir','modal-excluir')"></i></button>
+                            <button><i class="bi bi-trash-fill" onclick="abrirModal('fundo-modal-excluir-post','modal-excluir-post')"></i></button>
                         </td>
                     </tr>
                     <tr class="post">
@@ -67,7 +67,7 @@
                         <td class="operacoes">
                             <button><i class="bi bi-eye-fill"  onclick="abrirModal('fundoVisualizar','modalVisualizar')"></i></button>
                             <button><i class="bi bi-pencil-square" onclick="abrirModal('fundoEditar','modalEditar')"></i></button>
-                            <button><i class="bi bi-trash-fill" onclick="abrirModal('fundo-modal-excluir','modal-excluir')"></i></button>
+                            <button><i class="bi bi-trash-fill" onclick="abrirModal('fundo-modal-excluir-post','modal-excluir-post')"></i></button>
                         </td>
                     </tr>
                     <tr class="post">
@@ -78,7 +78,7 @@
                         <td class="operacoes">
                             <button><i class="bi bi-eye-fill"  onclick="abrirModal('fundoVisualizar','modalVisualizar')"></i></button>
                             <button><i class="bi bi-pencil-square" onclick="abrirModal('fundoEditar','modalEditar')"></i></button>
-                            <button><i class="bi bi-trash-fill" onclick="abrirModal('fundo-modal-excluir','modal-excluir')"></i></button>
+                            <button><i class="bi bi-trash-fill" onclick="abrirModal('fundo-modal-excluir-post','modal-excluir-post')"></i></button>
                         </td>
                     </tr>
                     <tr class="post">
@@ -89,7 +89,7 @@
                         <td class="operacoes">
                             <button><i class="bi bi-eye-fill"  onclick="abrirModal('fundoVisualizar','modalVisualizar')"></i></button>
                             <button><i class="bi bi-pencil-square" onclick="abrirModal('fundoEditar','modalEditar')"></i></button>
-                            <button><i class="bi bi-trash-fill" onclick="abrirModal('fundo-modal-excluir','modal-excluir')"></i></button>
+                            <button><i class="bi bi-trash-fill" onclick="abrirModal('fundo-modal-excluir-post','modal-excluir-post')"></i></button>
                         </td>
                     </tr>
                     <tr class="post">
@@ -100,7 +100,7 @@
                         <td class="operacoes">
                             <button><i class="bi bi-eye-fill"  onclick="abrirModal('fundoVisualizar','modalVisualizar')"></i></button>
                             <button><i class="bi bi-pencil-square" onclick="abrirModal('fundoEditar','modalEditar')"></i></button>
-                            <button><i class="bi bi-trash-fill" onclick="abrirModal('fundo-modal-excluir','modal-excluir')"></i></button>
+                            <button><i class="bi bi-trash-fill" onclick="abrirModal('fundo-modal-excluir-post','modal-excluir-post')"></i></button>
                         </td>
                     </tr>
                 </tbody>
@@ -128,82 +128,82 @@
         </div>
     </div>
     <!--Modal Criar-->
-    <div onclick="fecharModal('fundo-modal-criar','id-modal-criar')" class="overlay-criar" id="fundo-modal-criar"></div>
-        <div class="modal-criar" id="id-modal-criar">
-            <div class="titulo-modal-criar">
+    <div onclick="fecharModal('fundo-modal-criar-post','id-modal-criar-post')" class="overlay-criar-post" id="fundo-modal-criar-post"></div>
+        <div class="modal-criar-post" id="id-modal-criar-post">
+            <div class="titulo-modal-criar-post">
                 <p>Criar Publicação</p>
             </div>
-            <div class="container-superior-modal">
-                <div class="adicionar-arte">
+            <div class="container-superior-criar-post">
+                <div class="adicionar-arte-criar-post">
                     <div>Arte</div>
-                    <div class="input-arte"> 
-                        <input id="inputArte" class="custom-input-img" type="file" style="display: none;">
-                        <label id="labelArte"for="inputArte" class="custom-label-art">Selecionar imagem da arte <img src="/public/assets/icone-imagem.svg" /> 
+                    <div class="input-arte-criar-post"> 
+                        <input id="inputArteCriar" class="custom-input-img" type="file" style="display: none;">
+                        <label id="labelArteCriar"for="inputArteCriar" class="custom-label-art">Selecionar imagem da arte <img src="/public/assets/icone-imagem.svg" /> 
                         </label> 
-                        <img id="previewArte" src="" alt="Pré-visualização" style="display: none;"/>
+                        <img id="previewArteCriar" src="" alt="Pré-visualização" style="display: none;"/>
                     </div>
                 </div>
-                <div class="campos-superior-direita">
-                    <div class="campo-titulo">
+                <div class="campos-superior-direita-criar">
+                    <div class="campo-titulo-criar-post">
                         <p>Título</p>
-                        <input class="input-titulo" type="text" placeholder="Insira o Título">
+                        <input class="input-titulo-criar-post" type="text" placeholder="Insira o Título">
                     </div>
-                    <div class="campo-autor">
+                    <div class="campo-autor-criar-post">
                         <p>Autor</p>
-                        <input class="input-autor" type="text" placeholder="Insira o Autor">
+                        <input class="input-autor-criar-post" type="text" placeholder="Insira o Autor">
                     </div>
-                    <div class="adicionar-tag">
+                    <div class="adicionar-tag-criar-post">
                         <p>Tag</p>
-                        <div class="input-tag">
-                            <input id="inputTag" class="custom-input-img" type="file" style="display: none;">
-                            <label id="labelTag" for="inputTag" class="custom-label-tag">Selecionar imagem da tag <img src="/public/assets/icone-imagem.svg" />
+                        <div class="input-tag-criar-post">
+                            <input id="inputTagCriar" class="custom-input-img" type="file" style="display: none;">
+                            <label id="labelTagCriar" for="inputTagCriar" class="custom-label-tag">Selecionar imagem da tag <img src="/public/assets/icone-imagem.svg" />
                             </label>
-                            <img id="previewTag" src="" alt="Pré-visualização" style="display: none;" />
+                            <img id="previewTagCriar" src="" alt="Pré-visualização" style="display: none;" />
                         </div>
                     </div>
                 </div>
             </div>  
-            <div class="campo-descricao">
+            <div class="campo-descricao-criar-post">
                 <p>Descrição</p>
-                <textarea class="input-descricao" rows="3" cols="10" placeholder="Insira a Descrição"></textarea>
+                <textarea class="input-descricao-criar-post" rows="3" cols="10" placeholder="Insira a Descrição"></textarea>
             </div>
-            <div class="campo-materiais">
+            <div class="campo-materiais-criar-post">
                 <p>Materiais</p>
-                <textarea class="input-materiais" rows="2" cols="10" placeholder="Insira os Materiais"></textarea>
+                <textarea class="input-materiais-criar-post" rows="2" cols="10" placeholder="Insira os Materiais"></textarea>
             </div>
-            <div class="local-e-data">
-                <div class="campo-local">
+            <div class="local-e-data-criar">
+                <div class="campo-local-criar-post">
                     <p>Local</p>
-                    <input class="input-local" type="text" placeholder="Insira o Local">
+                    <input class="input-local-criar-post" type="text" placeholder="Insira o Local">
                 </div>
-                <div class="campo-data">
+                <div class="campo-data-criar-post">
                     <p>Data</p>
-                    <input class="input-data-automatica" type="date" readonly>
+                    <input class="data-criar-post" type="date" readonly>
                 </div>
             </div>
             <div class="botoes-modal">
                 <button class="botao-modal botao-modal-criar">Criar</button>
-                <button class="botao-modal botao-modal-cancelar" onclick="fecharModal('fundo-modal-criar','id-modal-criar')">Cancelar</button>
+                <button class="botao-modal botao-modal-cancelar" onclick="fecharModal('fundo-modal-criar-post','id-modal-criar-post')">Cancelar</button>
             </div>
         </div>
     <!-- Modal Excluir -->
-    <div onclick="fecharModal('fundo-modal-excluir','modal-excluir')" class="overlay-excluir" id="fundo-modal-excluir"></div>
-    <div class="modal-excluir" id="modal-excluir">
-        <div class="cabecalho-modal-excluir">
-            <div class="icone-modal-excluir">
+    <div onclick="fecharModal('fundo-modal-excluir-post','modal-excluir-post')" class="overlay-excluir-post" id="fundo-modal-excluir-post"></div>
+    <div class="modal-excluir-post" id="modal-excluir-post">
+        <div class="cabecalho-modal-excluir-post">
+            <div class="icone-modal-excluir-post">
                 <i class="bi bi-trash-fill"></i>
             </div>
-            <div class="titulo-modal-excluir">
+            <div class="titulo-modal-excluir-post">
                 <h2>Excluir Publicação</h2>
             </div>
         </div>
-        <div class="mensagem-modal-excluir">
+        <div class="mensagem-modal-excluir-post">
             <p>Tem certeza que deseja excluir a publicação?</p>
         </div>
-        <div class="botoes-modal-excluir">
-            <button class="botao-modal-excluir confirmar">Excluir</button>
-            <button class="botao-modal-excluir cancelar"
-                onclick="fecharModal('fundo-modal-excluir','modal-excluir')">Cancelar</button>
+        <div class="botoes-modal-excluir-post">
+            <button class="botao-modal-excluir-post confirmar">Excluir</button>
+            <button class="botao-modal-excluir-post cancelar"
+                onclick="fecharModal('fundo-modal-excluir-post','modal-excluir-post')">Cancelar</button>
         </div>
     </div>
     <!--Modal visualizar-->
