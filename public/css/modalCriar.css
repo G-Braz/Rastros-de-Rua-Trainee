@@ -169,6 +169,10 @@
     font-family: 'Urbanist', sans-serif;
     color: #F5F5F5;
 }
+input::placeholder,
+textarea::placeholder {
+    color: rgba(255, 255, 255, 0.39);
+}
 .data-criar-post{
     max-width: 130px;
     padding: 7px 1px;
