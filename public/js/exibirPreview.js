@@ -1,37 +1,38 @@
-function exibirPreview( inputArquivo, labelArquivo, preview){
-   inputArquivo.addEventListener('change', function () {
-      const file = this.files[0];
-      if (file) {
-         if (file.type.startsWith('image/')) {
-         const reader = new FileReader();
-         reader.onload = function (e) {
-         preview.src = e.target.result;
-         preview.style.display = 'flex';
-         };
-         labelArquivo.textContent = 'Imagem selecionada:';
-         
-         reader.readAsDataURL(file);
 
+function exibirPreview(inputArquivo, labelArquivo, preview, imagemPadrao) {
+      inputArquivo.addEventListener('change', function () {
+         const file = this.files[0];
+   
+         if (file && file.type.startsWith('image/')) {
+            const reader = new FileReader();
+            reader.onload = function (e) {
+               preview.src = e.target.result;
+               preview.style.display = 'flex';
+               imagemPadrao.style.display = 'none';
+            };
+            reader.readAsDataURL(file);
+            labelArquivo.textContent = 'Imagem selecionada:';
+   
          } else {
-         preview.style.display = 'none';
-         preview.src = '';
+            preview.style.display = 'none';
+            preview.src = '';
+            imagemPadrao.style.display = 'block';
+            labelArquivo.textContent = "Selecione uma imagem";
          }
-      } else {
-      preview.style.display = 'none';
-      preview.src = '';
-      labelArquivo.textContent = "Selecione uma imagem";
-      }
-   });
-}
+         this.value = '';
+      });
+   }
 
 exibirPreview(
-   document.getElementById('inputArte'),
-   document.getElementById('labelArte'),
-   document.getElementById('previewArte')
+   document.getElementById('inputArteCriar'),
+   document.getElementById('labelArteCriar'),
+   document.getElementById('previewArteCriar'),
+   document.getElementById('imgPadraoArteCriar')
 );
 
 exibirPreview(
-   document.getElementById('inputTag'),
-   document.getElementById('labelTag'),
-   document.getElementById('previewTag')
+   document.getElementById('inputTagCriar'),
+   document.getElementById('labelTagCriar'),
+   document.getElementById('previewTagCriar'),
+   document.getElementById('imgPadraoTagCriar')
 );
