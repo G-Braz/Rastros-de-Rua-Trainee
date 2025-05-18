@@ -1,11 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Staatliches&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
 
-body{
+body {
     margin: 0;
     padding: 0;
 }
 
-.conteudo {
+.conteudo-pag-inicial {
     background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
         url('../../../public/assets/pagina-inicial-background.jpg') center/cover no-repeat fixed;
     padding: 1% 1%;
@@ -16,10 +16,10 @@ body{
     margin: 0;
     font-family: "Staatliches", sans-serif;
     display: grid;
-    place-items: center;     
+    place-items: center;
 }
 
-.grade {
+.grade-pag-inicial {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 50px;
@@ -27,11 +27,11 @@ body{
 }
 
 /*Estilização da HeroSection*/
-.heroSection {
+.heroSection-pag-inicial {
     padding: 5% 5%;
 }
 
-.titulo {
+.titulo-pag-inicial {
     font-family: "Staatliches", sans-serif;
     filter: drop-shadow(5px 5px 24px #000000);
     color: #F5F5F5;
@@ -41,7 +41,7 @@ body{
     margin-top: 10%;
 }
 
-.descricao {
+.descricao-pag-inicial {
     margin-top: 0%;
     margin-bottom: 3.5%;
     color: #F5F5F5;
@@ -51,7 +51,7 @@ body{
     line-height: 1.2;
 }
 
-.botaoVerMais {
+.botaoVerMais-pag-inicial {
     font-family: "Staatliches", sans-serif;
     background-color: #1E3A5F;
     color: #F5F5F5;
@@ -61,19 +61,20 @@ body{
     box-shadow: 0 6px 9px rgba(0, 0, 0, 0.7);
     padding: 0.5vh 1vw;
     transition: all 0.2s ease-in-out;
+    cursor: pointer;
 }
 
-.botaoVerMais:hover {
+.botaoVerMais-pag-inicial:hover {
     box-shadow: 0 6px 12px rgba(0, 0, 0, 1);
     transform: scale(1.05);
     background-color: #254a73;
 }
 
 /*Estilização do Carrossel*/
-.ultimasPublicacoes {
+.ultimasPublicacoes-pag-inicial {
     display: flex;
     flex-direction: column;
-    box-sizing: border-box; 
+    box-sizing: border-box;
     width: 65%;
     height: 94vh;
     padding: 2% 3%;
@@ -95,8 +96,8 @@ body{
     flex-direction: column;
 }
 
-.navegacao-cima,
-.navegacao-baixo {
+.navegacao-cima-pag-inicial,
+.navegacao-baixo-pag-inicial {
     position: static;
     width: 35px;
     height: 35px;
@@ -109,7 +110,7 @@ body{
 }
 
 .swiper-button-prev::after,
-.swiper-button-next::after {  
+.swiper-button-next::after {
     font-size: 25px;
     color: #F5F5F5;
     transform: rotate(90deg);
@@ -117,17 +118,17 @@ body{
     margin-bottom: 0%;
 }
 
-.card-carrossel {
+.card-carrossel-pag-inicial {
     width: 70%;
     height: 30vh;
-    margin: auto; 
+    margin: auto;
     padding: 3%;
     border-radius: 8px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
+    cursor: default;
     /*Efeito de Vidro*/
     background: rgba(13, 13, 13, 0.7);
     border-radius: 8px;
@@ -138,7 +139,7 @@ body{
     box-shadow: inset 0px 4px 8px rgba(241, 236, 236, 0.3);
 }
 
-.titulo-carrossel {
+.titulo-carrossel-pag-inicial {
     color: #F5F5F5;
     letter-spacing: 2px;
     font-size: 30px;
@@ -148,7 +149,7 @@ body{
     margin-bottom: 1%;
 }
 
-.imagem-card{
+.imagem-card-pag-inicial {
     width: 100%;
     max-height: 40vh;
     overflow: hidden;
@@ -158,12 +159,12 @@ body{
     margin: auto;
 }
 
-.imagem-obra {
+.imagem-obra-pag-inicial {
     width: 100%;
     object-fit: fill;
 }
 
-.titulo-card {
+.titulo-card-pag-inicial {
     color: #F5F5F5;
     letter-spacing: 2px;
     font-size: 22px;
@@ -174,7 +175,7 @@ body{
     margin-top: 1%;
 }
 
-.descricao-card {
+.descricao-card-pag-inicial {
     font-family: "Urbanist", sans-serif;
     color: #F5F5F5;
     font-size: 12px;
@@ -186,529 +187,541 @@ body{
 
 /*Responsividade*/
 /*IpadPro*/
-@media only screen and (max-width: 1024px) and (min-width: 1024px) and (max-height: 1366px) and (min-height: 1366px){
-    .titulo {
+@media only screen and (max-width: 1024px) and (min-width: 1024px) and (max-height: 1366px) and (min-height: 1366px) {
+    .titulo-pag-inicial {
         margin-top: 0%;
         margin-bottom: 0%;
         font-size: 160px;
     }
 
-    .heroSection {
+    .heroSection-pag-inicial {
         padding: 50px 50px;
     }
 
-    .grade {
+    .grade-pag-inicial {
         grid-template-columns: 1fr;
         place-items: center;
         width: 100%;
     }
 
-    .titulo-card {
+    .titulo-card-pag-inicial {
         font-size: 30px;
         padding: 3px 15px;
     }
 
-    .descricao-card {
+    .descricao-card-pag-inicial {
         font-size: 18px;
         text-align: justify;
         padding: 0px 10px;
     }
 
-    .descricao {
+    .descricao-pag-inicial {
         margin-top: 20px;
         margin-bottom: 20px;
         font-size: 30px;
     }
 
-    .botaoVerMais {
+    .botaoVerMais-pag-inicial {
         font-size: 40px;
         padding: 2px 14px;
         border-radius: 5px;
     }
 
-    .ultimasPublicacoes {
+    .ultimasPublicacoes-pag-inicial {
         width: 55%;
         height: 62vh;
         padding: 2% 2%;
     }
 
-    .card-carrossel {
+    .card-carrossel-pag-inicial {
         width: 85%;
         height: 20vh;
         padding: 2%;
     }
 
-    .titulo-carrossel {
+    .titulo-carrossel-pag-inicial {
         font-size: 45px;
     }
 
-    .grade {
+    .grade-pag-inicial {
         gap: 25px;
     }
 
 }
+
 /*IpadAir*/
 @media only screen and (max-width: 820px) and (min-width: 820px) and (max-height: 1180px) and (min-height: 1180px) {
-    .conteudo{
+    .conteudo-pag-inicial {
         padding: 5% 5%;
     }
-    .titulo {
+
+    .titulo-pag-inicial {
         margin-top: 0%;
         margin-bottom: 0%;
         font-size: 160px;
     }
 
-    .heroSection {
+    .heroSection-pag-inicial {
         padding: 50px 50px;
     }
 
-    .grade {
+    .grade-pag-inicial {
         grid-template-columns: 1fr;
         place-items: center;
         width: 100%;
     }
 
-    .titulo-card {
+    .titulo-card-pag-inicial {
         font-size: 30px;
         padding: 3px 15px;
     }
 
-    .descricao-card {
+    .descricao-card-pag-inicial {
         font-size: 18px;
         text-align: justify;
         padding: 0px 10px;
     }
 
-    .descricao {
+    .descricao-pag-inicial {
         margin-top: 20px;
         margin-bottom: 20px;
         font-size: 30px;
     }
 
-    .botaoVerMais {
+    .botaoVerMais-pag-inicial {
         font-size: 40px;
         padding: 2px 14px;
         border-radius: 5px;
     }
 
-    .ultimasPublicacoes {
+    .ultimasPublicacoes-pag-inicial {
         width: 65%;
         height: 68vh;
         padding: 2% 2%;
     }
 
-    .card-carrossel {
+    .card-carrossel-pag-inicial {
         width: 85%;
         height: 24vh;
         padding: 2%;
     }
 
-    .titulo-carrossel {
+    .titulo-carrossel-pag-inicial {
         font-size: 45px;
     }
 
-    .grade {
+    .grade-pag-inicial {
         gap: 25px;
     }
 
 }
+
 /*IpadMini*/
 @media only screen and (max-width: 768px) and (min-width: 768px) and (max-height: 1024px) and (min-height: 1024px) {
-    .conteudo {
+    .conteudo-pag-inicial {
         padding: 5% 5%;
     }
 
-    .titulo {
+    .titulo-pag-inicial {
         margin-top: 0%;
         margin-bottom: 0%;
         font-size: 160px;
     }
 
-    .heroSection {
+    .heroSection-pag-inicial {
         padding: 50px 50px;
     }
 
-    .grade {
+    .grade-pag-inicial {
         grid-template-columns: 1fr;
         place-items: center;
         width: 100%;
     }
 
-    .titulo-card {
+    .titulo-card-pag-inicial {
         font-size: 30px;
         padding: 3px 15px;
     }
 
-    .descricao-card {
+    .descricao-card-pag-inicial {
         font-size: 18px;
         text-align: justify;
         padding: 0px 10px;
     }
 
-    .descricao {
+    .descricao-pag-inicial {
         margin-top: 20px;
         margin-bottom: 20px;
         font-size: 30px;
     }
 
-    .botaoVerMais {
+    .botaoVerMais-pag-inicial {
         font-size: 40px;
         padding: 2px 14px;
         border-radius: 5px;
     }
 
-    .ultimasPublicacoes {
+    .ultimasPublicacoes-pag-inicial {
         width: 65%;
         height: 70vh;
         padding: 2% 2%;
     }
 
-    .card-carrossel {
+    .card-carrossel-pag-inicial {
         width: 85%;
         height: 24vh;
         padding: 2%;
     }
 
-    .titulo-carrossel {
+    .titulo-carrossel-pag-inicial {
         font-size: 45px;
     }
 
-    .grade {
+    .grade-pag-inicial {
         gap: 25px;
     }
 
 }
+
 /*Surface Pro 7*/
 @media only screen and (max-width: 912px) and (min-width: 912px) and (max-height: 1368px) and (min-height: 1368px) {
-    .conteudo {
+    .conteudo-pag-inicial {
         padding: 5% 5%;
     }
 
-    .titulo {
+    .titulo-pag-inicial {
         margin-top: 0%;
         margin-bottom: 0%;
         font-size: 160px;
     }
 
-    .heroSection {
+    .heroSection-pag-inicial {
         padding: 50px 50px;
     }
 
-    .grade {
+    .grade-pag-inicial {
         grid-template-columns: 1fr;
         place-items: center;
         width: 100%;
     }
 
-    .titulo-card {
+    .titulo-card-pag-inicial {
         font-size: 30px;
         padding: 3px 15px;
     }
 
-    .descricao-card {
+    .descricao-card-pag-inicial {
         font-size: 18px;
         text-align: justify;
         padding: 0px 10px;
     }
 
-    .descricao {
+    .descricao-pag-inicial {
         margin-top: 20px;
         margin-bottom: 20px;
         font-size: 30px;
     }
 
-    .botaoVerMais {
+    .botaoVerMais-pag-inicial {
         font-size: 40px;
         padding: 2px 14px;
         border-radius: 5px;
     }
 
-    .ultimasPublicacoes {
+    .ultimasPublicacoes-pag-inicial {
         width: 65%;
         height: 70vh;
         padding: 2% 2%;
     }
 
-    .card-carrossel {
+    .card-carrossel-pag-inicial {
         width: 85%;
         height: 24vh;
         padding: 2%;
     }
 
-    .titulo-carrossel {
+    .titulo-carrossel-pag-inicial {
         font-size: 45px;
     }
 
-    .grade {
+    .grade-pag-inicial {
         gap: 25px;
     }
 
 }
+
 /*Surface Duo*/
 @media only screen and (max-width: 540px) and (min-width: 540px) and (max-height: 720px) and (min-height: 720px) {
-    .conteudo {
+    .conteudo-pag-inicial {
         padding: 5% 5%;
     }
 
-    .titulo {
+    .titulo-pag-inicial {
         margin-top: 0%;
         margin-bottom: 0%;
         font-size: 80px;
     }
 
-    .heroSection {
+    .heroSection-pag-inicial {
         padding: 50px 50px;
     }
 
-    .grade {
+    .grade-pag-inicial {
         grid-template-columns: 1fr;
         place-items: center;
         width: 100%;
     }
 
-    .titulo-card {
+    .titulo-card-pag-inicial {
         font-size: 24px;
         padding: 3px 15px;
     }
 
-    .descricao-card {
+    .descricao-card-pag-inicial {
         font-size: 14px;
         text-align: justify;
         padding: 0px 10px;
     }
 
-    .descricao {
+    .descricao-pag-inicial {
         margin-top: 20px;
         margin-bottom: 20px;
         font-size: 20px;
     }
 
-    .botaoVerMais {
+    .botaoVerMais-pag-inicial {
         font-size: 25px;
         padding: 2px 14px;
         border-radius: 5px;
     }
 
-    .ultimasPublicacoes {
+    .ultimasPublicacoes-pag-inicial {
         width: 70%;
         height: 90vh;
         padding: 2% 2%;
     }
 
-    .card-carrossel {
+    .card-carrossel-pag-inicial {
         width: 80%;
         height: 32vh;
         padding: 2%;
     }
 
-    .titulo-carrossel {
+    .titulo-carrossel-pag-inicial {
         font-size: 30px;
     }
 
-    .grade {
+    .grade-pag-inicial {
         gap: 25px;
     }
 
 }
+
 /*Asus Zenbook Fold*/
 @media only screen and (max-width: 853px) and (min-width: 853px) and (max-height: 1280px) and (min-height: 1280px) {
-    .conteudo {
+    .conteudo-pag-inicial {
         padding: 5% 5%;
     }
 
-    .titulo {
+    .titulo-pag-inicial {
         margin-top: 0%;
         margin-bottom: 0%;
         font-size: 160px;
     }
 
-    .heroSection {
+    .heroSection-pag-inicial {
         padding: 50px 50px;
     }
 
-    .grade {
+    .grade-pag-inicial {
         grid-template-columns: 1fr;
         place-items: center;
         width: 100%;
     }
 
-    .titulo-card {
+    .titulo-card-pag-inicial {
         font-size: 30px;
         padding: 3px 15px;
     }
 
-    .descricao-card {
+    .descricao-card-pag-inicial {
         font-size: 18px;
         text-align: justify;
         padding: 0px 10px;
     }
 
-    .descricao {
+    .descricao-pag-inicial {
         margin-top: 20px;
         margin-bottom: 20px;
         font-size: 30px;
     }
 
-    .botaoVerMais {
+    .botaoVerMais-pag-inicial {
         font-size: 40px;
         padding: 2px 14px;
         border-radius: 5px;
     }
 
-    .ultimasPublicacoes {
+    .ultimasPublicacoes-pag-inicial {
         width: 65%;
         height: 70vh;
         padding: 2% 2%;
     }
 
-    .card-carrossel {
+    .card-carrossel-pag-inicial {
         width: 85%;
         height: 24vh;
         padding: 2%;
     }
 
-    .titulo-carrossel {
+    .titulo-carrossel-pag-inicial {
         font-size: 45px;
     }
 
-    .grade {
+    .grade-pag-inicial {
         gap: 25px;
     }
 
 }
-/*4K*/
-@media only screen and (max-width: 2560px) and (min-width: 2560px){
-    .titulo {
-            margin-top: 0%;
-            margin-bottom: 0%;
-            font-size: 160px;
-        }
 
-    .titulo-card {
+/*4K*/
+@media only screen and (max-width: 2560px) and (min-width: 2560px) {
+    .titulo-pag-inicial {
+        margin-top: 0%;
+        margin-bottom: 0%;
+        font-size: 160px;
+    }
+
+    .titulo-card-pag-inicial {
         font-size: 30px;
     }
-    
-    .ultimasPublicacoes {
+
+    .ultimasPublicacoes-pag-inicial {
         width: 55%;
         height: 95vh;
         padding: 2% 2%;
     }
 
-    .card-carrossel {
+    .card-carrossel-pag-inicial {
         width: 70%;
         height: 30vh;
         padding: 2%;
     }
 
-    .descricao-card {
+    .descricao-card-pag-inicial {
         font-size: 18px;
         text-align: justify;
         padding: 0px 10px;
     }
 
-    .descricao {
+    .descricao-pag-inicial {
         margin-top: 20px;
         margin-bottom: 20px;
         font-size: 30px;
     }
 
-    .botaoVerMais {
+    .botaoVerMais-pag-inicial {
         font-size: 40px;
         padding: 2px 14px;
         border-radius: 5px;
     }
 
-    .titulo-carrossel {
+    .titulo-carrossel-pag-inicial {
         font-size: 45px;
     }
 }
+
 /* Dispositivos Móveis */
 @media only screen and (max-width: 430px) {
-    .titulo {
+    .titulo-pag-inicial {
         margin-top: 10%;
         font-size: 14vw;
     }
 
-    .heroSection {
+    .heroSection-pag-inicial {
         margin-top: 0%;
         padding: 4vw 5vw;
     }
 
-    .grade {
+    .grade-pag-inicial {
         grid-template-columns: 1fr;
         place-items: center;
         width: 100%;
     }
 
-    .titulo-card {
+    .titulo-card-pag-inicial {
         font-size: 15px;
         padding: 3px 15px;
     }
 
-    .descricao-card {
+    .descricao-card-pag-inicial {
         font-size: 2vw;
         text-align: justify;
         padding: 0px 10px;
     }
 
-    .descricao {
+    .descricao-pag-inicial {
         margin-top: 1vh;
         margin-bottom: 1vh;
         font-size: 3vw;
     }
 
-    .botaoVerMais {
+    .botaoVerMais-pag-inicial {
         font-size: 4vw;
         padding: 2px 5px;
         border-radius: 5px;
     }
 
-    .ultimasPublicacoes {
+    .ultimasPublicacoes-pag-inicial {
         width: 70%;
         padding: 1vw 2vw;
     }
 
-    .card-carrossel {
+    .card-carrossel-pag-inicial {
         width: 85%;
         height: 23vh;
         padding: 2%;
     }
 
-    .titulo-carrossel {
+    .titulo-carrossel-pag-inicial {
         font-size: 25px;
     }
 
-    .grade {
+    .grade-pag-inicial {
         gap: 25px;
     }
 
-    .ultimasPublicacoes {
+    .ultimasPublicacoes-pag-inicial {
         height: 67vh;
     }
 }
+
 @media only screen and (max-width: 414px) {
-    .card-carrossel {
+    .card-carrossel-pag-inicial {
         width: 90%;
         height: 24vh;
         padding: 2%;
     }
 
-    .grade {
+    .grade-pag-inicial {
         gap: 20px;
     }
 
-    .ultimasPublicacoes {
+    .ultimasPublicacoes-pag-inicial {
         height: 68vh;
     }
 }
+
 @media only screen and (max-width: 375px) {
-    .card-carrossel {
+    .card-carrossel-pag-inicial {
         height: 22vh;
     }
-    .titulo-carrossel{
+
+    .titulo-carrossel-pag-inicial {
         font-size: 20px;
     }
-    .ultimasPublicacoes{
+
+    .ultimasPublicacoes-pag-inicial {
         width: 70%;
         height: 70vh;
     }
