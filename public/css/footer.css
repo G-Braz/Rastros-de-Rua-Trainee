@@ -1,0 +1,275 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.footer {
+    margin-top: auto;
+    max-width: 100%;
+    background-color: #1E3A5F;
+    padding: 2vh 2vw;
+    box-shadow: 0 4px 6vw rgba(0, 0, 0, 0.6); 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: "Urbanist", sans-serif; 
+    gap: 5vh;
+}
+
+/* Estilo dos títulos */
+.titulo {
+    font-size: 2vw;
+    font-weight: bold;
+    text-align: center;
+    color: #F5F5F5;
+}
+
+/* Primeira linha do footer */
+.parte-01 {
+    width: 95%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 3vw;
+}
+
+/* Seção com o título e os ícones das redes sociais */
+.redes-sociais {
+    width: 22vw;
+    height: 15vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1vh;
+    padding: 1vh;
+    justify-content: center;
+}
+
+/* Seção com todos os ícones das redes sociais */
+.redes-sociais .logos {
+    display: flex;
+    gap: 0.6vw;
+    align-items: center;
+    padding: 1vh;
+}
+
+/* Ícones Redes Sociais */
+i.bi {
+    font-size: 3vw;
+    color: #F5F5F5;
+}
+
+/* Seção com as imagens do Mascote e da Logo Rastros de Rua */
+.assinatura {
+    width: 22vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1vh;
+}
+
+/* Imagem Mascote Rastros de Rua */
+.assinatura .mascote {
+    width: 6.5vw;
+    transform: scaleX(-1);
+}
+
+/* Imagem Logo Rastros de Rua */
+.assinatura .logo-branca {
+    width: 16.5vw;
+    height: auto;
+}
+
+/* Seção com o título e a imagem da assinatura Code Jr */
+.assinatura-ej {
+    width: 22vw;
+    height: 15vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1vh;
+    padding: 1vh;
+    justify-content: center;
+}
+
+/* Imagem Assinatura Code Jr */
+.assinatura-ej .imagem {
+    width: 5vw;
+    height: auto;
+}
+
+/* Segunda Linha do footer */
+.parte-02 {
+    width: 95%;
+    border-top: 0.2vw solid #F5F5F5;
+    padding: 3vh 1vw;
+    display: flex;
+    gap: 3vw;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+/* Seção com os títulos e com os conteúdos de missão, visão e valores */
+.missao, .visao, .valores {
+    width: 22vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1vh; 
+    padding: 3vh 0vw;
+}
+
+/* Textos do conteúdo de missão, visão e valores */
+.missao .conteudo, .visao .conteudo, .valores .conteudo {
+    opacity: 0;
+    font-size: 0;
+    text-align: center;
+    color: #F5F5F5;
+    transition: all 0.3s ease;
+}
+
+/* Mostra o conteúdo ao passar o mouse */
+.missao:hover .conteudo, .visao:hover .conteudo, .valores:hover .conteudo {
+    opacity: 1;
+    font-size: 1.5vw;
+    font-weight: semibold;
+    margin-top: 1vh;
+}
+
+/*Responsividade para Tablets*/
+/* Ipad mini / Ipad air / Ipad Pro / Surface Pro 7 / Surface Duo / Asus Zenbook Fold*/
+@media screen and (min-width: 431px) and (max-width: 1124px) and (min-height: 720px) {
+    .footer {
+        gap: 1vh;
+        padding: 1vh 2vw;
+    }
+    .parte-01 {
+        flex-direction: column;
+        align-items: center;
+        gap: 2vh;
+        width: 95%;
+    }
+    .redes-sociais, .assinatura, .assinatura-ej, .missao, .visao, .valores {
+        width: 90%;
+    }
+    .redes-sociais .logos {
+        gap: 1.5vw;
+    }    
+    .redes-sociais .logos i.bi {
+        font-size: 6vw; 
+    }
+    .titulo {
+        font-size: 5vw;
+    }
+    .assinatura .mascote {
+        width: 15vw;
+    }
+    .assinatura .logo-branca {
+        width: 27vw;
+    }
+    .assinatura-ej .imagem {
+        width: 11vw;
+    }
+    .parte-02 {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5vh; 
+        width: 90%;
+    }
+
+    .missao:hover .conteudo, .visao:hover .conteudo, .valores:hover .conteudo {
+        font-size: 4vw;
+    }
+}
+
+
+/*Responsividade para Celular*/
+/* Galaxy Z Fold 5 */
+@media screen and (min-width:0px) and (max-width: 344px) {
+    .footer {
+        gap: 2vh;
+        padding: 3vh 2vw;
+    }
+    .parte-01 {
+        flex-direction: column;
+        align-items: center;
+        gap: 1vh;
+        width: 90%;
+    }
+    .titulo {
+        font-size: 7vw; 
+    }
+    .redes-sociais, .assinatura, .assinatura-ej, .missao, .visao, .valores {
+        width: 95%;
+    }
+    .redes-sociais .logos{
+        gap: 1vh;
+    }
+    
+    .redes-sociais .logos i.bi {
+        font-size: 9vw;
+    }
+
+    .assinatura .mascote {
+        width: 22vw; 
+    }
+    .assinatura .logo-branca {
+        width: 42vw; 
+    }
+    .assinatura-ej .imagem {
+        width: 18vw; 
+    }
+    .parte-02 {
+        flex-direction: column;
+        align-items: center;
+        gap: 1vh;
+        width: 95%;
+    }
+    .missao:hover .conteudo, .visao:hover .conteudo, .valores:hover .conteudo {
+        font-size: 5vw;
+    }
+}
+
+/* Iphone SE / Iphone XR / Iphone 12 Pro / Iphone 14 Pro Max / Pixel 7*/
+@media screen and (min-width:345px) and (max-width: 430px) {
+    .footer {
+        gap: 3vh;
+        padding: 3vh 2vw;
+    }
+    .parte-01 {
+        flex-direction: column;
+        align-items: center;
+        gap: 0%;
+        width: 90%;
+    }
+    .titulo {
+        font-size: 6vw; 
+    }
+    .redes-sociais, .assinatura, .assinatura-ej, .missao, .visao, .valores {
+        width: 90%;
+    }
+    .redes-sociais .logos{
+        gap: 1vh;
+    }
+    .redes-sociais .logos i.bi {
+        font-size: 8vw;
+    }
+    .assinatura .mascote {
+        width: 20vw; 
+    }
+    .assinatura .logo-branca {
+        width: 40vw; 
+    }
+    .assinatura-ej .imagem {
+        width: 16vw; 
+    }
+    .parte-02 {
+        flex-direction: column;
+        align-items: center;
+        gap: 1vh;
+        width: 90%;
+    }
+    .missao:hover .conteudo, .visao:hover .conteudo, .valores:hover .conteudo {
+        font-size: 4.5vw;
+    }
+}
