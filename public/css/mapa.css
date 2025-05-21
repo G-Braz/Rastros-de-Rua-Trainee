@@ -82,7 +82,26 @@ html,body {
 }
 
 .btn-salvar-mapa{
-        
+        display: flex;
+        justify-content: end;
+        font-family: 'Staatliches', sans-serif;
+        width: fit-content;
+        height: fit-content;
+        background-color: #1E3A5F;
+        color: #F5F5F5;
+        font-size: 24px;
+        padding: 3px 14px;
+        border-radius: 8px;
+        margin-left: auto;
+        margin-right: auto;
+        border: none;
+        margin-top: 20px;
+}
+.btn-salvar-mapa:hover {
+        transition: all 0.3s;
+        background-color: #0C1C31;
+        color: #F5F5F5;
+        transform: scale(1.05);
 }
 
 
