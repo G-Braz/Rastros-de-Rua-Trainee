@@ -6,12 +6,31 @@
         <title>Mapa</title>
         <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
         <link rel="stylesheet" href="../../../public/css/mapa.css"/>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Staatliches&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 </head>
 <body>
-        <p>Mapa do modal</p>
-        <div id="map" style="height: 250px; width: 100%; margin-bottom: 30px;"></div>
-        <p>Mapa do post</p>
-        <div id="map2" style="height: 250px; width: 100%;"></div>
+        <div class="pagina-mapa">
+                <div class="conteudo-pagina-mapa">
+                        <div class="instrucoes-mapa">
+                                <i class="icone-lampada-mapa bi bi-lightbulb"></i>
+                                <p class="titulo-instrucoes-mapa">Como selecionar o local da arte de rua</p>
+                                <ol>
+                                        <li><strong>Clique no mapa:</strong> selecione o local exato da arte de rua. O marcador será movido
+                                                automaticamente.</li>
+                                        <li><strong>(Opcional) Arraste o marcador:</strong> você pode ajustar a posição manualmente.</li>       
+                                        <li><strong>Salve ou confirme:</strong> continue com o formulário normalmente.</li>
+                                </ol>
+                                <p class="dica"> Use o zoom do mapa para mais precisão.</p>  
+                                <button class="btn-salvar-mapa">Salvar</button>      
+                        </div>
+                        <div id="map"></div>
+                </div>
+        </div>
+                <div id="map2" style="display:none;height: 250px; width: 100%;"></div>
         <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
         <script src="../../../public/js/scriptsMapa.js"></script>         
 </body>
