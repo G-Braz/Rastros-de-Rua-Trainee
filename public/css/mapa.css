@@ -96,6 +96,7 @@ html,body {
         margin-right: auto;
         border: none;
         margin-top: 20px;
+        cursor: pointer;
 }
 .btn-salvar-mapa:hover {
         transition: all 0.3s;
@@ -104,8 +105,7 @@ html,body {
         transform: scale(1.05);
 }
 
-
-
+/* Estilização recursos do mapa */
 .leaflet-control-attribution a {
         display: none;
 }
@@ -131,4 +131,5 @@ html,body {
         display: flex !important;
         flex-direction: column !important;
         gap: 5px !important;
-        border: none !important;       }
+        border: none !important;       
+}
