@@ -133,3 +133,49 @@ html,body {
         gap: 5px !important;
         border: none !important;       
 }
+
+@media screen and (min-width:344px) and (max-width:914px) {
+        .conteudo-pagina-mapa {
+                flex-direction: column;
+                overflow: hidden;
+                height: 100%;
+        }
+        .instrucoes-mapa{
+                width: 90%;
+                height: fit-content;
+                font-size: 14px;
+        }
+        .icone-lampada-mapa {
+                font-size: 3rem;
+                margin-bottom: 25px;
+                margin-top: 20px;
+        }
+
+        .titulo-instrucoes-mapa {
+                font-size: 1.4rem;
+        }
+
+        .instrucoes-mapa ol {
+                padding-left: 1.7rem;
+        }
+
+        .instrucoes-mapa li {
+                margin-bottom: 0.2rem;
+        }
+
+        .instrucoes-mapa .dica {
+                margin-top: 0.2rem;
+                margin-bottom: 0.2rem;
+        }
+
+        .btn-salvar-mapa {
+                font-size: 16px; 
+                margin-top: 0.5rem;
+                margin-bottom: 0.5rem;
+        }
+        #map{
+                padding: 0 10px;
+                width: 90%;
+                height: 60%;
+        }
+}
