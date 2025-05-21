@@ -388,7 +388,7 @@ header {
 
 @media only screen and (min-width: 1025px) and (max-width: 1366px) and (min-height: 600px) and (max-height: 799px) {
     Header{
-        height: 14vh;
+        height: 16vh;
     }
     .logo-navbar i{
         display: none;
@@ -398,9 +398,11 @@ header {
     }
     .links {
         width: 33%;;
-        height: fit-content;
+        height: 100%;
     }
-
+    .links a{
+        height: 40%;
+    }
     .HomeButton , .LoginButton{
         width: 32%;
     }
