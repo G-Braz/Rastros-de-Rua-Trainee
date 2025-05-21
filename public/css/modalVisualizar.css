@@ -48,6 +48,7 @@
 }
 .visualizarBotao:hover { /*Faz o botao ficar maior ao passar o mouse*/
     transition: all 0.3s;
+    background-color: #B22222;
 }
 .botaoVisualizar{/*Div interna que configura o botao*/
     display: flex;
