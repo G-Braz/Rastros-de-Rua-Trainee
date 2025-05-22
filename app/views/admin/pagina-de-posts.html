@@ -238,12 +238,12 @@
             </div>  
             <div class="descricaoModalVisualizar">
                 <p class="tituloDescricaoVisualizar">Descrição</p>
-                <textarea class="conteudoDescricaoVisualizar"rows="5" cols="10" readonly >Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ratione eius molestiae voluptas nihil reiciendis quasi fugiat, quas corrupti impedit distinctio praesentium? Delectus, expedita? Praesentium quia sequi alias neque natus esse?</textarea>
+                <textarea class="conteudoDescricaoVisualizar" id= "textAreaDescricao"readonly >Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ratione eius molestiae voluptas nihil reiciendis quasi fugiat, quas corrupti impedit distinctio praesentium? Delectus, expedita? Praesentium quia sequi alias neque natus esse?Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ratione eius molestiae voluptas nihil reiciendis quasi fugiat, quas corrupti impedit distinctio praesentium? Delectus, expedita? Praesentium quia sequi alias neque natus esse?Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ratione eius molestiae voluptas nihil reiciendis quasi fugiat, quas corrupti impedit distinctio praesentium? Delectus, expedita? Praesentium quia sequi alias neque natus esse?Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ratione eius molestiae voluptas nihil reiciendis quasi fugiat, quas corrupti impedit distinctio praesentium? Delectus, expedita? Praesentium quia sequi alias neque natus esse?</textarea>
 
             </div>
             <div class="materiaisModalVisualizar">
                 <p class="tituloMateriaisVisualizar">Materiais</p>
-                <textarea class="conteudoMateriaisVisualizar" rows="5" cols="10" readonly >Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ratione eius molestiae voluptas nihil reiciendis quasi fugiat, quas corrupti impedit distinctio praesentium? Delectus, expedita? Praesentium quia sequi alias neque natus esse?</textarea>
+                <textarea class="conteudoMateriaisVisualizar" id="textAreaMateriais" readonly >Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ratione eius molestiae voluptas nihil reiciendis quasi fugiat, quas corrupti impedit distinctio praesentium? Delectus, expedita? Praesentium quia sequi alias neque natus esse?</textarea>
             </div>
             <div class="dataLocalVisualizar">
                 <div class="localVisualizar">
@@ -308,11 +308,11 @@
             </div>  
             <div class="descricaoModalEditar">
                 <p>Descrição</p>
-                <textarea class="inputDescricaoEditar" id="inputDescricaoEditar" rows="5" cols="10" >Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ratione eius molestiae voluptas nihil reiciendis quasi fugiat, quas corrupti impedit distinctio praesentium? Delectus, expedita? Praesentium quia sequi alias neque natus esse?</textarea>
+                <textarea class="inputDescricaoEditar" id="textAreaDescricao" oninput="autoResize(this)" >Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ratione eius molestiae voluptas nihil reiciendis quasi fugiat, quas corrupti impedit distinctio praesentium? Delectus, expedita? Praesentium quia sequi alias neque natus esse?</textarea>
             </div>
             <div class="MateriaisModalEditar">
                 <p>Materiais</p>
-                <textarea class="inputMateriaisEditar" id="inputMateriaisEditar" rows="5" cols="10" >Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ratione eius molestiae voluptas nihil reiciendis quasi fugiat, quas corrupti impedit distinctio praesentium? Delectus, expedita? Praesentium quia sequi alias neque natus esse?</textarea>
+                <textarea class="inputMateriaisEditar" id="textAreaMateriais" oninput="autoResize(this)">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ratione eius molestiae voluptas nihil reiciendis quasi fugiat, quas corrupti impedit distinctio praesentium? Delectus, expedita? Praesentium quia sequi alias neque natus esse?</textarea>
             </div>
             <div class="dataLocalEditar">
                 <div class="localEditar">
@@ -321,7 +321,7 @@
                 </div>
                 <div class="dataEditar">
                     <p>Data de Criação</p>
-                    <input class="inputData" id="inputData" type="date" value="16/05/2025" readonly>
+                    <p class="conteudoDataEditar">16/05/2025</p>
                 </div>
             </div>
             <div class="botoesEditar">
