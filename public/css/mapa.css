@@ -1,0 +1,211 @@
+html,body {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        height: 100%;
+        width: 100%;
+}
+.pagina-mapa,
+.pag-mapa-post{
+        background-color: #F5F5F5;
+        overflow-y: hidden;
+        height: 100%;
+}
+#map,
+#map2{
+        height: 100%;
+        width: 100%;
+}
+#map2{
+        height: 70vh;
+        width: 70vw;
+}
+.pag-mapa-post{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+}
+.conteudo-mapa-post{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: fit-content;
+        border-radius: 0.75rem;
+        border: #1E3A5F solid 15px;
+}
+.titulo-mapa-post p{
+        font-size: 2.8rem;
+        font-family: 'Staatliches', sans-serif;
+        text-align: center;
+        color: #1E3A5F;
+        margin: 3%;
+        width: 100%;
+        margin: auto;
+}
+.conteudo-pagina-mapa{
+        display: flex;
+        flex-direction: row;
+        margin: 0;
+        gap: 20px;
+        justify-content: center;
+        align-items: center;
+        height: 90vh;
+        padding: 2%;
+}
+.icone-lampada-mapa{
+        display: flex;
+        font-size: 4.5rem;
+        text-align: center;
+        justify-content: center;
+        color: #1E3A5F;
+        transition: all 0.3s;
+        margin-bottom: 25px;
+}
+.icone-lampada-mapa:hover{
+        display: flex;
+        font-size: 4.5rem;
+        text-align: center;
+        justify-content: center;
+        color: #ffffff;
+        transform: scale(1.1);
+        transition: all 0.3s;
+        text-shadow: 0 0 20px #0C1C31, 0 0 30px #1E3A5F, 0 0 40px #1E3A5F, 0 0 50px #1E3A5F,
+        0 0 60px #1E3A5F;
+}
+.titulo-instrucoes-mapa {
+        font-size: 1.8rem;
+        font-family: 'Staatliches', sans-serif;
+        text-align: center;
+        color: #0C1C31;
+        margin: 0;
+}
+.instrucoes-mapa {
+        background-color: #ebebeb;
+        border-radius: 0.75rem;
+        font-family: 'Urbanist', sans-serif;
+        width: 35%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        border-left: 6px solid #1E3A5F;
+        padding: 0 10px;
+}
+
+
+.instrucoes-mapa ol {
+        padding-left: 1.7rem;
+}
+
+.instrucoes-mapa li {
+        margin-bottom: 0.7rem;
+}
+
+.instrucoes-mapa .dica {
+        margin-top: 1rem;
+        color: #1E3A5F;
+        font-family: 'Urbanist', sans-serif;
+        text-align: center;
+}
+
+.btn-salvar-mapa{
+        display: flex;
+        justify-content: end;
+        font-family: 'Staatliches', sans-serif;
+        width: fit-content;
+        height: fit-content;
+        background-color: #1E3A5F;
+        color: #F5F5F5;
+        font-size: 24px;
+        padding: 3px 14px;
+        border-radius: 8px;
+        margin-left: auto;
+        margin-right: auto;
+        border: none;
+        margin-top: 20px;
+        cursor: pointer;
+}
+.btn-salvar-mapa:hover {
+        transition: all 0.3s;
+        background-color: #0C1C31;
+        color: #F5F5F5;
+        transform: scale(1.05);
+}
+
+/* Estilização recursos do mapa */
+.leaflet-control-attribution a {
+        display: none;
+}
+
+.leaflet-control-zoom-in,
+.leaflet-control-zoom-out {
+        background-color: #1E3A5F !important;
+        color: white !important;
+        border: none !important;
+        border-radius: 20px !important;
+        width: 30px !important;
+        height: 30px !important;
+        cursor: pointer !important;
+}
+
+.leaflet-control-zoom-in:hover,
+.leaflet-control-zoom-out:hover {
+        background-color: #0C1C31 !important;
+        filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.5)) !important;
+}
+
+.leaflet-control-zoom,
+.leaflet-bar .leaflet-control {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 5px !important;
+        border: none !important;       
+}
+
+@media screen and (min-width:344px) and (max-width:914px) {
+        .conteudo-pagina-mapa {
+                flex-direction: column;
+                overflow: hidden;
+                height: 100%;
+        }
+        .instrucoes-mapa{
+                width: 90%;
+                height: fit-content;
+                font-size: 14px;
+        }
+        .icone-lampada-mapa {
+                font-size: 3rem;
+                margin-bottom: 25px;
+                margin-top: 20px;
+        }
+
+        .titulo-instrucoes-mapa {
+                font-size: 1.4rem;
+        }
+
+        .instrucoes-mapa ol {
+                padding-left: 1.7rem;
+        }
+
+        .instrucoes-mapa li {
+                margin-bottom: 0.2rem;
+        }
+
+        .instrucoes-mapa .dica {
+                margin-top: 0.2rem;
+                margin-bottom: 0.2rem;
+        }
+
+        .btn-salvar-mapa {
+                font-size: 16px; 
+                margin-top: 0.5rem;
+                margin-bottom: 0.5rem;
+        }
+        #map{
+                padding: 0 10px;
+                width: 90%;
+                height: 60%;
+        }
+}
