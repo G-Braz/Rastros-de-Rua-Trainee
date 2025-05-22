@@ -82,6 +82,32 @@
     font-weight: bold; 
     color: #F5F5F5;
 }
+.conteudo-btn-mapa-post{
+    padding: 1vh;
+}
+.btn-local-mapa{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Staatliches', sans-serif;
+    font-size: 3vh;
+    cursor: pointer;
+    text-align: start;
+    padding: 1% 2%;
+    width: fit-content;
+    color: #0c1c31f2;
+    border-radius: 0.7vw;
+    border: none;
+    transition: all 0.2s;
+    white-space: nowrap;
+    background-color: #F5F5F5;
+    text-decoration: none;
+}
+.btn-local-mapa:hover{
+    transform: scale(1.03);
+    transition: all 0.2s;
+    box-shadow: 0 0.6vh 0.6vh #0D0D0D;
+}
 
 /* Assinatura do artista */
 .tag {
@@ -326,7 +352,7 @@
         font-size: 6vh;
     }
 
-    .autor, .data, .local {
+    .autor, .data, .local, .conteudo-btn-mapa-post {
         font-size: 3.3vh;
         padding: 0%;
     }
@@ -389,18 +415,23 @@
 
     .informacoes {
         width: 88vw;
-        height: 35vh;
+        height: fit-content;
         padding: 1vh;
         align-items: flex-start;
+        gap: 20px;
     }
 
     .titulo-post {
         font-size: 4vh;
     }
 
-    .autor, .data, .local {
+    .autor, .data, .local, .conteudo-btn-mapa-post {
         font-size: 2.5vh;
         padding: 0%;
+    }
+
+    .btn-local-mapa{
+        font-size: 2.5vh;
     }
 
     .tag {
@@ -462,7 +493,8 @@
 
     .informacoes {
         width: 88vw;
-        height: 50vh;
+        gap: 5px;
+        height: fit-content;
         padding: 1vh;
         align-items: flex-start;
     }
@@ -471,7 +503,7 @@
         font-size: 6vh;
     }
 
-    .autor, .data, .local {
+    .autor, .data, .local, .conteudo-btn-mapa-post {
         font-size: 3.3vh;
     }
 
@@ -533,18 +565,22 @@
 
     .informacoes {
         width: 88vw;
-        height: 42vh;
         padding: 1vh;
         align-items: flex-start;
+        gap: 25px;
+        height: fit-content;
     }
 
     .titulo-post {
         font-size: 4.8vh;
     }
 
-    .autor, .data, .local {
+    .autor, .data, .local, .conteudo-btn-mapa-post{
         font-size: 3vh;
         padding: 0%;
+    }
+    .btn-local-mapa{
+        font-size: 2.5vh;
     }
 
     .tag {

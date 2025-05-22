@@ -5,15 +5,44 @@ html,body {
         height: 100%;
         width: 100%;
 }
-.pagina-mapa{
+.pagina-mapa,
+.pag-mapa-post{
         background-color: #F5F5F5;
         overflow-y: hidden;
         height: 100%;
 }
-#map{
-        border-radius: 0.75rem;
+#map,
+#map2{
         height: 100%;
         width: 100%;
+}
+#map2{
+        height: 70vh;
+        width: 70vw;
+}
+.pag-mapa-post{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+}
+.conteudo-mapa-post{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: fit-content;
+        border-radius: 0.75rem;
+        border: #1E3A5F solid 15px;
+}
+.titulo-mapa-post p{
+        font-size: 2.8rem;
+        font-family: 'Staatliches', sans-serif;
+        text-align: center;
+        color: #1E3A5F;
+        margin: 3%;
+        width: 100%;
+        margin: auto;
 }
 .conteudo-pagina-mapa{
         display: flex;
@@ -118,6 +147,7 @@ html,body {
         border-radius: 20px !important;
         width: 30px !important;
         height: 30px !important;
+        cursor: pointer !important;
 }
 
 .leaflet-control-zoom-in:hover,
