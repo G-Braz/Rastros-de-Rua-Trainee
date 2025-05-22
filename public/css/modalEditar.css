@@ -15,7 +15,6 @@
     font-size: 20px;
     color: #1E3A5F;
     font-family: 'Staatliches', sans-serif;
-    width: 60vw;
     height: fit-content;
     background-color: #F5F5F5;
     border-radius: 8px;
@@ -178,6 +177,8 @@
 }
 
 .arteEditar{
+    display: flex;
+    flex-direction: column;
     width: 500px;
 }
 
@@ -343,13 +344,14 @@ textarea{
     }
     .editar{
         top:5%;
-        width:65vw;
+        width:50vw; /*mudei aqui*/
         row-gap: 4px;
     }
     .arteEditar{
-        width: 80%;
-        align-content: center;
+        width: 70%;
+        align-items: center;
         text-align: center;
+        justify-content: center;
     }
     .tagEditar{
         text-align: center;
