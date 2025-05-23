@@ -54,8 +54,8 @@
                         <td>Lorem Ipsum</td>
                         <td>01/01/2025</td>
                         <td class="operacoes">
-                            <button><i class="bi bi-eye-fill" onclick="abrirModal('fundoVisualizar','modalVisualizar')"></i></button>
-                            <button><i class="bi bi-pencil-square" onclick="abrirModal('fundoEditar','modalEditar')"></i></button>
+                            <button><i class="bi bi-eye-fill" onclick="abrirModal('fundoVisualizar','idModalVisualizar')"></i></button>
+                            <button><i class="bi bi-pencil-square" onclick="abrirModal('fundoEditar','idModalEditar')"></i></button>
                             <button><i class="bi bi-trash-fill" onclick="abrirModal('fundo-modal-excluir-post','modal-excluir-post')"></i></button>
                         </td>
                     </tr>
@@ -65,8 +65,8 @@
                         <td>Lorem Ipsum</td>
                         <td>02/01/2025</td>
                         <td class="operacoes">
-                            <button><i class="bi bi-eye-fill"  onclick="abrirModal('fundoVisualizar','modalVisualizar')"></i></button>
-                            <button><i class="bi bi-pencil-square" onclick="abrirModal('fundoEditar','modalEditar')"></i></button>
+                            <button><i class="bi bi-eye-fill" onclick="abrirModal('fundoVisualizar','idModalVisualizar')"></i></button>
+                            <button><i class="bi bi-pencil-square" onclick="abrirModal('fundoEditar','idModalEditar')"></i></button>
                             <button><i class="bi bi-trash-fill" onclick="abrirModal('fundo-modal-excluir-post','modal-excluir-post')"></i></button>
                         </td>
                     </tr>
@@ -76,8 +76,8 @@
                         <td>Lorem Ipsum</td>
                         <td>03/01/2025</td>
                         <td class="operacoes">
-                            <button><i class="bi bi-eye-fill"  onclick="abrirModal('fundoVisualizar','modalVisualizar')"></i></button>
-                            <button><i class="bi bi-pencil-square" onclick="abrirModal('fundoEditar','modalEditar')"></i></button>
+                            <button><i class="bi bi-eye-fill" onclick="abrirModal('fundoVisualizar','idModalVisualizar')"></i></button>
+                            <button><i class="bi bi-pencil-square" onclick="abrirModal('fundoEditar','idModalEditar')"></i></button>
                             <button><i class="bi bi-trash-fill" onclick="abrirModal('fundo-modal-excluir-post','modal-excluir-post')"></i></button>
                         </td>
                     </tr>
@@ -87,8 +87,8 @@
                         <td>Lorem Ipsum</td>
                         <td>04/01/2025</td>
                         <td class="operacoes">
-                            <button><i class="bi bi-eye-fill"  onclick="abrirModal('fundoVisualizar','modalVisualizar')"></i></button>
-                            <button><i class="bi bi-pencil-square" onclick="abrirModal('fundoEditar','modalEditar')"></i></button>
+                            <button><i class="bi bi-eye-fill" onclick="abrirModal('fundoVisualizar','idModalVisualizar')"></i></button>
+                            <button><i class="bi bi-pencil-square" onclick="abrirModal('fundoEditar','idModalEditar')"></i></button>
                             <button><i class="bi bi-trash-fill" onclick="abrirModal('fundo-modal-excluir-post','modal-excluir-post')"></i></button>
                         </td>
                     </tr>
@@ -98,8 +98,8 @@
                         <td>Lorem Ipsum</td>
                         <td>05/01/2025</td>
                         <td class="operacoes">
-                            <button><i class="bi bi-eye-fill"  onclick="abrirModal('fundoVisualizar','modalVisualizar')"></i></button>
-                            <button><i class="bi bi-pencil-square" onclick="abrirModal('fundoEditar','modalEditar')"></i></button>
+                            <button><i class="bi bi-eye-fill" onclick="abrirModal('fundoVisualizar','idModalVisualizar')"></i></button>
+                            <button><i class="bi bi-pencil-square" onclick="abrirModal('fundoEditar','idModalEditar')"></i></button>
                             <button><i class="bi bi-trash-fill" onclick="abrirModal('fundo-modal-excluir-post','modal-excluir-post')"></i></button>
                         </td>
                     </tr>
@@ -210,8 +210,9 @@
         </div>
     </div>
     <!--Modal visualizar-->
-    <div class="modalVisualizar" id="fundoVisualizar">
-        <div class="visualizar" id="modalVisualizar">
+    
+    <div onclick="fecharModal('idModalVisualizar','fundoVisualizar')" class="modalVisualizar" id="fundoVisualizar"> </div>
+        <div class="visualizar" id="idModalVisualizar">
             <div class="tituloModalVisualizar">
                 <p>Visualizar Publicação</p>
             </div>
@@ -241,7 +242,7 @@
             </div>  
             <div class="descricaoModalVisualizar">
                 <p class="tituloDescricaoVisualizar">Descrição</p>
-                <textarea class="conteudoDescricaoVisualizar" id= "textAreaDescricao"readonly >Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ratione eius molestiae voluptas nihil reiciendis quasi fugiat, quas corrupti impedit distinctio praesentium? Delectus, expedita? Praesentium quia sequi alias neque natus esse?Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ratione eius molestiae voluptas nihil reiciendis quasi fugiat, quas corrupti impedit distinctio praesentium? Delectus, expedita? Praesentium quia sequi alias neque natus esse?Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ratione eius molestiae voluptas nihil reiciendis quasi fugiat, quas corrupti impedit distinctio praesentium? Delectus, expedita? Praesentium quia sequi alias neque natus esse?Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ratione eius molestiae voluptas nihil reiciendis quasi fugiat, quas corrupti impedit distinctio praesentium? Delectus, expedita? Praesentium quia sequi alias neque natus esse?</textarea>
+                <textarea class="conteudoDescricaoVisualizar" id= "textAreaDescricao"readonly >Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ratione eius molestiae voluptas nihil reiciendis quasi fugiat, quas corrupti impedit distinctio praesentium? Delectus, expedita? Praesentium quia sequi alias neque natus esse?</textarea>
 
             </div>
             <div class="materiaisModalVisualizar">
@@ -251,7 +252,10 @@
             <div class="dataLocalVisualizar">
                 <div class="localVisualizar">
                     <p class="TituloLocalVisualizar">Local</p>
-                    <p class="conteudoLocalVisualizar">Juiz de Fora</p>
+                    <a href="../site/mapaPost.html" class="conteudoLocalVisualizar">
+                        <i class=" icone-geo-mapa bi bi-geo-alt-fill"></i>
+                        Visualizar no mapa
+                    </a>
                 </div>
                 <div class="dataVisualizar">
                     <p class="visualizarData">Data de Criação</p>
@@ -259,13 +263,13 @@
                 </div>
             </div>
             <div class="botaoVisualizar">
-                <button class="visualizarBotao" onclick="fecharModal('fundoVisualizar','modalVisualizar')">Fechar</button>
+                <button class="visualizarBotao" onclick="fecharModal('fundoVisualizar','idModalVisualizar')">Fechar</button>
             </div>
         </div>
     </div>
     <!--Modal editar-->
-    <div class="modalEditar" id="fundoEditar">
-        <div class="editar" id="modalEditar">
+    <div onclick="fecharModal('idModalEditar','fundoEditar')" class="modalEditar" id="fundoEditar"></div>
+        <div class="editar" id="idModalEditar">
             <div class="tituloModalEditar">
                 <p>Editar Publicação</p>
             </div>
@@ -311,16 +315,19 @@
             </div>  
             <div class="descricaoModalEditar">
                 <p>Descrição</p>
-                <textarea class="inputDescricaoEditar" id="textAreaDescricao" oninput="autoResize(this)" >Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ratione eius molestiae voluptas nihil reiciendis quasi fugiat, quas corrupti impedit distinctio praesentium? Delectus, expedita? Praesentium quia sequi alias neque natus esse?</textarea>
+                <textarea class="inputDescricaoEditar" id="textAreaDescricaoEditar" oninput="autoResize(this)" >Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ratione eius molestiae voluptas nihil reiciendis quasi fugiat, quas corrupti impedit distinctio praesentium? Delectus, expedita? Praesentium quia sequi alias neque natus esse?</textarea>
             </div>
             <div class="MateriaisModalEditar">
                 <p>Materiais</p>
-                <textarea class="inputMateriaisEditar" id="textAreaMateriais" oninput="autoResize(this)">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ratione eius molestiae voluptas nihil reiciendis quasi fugiat, quas corrupti impedit distinctio praesentium? Delectus, expedita? Praesentium quia sequi alias neque natus esse?</textarea>
+                <textarea class="inputMateriaisEditar" id="textAreaMateriaisEditar" oninput="autoResize(this)">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ratione eius molestiae voluptas nihil reiciendis quasi fugiat, quas corrupti impedit distinctio praesentium? Delectus, expedita? Praesentium quia sequi alias neque natus esse?</textarea>
             </div>
             <div class="dataLocalEditar">
                 <div class="localEditar">
                     <p>Local</p>
-                    <input class="inputLocal" id="inputLocal" type="text" value="Juiz de Fora">
+                    <a href="./mapaModal.html" class="inputLocalEditar">
+                        <i class=" icone-geo-mapa bi bi-geo-alt-fill"></i>
+                        Selecionar localização
+                    </a>
                 </div>
                 <div class="dataEditar">
                     <p>Data de Criação</p>
@@ -328,8 +335,8 @@
                 </div>
             </div>
             <div class="botoesEditar">
-                <button class="botaoModal botaoSalvar" onclick="salvarAlteracoes()">Salvar</button>
-                <button class="botaoModal botaoCancelar" onclick="fecharModal('fundoEditar','modalEditar')">Cancelar</button>
+                <button class="botaoModal botaoSalvar">Salvar</button>
+                <button class="botaoModal botaoCancelar" onclick="fecharModal('fundoEditar','idModalEditar')">Cancelar</button>
             </div>
         </div>
     </div>

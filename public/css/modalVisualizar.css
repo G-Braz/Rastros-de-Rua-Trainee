@@ -20,7 +20,7 @@
     background-color: #F5F5F5;
     border-radius: 8px;
     padding: 0px;
-    display: flex;
+    display: none;
     flex-direction: column;
     position: absolute;
     align-items: center;
@@ -28,6 +28,8 @@
     row-gap: 10px;
     overflow-y: scroll;
     max-height: 90%;
+    top: 10%;
+    left: 15%;
 }
 .tituloModalVisualizar{ /*Titulo Visualizar Publicação*/
     font-size: 30px;
@@ -117,20 +119,34 @@
     font-family: 'Urbanist', sans-serif;
     color: #F5F5F5;
 }
+.dataVisualizar{
+    width: 50%;
+}
 .conteudoDataVisualizar{ /*Algumas configs especificas da data*/
     width: 100%;
-    padding: 8px 10px;
     text-align: center;
 }
 .conteudoLocalVisualizar{ /*Config especifica do local*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.2s;
+    white-space: nowrap;
     width: 100%;
+    text-decoration: none;
+}
+.conteudoLocalVisualizar:hover{
+    transform: scale(1.03);
+    transition: all 0.2s;
+    background-color: #0C1C31; 
 }
 .arteContent{ /*Titulo que fica em cima da arte*/
     display: flex;
     justify-content: left;
 }
 .localVisualizar { /*Configura o local*/
-    width: 77%;
+    width: 50%;
     height: 100%;
 }
 .descricaoModalVisualizar{ /*Configura a descrição*/
@@ -195,7 +211,7 @@
         align-items: center;
     }
     .conteudoTagVisualizar img{
-        width:50%;
+        width:70%;
         padding: 1.5%;
     }   
     .conteudoArteVisualizar img{
@@ -203,6 +219,7 @@
         margin-left: 0;
     }   
     .conteudoArteVisualizar{
+        width: 100%;
         align-items: center;
         justify-content: center;
         align-content: center;
@@ -248,6 +265,7 @@
     .dataVisualizar{
         width: 100%;
     }
+
 }
 
 /*Tablets*/
@@ -257,8 +275,9 @@
     }
     .visualizar{
         top: 5%;
-        width: 65vw;
+        width: 55vw;
         row-gap: 4px;
+        left: 22%;
     }
     .arteVisualizar{
         width: 100%;
@@ -280,9 +299,10 @@
     }   
     .conteudoArteVisualizar{
         align-items: center;
+        width: 100%;
     }
     .conteudoArteVisualizar img{
-        width: 90%;
+        width: 100%;
         margin-left: 0;
         padding: 1%;
     }   
@@ -300,7 +320,10 @@
        padding-left: 2px;
     }
     .ConteudoLocalVisualizar{
-        width: 60%;
+        width: 100%;
+    }
+    p.conteudoDataVisualizar{
+        width: 100%;
     }
     p.conteudoAutorVisualizar,p.conteudoTituloVisualizar,.conteudoDescricaoVisualizar,.ConteudoLocalVisualizar,.conteudoLocalVisualizar,.conteudoDataVisualizar,textArea.conteudoMateriaisVisualizar{
         padding: 1%;
@@ -323,6 +346,10 @@
     .dataLocalVisualizar{
         flex-direction: column;
     }
+    .dataVisualizar{
+        width: 100%;
+    }
+
 }
 
 /*surface duo*/
@@ -470,7 +497,7 @@
     }
 }
 /*Nest Hub max*/
-@media only screen and (min-width:1200px) and (max-width: 1300px) and (max-height:800px){
+@media only screen and (min-width:1200px) and (max-width: 1300px) and(min-height: 799px) and (max-height:800px){
     .tituloModalVisualizar{
        font-size:100%;
     }
@@ -539,22 +566,28 @@
         flex-direction: row;
     }
 }
-/*Desktops*/
-@media only screen and (min-width:1440px) and (max-width: 2000px) and (min-height:1000px){
+/*Laptops*/
+@media only screen and (min-width:1000px) and (max-width: 1440px) and (min-height:700px){
     .tituloModalVisualizar{
-       font-size: 100%;
+       font-size: 22px;
     }
     .tituloModalVisualizar p{
         padding: 0;
     }
     .visualizar{
-        top: 1%;
+        top: 5%;
         width: 60vw;
-        row-gap: 4px;
+        row-gap: 3px;
+        left: 20%;
     }
     .arteVisualizar{
         width: 100%;
         align-content: center;
+        text-align: start;
+        align-items: start;
+    }
+    .arteVisualizar img{
+        width: 100%;
     }
     .tagVisualizar{
         text-align: start;
@@ -568,6 +601,9 @@
         padding: 1%;
         border-radius: 8px;
     }   
+    .conteudoArteVisualizar{
+        width: 100%;
+    }
     .conteudoArteVisualizar img{
         width:100%;
         margin-left: 0;
@@ -581,20 +617,22 @@
         padding-left: 2px;
     }
     .ConteudoLocalVisualizar{
-        width: 60%;
+        width: 50%;
     }
     p.conteudoAutorVisualizar,p.conteudoTituloVisualizar,.conteudoDescricaoVisualizar,.ConteudoLocalVisualizar,.conteudoLocalVisualizar,.conteudoDataVisualizar,p.conteudoMateriaisVisualizar,textArea.conteudoMateriaisVisualizar{
         padding: 1%;
         font-size: 16px;
     }
     .arteContent,p.TituloTituloVisualizar,p.tituloAutorVisualizar,.tagVisualizar p,p.tituloDescricaoVisualizar,p.TituloLocalVisualizar,p.visualizarData, p.tituloTituloVisualizar,p.tituloMateriaisVisualizar,p.tituloMateriaisVisualizar{
-        font-size: 20px;
+        font-size: 22px;
+        text-align: start;
     }
     .localVisualizar{
-        width: 75%;
+        width: 50%;
     }
     .conteudoDataVisualizar{
-        padding: 4.9%;
+        width: 100%;
+        padding: 0.5%;
     }
     .botaoVisualizar{
         padding-bottom: 13px;
@@ -606,4 +644,8 @@
     .imagensVisualizar{
         flex-direction: row;
     }
+    .dataLocalVisualizar{
+        flex-direction: row;
+    }
+
 }

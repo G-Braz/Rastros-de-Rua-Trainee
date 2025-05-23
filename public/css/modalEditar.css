@@ -1,4 +1,4 @@
-.modalEditar{
+.modalEditar{ /*fundo que nao aparece do modal*/
     width: 100%;
     height: 100%;
     display: none;
@@ -11,23 +11,25 @@
     top: 0%;
 }
 
-.editar{
-    font-size: 20px;
+.editar{/*fundo branco do modal*/
+    font-size: 26px;
     color: #1E3A5F;
     font-family: 'Staatliches', sans-serif;
+    width: 60vw;
     height: fit-content;
     background-color: #F5F5F5;
     border-radius: 8px;
     padding: 0px;
-    display: flex;
+    display: none;
     flex-direction: column;
     position: absolute;
     align-items: center;
     filter: drop-shadow(5px 5px 10px #000000);
     row-gap: 10px;
-    top:5%;
     overflow-y: scroll;
     max-height: 90%;
+    left: 15%;
+    top: 5%;
 }
 .tituloModalEditar{
     font-size: 28px;
@@ -128,7 +130,7 @@
 .tituloInput,
 .inputAutor,
 .inputDescricaoEditar,
-.inputLocal,
+.inputLocalEditar,
 .conteudoDataEditar,
 .inputMateriaisEditar{
     background-color: #1E3A5F;
@@ -142,11 +144,18 @@
     color: #F5F5F5;
 }
 .conteudoDataEditar{
-    padding: 6.91%;
+    text-align: center;
 }
 
-.inputLocal{
+.inputLocalEditar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.2s;
+    white-space: nowrap;
     width: 100%;
+    text-decoration: none;
 }
 .tituloPublicacaoEditar,
 .autorEditar{
@@ -154,11 +163,11 @@
     color: #1E3A5F;
 }
 .dataEditar {
-    width: fit-content;
+    width: 50%;
     height: 100%;
 }
 .localEditar {
-    width: 80%;
+    width: 50%;
     height: 100%;
 }
 .descricaoModalEditar{
@@ -258,7 +267,7 @@ textarea{
         text-align: center;
     }
     .conteudoTagInput{
-        width:72%;
+        width:65%;
         align-items: center;
     }
     .conteudoTagInput img{
@@ -267,12 +276,12 @@ textarea{
     }
     .conteudoArteInput{
         padding-bottom: 5px;
-        width: 90%;
+        width: 80%;
         align-items: center;
         padding: 2% 0 2% 0;
     }
     .conteudoArteInput img{
-       width:100%;
+       width:90%;
        margin-left: 0;
        justify-items: center;
     }  
@@ -289,15 +298,15 @@ textarea{
         padding: 0;
     }
     .tagInput img{
-        width: 80%;
+        width: 75%;
         padding: 1.5%;
     }
     .arteEditar p,.tituloPublicacaoEditar p,.autorEditar p,.tagEditar p,.descricaoModalEditar p,.LocalEditar p,.dataEditar p,.MateriaisModalEditar p,.localEditar p{
         font-size: 18px;
         text-align: center;
     }
-    .tituloInput,.inputAutor,.inputDescricaoEditar,.inputLocal,p.conteudoDataEditar,.inputMateriaisEditar{
-        font-size: 16px;
+    .tituloInput,.inputAutor,.inputDescricaoEditar,.inputLocalEditar,p.conteudoDataEditar,.inputMateriaisEditar{
+        font-size: 18px;
     }
     .botaoModal{
         border-radius: 8px;
@@ -344,11 +353,12 @@ textarea{
     }
     .editar{
         top:5%;
-        width:50vw; /*mudei aqui*/
+        width:55vw;
         row-gap: 4px;
+        left: 20%;
     }
     .arteEditar{
-        width: 70%;
+        width: 100%;
         align-items: center;
         text-align: center;
         justify-content: center;
@@ -357,17 +367,17 @@ textarea{
         text-align: center;
     }
     .conteudoTagInput{
-        width:50%;
+        width:55%;
         align-items: center;
-        padding: 1%;
+        padding: 1.8%;
     }
     .conteudoArteInput{
-        padding: 1%;
+        padding: 1.8%;
         align-items: center;
-        width:80%;
+        width:65%;
     }
     .conteudoArteInput img{
-        width:50%;
+        width:100%;
         padding: 3% 3% 3% 3%;
         margin-left: 0;
         justify-items: left;
@@ -375,6 +385,7 @@ textarea{
     .imagensEditar{
         flex-direction: column;
         align-items: center;
+        width: 90%;
     }
     .camposEditar{
         width: 100%;
@@ -412,10 +423,10 @@ textarea{
     .dataLocalEditar{
         flex-direction: column;
     }
-    .conteudoDataEditar{
-        padding: 1.214%;
-    }
     .localEditar,.dataEditar{
+        width: 100%;
+    }
+    .arteInput{
         width: 100%;
     }
 }
@@ -620,55 +631,58 @@ textarea{
     .tagInput img{
         width: 44%;
     }
-    .conteudoDataEditar{
-        padding: 5.56%;
-    }
 }
-/*Desktops*/
-@media only screen and (min-width:1440px) and (max-width: 2000px) and (min-height:1000px){
+/*Laptops*/
+@media only screen and (min-width:1000px) and (max-width: 1440px) and (min-height:700px){
     .tituloModalEditar{
-        font-size: 100%;
+        font-size: 22px;
     }
     .editar{
         top:5%;
         width: 60vw;
         row-gap: 3px;
+        left: 20%;
     }
     .arteEditar{
-        width: 80%;
-        align-content: center;
+        width: 100%;
         text-align: start;
+        align-items: start;
+        gap: 15px;
     }
     .tagEditar{
-        text-align: start;
+        text-align: center;
     }
     .conteudoTagInput{
-        width:35%;
+        width:100%;
         align-items: center;
     }
     .conteudoArteInput{
         padding-bottom: 5px;
+        padding: 5px;
         align-items: center;
-        width: 55%;
+        width: 70%;
+        margin-top: 6px;
     }  
     .imagensEditar{
         flex-direction: row;
         align-items: center;
+        
     }
     .camposEditar{
         width: 100%;
     }
     .tagInput{
-        width: 100%;
+        width: 54%;
     }
     .arteEditar p,.tituloPublicacaoEditar p,.autorEditar p,.tagEditar p,.descricaoModalEditar p,.localEditar p,.dataEditar p,.MateriaisModalEditar p{
         font-size: 22px;
+        text-align: start;
     }
-    .tituloInput,.inputAutor,.inputDescricaoEditar,.inputLocal,p.conteudoDataEditar,.inputMateriaisEditar{
-        font-size: 80%;
+    .tituloInput,.inputAutor,.inputDescricaoEditar,.inputLocalEditar,p.conteudoDataEditar,.inputMateriaisEditar{
+        font-size: 16px;
     }
     .botaoModal{
-        font-size: 90%;
+        font-size: 20px;
         border-radius: 8px;
     }
     .botoesEditar{
@@ -680,22 +694,31 @@ textarea{
     .conteudoArteInput i,.conteudoTagInput i{
         font-size: 12px;
     }
+    .conteudoTagInput{
+        padding: 5%;
+    }
     .tagEditar{
-        width:100%;
+        width:90%;
+    }
+    .arteInput{
+        width: 100%;
     }
     .labelImgTag{
         align-items: start;
     }
     .tagInput img{
-        width: 35%;
-    }
-    .conteudoDataEditar{
-        padding: 1.214%;
+        width: 100%;
     }
     .dataLocalEditar{
         flex-direction: row;
     }
+    .localEditar{
+        width: 50%;
+    }
     .dataEditar{
-        width: fit-content;
+        width: 50%;
+    }
+    p.conteudoDataEditar{
+        text-align: center;
     }
 }
