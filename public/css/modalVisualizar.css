@@ -28,7 +28,7 @@
     row-gap: 10px;
     overflow-y: scroll;
     max-height: 90%;
-    top: 10%;
+    top: 5%;
     left: 15%;
 }
 .tituloModalVisualizar{ /*Titulo Visualizar Publicação*/
@@ -67,7 +67,7 @@
     border-radius: 8px;
 }
 .conteudoTagVisualizar img{/*Imagem da tag*/
-    width: 168px;
+    width: 144px;
     background-color: #1E3A5F;
     padding:3%;
     border-radius: 8px;
@@ -78,7 +78,7 @@
     flex-direction: column;
     border-radius: 8px;
     height: fit-content;
-    width: 60%;
+    width: 100%;
     align-items: start;
     justify-content: center;
 }
@@ -144,6 +144,8 @@
 .arteContent{ /*Titulo que fica em cima da arte*/
     display: flex;
     justify-content: left;
+    text-align: start;
+    width: 100%;
 }
 .localVisualizar { /*Configura o local*/
     width: 50%;
@@ -269,7 +271,7 @@
 }
 
 /*Tablets*/
-@media only screen and (min-width: 431px) and (max-width: 1366px){
+@media only screen and (min-width: 431px) and (max-width: 1000px){
     .tituloModalVisualizar{
         font-size: 30px;
     }
@@ -567,9 +569,9 @@
     }
 }
 /*Laptops*/
-@media only screen and (min-width:1000px) and (max-width: 1440px) and (min-height:700px){
+@media only screen and (min-width:1000px) and (max-width: 2000px) and (min-height:700px){
     .tituloModalVisualizar{
-       font-size: 22px;
+        font-size: 22px;
     }
     .tituloModalVisualizar p{
         padding: 0;

@@ -88,7 +88,7 @@
     padding: 1%;
     background-color: #1E3A5F;
     border-radius: 8px;
-    width: 45%;
+    width: 50%;
     border:2px solid #ccc
 }
 .inputImg{
@@ -237,7 +237,7 @@
     font-size: 70%;
 }
 .conteudoTagInput{
-    width: 45%;
+    width: 50%;
     padding:1.542%;
 }
 .conteudoTagInput p,.conteudoTagInput i{
@@ -347,7 +347,7 @@ textarea{
 }
 
 /*Tablets*/
-@media only screen and (min-width: 431px) and (max-width: 1366px) and (min-height:601px){
+@media only screen and (min-width: 431px) and (max-width: 1000px) and (min-height:601px){
     .tituloModalEditar{
         font-size:28px;
     }
@@ -672,7 +672,7 @@ textarea{
         width: 100%;
     }
     .tagInput{
-        width: 54%;
+        width: 100%;
     }
     .arteEditar p,.tituloPublicacaoEditar p,.autorEditar p,.tagEditar p,.descricaoModalEditar p,.localEditar p,.dataEditar p,.MateriaisModalEditar p{
         font-size: 22px;
@@ -698,7 +698,7 @@ textarea{
         padding: 5%;
     }
     .tagEditar{
-        width:90%;
+        width:100%;
     }
     .arteInput{
         width: 100%;
