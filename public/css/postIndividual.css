@@ -151,6 +151,13 @@
     color: #F5F5F5;
 }
 
+.mapaPostFundo{
+    display: none;
+    position: fixed;
+    top:0%;
+    bottom: 0%;
+}
+
 /*Responsividade para Tablets*/
 /* Ipad mini / Ipad air / Ipad Pro / Surface Pro 7 / Surface Duo / Asus Zenbook Fold*/
 @media screen and (min-width: 431px) and (max-width: 1024px) and (min-height: 700px) {

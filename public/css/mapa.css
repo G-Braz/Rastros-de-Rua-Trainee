@@ -1,15 +1,16 @@
-html,body {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-        height: 100%;
-        width: 100%;
-}
 .pagina-mapa,
 .pag-mapa-post{
+        display: none;
+        position: fixed;
+        top: 0%;
+        left: 0%;
+        justify-content: center;
+        align-items: center;
+        align-self: center;
         background-color: #F5F5F5;
         overflow-y: hidden;
         height: 100%;
+        width: 100%;
 }
 #map,
 #map2{
@@ -40,9 +41,9 @@ html,body {
         font-family: 'Staatliches', sans-serif;
         text-align: center;
         color: #1E3A5F;
-        margin: 3%;
         width: 100%;
         margin: auto;
+        margin-bottom: 10px;
 }
 .conteudo-pagina-mapa{
         display: flex;
@@ -53,6 +54,7 @@ html,body {
         align-items: center;
         height: 90vh;
         padding: 2%;
+        width: 100%;
 }
 .icone-lampada-mapa{
         display: flex;
@@ -110,7 +112,7 @@ html,body {
         text-align: center;
 }
 
-.btn-salvar-mapa{
+.btn-salvar-mapa, .btn-fechar-mapa{
         display: flex;
         justify-content: end;
         font-family: 'Staatliches', sans-serif;
@@ -129,11 +131,20 @@ html,body {
 }
 .btn-salvar-mapa:hover {
         transition: all 0.3s;
-        background-color: #0C1C31;
+        background-color: #05AC4B;
         color: #F5F5F5;
         transform: scale(1.05);
 }
-
+.btn-fechar-mapa:hover {
+        transition: all 0.3s;
+        background-color: #B22222;
+        color: #F5F5F5;
+        transform: scale(1.05);
+}
+.icone-geo-mapa{
+        color: #F5F5F5;
+        font-size: 24px;
+}
 /* Estilização recursos do mapa */
 .leaflet-control-attribution a {
         display: none;
