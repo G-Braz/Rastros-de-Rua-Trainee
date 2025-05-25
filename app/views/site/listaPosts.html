@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Publicações</title>
+    <link rel="stylesheet" href="../../../public/css/listaPosts.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Staatliches&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+<body>
+    <div id="tela" onclick="fecharFiltro('tiposFiltro')"></div>
+    <div class="conteudo">
+        <div class="topo">
+            <div class="barraDePesquisa">
+                <div class="caixaDePesquisa">
+                        <i class="bi bi-search"></i>
+                        <input type="text" class="inputPesquisa" name="text" placeholder="Buscar Post">
+                        </input>
+                        <i class="bi bi-x-lg" onclick= "apagarTexto('inputPesquisa')"></i>
+                </div>
+            </div>
+            <div class="filtro" onclick="abrirFiltro('tiposFiltro')">
+                <i class="bi bi-filter-circle-fill"></i>
+                <p class="textoFiltro">Filtro</p>
+            </div>
+            <div class="tiposFiltro" id="tiposFiltro">
+                    <p>tipo1</p>
+                    <p>tipo2</p>
+                    <p>tipo3</p>
+                    <p>tipo4</p>
+                    <p>tipo5</p>
+                    <p>tipo6</p>
+            </div>
+        </div>
+        <ul class="listaDePosts">
+            
+                <li>
+                    <a href="listaPosts.html" class="post">
+                        <img src="../../../public/assets/FotoPost.jpg" class="fotoCapa">
+                        <img src="../../../public/assets/Tag-rastrosderua 2.png" class="fotoTag">
+                        <div class="textoPost">
+                            <h1>Arte 1</h1>
+                            <p>Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups.</p>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="listaPosts.html" class="post">
+                        <img src="../../../public/assets/FotoPost.jpg" class="fotoCapa">
+                        <img src="../../../public/assets/Tag-rastrosderua 2.png" class="fotoTag">
+                        <div class="textoPost">
+                            <h1>Arte 1</h1>
+                            <p>Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups.</p>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="listaPosts.html" class="post">
+                        <img src="../../../public/assets/FotoPost.jpg" class="fotoCapa">
+                        <img src="../../../public/assets/Tag-rastrosderua 2.png" class="fotoTag">
+                        <div class="textoPost">
+                            <h1>Arte 1</h1>
+                            <p>Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups.</p>
+                        </div>
+                    </a>
+                </li>
+            
+            
+                <li>
+                    <a href="listaPosts.html" class="post">
+                        <img src="../../../public/assets/FotoPost.jpg" class="fotoCapa">
+                        <img src="../../../public/assets/Tag-rastrosderua 2.png" class="fotoTag">
+                        <div class="textoPost">
+                            <h1>Arte 1</h1>
+                            <p>Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups.</p>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="listaPosts.html" class="post">
+                        <img src="../../../public/assets/FotoPost.jpg" class="fotoCapa">
+                        <img src="../../../public/assets/Tag-rastrosderua 2.png" class="fotoTag">
+                        <div class="textoPost">
+                            <h1>Arte 1</h1>
+                            <p>Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups.</p>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="listaPosts.html" class="post">
+                        <img src="../../../public/assets/FotoPost.jpg" class="fotoCapa">
+                        <img src="../../../public/assets/Tag-rastrosderua 2.png" class="fotoTag">
+                        <div class="textoPost">
+                            <h1>Arte 1</h1>
+                            <p>Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups.</p>
+                        </div>
+                    </a>
+                </li>
+            
+            
+        </ul>
+        <div class="paginacao">
+            <a href="listaPosts.html" class="skip">
+                <i class="bi bi-skip-backward"></i>
+            </a href="listaPosts.html">
+                <a href="listaPosts.html" class="paginas">
+                    <p> 1 </p>
+                </a href="listaPosts.html">
+                <a href="listaPosts.html" class="paginas">
+                    <p> 2 </p>
+                </a href="listaPosts.html">
+                <a href="listaPosts.html" class="paginas">
+                    <p> 3 </p>
+                </a href="listaPosts.html">
+                <a href="listaPosts.html" class="paginas">
+                    <p> 4 </p>
+                </a href="listaPosts.html">
+            <a href="listaPosts.html" class="skip">
+                <i class="bi bi-skip-forward"></i>
+            </a href="listaPosts.html">
+        </div>
+    </div>
+
+    <script src="../../../public/js/listaPosts.js"></script>
+</body>
+</html>

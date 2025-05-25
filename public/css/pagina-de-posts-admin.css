@@ -1,0 +1,673 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Imagem no fundo */
+body{
+    background: url('/public/assets/fundo-tabelas.jpg') no-repeat; 
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+}
+/* Fundo */
+.pagina {
+    font-family: 'Urbanist', sans-serif;
+    width: 100%;
+    min-height: 100vh;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 3vh 1vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1vh;
+}
+
+/* Parte 01 */
+.descricao {
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1vh 0vw;
+}
+
+/* Mascote e Titulo */
+.nome-tabela {
+    display: flex;
+    align-items: center;
+    gap: 1vw;
+}
+
+.mascote img {
+    width: 5.4vw;
+    transform: scaleX(-1); /* Inverte horizontalmente a imagem */
+}
+
+/* Titulo Tabela */
+h1 {
+    font-family: 'Staatliches', sans-serif;
+    font-size: 4.8vw;
+    font-weight: 100;
+    color: #F5F5F5;
+    padding: 1vh 0;
+}
+
+/* Botão Criar Publicação */
+.botaoadicionar {
+    width: 21%;
+    height: 7vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1vw;
+    background-color: #F5F5F5;
+    border-radius: 0.7vw;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.botaoadicionar .texto-botao {
+    font-size: 1.9vw;
+    font-weight: 800;
+    font-family: 'Urbanist', sans-serif;
+    color: #0C1C31;
+}
+
+/*Deixa o botão de criar publicação maior ao passar o mouse*/
+.botaoadicionar:hover{ 
+    transform: scale(1.05);
+    transition: transform 0.2s ease-in-out;
+}
+
+/* Parte 02: Tabela */
+.tabela {
+    width: 90%;
+    background-color: #1E3A5F;
+    border-radius: 0.7vw;
+    box-shadow: 0px 4px 4px rgba(12, 28, 49, 0.8);
+}
+
+table {
+    width: 100%; 
+    text-align: center;
+    border-collapse: collapse;
+}
+
+/*Cabeçalho da tabela*/
+th {
+    font-size: 2.4vw;
+    color: #F5F5F5;
+    border-bottom: 0.1vh solid #F5F5F5; 
+    padding: 2vh 1.5vw; 
+}
+
+/*Celulas da tabela*/ 
+td {
+    font-size: 2vw;
+    color: #F5F5F5; 
+    padding: 2vh 1.5vw;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+/* Muda a cor do fundo ao passar o mouse */
+.post:hover {
+    background-color: #0C1C31; 
+}
+
+.operacoes{
+    justify-content: center; 
+    display: flex;
+    gap: 0.4vw; 
+}
+
+/* Botões operações */
+button { 
+    width: 3.5vw;
+    height: 6vh;
+    background-color: #F5F5F5; 
+    border: none; 
+    border-radius: 0.7vw;
+    padding: 1vh; 
+    display: flex;
+    align-items: center; 
+    justify-content: center; 
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); 
+    cursor: pointer;
+}
+
+/* Ícones */
+button i {
+    color: #0C1C31; 
+    font-size: 2vw; 
+}
+
+/*Efeito ao passar o mouse nos ícones de operações*/
+button:hover{ 
+    transform: scale(1.1);
+    transition: transform 0.2s ease-in-out;
+}
+
+/* Parte 03: Paginação */
+.paginacao {
+    display: flex;
+    flex-direction: row;
+    gap: 0.6vw;
+    padding: 3vh;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+/* Links Paginação */
+.paginacao a {
+    display: flex;
+    background:rgb(0,11,26,0.8);
+    border-radius: 1.5vw; 
+    box-shadow: 0 4px 15px #0D0D0D;
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    font-size: 4vh;
+    color:#F5F5F5;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    transition: background 0.2s;
+}
+
+/* Ícones paginação */
+.paginacao .bi {
+    font-weight: 400;
+    padding: 2%;
+    font-size: 4vh;
+}
+
+.paginacao .paginas {
+    width: 4.5%;
+    height: 6.5vh;
+    padding: 3vh 1vw;
+    font-weight: 400;
+}
+
+.paginacao .skip {
+    width: 4.5%;
+    height: 6.5vh;
+}
+
+/* Muda ao passar o mouse */
+.paginacao a:hover {
+    background: rgb(12, 28, 49, 0.8); /* Ficou mais bonito assim nessa página */
+    /* background: rgb(0,11,26,0.3); backgrond que está na páginação padrão do site */
+    border: 1px solid rgb(245, 245, 245, 0.4);
+    transform: scale(1.05);
+    transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+
+/*Responsividade para Tablets*/
+/* Ipad mini / Ipad air / Ipad Pro / Surface Pro 7 / Surface Duo / Asus Zenbook Fold*/
+@media screen and (min-width: 431px) and (max-width: 1124px) and (min-height: 720px) {
+    .pagina {
+        padding: 3vh 0vw;
+        gap: 2vh;
+    }
+
+    .descricao {
+        width: 96%;
+        flex-direction: column;
+        gap: 2vh;
+    }
+
+    .mascote img {
+        width: 14vw;
+    }
+    
+    .nome-tabela {
+        gap: 1vw;
+    }
+    
+    h1 {
+        font-size: 13vw;
+    }
+
+    .botaoadicionar {
+        width: 60%;
+        height: 5vh;
+        padding: 1vh;
+        gap: 2vw;
+        border-radius: 0.7vw;
+    }
+    
+    .botaoadicionar .texto-botao {
+        font-size: 5.8vw;
+    }
+
+    .tabela {
+        width: 96%;
+    }
+    
+    th {
+        font-size: 4.7vw;
+        padding: 2vh 1vw; 
+        height: 10vh;
+    }
+    
+    td {
+        font-size: 4.5vw;
+        padding: 2vh 1vw;
+        height: 11vh;
+    }
+
+    .operacoes{
+        gap: 0.8vw; 
+        padding: 3vh 3vw;
+    }
+    
+    button { 
+        width: 7vw;
+        height: 5vh;
+    }
+    
+    button i {
+        font-size: 5vw; 
+    }
+
+    .paginacao {
+        gap: 1.5vw;
+        padding: 2vh 0;
+    }
+
+    .paginacao a {
+        font-size: 4.5vw;
+    }
+    
+    .paginacao .bi {
+        padding: 2%;
+        font-size: 4.5vw;
+    }
+    
+    .paginacao .paginas {
+        width: 13%;
+        height: 4.5vh;
+        padding: 2vh 1vw;
+    }
+    
+    .paginacao .skip {
+        width: 13%;
+        height: 4.5vh;
+    }
+}
+
+/*Responsividade para Tablets*/
+/* Ipad mini / Ipad air / Ipad Pro / Surface Pro 7 / Surface Duo / Asus Zenbook Fold*/
+@media screen and (min-width: 431px) and (max-width: 1124px) and (min-height: 720px) {
+    .pagina {
+        padding: 0.5vh 0vw;
+        gap: 3vh;
+    }
+
+    .descricao {
+        width: 96%;
+        flex-direction: column;
+        gap: 2vh;
+    }
+
+    .mascote img {
+        width: 18vw;
+    }
+    
+    .nome-tabela {
+        gap: 1vw;
+    }
+    
+    h1 {
+        font-size: 10vw;
+    }
+
+    .botaoadicionar {
+        width: 60%;
+        height: 5vh;
+        padding: 1vh;
+        gap: 2vw;
+        border-radius: 0.7vw;
+    }
+    
+    .botaoadicionar .texto-botao {
+        font-size: 5.8vw;
+    }
+
+    .tabela {
+        width: 96%;
+    }
+    
+    th {
+        font-size: 4.5vw;
+        padding: 1vh 1vw; 
+        height: 8vh;
+    }
+    
+    td {
+        font-size: 4vw;
+        padding: 1vh 1vw;
+        height: 10vh;
+    }
+
+    .operacoes{
+        gap: 0.8vw; 
+        padding: 2.5vh 1vw;
+    }
+    
+    button { 
+        width: 7vw;
+        height: 5vh;
+    }
+    
+    button i {
+        font-size: 5vw; 
+    }
+
+    .paginacao {
+        gap: 1.5vw;
+        padding: 0;
+    }
+
+    .paginacao a {
+        font-size: 4vw;
+        border-radius: 3vw; 
+    }
+    
+    .paginacao .bi {
+        padding: 2%;
+        font-size: 4.5vw;
+    }
+    
+    .paginacao .paginas {
+        width: 9%;
+        height: 5vh;
+        padding: 2vh 1vw;
+    }
+    
+    .paginacao .skip {
+        width: 9%;
+        height: 5vh;
+    }
+}
+
+/*Responsividade para Celular*/
+/* Galaxy Z Fold 5 */
+@media screen and (min-width:0px) and (max-width: 344px) {
+    .pagina {
+        padding: 2vh 0vw;
+        gap: 2vh;
+    }
+
+    .descricao {
+        width: 96%;
+        flex-direction: column;
+        gap: 2vh;
+    }
+
+    .mascote img {
+        width: 22vw;
+    }
+    
+    .nome-tabela {
+        gap: 3vw;
+    }
+    
+    h1 {
+        font-size: 12vw;
+    }
+
+    .botaoadicionar {
+        width: 58%;
+        height: 3vh;
+        padding: 1vh;
+        gap: 2vw;
+        border-radius: 0.7vw;
+    }
+    
+    .botaoadicionar .texto-botao {
+        font-size: 5.8vw;
+    }
+
+    .tabela {
+        width: 96%;
+    }
+    
+    th {
+        font-size: 4.7vw;
+        padding: 2vh 2vw; 
+        height: 10vh;
+    }
+    
+    td {
+        font-size: 4.5vw;
+        padding: 2vh 2vw;
+        height: 11vh;
+    }
+
+    .operacoes{
+        gap: 0.8vw; 
+        padding: 3.5vh 3vw;
+    }
+    
+    button { 
+        width: 7vw;
+        height: 3vh;
+    }
+    
+    button i {
+        font-size: 5vw; 
+    }
+
+    .paginacao {
+        gap: 1.5vw;
+        padding: 2vh 0;
+    }
+
+    .paginacao a {
+        font-size: 4.5vw;
+        border-radius: 3vw; 
+    }
+    
+    .paginacao .bi {
+        padding: 2%;
+        font-size: 4.5vw;
+    }
+    
+    .paginacao .paginas {
+        width: 10%;
+        height: 3vh;
+        padding: 2vh 1vw;
+    }
+    
+    .paginacao .skip {
+        width: 10%;
+        height: 4vh;
+    }
+}
+
+/* Iphone SE */
+@media screen and (min-width:345px) and (max-width: 375px) {
+    .pagina {
+        padding: 1vh 0vw;
+        gap: 2vh;
+    }
+
+    .descricao {
+        width: 95%;
+        flex-direction: column;
+        gap: 2vh;
+    }
+
+    .mascote img {
+        width: 23vw;
+    }
+    
+    .nome-tabela {
+        gap: 1vw;
+    }
+    
+    h1 {
+        font-size: 12vw;
+    }
+
+    .botaoadicionar {
+        width: 48%;
+        height: 4vh;
+        padding: 0vh;
+        gap: 2vw;
+        border-radius: 0.7vw;
+    }
+    
+    .botaoadicionar .texto-botao {
+        font-size: 4.6vw;
+    }
+
+    .tabela {
+        width: 95%;
+    }
+    
+    th {
+        font-size: 4vw;
+        padding: 2vh 2vw; 
+    }
+    
+    td {
+        font-size: 3.4vw;
+        padding: 2vh 2vw;
+    }
+
+    .operacoes{
+        gap: 0.8vw; 
+        padding: 3vh 2vw;
+    }
+    
+    button { 
+        width: 6vw;
+        height: 4vh;
+    }
+    
+    button i {
+        font-size: 4vw; 
+    }
+
+    .paginacao {
+        gap: 1.5vw;
+        padding: 3vh 0;
+    }
+
+    .paginacao a {
+        font-size: 4vw;
+        border-radius: 3vw; 
+    }
+    
+    .paginacao .bi {
+        padding: 2%;
+        font-size: 4vw;
+    }
+    
+    .paginacao .paginas {
+        width: 9%;
+        height: 4.5vh;
+        padding: 1vh 1vw;
+    }
+    
+    .paginacao .skip {
+        width: 9%;
+        height: 4.5vh;
+    }
+
+}
+
+/* Iphone XR */
+@media screen and (min-width:376px) and (max-width: 430px) {
+    .pagina {
+        padding: 2vh 0vw;
+        gap: 2vh;
+    }
+
+    .descricao {
+        width: 96%;
+        flex-direction: column;
+        gap: 2vh;
+    }
+
+    .mascote img {
+        width: 23vw;
+    }
+    
+    .nome-tabela {
+        gap: 1vw;
+    }
+    
+    h1 {
+        font-size: 12vw;
+    }
+
+    .botaoadicionar {
+        width: 48%;
+        height: 4vh;
+        padding: 0vh;
+        gap: 2vw;
+        border-radius: 0.7vw;
+    }
+    
+    .botaoadicionar .texto-botao {
+        font-size: 5vw;
+    }
+
+    .tabela {
+        width: 96%;
+    }
+    
+    th {
+        font-size: 5vw;
+        padding: 2vh 2vw; 
+    }
+    
+    td {
+        font-size: 4.4vw;
+        padding: 2vh 2vw;
+    }
+
+    .operacoes{
+        gap: 0.8vw; 
+        padding: 3vh 2vw;
+    }
+    
+    button { 
+        width: 7vw;
+        height: 4vh;
+    }
+    
+    button i {
+        font-size: 4vw; 
+    }
+
+    .paginacao {
+        gap: 2vw;
+        padding: 3vh 0;
+    }
+
+    .paginacao a {
+        font-size: 5vw;
+        border-radius: 3vw; 
+    }
+    
+    .paginacao .bi {
+        padding: 2%;
+        font-size: 5vw;
+    }
+    
+    .paginacao .paginas {
+        width: 10%;
+        height: 4vh;
+        padding: 2vh 1vw;
+    }
+    
+    .paginacao .skip {
+        width: 10%;
+        height: 4vh;
+    }
+}

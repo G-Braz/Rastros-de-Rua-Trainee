@@ -1,0 +1,542 @@
+.overlay-criar-post{
+    width: 100%;
+    height: 100%;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    background-color: rgba(26, 26, 26, 0.466);
+    opacity: 0;
+    transition: all 0.5s ease;
+    top: 0%;
+}
+.modal-criar-post{
+    font-size: 20px;
+    color: #1E3A5F;
+    font-family: 'Staatliches', sans-serif;
+    width: 55vw;
+    height: fit-content;
+    background-color: #F5F5F5;
+    border-radius: 8px;
+    padding: 0px;
+    display: none;
+    flex-direction: column;
+    position: fixed;
+    align-items: center;
+    filter: drop-shadow(5px 5px 10px #000000);
+    row-gap: 10px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.opacidade {
+    opacity: 1;
+    transition: all 0.3s ease-in;
+}
+.titulo-modal-criar-post{
+    font-size: 28px;
+    padding: 5px 5px;
+    text-align: center;
+    width: 100%;
+    background-color: #1E3A5F;
+    color: #F5F5F5;
+    border-top-right-radius: 8px;
+    border-top-left-radius: 8px ;
+}
+.container-superior-criar-post{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 90%;
+    align-items: flex-end;
+    gap: 3%;
+}
+.campos-superior-direita-criar {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    align-items: start;
+}
+.adicionar-arte-criar-post,
+.adicionar-tag-criar-post {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    align-self: center;
+}
+.adicionar-tag-criar-post {
+    align-items:start;
+    width: 100%;
+}
+.input-arte-criar-post,
+.input-tag-criar-post {
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 8px;
+    height: fit-content;
+    width: fit-content;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Urbanist', sans-serif;
+    border: 4px;
+    border: 1.5px solid #1E3A5F;
+    font-size: 14px;
+    border-style: dashed;
+}
+.custom-label-art img {
+    height: 70px;
+}
+.custom-label-tag img {
+    height: 40px;
+}
+#previewArteCriar,
+#previewTagCriar {
+    object-fit: cover;
+    margin-top: 10px;
+    height: 27.7vh;
+    width: 100%;
+    display: none;
+    border-radius: 8px;
+}
+#previewTagCriar {
+    height: 7.7vh;
+    width: 100%;
+}
+.custom-label-art,
+.custom-label-tag {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    color: #0C1C31;
+    cursor: pointer;
+}
+.botao-modal{
+    font-family: 'Staatliches', sans-serif;
+    width: fit-content;
+    height: fit-content;
+    background-color: #1E3A5F;
+    color: #F5F5F5;
+    font-size: 20px;
+    padding: 4px 10px;
+    font-size: 18px;
+    border-radius: 6px;
+    box-sizing: border-box;
+    max-width: 100%;
+    white-space: nowrap;
+}
+.botao-modal-cancelar:hover{
+    background-color: #B22222;
+    transition: all 0.3s;
+}
+.botao-modal-criar:hover {
+    background-color: #05AC4B;
+    transition: all 0.3s;
+}
+.botoes-modal{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    padding-top: 5px;
+    padding-bottom: 20px;
+    width: 100%;
+}
+
+.input-titulo-criar-post,
+.input-descricao-criar-post,
+.input-autor-criar-post,
+.btn-mapa-modal-criar,
+.data-criar-post,
+.input-materiais-criar-post{
+    background-color: #1E3A5F;
+    width: 100%;
+    padding: 8px 10px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    font-family: 'Urbanist', sans-serif;
+    color: #F5F5F5;
+}
+input::placeholder,
+textarea::placeholder {
+    color: rgba(255, 255, 255, 0.39);
+}
+.local-e-data-criar {
+    display: flex;
+    flex-direction: row;
+    width: 90%;
+    gap: 3%;
+    justify-content: center;
+    align-items: flex-end;
+    text-align: start;
+}
+.campo-data-criar-post{
+    width: 100%;
+}
+.campo-local-criar-post{
+    width: 100%;
+}
+.data-criar-post{
+    text-align: center;
+    font-size: 14px;
+    width: 100%;
+    margin: 0;
+}
+.btn-mapa-modal-criar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Staatliches', sans-serif;
+    font-size: 16px;
+    cursor: pointer;
+    padding: 7px 1px;
+    width: 100%;
+    color: #fffffff2;
+    transition: all 0.2s;
+    white-space: nowrap;
+    background-color: #1E3A5F;
+    text-decoration: none;
+}
+.icone-geo-mapa{
+    margin-right: 3px;
+}
+
+.btn-mapa-modal-criar:hover {
+    transform: scale(1.03);
+    transition: all 0.2s;
+    background-color: #0C1C31;
+}
+.campo-titulo-criar-post,
+.campo-autor-criar-post{
+    width: 100%;
+    color: #1E3A5F;
+}
+.campo-descricao-criar-post,
+.campo-materiais-criar-post{
+    width: 90%;
+    color:#1E3A5F;
+}
+
+.input-descricao-criar-post,
+.input-materiais-criar-post{
+    resize: none;
+    overflow: auto;
+    display: block;
+    width: 100%;
+    scrollbar-width:thin;
+}
+/* dispositivos moveis */
+@media only screen and (max-width: 445px) {
+    .modal-criar-post{
+        width: 60vw;
+        font-size: 16px;
+        max-height: 90%;
+        overflow-y: scroll;
+        text-align: center;
+    }
+    .titulo-modal-criar-post {
+        font-size: 20px;
+    }
+    .btn-mapa-modal-criar {
+        font-size: 2vh;
+        padding: 1% 2%;
+        width: 100%;
+        border-radius: 4px;
+    }
+    .container-superior-criar-post {
+        flex-direction:column;
+        gap: 0;
+        justify-content: center;
+    }
+    .campos-superior-direita-criar {
+        width: 100%;   
+    }
+    .adicionar-arte-criar-post,
+    .adicionar-tag-criar-post{
+        text-align: center;
+        height: fit-content;
+        width: 100%;
+        align-items: center;
+    }
+    #previewArteCriar,
+    #previewTagCriar {
+        object-fit: cover;
+        margin-top: 10px;
+        height: 11vh;
+        width: 100%;
+        display: none;
+        border-radius: 8px;
+    }
+    #previewTagCriar {
+        height: 7vh;
+        width: 60%;
+    }
+    .input-titulo-criar-post,
+    .input-descricao-criar-post,
+    .input-autor-criar-post,
+    .btn-mapa-modal-criar,
+    .data-criar-post,
+    .input-materiais-criar-post{
+        padding: 6px 8px;
+        border-radius: 8px;
+        font-size: 12px;
+    }
+    .input-arte-criar-post,
+    .input-tag-criar-post{
+        width: 100%;
+        font-size: 12px;
+    }
+    .custom-label-art img {
+        height: 50px;
+    }
+
+    .custom-label-tag img {
+        height: 30px;   
+    }
+
+    .local-e-data-criar {
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+        gap: 2vh;
+    }
+    .data-criar-post {
+        max-width: 100%;
+        padding: 5px 1px;
+        text-align: center;
+        font-size: 12px;   
+    }
+}
+/* surfacepro7 */
+@media only screen and (min-width: 912px) and (max-width: 912px) and (max-height: 1368px) and (min-height: 1368px) {
+    .modal-criar-post {
+        width: 75vw;    
+        font-size: 26px;
+    }
+    #previewArteCriar {
+        height: 17vh;
+    }
+
+    #previewTagCriar {
+        height: 5vh;
+    }
+    .titulo-modal-criar-post {
+        font-size: 35px;
+    }
+    .input-titulo-criar-post,
+    .input-descricao-criar-post,
+    .input-autor-criar-post,
+    .btn-mapa-modal-criar,
+    .data-criar-post,
+    .input-materiais-criar-post{
+        font-size: 20px;
+    }
+    .botao-modal{
+        font-size: 25px;
+    }
+    .data-criar-post {
+        max-width: 100%;
+        padding: 7px 1px;
+        text-align: center;
+    }
+}
+/* surfaceduo*/
+@media only screen and (min-width: 540px) and (max-width: 540px) and (max-height: 720px) and (min-height: 720px) {
+    .modal-criar-post{
+        width: 85vw;
+    }
+
+    #previewArteCriar {
+        height: 22vh;
+    }
+
+    #previewTagCriar {
+        height: 4vh;
+    }
+
+}
+/* ipad mini */
+@media only screen and (min-width: 768px) and (max-width: 768px) and (max-height: 1024px) and (min-height: 1024px) {
+    .modal-criar-post {
+        width: 70vw;
+        overflow: hidden;
+    }
+
+    #previewArteCriar{
+        height: 17vh;
+    }
+
+    #previewTagCriar {
+        height: 5vh;
+    }
+
+    .adicionar-tag-criar-post{
+        width: 60%;
+    }
+
+    .btn-mapa-modal-criar {
+        width: 100%;
+    }
+
+    .campo-data-criar-post {
+        width: 38%;
+    }
+}
+/* IPAD air */
+@media only screen and (min-width: 820px) and (max-width: 820px) and (max-height: 1180px) and (min-height: 1180px) {
+    .modal-criar-post {
+        width: 70vw;
+        font-size: 22px;
+        overflow: hidden;
+    }
+
+    #previewArteCriar{
+        height: 17vh;
+    }
+
+    #previewTagCriar {
+        height: 5vh;
+    }
+
+    .adicionar-tag-criar-post {
+        width: 60%;
+    }
+
+    .titulo-modal-criar-post {
+        font-size: 35px;
+    }
+
+    .btn-mapa-modal-criar{
+        width: 100%;
+    }
+
+    .campo-data-criar-post {
+        display: flex;
+        flex-direction: column;
+        width: max-content;
+        align-items: flex-start;
+    }
+
+    .data-criar-post {
+        width: fit-content;
+    }
+}
+/* IPAD pro */
+@media only screen and (min-width: 1024px) and (max-width: 1024px) and (max-height: 1366px) and (min-height: 1366px) {
+    .modal-criar-post {
+        width: 75vw;
+        font-size: 28px;
+        overflow: hidden;
+    }
+
+    #previewArteCriar {
+        height: 17vh;
+    }
+
+    #previewTagCriar {
+        height: 5vh;
+    }
+
+    .adicionar-tag-criar-post{
+        width: 70%;
+        align-items: start;
+    }
+
+    .titulo-modal-criar-post{
+        font-size: 40px;
+    }
+
+    .btn-mapa-modal-criar{
+        width: 100%;
+    }
+
+    .campo-data-criar-post {
+        width: max-content;
+    }
+
+    .data-criar-post {
+        width: fit-content;
+    }
+}
+/* asus zenbook */
+@media only screen and (min-width: 853px) and (max-width: 853px) and (max-height: 1280px) and (min-height: 1280px) {
+    .modal-criar-post {
+        width: 75vw;
+        font-size: 28px;
+        overflow: hidden;
+    }
+
+    #previewArteCriar {
+        height: 17vh;
+    }
+
+    #previewTagCriar {
+        height: 5vh;
+    }
+
+    .adicionar-tag-criar-post {
+        width: 70%;
+        align-items: start;
+    }
+
+    .titulo-modal-criar-post{
+        font-size: 40px;
+    }
+
+    .btn-mapa-modal-criar {
+        width: 100%;
+    }
+
+    .campo-data-criar-post {
+        width: max-content;
+    }
+
+    .data-criar-post {
+        width: fit-content;
+    }
+}
+/* nesthub*/
+@media only screen and (min-width: 1024px) and (max-width: 1024px) and (max-height: 600px) and (min-height: 600px) {
+    .modal-criar-post{
+        width: 75vw;
+        font-size: 20px;
+        overflow-y: scroll  ;
+        max-height: 90%;
+    }
+
+    #previewArteCriar {
+        height: 30vh;
+    }
+
+    #previewTagCriar {
+        height: 8vh;
+        width: 100%;
+    }
+
+    .adicionar-tag-criar-post {
+        width: 90%;
+        align-items: start;
+    }
+
+    .titulo-modal-criar-post {
+        font-size: 30px;
+    }
+
+    .btn-mapa-modal-criar{
+        width: 100%;
+    }
+
+    .campo-data-criar-post {
+        width: max-content;
+    }
+
+    .data-criar-post {
+        width: fit-content;
+    }
+}

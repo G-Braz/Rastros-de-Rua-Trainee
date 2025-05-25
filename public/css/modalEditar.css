@@ -1,0 +1,724 @@
+.modalEditar{ /*fundo que nao aparece do modal*/
+    width: 100%;
+    height: 100%;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    background-color: rgba(26, 26, 26, 0.466);
+    opacity: 0;
+    transition: all 0.5s ease;
+    top: 0%;
+}
+
+.editar{/*fundo branco do modal*/
+    font-size: 26px;
+    color: #1E3A5F;
+    font-family: 'Staatliches', sans-serif;
+    width: 60vw;
+    height: fit-content;
+    background-color: #F5F5F5;
+    border-radius: 8px;
+    padding: 0px;
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    align-items: center;
+    filter: drop-shadow(5px 5px 10px #000000);
+    row-gap: 10px;
+    overflow-y: scroll;
+    max-height: 90%;
+    left: 15%;
+    top: 5%;
+}
+.tituloModalEditar{
+    font-size: 28px;
+    padding: 5px 5px;
+    text-align: center;
+    width: 100%;
+    background-color: #1E3A5F;
+    color: #F5F5F5;
+    border-top-right-radius: 8px;
+    border-top-left-radius: 8px ;
+}
+.botaoModal{
+    font-family: 'Staatliches', sans-serif;
+    width: fit-content;
+    height: fit-content;
+    background-color: #1E3A5F;
+    color: #F5F5F5;
+    font-size: 20px;
+    padding: 4px 16px;
+}
+.botaoCancelar:hover{
+    background-color: #B22222;
+    transition: all 0.3s;
+}
+.botaoSalvar:hover {
+    background-color: #05AC4B;
+    transition: all 0.3s;
+}
+.botoesEditar{
+    display: flex;
+    flex-direction: row;
+    align-self: center;
+    gap: 10%;
+    padding-top: 5px;
+    padding-bottom: 20px;
+}
+.arteInput,
+.tagInput {
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+    width: fit-content;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Urbanist', sans-serif;
+    font-size: 14px;
+}
+.arteInput img{
+    padding: 1.5%;
+    background-color: #1E3A5F;
+    border-radius: 8px;
+    width: 100%;
+    border:2px solid #ccc
+}
+.tagInput img{
+    padding: 1%;
+    background-color: #1E3A5F;
+    border-radius: 8px;
+    width: 50%;
+    border:2px solid #ccc
+}
+.inputImg{
+    display: none;
+}
+#previewArte,
+#previewTag {
+    object-fit: cover;
+    margin-top: 10px;
+    height: 27.7vh;
+    width: 230px;
+    display: none;
+    border-radius: 8px;
+}
+#previewTag{
+    height: 10vh;
+}
+.labelImgArte,
+.labelImgTag {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    color:#0C1C31;
+    cursor: pointer;
+    font-size:20px;
+}
+.labelImgTag{
+    align-items: start;
+}
+.dataLocalEditar{
+    display: flex;
+    flex-direction: row;
+    width: 90%;
+    gap: 1%;
+    justify-content:space-between ;
+}
+.tituloInput,
+.inputAutor,
+.inputDescricaoEditar,
+.inputLocalEditar,
+.conteudoDataEditar,
+.inputMateriaisEditar{
+    background-color: #1E3A5F;
+    width: 100%;
+    padding: 1.214%;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    font-size: 18px;
+    transition: all 0.3s ease;
+    font-family: 'Urbanist', sans-serif;
+    color: #F5F5F5;
+}
+.conteudoDataEditar{
+    text-align: center;
+}
+
+.inputLocalEditar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.2s;
+    white-space: nowrap;
+    width: 100%;
+    text-decoration: none;
+}
+.tituloPublicacaoEditar,
+.autorEditar{
+    width: 100%;
+    color: #1E3A5F;
+}
+.dataEditar {
+    width: 50%;
+    height: 100%;
+}
+.localEditar {
+    width: 50%;
+    height: 100%;
+}
+.descricaoModalEditar{
+    width: 90%;
+    color:#1E3A5F;
+}
+
+.inputDescricao{
+    resize: none;
+    overflow: auto;
+    display: block;
+    width: 100%;
+}
+.MateriaisModalEditar{
+    width: 90%;
+}
+
+.arteEditar{
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+}
+
+.imagensEditar{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 90%;
+    align-items: center;
+    gap: 3%;
+}
+.tagEditar{
+    align-items: center;
+}
+
+.camposEditar{
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+}
+.labelArte{
+    height: 350px;
+}
+.labelTag{
+    height: 100px;
+    display: block;
+}
+
+.conteudoArteInput, .conteudoTagInput{
+    display: flex;
+    width: 60%;
+    justify-content: space-around;
+    background-color: #1E3A5F;
+    color: white;
+    border-radius: 8px;
+    margin-top: 4px;
+    padding: 2%;
+    gap: 3.4%;
+}
+.conteudoArteInput{
+    padding: 1%;
+}
+.conteudoArteInput p{
+    font-size: 70%;
+}
+.conteudoArteInput i{
+    font-size: 70%;
+}
+.conteudoTagInput{
+    width: 50%;
+    padding:1.542%;
+}
+.conteudoTagInput p,.conteudoTagInput i{
+    font-size: 14px;
+}
+textarea{
+    resize: none;
+    overflow: hidden;
+}
+.arteInput{
+    width: 89%;
+}
+/*Responsividade*/
+/*Celulares*/
+@media only screen and (min-width: 0px) and (max-width: 430px){
+    .tituloModalEditar{
+        font-size: 20px;
+    }
+    .editar{
+        top:5%;
+        width: 70vw;
+        row-gap: 7px;
+    }
+    .arteEditar{
+        width: 100%;
+        align-content: center;
+        text-align: center;
+    }
+    .conteudoTagInput{
+        width:65%;
+        align-items: center;
+    }
+    .conteudoTagInput img{
+        width: 100%;
+        padding: 2%;
+    }
+    .conteudoArteInput{
+        padding-bottom: 5px;
+        width: 80%;
+        align-items: center;
+        padding: 2% 0 2% 0;
+    }
+    .conteudoArteInput img{
+       width:90%;
+       margin-left: 0;
+       justify-items: center;
+    }  
+    .imagensEditar{
+        flex-direction: column;
+        align-items: center;
+    }
+    .camposEditar{
+        width: 100%;
+    }
+    .tagInput{
+        width: 100%;
+        align-items: center;
+        padding: 0;
+    }
+    .tagInput img{
+        width: 75%;
+        padding: 1.5%;
+    }
+    .arteEditar p,.tituloPublicacaoEditar p,.autorEditar p,.tagEditar p,.descricaoModalEditar p,.LocalEditar p,.dataEditar p,.MateriaisModalEditar p,.localEditar p{
+        font-size: 18px;
+        text-align: center;
+    }
+    .tituloInput,.inputAutor,.inputDescricaoEditar,.inputLocalEditar,p.conteudoDataEditar,.inputMateriaisEditar{
+        font-size: 18px;
+    }
+    .botaoModal{
+        border-radius: 8px;
+        font-size: 16px;
+        width: fit-content;
+    }
+    .botoesEditar{
+        width: 90%;
+        justify-content: center;
+    }
+    .conteudoArteInput p,.conteudoTagInput p,.conteudoArteInput i,.conteudoTagInput i{
+        font-size: 14px;
+    }
+    .tagEditar{
+        width: 100%;
+        text-align: center;
+    }
+    .labelImgTag
+    {
+        align-items: center;
+    }
+    .arteInput img{
+        padding: 2%;
+    }
+    .conteudoDataEditar{
+        padding: 1.214%;
+        text-align: center;
+    }
+    .dataLocalEditar{
+        flex-direction: column;
+    }
+    .localEditar,.dataEditar{
+        width: 100%;
+    }
+    .arteInput{
+        width: 100%;
+    }
+}
+
+/*Tablets*/
+@media only screen and (min-width: 431px) and (max-width: 1000px) and (min-height:601px){
+    .tituloModalEditar{
+        font-size:28px;
+    }
+    .editar{
+        top:5%;
+        width:55vw;
+        row-gap: 4px;
+        left: 20%;
+    }
+    .arteEditar{
+        width: 100%;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+    }
+    .tagEditar{
+        text-align: center;
+    }
+    .conteudoTagInput{
+        width:55%;
+        align-items: center;
+        padding: 1.8%;
+    }
+    .conteudoArteInput{
+        padding: 1.8%;
+        align-items: center;
+        width:65%;
+    }
+    .conteudoArteInput img{
+        width:100%;
+        padding: 3% 3% 3% 3%;
+        margin-left: 0;
+        justify-items: left;
+    }  
+    .imagensEditar{
+        flex-direction: column;
+        align-items: center;
+        width: 90%;
+    }
+    .camposEditar{
+        width: 100%;
+    }
+    .tagInput{
+        width: 100%;
+        align-items: start;
+    }
+    .arteEditar p,.tituloPublicacaoEditar p,.autorEditar p,.tagEditar p,.descricaoModalEditar p,.localEditar p,.dataEditar p,.MateriaisModalEditar p{
+        font-size: 24px;
+        text-align: center;
+    }
+    .tituloInput,.inputAutor,.inputDescricaoEditar,.inputLocal,p.conteudoDataEditar,.inputMateriaisEditar{
+        font-size: 22px;
+    }
+    .botaoModal{
+        font-size: 24px;
+        border-radius: 8px;
+    }
+    .botoesEditar{
+        padding-bottom: 6px;
+    }
+    .conteudoArteInput p,.conteudoTagInput p{
+        font-size: 18px;
+    }
+    .tagEditar{
+        width:100%;
+    }
+    .labelImgTag{
+        align-items: center;
+    }
+    .tagInput img{
+        width: 60%;
+    }
+    .dataLocalEditar{
+        flex-direction: column;
+    }
+    .localEditar,.dataEditar{
+        width: 100%;
+    }
+    .arteInput{
+        width: 100%;
+    }
+}
+/*surface duo*/
+@media only screen and (min-width: 530px) and (max-width: 550px) and (max-height:720px){
+    .tituloModalEditar{
+        font-size: 22px;
+    }
+    .editar{
+        top:5.1%;
+        width: 65vw;
+        row-gap: 1px;
+    }
+    .arteEditar{
+        width: 80%;
+        align-content: center;
+    }
+    .conteudoTagInput{
+        width:52%;
+        align-items: center;
+    }
+    .conteudoArteInput{
+        padding: 1.5%;
+        align-items: center;
+        width: 85%;
+    }
+    .imagensEditar{
+        flex-direction: column;
+        align-items: center;
+    }
+    .camposEditar{
+        width: 100%;
+    }
+    .tagInput{
+        width: 100%;
+    }
+    .arteEditar p,.tituloPublicacaoEditar p,.autorEditar p,.tagEditar p,.descricaoModalEditar p,.localEditar p,.dataEditar p,.MateriaisModalEditar p{
+        font-size: 19px;
+    }
+    .tituloInput,.inputAutor,.inputDescricaoEditar,.inputLocal,p.conteudoDataEditar, .inputMateriaisEditar{
+        font-size: 17px;
+    }
+    .botaoModal{
+        font-size: 90%;
+        border-radius: 8px;
+        
+    }
+    .botoesEditar{
+        padding-bottom: 6px;
+    }
+    .conteudoArteInput p,.conteudoTagInput p{
+        font-size: 14px;
+    }
+    .conteudoArteInput i,.conteudoTagInput i{
+        font-size: 14px;
+    }
+    .tagEditar{
+        width:100%;
+    }
+    .conteudoDataEditar{
+        padding: 1.63%;
+    }
+}
+/*Nest Hub*/
+@media only screen and (min-width:1020px) and (max-width: 1030px) and (max-height:720px){
+    .tituloModalEditar{
+        font-size: 20px;
+    }
+    .editar{
+        top:5%;
+        width: 80vw;
+        row-gap: 1.5px;
+    }
+    .arteEditar{
+        width: 85%;
+        align-content: center;
+        text-align: start;
+    }
+    .tagEditar{
+        text-align: start;
+    }
+    .conteudoTagInput{
+        width:44%;
+
+    }
+
+    .conteudoArteInput{
+        padding: 1%;
+        width: 60%;
+        border-radius: 6px;
+    }
+    .imagensEditar{
+        flex-direction: row;
+        align-items: center;
+    }
+    .camposEditar{
+        width: 100%;
+    }
+    .tagInput{
+        width: 100%;
+        align-items: start;
+    }
+    .arteEditar p,.tituloPublicacaoEditar p,.autorEditar p,.tagEditar p,.descricaoModalEditar p,.localEditar p,.dataEditar p,.MateriaisModalEditar p{
+        font-size: 18px;
+    }
+    .tituloInput,.inputAutor,.inputDescricaoEditar,.inputLocal,.conteudoDataEditar,.inputMateriaisEditar{
+        font-size: 16px;
+    }
+    .botaoModal{
+        font-size: 90%;
+        border-radius: 8px;
+        
+    }
+    .botoesEditar{
+        padding-bottom: 3px;
+    }
+    .conteudoArteInput p,.conteudoTagInput p{
+        font-size: 70%;
+    }
+    .conteudoArteInput i,.conteudoTagInput i{
+        font-size: 70%;
+    }
+    .tagEditar{
+        width:100%;
+    }
+    .labelImgTag{
+        align-items: start;
+    }
+    .tagInput img{
+        width: 44%;
+    }
+    .conteudoDataEditar{
+        padding: 5.56%;
+    }
+
+}
+/*Nest Hub max*/
+@media only screen and (min-width:1200px) and (max-width: 1300px) and (max-height:800px){
+        .tituloModalEditar{
+        font-size: 20px;
+    }
+    .editar{
+        top:5%;
+        width: 75vw;
+        row-gap: 1.5px;
+    }
+    .arteEditar{
+        width: 80%;
+        align-content: center;
+        text-align: start;
+    }
+    .tagEditar{
+        text-align: start;
+    }
+    .conteudoTagInput{
+        width:44%;
+        padding: 1.3%;
+    }
+
+    .conteudoArteInput{
+        padding: 1.5%;
+        width: 60%;
+        border-radius: 6px;
+    }
+    .imagensEditar{
+        flex-direction: row;
+        align-items: center;
+    }
+    .camposEditar{
+        width: 100%;
+    }
+    .tagInput{
+        width: 100%;
+        align-items: start;
+    }
+    .arteEditar p,.tituloPublicacaoEditar p,.autorEditar p,.tagEditar p,.descricaoModalEditar p,.localEditar p,.dataEditar p,.MateriaisModalEditar p{
+        font-size: 18px;
+    }
+    .tituloInput,.inputAutor,.inputDescricaoEditar,.inputLocal,.conteudoDataEditar,.inputMateriaisEditar{
+        font-size: 16px;
+    }
+    .botaoModal{
+        font-size: 90%;
+        border-radius: 8px;
+        
+    }
+    .botoesEditar{
+        padding-bottom: 15px;
+    }
+    .conteudoArteInput p,.conteudoTagInput p{
+        font-size: 70%;
+    }
+    .conteudoArteInput i,.conteudoTagInput i{
+        font-size: 70%;
+    }
+    .tagEditar{
+        width:100%;
+    }
+    .labelImgTag{
+        align-items: start;
+    }
+    .tagInput img{
+        width: 44%;
+    }
+}
+/*Laptops*/
+@media only screen and (min-width:1000px) and (max-width: 1440px) and (min-height:700px){
+    .tituloModalEditar{
+        font-size: 22px;
+    }
+    .editar{
+        top:5%;
+        width: 60vw;
+        row-gap: 3px;
+        left: 20%;
+    }
+    .arteEditar{
+        width: 100%;
+        text-align: start;
+        align-items: start;
+        gap: 15px;
+    }
+    .tagEditar{
+        text-align: center;
+    }
+    .conteudoTagInput{
+        width:100%;
+        align-items: center;
+    }
+    .conteudoArteInput{
+        padding-bottom: 5px;
+        padding: 5px;
+        align-items: center;
+        width: 70%;
+        margin-top: 6px;
+    }  
+    .imagensEditar{
+        flex-direction: row;
+        align-items: center;
+        
+    }
+    .camposEditar{
+        width: 100%;
+    }
+    .tagInput{
+        width: 100%;
+    }
+    .arteEditar p,.tituloPublicacaoEditar p,.autorEditar p,.tagEditar p,.descricaoModalEditar p,.localEditar p,.dataEditar p,.MateriaisModalEditar p{
+        font-size: 22px;
+        text-align: start;
+    }
+    .tituloInput,.inputAutor,.inputDescricaoEditar,.inputLocalEditar,p.conteudoDataEditar,.inputMateriaisEditar{
+        font-size: 16px;
+    }
+    .botaoModal{
+        font-size: 20px;
+        border-radius: 8px;
+    }
+    .botoesEditar{
+        padding-bottom: 6px;
+    }
+    .conteudoArteInput p,.conteudoTagInput p{
+        font-size: 12px;
+    }
+    .conteudoArteInput i,.conteudoTagInput i{
+        font-size: 12px;
+    }
+    .conteudoTagInput{
+        padding: 5%;
+    }
+    .tagEditar{
+        width:100%;
+    }
+    .arteInput{
+        width: 100%;
+    }
+    .labelImgTag{
+        align-items: start;
+    }
+    .tagInput img{
+        width: 100%;
+    }
+    .dataLocalEditar{
+        flex-direction: row;
+    }
+    .localEditar{
+        width: 50%;
+    }
+    .dataEditar{
+        width: 50%;
+    }
+    p.conteudoDataEditar{
+        text-align: center;
+    }
+}
