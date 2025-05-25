@@ -255,7 +255,7 @@
             <div class="dataLocalVisualizar">
                 <div class="localVisualizar">
                     <p class="TituloLocalVisualizar">Local</p>
-                    <button onclick="abrirModal('idModalMapa','idConteudoMapaM')" class="conteudoLocalVisualizar">
+                    <button onclick="abrirModal('idMapaPost','idConteudoMapaP')" class="conteudoLocalVisualizar">
                         <i class=" icone-geo-mapa bi bi-geo-alt-fill"></i>
                         Visualizar no mapa
                     </button>
@@ -343,7 +343,7 @@
             </div>
         </div>
     </div>
-        <!-- -----Modal do Mapa----- -->
+        <!-- -----Modal do Mapa Criar/Editar----- -->
         <div class="pagina-mapa" id="idModalMapa">
             <div class="conteudo-pagina-mapa" id="idConteudoMapaM">
                 <div class="instrucoes-mapa">
@@ -359,6 +359,18 @@
                     <button onclick="fecharModal('idModalMapa','idConteudoMapaM')" class="btn-salvar-mapa">Salvar</button>
                 </div>
                 <div id="map"></div>
+            </div>
+        </div>
+        <!-- -----Modal Mapa Visualizar----- -->
+        <div id="idMapaPost" class="mapaPostFundo">
+            <div id="idConteudoMapaP" class="pag-mapa-post">
+                <div class="titulo-mapa-post">
+                    <p>Visualizar localização da arte</p>
+                </div>
+                <div class="conteudo-mapa-post">
+                    <div id="map2"></div>
+                </div>
+                <button onclick="fecharModal('idMapaPost','idConteudoMapaP')" class="btn-fechar-mapa">Fechar</button>
             </div>
         </div>
 </body>
