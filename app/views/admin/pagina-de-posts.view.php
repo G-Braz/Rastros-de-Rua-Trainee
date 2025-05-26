@@ -56,17 +56,19 @@
                         <td><?= $post->titulo ?></td>
                         <td><?= $post->autor ?></td>
                         <td><?= $post->data ?></td>
+
                         <td class="operacoes">
-                            <button><i class="bi bi-eye-fill" onclick="abrirModal('fundoVisualizar<?= $post->id ?>','idModalVisualizar<?= $post->id ?>')"></i></button>
-                            <button><i class="bi bi-pencil-square" onclick="abrirModal('fundoEditar<?= $post->id ?>','idModalEditar<?= $post->id ?>')"></i></button>
-                            <button><i class="bi bi-trash-fill" onclick="abrirModal('fundo-modal-excluir-post<?= $post->id ?>','modal-excluir-post<?= $post->id ?>')"></i></button>
+                            <button><i class="bi bi-eye-fill" onclick="abrirModal('fundoVisualizar','idModalVisualizar')"<?= $post->id ?>></i></button>
+                            <button><i class="bi bi-pencil-square" onclick="abrirModal('fundoEditar','idModalEditar')"></i></button>
+                            <button><i class="bi bi-trash-fill" onclick="abrirModal('fundo-modal-excluir-post','modal-excluir-post')"></i></button>
                         </td>
                     </tr>
+
                     <?php endforeach ?>
                 </tbody>
             </table>
         </div>
-        
+    <?php foreach($posts as $post): ?>   
     <!--Modal Criar-->
     <div onclick="fecharModal('fundo-modal-criar-post','id-modal-criar-post')" class="overlay-criar-post" id="fundo-modal-criar-post"></div>
         <div class="modal-criar-post" id="id-modal-criar-post">
@@ -166,12 +168,12 @@
                 </div>
                 <div class="campos">
                     <div class="tituloPublicacaoVisualizar">
-                        <p class="TituloTituloVisualizar">Título</p>
-                        <p class="conteudoTituloVisualizar">Lorem ipsum</p>
+                        <p class="TituloTituloVisualizar">Titulo</p>
+                        <p class="conteudoTituloVisualizar"><?= $post->titulo ?></p>
                     </div>
                     <div class="autorVisualizar">
                         <p class="tituloAutorVisualizar">Autor</p>
-                        <p class="conteudoAutorVisualizar">Lorem ipsum</p>
+                        <p class="conteudoAutorVisualizar"><?=$post->autor?></p>
                     </div>
                     <div class="tagVisualizar">
                         <p>Tag</p>
@@ -183,12 +185,12 @@
             </div>  
             <div class="descricaoModalVisualizar">
                 <p class="tituloDescricaoVisualizar">Descrição</p>
-                <textarea class="conteudoDescricaoVisualizar" id= "textAreaDescricao"readonly >Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ratione eius molestiae voluptas nihil reiciendis quasi fugiat, quas corrupti impedit distinctio praesentium? Delectus, expedita? Praesentium quia sequi alias neque natus esse?</textarea>
+                <textarea class="conteudoDescricaoVisualizar" id= "textAreaDescricao"readonly ><?=$post->descricao?></textarea>
 
             </div>
             <div class="materiaisModalVisualizar">
                 <p class="tituloMateriaisVisualizar">Materiais</p>
-                <textarea class="conteudoMateriaisVisualizar" id="textAreaMateriais" readonly >Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ratione eius molestiae voluptas nihil reiciendis quasi fugiat, quas corrupti impedit distinctio praesentium? Delectus, expedita? Praesentium quia sequi alias neque natus esse?</textarea>
+                <textarea class="conteudoMateriaisVisualizar" id="textAreaMateriais" readonly ><?=$post->materiais?></textarea>
             </div>
             <div class="dataLocalVisualizar">
                 <div class="localVisualizar">
@@ -200,7 +202,7 @@
                 </div>
                 <div class="dataVisualizar">
                     <p class="visualizarData">Data de Criação</p>
-                    <p class="conteudoDataVisualizar">01/01/2025</p>
+                    <p class="conteudoDataVisualizar"><?=$post->data?></p>
                 </div>
             </div>
             <div class="botaoVisualizar">
@@ -281,6 +283,7 @@
             </div>
         </div>
     </div>
+<?php endforeach ?>
         <!-- -----Modal do Mapa Criar/Editar----- -->
         <div class="pagina-mapa" id="idModalMapa">
             <div class="conteudo-pagina-mapa" id="idConteudoMapaM">
@@ -299,6 +302,7 @@
                 <div id="map"></div>
             </div>
         </div>
+
         <!-- -----Modal Mapa Visualizar----- -->
         <div id="idMapaPost" class="mapaPostFundo">
             <div id="idConteudoMapaP" class="pag-mapa-post">
