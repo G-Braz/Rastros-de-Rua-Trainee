@@ -50,85 +50,23 @@
                     </tr>
                 </thead>
                 <tbody>
+                <?php foreach($posts as $post): ?>
                     <tr class="post">
-                        <td>1</td>
-                        <td>Lorem Ipsum</td>
-                        <td>Lorem Ipsum</td>
-                        <td>01/01/2025</td>
+                        <td><?= $post->id ?></td>
+                        <td><?= $post->titulo ?></td>
+                        <td><?= $post->autor ?></td>
+                        <td><?= $post->data ?></td>
                         <td class="operacoes">
-                            <button><i class="bi bi-eye-fill" onclick="abrirModal('fundoVisualizar','idModalVisualizar')"></i></button>
-                            <button><i class="bi bi-pencil-square" onclick="abrirModal('fundoEditar','idModalEditar')"></i></button>
-                            <button><i class="bi bi-trash-fill" onclick="abrirModal('fundo-modal-excluir-post','modal-excluir-post')"></i></button>
+                            <button><i class="bi bi-eye-fill" onclick="abrirModal('fundoVisualizar<?= $post->id ?>','idModalVisualizar<?= $post->id ?>')"></i></button>
+                            <button><i class="bi bi-pencil-square" onclick="abrirModal('fundoEditar<?= $post->id ?>','idModalEditar<?= $post->id ?>')"></i></button>
+                            <button><i class="bi bi-trash-fill" onclick="abrirModal('fundo-modal-excluir-post<?= $post->id ?>','modal-excluir-post<?= $post->id ?>')"></i></button>
                         </td>
                     </tr>
-                    <tr class="post">
-                        <td>2</td>
-                        <td>Lorem Ipsum</td>
-                        <td>Lorem Ipsum</td>
-                        <td>02/01/2025</td>
-                        <td class="operacoes">
-                            <button><i class="bi bi-eye-fill" onclick="abrirModal('fundoVisualizar','idModalVisualizar')"></i></button>
-                            <button><i class="bi bi-pencil-square" onclick="abrirModal('fundoEditar','idModalEditar')"></i></button>
-                            <button><i class="bi bi-trash-fill" onclick="abrirModal('fundo-modal-excluir-post','modal-excluir-post')"></i></button>
-                        </td>
-                    </tr>
-                    <tr class="post">
-                        <td>3</td>
-                        <td>Lorem Ipsum</td>
-                        <td>Lorem Ipsum</td>
-                        <td>03/01/2025</td>
-                        <td class="operacoes">
-                            <button><i class="bi bi-eye-fill" onclick="abrirModal('fundoVisualizar','idModalVisualizar')"></i></button>
-                            <button><i class="bi bi-pencil-square" onclick="abrirModal('fundoEditar','idModalEditar')"></i></button>
-                            <button><i class="bi bi-trash-fill" onclick="abrirModal('fundo-modal-excluir-post','modal-excluir-post')"></i></button>
-                        </td>
-                    </tr>
-                    <tr class="post">
-                        <td>4</td>
-                        <td>Lorem Ipsum</td>
-                        <td>Lorem Ipsum</td>
-                        <td>04/01/2025</td>
-                        <td class="operacoes">
-                            <button><i class="bi bi-eye-fill" onclick="abrirModal('fundoVisualizar','idModalVisualizar')"></i></button>
-                            <button><i class="bi bi-pencil-square" onclick="abrirModal('fundoEditar','idModalEditar')"></i></button>
-                            <button><i class="bi bi-trash-fill" onclick="abrirModal('fundo-modal-excluir-post','modal-excluir-post')"></i></button>
-                        </td>
-                    </tr>
-                    <tr class="post">
-                        <td>5</td>
-                        <td>Lorem Ipsum</td>
-                        <td>Lorem Ipsum</td>
-                        <td>05/01/2025</td>
-                        <td class="operacoes">
-                            <button><i class="bi bi-eye-fill" onclick="abrirModal('fundoVisualizar','idModalVisualizar')"></i></button>
-                            <button><i class="bi bi-pencil-square" onclick="abrirModal('fundoEditar','idModalEditar')"></i></button>
-                            <button><i class="bi bi-trash-fill" onclick="abrirModal('fundo-modal-excluir-post','modal-excluir-post')"></i></button>
-                        </td>
-                    </tr>
+                    <?php endforeach ?>
                 </tbody>
             </table>
         </div>
-        <div class="paginacao">
-            <a href="" class="skip">
-                <i class="bi bi-skip-backward"></i>
-            </a href="">
-                <a href="" class="paginas">
-                    <p> 1 </p>
-                </a href="">
-                <a href="" class="paginas">
-                    <p> 2 </p>
-                </a href="">
-                <a href="" class="paginas">
-                    <p> 3 </p>
-                </a href="">
-                <a href="" class="paginas">
-                    <p> 4 </p>
-                </a href="">
-            <a href="" class="skip">
-                <i class="bi bi-skip-forward"></i>
-            </a href="">
-        </div>
-    </div>
+        
     <!--Modal Criar-->
     <div onclick="fecharModal('fundo-modal-criar-post','id-modal-criar-post')" class="overlay-criar-post" id="fundo-modal-criar-post"></div>
         <div class="modal-criar-post" id="id-modal-criar-post">
@@ -373,6 +311,28 @@
                 <button onclick="fecharModal('idMapaPost','idConteudoMapaP')" class="btn-fechar-mapa">Fechar</button>
             </div>
         </div>
+    <!--PAGINAÇÃO-->
+    <div class="paginacao">
+            <a href="" class="skip">
+                <i class="bi bi-skip-backward"></i>
+            </a href="">
+                <a href="" class="paginas">
+                    <p> 1 </p>
+                </a href="">
+                <a href="" class="paginas">
+                    <p> 2 </p>
+                </a href="">
+                <a href="" class="paginas">
+                    <p> 3 </p>
+                </a href="">
+                <a href="" class="paginas">
+                    <p> 4 </p>
+                </a href="">
+            <a href="" class="skip">
+                <i class="bi bi-skip-forward"></i>
+            </a href="">
+        </div>
+    </div>
 </body>
 <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 <script src="../../../public/js/mapas.js"></script>
