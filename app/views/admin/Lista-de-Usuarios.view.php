@@ -90,10 +90,12 @@
             <div class="botao-modal">
                 <button class="botao" onclick="fecharModal('visualizar')">fechar</button>
             </div>
-        </div>    
-
+        </div> 
+        </form>   
+        
+        
         <!-- Modal Criar -->
-        <div id="criar" class="modalUsuario">
+        <form id="criar" class="modalUsuario" action="/usuarios/criar_usuario" method="POST">
             <div class="topo-info">
                 <div class="icone-info">
                     <i class="bi bi-person-plus-fill"></i>
@@ -105,16 +107,16 @@
             <div class="conteiner-info">
                 <div class="item-info">
                     <p class="titulo">Nome:</p>
-                    <input type="text" class="boxCriar" name="text" placeholder="Usuário">
+                    <input type="text" class="boxCriar" name="nome" placeholder="Usuário">
                 </div>
                 <div class="item-info">
                     <p class="titulo">E-mail:</p>
-                    <input type="text" class="boxCriar" name="text" placeholder="email@email.com">
+                    <input type="text" class="boxCriar" name="email" placeholder="email@email.com">
                 </div>
                 <div class="item-info">
                     <p class="titulo">Senha:</p>
                     <div class="boxCriar senha-box-criar">
-                        <input type="text" class="boxSenha" name="text" placeholder="senha">
+                        <input type="text" class="boxSenha" name="senha" placeholder="senha">
                         <div class="icone-senha">
                             <i class="bi bi-eye-fill"></i>
                         </div>
@@ -122,11 +124,11 @@
                 </div>
             </div>
             <div class="botao-modal">
-                <button class="botao" id="salvar">salvar</button>
-                <button class="botao" id="cancelar" onclick="fecharModal('criar')">cancelar</button>
+                <button type="submit" class="botao" id="salvar">salvar</button>
+                <button type="button" class="botao" id="cancelar" onclick="fecharModal('criar')">cancelar</button>
             </div>
-        </div>
-        
+        </form>
+
         <!-- Modal Editar -->
         <div id="editar" class="modalUsuario">
             <div class="topo-info">
