@@ -31,31 +31,31 @@
                 Criar Usuário
             </div>
         </div>
-            <table>
-                <tr>
-                    <th>ID</th>
-                    <th>Email</th>
-                    <th>Nome de Usuário</th>
-                    <th>Operações</th>
-                </tr>
-                <?php foreach ($usuarios as $usuario): ?>
-                <tr class="Usuario">
-                    <td><?= $usuario->id; ?></td>
-                    <td><?= $usuario->email; ?></td>
-                    <td><?= $usuario->nome; ?></td>
+        <table>
+            <tr>
+                <th>ID</th>
+                <th>Email</th>
+                <th>Nome de Usuário</th>
+                <th>Operações</th>
+            </tr>
+            <?php foreach ($usuarios as $usuario): ?>
+            <tr class="Usuario">
+                <td><?= $usuario->id; ?></td>
+                <td><?= $usuario->email; ?></td>
+                <td><?= $usuario->nome; ?></td>
                     
-                    <td class="operacoes" >
-                        <i class="bi bi-eye-fill" onclick="abrirModal('visualizar', <?= $usuario->id; ?>)"></i>
-                        <i class="bi bi-pencil-square" onclick="abrirModal('editar', <?= $usuario->id; ?>)"></i>
-                        <i class="bi bi-trash-fill" onclick="abrirModal('excluir', <?= $usuario->id; ?>)"></i>
-                    </td>
-                </tr>
-                <?php endforeach; ?>
-            </table>
+                <td class="operacoes" >
+                    <i class="bi bi-eye-fill" onclick="abrirModal('visualizar-<?= $usuario->id ?>')"></i>
+                    <i class="bi bi-pencil-square" onclick="abrirModal('editar-<?= $usuario->id ?>')"></i>
+                    <i class="bi bi-trash-fill" onclick="abrirModal('excluir-<?= $usuario->id ?>')"></i>
+                </td>
+            </tr>
+            <?php endforeach; ?>
+        </table>   
         
-        
+        <?php foreach ($usuarios as $usuario): ?>
         <!-- Modal Visualizar -->
-        <div id="visualizar" class="modalUsuario">
+        <div id="visualizar-<?= $usuario->id ?>" class="modalUsuario">
             <div class="topo-info">
                 <div class="icone-info">
                     <i class="bi bi-person-circle"></i>
@@ -88,10 +88,9 @@
                 </div>
             </div>
             <div class="botao-modal">
-                <button class="botao" onclick="fecharModal('visualizar')">fechar</button>
+                <button class="botao" onclick="fecharModal('visualizar-<?= $usuario->id ?>')">fechar</button>
             </div>
-        </div>   
-        
+        </div>
         
         <!-- Modal Criar -->
         <form id="criar" class="modalUsuario" action="/usuarios/criar_usuario" method="POST">
@@ -130,7 +129,7 @@
 
         <!-- Modal Editar -->
         <form id="form-editar" action="/usuarios/editar_usuario" method="POST">
-            <div id="editar" class="modalUsuario">
+            <div id="editar-<?= $usuario->id ?>" class="modalUsuario">
                 <div class="topo-info">
                     <div class="icone-info">
                         <i class="bi bi-person-fill"></i>
@@ -143,7 +142,6 @@
                 <div class="conteiner-info">
                     <div class="item-info">
                         <input type="hidden" value="<?= $usuario->id ?>" name="id">
-                        <p>ID carregado: <?= $usuario->id ?></p>
                         <p class="titulo">Nome:</p>
                         <input type="text" class="boxEditar" name="nome" value="<?= $usuario->nome ?>">
                     </div>
@@ -163,14 +161,14 @@
                 </div>
                 <div class="botao-modal">
                     <button type="submit" class="botao" id="salvar">salvar</button>
-                    <button type="button" class="botao" id="cancelar" onclick="fecharModal('editar')">cancelar</button>
+                    <button type="button" class="botao" id="cancelar" onclick="fecharModal('editar-<?= $usuario->id ?>')">cancelar</button>
                 </div>
             </div>
         </form>
 
         <!-- Modal Excluir -->
         <form id="form-excluir" action="/usuarios/excluir_usuario" method="POST">
-        <div id="excluir" class="modalUsuarioExcluir">
+        <div id="excluir-<?= $usuario->id ?>" class="modalUsuarioExcluir">
             <input type="hidden" value="<?= $usuario->id ?>" name="id">
             <div class="topo-excluir">
                 <div class="icone-excluir">
@@ -185,10 +183,11 @@
             </div>
             <div class="botoes-modal">
                 <button type="submit" class="excluir">Excluir</button>
-                <button type="button" class="cancelar" onclick="fecharModal('excluir')">Cancelar</button>
+                <button type="button" class="cancelar" onclick="fecharModal('excluir-<?= $usuario->id ?>')">Cancelar</button>
             </div>
         </div> 
         </form>
+        <?php endforeach; ?>
 
         <!-- Paginação -->
         <div class="paginacao"> 

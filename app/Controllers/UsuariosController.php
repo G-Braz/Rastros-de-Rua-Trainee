@@ -32,8 +32,7 @@ class UsuariosController
             'senha' => $_POST['senha']
         ];
         $id = $_POST['id'];
-        var_dump($_POST);
-        exit;
+
         App::get('database')->update('usuarios', $id, $parameters);
         header('Location: /usuarios');
     }
