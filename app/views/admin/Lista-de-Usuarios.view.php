@@ -130,6 +130,7 @@
         </form>
 
         <!-- Modal Editar -->
+        <form id="form-editar" action="/usuarios/editar_usuario" method="POST">
         <div id="editar" class="modalUsuario">
             <div class="topo-info">
                 <div class="icone-info">
@@ -161,10 +162,11 @@
                 </div>
             </div>
             <div class="botao-modal">
-                <button class="botao" id="salvar">salvar</button>
-                <button class="botao" id="cancelar" onclick="fecharModal('editar')">cancelar</button>
+                <button type="submit" class="botao" id="salvar">salvar</button>
+                <button type="button" class="botao" id="cancelar" onclick="fecharModal('editar')">cancelar</button>
             </div>
         </div>
+        </form>
 
         <!-- Modal Excluir -->
         <div id="excluir" class="modalUsuarioExcluir">
