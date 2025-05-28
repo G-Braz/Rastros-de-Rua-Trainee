@@ -6,3 +6,5 @@ use App\Core\Router;
 
 $router->get('', 'ExampleController@index');
 $router->get('posts', 'PostsController@index');
+$router->post('posts/create','PostsController@create');
+$router->post('posts/edit','PostsController@edit');

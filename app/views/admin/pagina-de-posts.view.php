@@ -70,68 +70,80 @@
         </div>
     <?php foreach($posts as $post): ?>   
     <!--Modal Criar-->
-    <div onclick="fecharModal('fundo-modal-criar-post','id-modal-criar-post')" class="overlay-criar-post" id="fundo-modal-criar-post"></div>
-        <div class="modal-criar-post" id="id-modal-criar-post">
-            <div class="titulo-modal-criar-post">
-                <p>Criar Publicação</p>
-            </div>
-            <div class="container-superior-criar-post">
-                <div class="adicionar-arte-criar-post">
-                    <div>Arte</div>
-                    <div class="input-arte-criar-post"> 
-                        <input id="inputArteCriar" class="custom-input-img" type="file" style="display: none;">
-                        <label id="labelArteCriar"for="inputArteCriar" class="custom-label-art">Selecionar imagem da arte <img id="imgPadraoArteCriar" src="/public/assets/icone-imagem.svg" /> 
-                        </label> 
-                        <img id="previewArteCriar" src="" alt="Pré-visualização" style="display: none;"/>
-                    </div>
-                </div>
-                <div class="campos-superior-direita-criar">
-                    <div class="campo-titulo-criar-post">
-                        <p>Título</p>
-                        <input class="input-titulo-criar-post" type="text" placeholder="Insira o Título">
-                    </div>
-                    <div class="campo-autor-criar-post">
-                        <p>Autor</p>
-                        <input class="input-autor-criar-post" type="text" placeholder="Insira o Autor">
-                    </div>
-                    <div class="adicionar-tag-criar-post">
-                        <p>Tag</p>
-                        <div class="input-tag-criar-post">
-                            <input id="inputTagCriar" class="custom-input-img" type="file" style="display: none;">
-                            <label id="labelTagCriar" for="inputTagCriar" class="custom-label-tag">Selecionar imagem da tag <img id="imgPadraoTagCriar" src="/public/assets/icone-imagem.svg" />
-                            </label>
-                            <img id="previewTagCriar" src="" alt="Pré-visualização" style="display: none;" />
-                        </div>
-                    </div>
-                </div>
-            </div>  
-            <div class="campo-descricao-criar-post">
-                <p>Descrição</p>
-                <textarea class="input-descricao-criar-post" rows="3" cols="10" placeholder="Insira a Descrição"></textarea>
-            </div>
-            <div class="campo-materiais-criar-post">
-                <p>Materiais</p>
-                <textarea class="input-materiais-criar-post" rows="2" cols="10" placeholder="Insira os Materiais"></textarea>
-            </div>
-            <div class="local-e-data-criar">
-                <div class="campo-local-criar-post">
-                    <p>Local</p>
-                    <button 
-                    onclick="abrirModal('idModalMapa','idConteudoMapaM')" class="btn-mapa-modal-criar">
-                        <i class="icone-geo-mapa bi bi-geo-alt-fill"></i>
-                        Selecionar localização
-                    </button>
-                </div>
-                <div class="campo-data-criar-post">
-                    <p>Data</p>
-                    <input class="data-criar-post" type="date" readonly> </input>
-                </div>
-            </div>
-            <div class="botoes-modal">
-                <button class="botao-modal botao-modal-criar">Criar</button>
-                <button class="botao-modal botao-modal-cancelar" onclick="fecharModal('fundo-modal-criar-post','id-modal-criar-post')">Cancelar</button>
+<div onclick="fecharModal('fundo-modal-criar-post','id-modal-criar-post')" class="overlay-criar-post" id="fundo-modal-criar-post"></div>
+<form class="modal-criar-post" id="id-modal-criar-post" method="POST" action="/posts/create" enctype="multipart/form-data">
+    <div class="titulo-modal-criar-post">
+        <p>Criar Publicação</p>
+    </div>
+
+    <div class="container-superior-criar-post">
+        <div class="adicionar-arte-criar-post">
+            <div>Arte</div>
+            <div class="input-arte-criar-post"> 
+                <input id="inputArteCriar" class="custom-input-img" type="file" name="arte" style="display: none;">
+                <label id="labelArteCriar" for="inputArteCriar" class="custom-label-art">
+                    Selecionar imagem da arte 
+                    <img id="imgPadraoArteCriar" src="/public/assets/icone-imagem.svg" /> 
+                </label> 
+                <img id="previewArteCriar" src="" alt="Pré-visualização" style="display: none;" />
             </div>
         </div>
+
+        <div class="campos-superior-direita-criar">
+            <div class="campo-titulo-criar-post">
+                <p>Título</p>
+                <input class="input-titulo-criar-post" type="text" placeholder="Insira o Título" name="titulo">
+            </div>
+            <div class="campo-autor-criar-post">
+                <p>Autor</p>
+                <input class="input-autor-criar-post" type="text" placeholder="Insira o Autor" name="autor">
+            </div>
+            <div class="adicionar-tag-criar-post">
+                <p>Tag</p>
+                <div class="input-tag-criar-post">
+                    <input id="inputTagCriar" class="custom-input-img" type="file" name="tag" style="display: none;">
+                    <label id="labelTagCriar" for="inputTagCriar" class="custom-label-tag">
+                        Selecionar imagem da tag 
+                        <img id="imgPadraoTagCriar" src="/public/assets/icone-imagem.svg" />
+                    </label>
+                    <img id="previewTagCriar" src="" alt="Pré-visualização" style="display: none;" />
+                </div>
+            </div>
+        </div>
+    </div>  
+
+    <div class="campo-descricao-criar-post">
+        <p>Descrição</p>
+        <textarea class="input-descricao-criar-post" rows="3" cols="10" placeholder="Insira a Descrição" name="descricao"></textarea>
+    </div>
+
+    <div class="campo-materiais-criar-post">
+        <p>Materiais</p>
+        <textarea class="input-materiais-criar-post" rows="2" cols="10" placeholder="Insira os Materiais" name="materiais"></textarea>
+    </div>
+
+    <div class="local-e-data-criar">
+        <div class="campo-local-criar-post">
+            <p>Local</p>
+            <button 
+                type="button"
+                onclick="abrirModal('idModalMapa','idConteudoMapaM')" 
+                class="btn-mapa-modal-criar">
+                <i class="icone-geo-mapa bi bi-geo-alt-fill"></i>
+                Selecionar localização
+            </button>
+        </div>
+        <div class="campo-data-criar-post">
+            <p>Data</p>
+            <input class="data-criar-post" type="date" readonly name="data">
+        </div>
+    </div>
+
+    <div class="botoes-modal">
+        <button type="submit" class="botao-modal botao-modal-criar">Criar</button>
+        <button type="button" class="botao-modal botao-modal-cancelar" onclick="fecharModal('fundo-modal-criar-post','id-modal-criar-post')">Cancelar</button>
+    </div>
+</form>
     <!-- Modal Excluir -->
     <div onclick="fecharModal('fundo-modal-excluir-post','modal-excluir-post')" class="overlay-excluir-post" id="fundo-modal-excluir-post"></div>
     <div class="modal-excluir-post" id="modal-excluir-post">
@@ -163,7 +175,7 @@
                 <div class="arteVisualizar">
                     <div class="arteContent">Arte</div>
                     <div class="conteudoArteVisualizar"> 
-                        <img src="../../../public/assets/imagemTeste.jpg" alt="Arte">
+                        <img src="../../../public/assets/imagemTeste.jpg" alt="Arte" name="arteVisualizar">
                     </div>
                 </div>
                 <div class="campos">
@@ -211,78 +223,81 @@
         </div>
     </div>
     <!--Modal editar-->
-    <div onclick="fecharModal('idModalEditar','fundoEditar')" class="modalEditar" id="fundoEditar"></div>
-        <div class="editar" id="idModalEditar">
-            <div class="tituloModalEditar">
-                <p>Editar Publicação</p>
-            </div>
-            <div class="imagensEditar">
-                <div class="arteEditar">
-                    <p>Arte</p>
-                    <div class="arteInput"> 
-                        <input id="inputArte" class="inputImg" type="file">
-                        <label id="labelArte"for="inputArte" class="labelImgArte">
-                            <img src="../../../public/assets/imagemTeste.jpg"/>
-                            <div class="conteudoArteInput">
-                                <p>Selecionar nova imagem</p>
-                                <i class="bi bi-upload"></i>
-                            </div>
-                        </label>
-                        <img id="previewArte" src="" alt="Pré-visualização" style="display: none;"/>
+<div onclick="fecharModal('idModalEditar','fundoEditar')" class="modalEditar" id="fundoEditar"></div>
+<form class="editar" id="idModalEditar" method="POST" action="/posts/edit" enctype="multipart/form-data">
+    <div class="tituloModalEditar">
+        <p>Editar Publicação</p>
+    </div>
+    <div class="imagensEditar">
+        <div class="arteEditar">
+            <p>Arte</p>
+            <div class="arteInput"> 
+                <input id="inputArte" class="inputImg" type="file" name="arte">
+                <label id="labelArte" for="inputArte" class="labelImgArte">
+                    <img src="../../../public/assets/imagemTeste.jpg"/>
+                    <div class="conteudoArteInput">
+                        <p>Selecionar nova imagem</p>
+                        <i class="bi bi-upload"></i>
                     </div>
-                </div>
-                <div class="camposEditar">
-                    <div class="tituloPublicacaoEditar">
-                        <p>Título</p>
-                        <input class="tituloInput" id="tituloPublicacaoEditar" type="text" value="Lorem ipsum">
-                    </div>
-                    <div class="autorEditar">
-                        <p>Autor</p>
-                        <input class="inputAutor" id="inputAutor" type="text" value="Lorem ipsum">
-                    </div>
-                    <div class="tagEditar">
-                        <p>Tag</p>
-                        <div class="tagInput">
-                            <input id="inputTag" class="inputImg" type="file">
-                            <label id="labelTag" for="inputTag" class="labelImgTag"><img src="../../../public/assets/Tag.png"/>
-                                <div class="conteudoTagInput">
-                                    <p>Selecionar nova tag</p>
-                                    <i class="bi bi-upload"></i>
-                                </div>
-                            </label>
-                            <img id="previewTag" src="" alt="Pré-visualização" style="display: none;"/>
-                            
-                        </div>
-                    </div>
-                </div>
-            </div>  
-            <div class="descricaoModalEditar">
-                <p>Descrição</p>
-                <textarea class="inputDescricaoEditar" id="textAreaDescricaoEditar" oninput="autoResize(this)" >Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ratione eius molestiae voluptas nihil reiciendis quasi fugiat, quas corrupti impedit distinctio praesentium? Delectus, expedita? Praesentium quia sequi alias neque natus esse?</textarea>
-            </div>
-            <div class="MateriaisModalEditar">
-                <p>Materiais</p>
-                <textarea class="inputMateriaisEditar" id="textAreaMateriaisEditar" oninput="autoResize(this)">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ratione eius molestiae voluptas nihil reiciendis quasi fugiat, quas corrupti impedit distinctio praesentium? Delectus, expedita? Praesentium quia sequi alias neque natus esse?</textarea>
-            </div>
-            <div class="dataLocalEditar">
-                <div class="localEditar">
-                    <p>Local</p>
-                    <button onclick="abrirModal('idModalMapa','idConteudoMapaM')" class="inputLocalEditar">
-                        <i class=" icone-geo-mapa bi bi-geo-alt-fill"></i>
-                        Selecionar localização
-                    </button>
-                </div>
-                <div class="dataEditar">
-                    <p>Data de Criação</p>
-                    <p class="conteudoDataEditar">16/05/2025</p>
-                </div>
-            </div>
-            <div class="botoesEditar">
-                <button class="botaoModal botaoSalvar">Salvar</button>
-                <button class="botaoModal botaoCancelar" onclick="fecharModal('fundoEditar','idModalEditar')">Cancelar</button>
+                </label>
+                <img id="previewArte" src="" alt="Pré-visualização" style="display: none;" />
             </div>
         </div>
+        <div class="camposEditar">
+            <div class="tituloPublicacaoEditar">
+                <p>Título</p>
+                <input class="tituloInput" id="tituloPublicacaoEditar" type="text" value="Lorem ipsum" name="titulo">
+            </div>
+            <div class="autorEditar">
+                <p>Autor</p>
+                <input class="inputAutor" id="inputAutor" type="text" value="Lorem ipsum" name="autor">
+            </div>
+            <div class="tagEditar">
+                <p>Tag</p>
+                <div class="tagInput">
+                    <input id="inputTag" class="inputImg" type="file" name="tag">
+                    <label id="labelTag" for="inputTag" class="labelImgTag">
+                        <img src="../../../public/assets/Tag.png"/>
+                        <div class="conteudoTagInput">
+                            <p>Selecionar nova tag</p>
+                            <i class="bi bi-upload"></i>
+                        </div>
+                    </label>
+                    <img id="previewTag" src="" alt="Pré-visualização" style="display: none;" />
+                </div>
+            </div>
+        </div>
+    </div>  
+
+    <div class="descricaoModalEditar">
+        <p>Descrição</p>
+        <textarea class="inputDescricaoEditar" id="textAreaDescricaoEditar" name="descricao" oninput="autoResize(this)">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ratione eius molestiae voluptas nihil reiciendis quasi fugiat, quas corrupti impedit distinctio praesentium? Delectus, expedita? Praesentium quia sequi alias neque natus esse?</textarea>
     </div>
+
+    <div class="MateriaisModalEditar">
+        <p>Materiais</p>
+        <textarea class="inputMateriaisEditar" id="textAreaMateriaisEditar" name="materiais" oninput="autoResize(this)">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ratione eius molestiae voluptas nihil reiciendis quasi fugiat, quas corrupti impedit distinctio praesentium? Delectus, expedita? Praesentium quia sequi alias neque natus esse?</textarea>
+    </div>
+
+    <div class="dataLocalEditar">
+        <div class="localEditar">
+            <p>Local</p>
+            <button onclick="abrirModal('idModalMapa','idConteudoMapaM')" class="inputLocalEditar" type="button">
+                <i class="icone-geo-mapa bi bi-geo-alt-fill"></i>
+                Selecionar localização
+            </button>
+        </div>
+        <div class="dataEditar">
+            <p>Data de Criação</p>
+            <p class="conteudoDataEditar">16/05/2025</p>
+        </div>
+    </div>
+
+    <div class="botoesEditar">
+        <button class="botaoModal botaoSalvar" type="submit">Salvar</button>
+        <button class="botaoModal botaoCancelar" type="button" onclick="fecharModal('fundoEditar','idModalEditar')">Cancelar</button>
+    </div>
+</form>
 <?php endforeach ?>
         <!-- -----Modal do Mapa Criar/Editar----- -->
         <div class="pagina-mapa" id="idModalMapa">
