@@ -54,8 +54,7 @@ class QueryBuilder
             $table, 
             implode(', ', array_map(function($param){
                 return $param . " = :" . $param;
-            }, array_keys($parameters))),
-            $id
+            }, array_keys($parameters) - ['id']))
         ); 
 
         try {

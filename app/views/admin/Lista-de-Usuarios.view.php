@@ -131,41 +131,42 @@
 
         <!-- Modal Editar -->
         <form id="form-editar" action="/usuarios/editar_usuario" method="POST">
-        <div id="editar" class="modalUsuario">
-            <div class="topo-info">
-                <div class="icone-info">
-                    <i class="bi bi-person-fill"></i>
-                    <i class="bi bi-pencil-square"></i>
+            <div id="editar" class="modalUsuario">
+                <div class="topo-info">
+                    <div class="icone-info">
+                        <i class="bi bi-person-fill"></i>
+                        <i class="bi bi-pencil-square"></i>
+                    </div>
+                    <div class="titulo-info">
+                        <h2>Editar usuário</h2>
+                    </div>
                 </div>
-                <div class="titulo-info">
-                    <h2>Editar usuário</h2>
-                </div>
-            </div>
-            <div class="conteiner-info">
-                <div class="item-info">
-                    
-                    <p class="titulo">Nome:</p>
-                    <input type="text" class="boxEditar" name="nome" value="Usuário">
-                </div>
-                <div class="item-info">
-                    <p class="titulo">E-mail:</p>
-                    <input type="text" class="boxEditar" name="email" value="email@email.com">
-                </div>
-                <div class="item-info">
-                    <p class="titulo">Senha:</p>
-                    <div class="boxCriar senha-box-criar">
-                        <input type="text" class="boxSenha" name="senha" value="senha">
-                        <div class="icone-senha">
-                            <i class="bi bi-eye-fill"></i>
+                <div class="conteiner-info">
+                    <div class="item-info">
+                        <input type="hidden" value="<?= $usuario->id ?>" name="id">
+                        <p>ID carregado: <?= $usuario->id ?></p>
+                        <p class="titulo">Nome:</p>
+                        <input type="text" class="boxEditar" name="nome" value="Usuário">
+                    </div>
+                    <div class="item-info">
+                        <p class="titulo">E-mail:</p>
+                        <input type="text" class="boxEditar" name="email" value="email@email.com">
+                    </div>
+                    <div class="item-info">
+                        <p class="titulo">Senha:</p>
+                        <div class="boxCriar senha-box-criar">
+                            <input type="text" class="boxSenha" name="senha" value="senha">
+                            <div class="icone-senha">
+                                <i class="bi bi-eye-fill"></i>
+                            </div>
                         </div>
                     </div>
                 </div>
+                <div class="botao-modal">
+                    <button type="submit" class="botao" id="salvar">salvar</button>
+                    <button type="button" class="botao" id="cancelar" onclick="fecharModal('editar')">cancelar</button>
+                </div>
             </div>
-            <div class="botao-modal">
-                <button type="submit" class="botao" id="salvar">salvar</button>
-                <button type="button" class="botao" id="cancelar" onclick="fecharModal('editar')">cancelar</button>
-            </div>
-        </div>
         </form>
 
         <!-- Modal Excluir -->
