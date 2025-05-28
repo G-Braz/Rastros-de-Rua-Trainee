@@ -145,16 +145,16 @@
                 <div class="item-info">
                     
                     <p class="titulo">Nome:</p>
-                    <input type="text" class="boxEditar" name="text" value="Usuário">
+                    <input type="text" class="boxEditar" name="nome" value="Usuário">
                 </div>
                 <div class="item-info">
                     <p class="titulo">E-mail:</p>
-                    <input type="text" class="boxEditar" name="text" value="email@email.com">
+                    <input type="text" class="boxEditar" name="email" value="email@email.com">
                 </div>
                 <div class="item-info">
                     <p class="titulo">Senha:</p>
                     <div class="boxCriar senha-box-criar">
-                        <input type="text" class="boxSenha" name="text" value="senha">
+                        <input type="text" class="boxSenha" name="senha" value="senha">
                         <div class="icone-senha">
                             <i class="bi bi-eye-fill"></i>
                         </div>
