@@ -50,10 +50,11 @@ class QueryBuilder
             $table,
             implode(', ', array_map(function($parameters){
                 return $parameters . ' = :' . $parameters;
-            },array_keys($parameters))),
-            $id
+            },array_keys($parameters)))
 
         );
+
+        $parameters['id'] = $id;
         try {
             $stmt = $this->pdo->prepare($sql);
             $stmt->execute($parameters);

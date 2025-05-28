@@ -59,7 +59,7 @@
 
                         <td class="operacoes">
                             <button><i class="bi bi-eye-fill" onclick="abrirModal('fundoVisualizar<?= $post->id ?>','idModalVisualizar<?= $post->id ?>')"></i></button>
-                            <button><i class="bi bi-pencil-square" onclick="abrirModal('fundoEditar','idModalEditar')"></i></button>
+                            <button><i class="bi bi-pencil-square" onclick="abrirModal('fundoEditar<?= $post->id ?>','idModalEditar<?= $post->id ?>',<?= $post->id ?>)"></i></button>
                             <button><i class="bi bi-trash-fill" onclick="abrirModal('fundo-modal-excluir-post<?= $post->id ?>','modal-excluir-post<?= $post->id ?>',<?= $post->id ?> )"></i></button>
                         </td>
                     </tr>
@@ -80,7 +80,7 @@
         <div class="adicionar-arte-criar-post">
             <div>Arte</div>
             <div class="input-arte-criar-post"> 
-                <input id="inputArteCriar" class="custom-input-img" type="file" name="arte" style="display: none;">
+                <input id="inputArteCriar" class="custom-input-img" type="file" name="arte" style="display: none;" onchange="exibirPreview('inputArteCriar', 'previewArteCriar', 'imgPadraoArteCriar')">
                 <label id="labelArteCriar" for="inputArteCriar" class="custom-label-art">
                     Selecionar imagem da arte 
                     <img id="imgPadraoArteCriar" src="/public/assets/icone-imagem.svg" /> 
@@ -167,7 +167,6 @@
         </div>
     </form>
     <!--Modal visualizar-->
-    
     <div onclick="fecharModal('idModalVisualizar<?= $post->id ?>','fundoVisualizar<?= $post->id ?>')" class="modalVisualizar" id="fundoVisualizar<?= $post->id ?>"> </div>
         <div class="visualizar" id="idModalVisualizar<?= $post->id ?>">
             <div class="tituloModalVisualizar">
@@ -225,8 +224,9 @@
         </div>
     </div>
     <!--Modal editar-->
-<div onclick="fecharModal('idModalEditar','fundoEditar')" class="modalEditar" id="fundoEditar"></div>
-<form class="editar" id="idModalEditar" method="POST" action="/posts/edit" enctype="multipart/form-data">
+<div onclick="fecharModal('idModalEditar<?= $post->id ?>','fundoEditar<?= $post->id ?>')" class="modalEditar" id="fundoEditar<?= $post->id ?>"></div>
+<form class="editar" id="idModalEditar<?= $post->id ?>" method="POST" action="/posts/edit" enctype="multipart/form-data">
+    <input type="hidden" name="id" value="<?= $post->id ?>">
     <div class="tituloModalEditar">
         <p>Editar Publicação</p>
     </div>
@@ -234,32 +234,32 @@
         <div class="arteEditar">
             <p>Arte</p>
             <div class="arteInput"> 
-                <input id="inputArte" class="inputImg" type="file" name="arte">
-                <label id="labelArte" for="inputArte" class="labelImgArte">
-                    <img src="../../../public/assets/imagemTeste.jpg"/>
+                <input id="inputArte<?= $post->id ?>" class="inputImg" type="file" name="arte">
+                <label id="labelArte<?= $post->id ?>" for="inputArte<?= $post->id ?>" class="labelImgArte">
+                    <img id="imagemAtualEditar<?= $post->id ?>" src="<?= $post->img_arte ?>"/>
                     <div class="conteudoArteInput">
                         <p>Selecionar nova imagem</p>
                         <i class="bi bi-upload"></i>
                     </div>
                 </label>
-                <img id="previewArte" src="" alt="Pré-visualização" style="display: none;" />
+                <img id="previewArte<?= $post->id ?>" src="" alt="Pré-visualização" style="display: none;" />
             </div>
         </div>
         <div class="camposEditar">
             <div class="tituloPublicacaoEditar">
                 <p>Título</p>
-                <input class="tituloInput" id="tituloPublicacaoEditar" type="text" value="Lorem ipsum" name="titulo">
+                <input class="tituloInput" id="tituloPublicacaoEditar" type="text" value="<?=$post->titulo ?>" name="titulo">
             </div>
             <div class="autorEditar">
                 <p>Autor</p>
-                <input class="inputAutor" id="inputAutor" type="text" value="Lorem ipsum" name="autor">
+                <input class="inputAutor" id="inputAutor" type="text" value="<?=$post->autor ?>" name="autor">
             </div>
             <div class="tagEditar">
                 <p>Tag</p>
                 <div class="tagInput">
-                    <input id="inputTag" class="inputImg" type="file" name="tag">
-                    <label id="labelTag" for="inputTag" class="labelImgTag">
-                        <img src="../../../public/assets/Tag.png"/>
+                    <input id="inputTag<?= $post->id ?>" class="inputImg" type="file" name="tag">
+                    <label id="labelTag<?= $post->id ?>" for="inputTag<?= $post->id ?>" class="labelImgTag">
+                        <img src="<?= $post->img_tag ?>"/>
                         <div class="conteudoTagInput">
                             <p>Selecionar nova tag</p>
                             <i class="bi bi-upload"></i>
@@ -273,12 +273,12 @@
 
     <div class="descricaoModalEditar">
         <p>Descrição</p>
-        <textarea class="inputDescricaoEditar" id="textAreaDescricaoEditar" name="descricao" oninput="autoResize(this)">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ratione eius molestiae voluptas nihil reiciendis quasi fugiat, quas corrupti impedit distinctio praesentium? Delectus, expedita? Praesentium quia sequi alias neque natus esse?</textarea>
+        <textarea class="inputDescricaoEditar" id="textAreaDescricaoEditar" name="descricao" oninput="autoResize(this)"><?=$post->descricao ?></textarea>
     </div>
 
     <div class="MateriaisModalEditar">
         <p>Materiais</p>
-        <textarea class="inputMateriaisEditar" id="textAreaMateriaisEditar" name="materiais" oninput="autoResize(this)">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ratione eius molestiae voluptas nihil reiciendis quasi fugiat, quas corrupti impedit distinctio praesentium? Delectus, expedita? Praesentium quia sequi alias neque natus esse?</textarea>
+        <textarea class="inputMateriaisEditar" id="textAreaMateriaisEditar" name="materiais" oninput="autoResize(this)"><?=$post->materiais ?></textarea>
     </div>
 
     <div class="dataLocalEditar">
@@ -286,18 +286,18 @@
             <p>Local</p>
             <button onclick="abrirModal('idModalMapa','idConteudoMapaM')" class="inputLocalEditar" type="button">
                 <i class="icone-geo-mapa bi bi-geo-alt-fill"></i>
-                Selecionar localização
+                <?=$post->local ?>
             </button>
         </div>
         <div class="dataEditar">
             <p>Data de Criação</p>
-            <p class="conteudoDataEditar">16/05/2025</p>
+            <p class="conteudoDataEditar" name="data"><?=$post->data ?></p>
         </div>
     </div>
 
     <div class="botoesEditar">
         <button class="botaoModal botaoSalvar" type="submit">Salvar</button>
-        <button class="botaoModal botaoCancelar" type="button" onclick="fecharModal('fundoEditar','idModalEditar')">Cancelar</button>
+        <button class="botaoModal botaoCancelar" type="button" onclick="fecharModal('fundoEditar<?= $post->id ?>','idModalEditar<?= $post->id ?>',<?= $post->id ?>)">Cancelar</button>
     </div>
 </form>
 <?php endforeach ?>

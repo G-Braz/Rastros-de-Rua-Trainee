@@ -52,7 +52,7 @@ class PostsController
             'img_arte'    => $arteNome,
             'img_tag'     => $tagNome
             ];
-        $id= 19;
+        $id= $_POST['id'];
 
         App::get('database')->update('publicacoes', $parameters, $id);
 
