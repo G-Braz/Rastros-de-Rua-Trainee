@@ -37,4 +37,12 @@ class UsuariosController
         App::get('database')->update('usuarios', $id, $parameters);
         header('Location: /usuarios');
     }
+
+    public function excluir_usuario()
+    {
+        $id = $_POST['id'];
+        
+        App::get('database')->delete('usuarios', $id);
+        header('Location: /usuarios');
+    }
 }

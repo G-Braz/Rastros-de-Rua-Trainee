@@ -67,20 +67,20 @@
             <div class="conteiner-info">
                 <div class="item-info">
                     <p class="titulo">ID:</p>
-                    <div class="box">ID</div>
+                    <div class="box"><?= $usuario->id ?></div>
                 </div>
                 <div class="item-info">
                     <p class="titulo">Nome:</p>
-                    <div class="box">Usuário</div>
+                    <div class="box"><?= $usuario->nome ?></div>
                 </div>
                 <div class="item-info">
                     <p class="titulo">E-mail:</p>
-                    <div class="box">email@email.com</div>
+                    <div class="box"><?= $usuario->email ?></div>
                 </div>
                 <div class="item-info">
                     <p class="titulo">Senha:</p>
                     <div class="box senha-box">
-                        <p>senha</p>
+                        <p><?= $usuario->senha ?></p>
                         <div class="icone-senha">
                             <i class="bi bi-eye-fill"></i>
                         </div>
@@ -90,8 +90,7 @@
             <div class="botao-modal">
                 <button class="botao" onclick="fecharModal('visualizar')">fechar</button>
             </div>
-        </div> 
-        </form>   
+        </div>   
         
         
         <!-- Modal Criar -->
@@ -146,16 +145,16 @@
                         <input type="hidden" value="<?= $usuario->id ?>" name="id">
                         <p>ID carregado: <?= $usuario->id ?></p>
                         <p class="titulo">Nome:</p>
-                        <input type="text" class="boxEditar" name="nome" value="Usuário">
+                        <input type="text" class="boxEditar" name="nome" value="<?= $usuario->nome ?>">
                     </div>
                     <div class="item-info">
                         <p class="titulo">E-mail:</p>
-                        <input type="text" class="boxEditar" name="email" value="email@email.com">
+                        <input type="text" class="boxEditar" name="email" value="<?= $usuario->email ?>">
                     </div>
                     <div class="item-info">
                         <p class="titulo">Senha:</p>
                         <div class="boxCriar senha-box-criar">
-                            <input type="text" class="boxSenha" name="senha" value="senha">
+                            <input type="text" class="boxSenha" name="senha" value="<?= $usuario->senha?>">
                             <div class="icone-senha">
                                 <i class="bi bi-eye-fill"></i>
                             </div>
@@ -170,7 +169,9 @@
         </form>
 
         <!-- Modal Excluir -->
+        <form id="form-excluir" action="/usuarios/excluir_usuario" method="POST">
         <div id="excluir" class="modalUsuarioExcluir">
+            <input type="hidden" value="<?= $usuario->id ?>" name="id">
             <div class="topo-excluir">
                 <div class="icone-excluir">
                     <i class="bi bi-trash-fill"></i>
@@ -183,10 +184,11 @@
                 <p>Tem certeza que deseja excluir o usuário?</p>
             </div>
             <div class="botoes-modal">
-                <button class="excluir">Excluir</button>
-                <button class="cancelar" onclick="fecharModal('excluir')">Cancelar</button>
+                <button type="submit" class="excluir">Excluir</button>
+                <button type="button" class="cancelar" onclick="fecharModal('excluir')">Cancelar</button>
             </div>
         </div> 
+        </form>
 
         <!-- Paginação -->
         <div class="paginacao"> 
