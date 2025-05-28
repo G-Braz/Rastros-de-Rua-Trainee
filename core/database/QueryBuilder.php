@@ -35,13 +35,13 @@ class QueryBuilder
         
         $table,
         implode(', ', array_keys($parameters)),
-        implode(', : ', array_keys($parameters))
+        implode(', ', array_map(function($key) {
+            return ':' . $key;
+        }, array_keys($parameters)))
     );
-
         try {
             $stmt = $this->pdo->prepare($sql);
             $stmt->execute($parameters);
-
         } catch (Exception $e) {
             die($e->getMessage());
         }
