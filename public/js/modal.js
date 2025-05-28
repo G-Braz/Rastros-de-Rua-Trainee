@@ -1,6 +1,6 @@
 
 
-function abrirModal(idFundo, idModal){ 
+function abrirModal(idFundo, idModal, postID = null){ 
 
   if (!idFundo || !idModal) {
       console.error('Elementos do modal não encontrados! IDs:', idFundo, idModal);
@@ -9,6 +9,11 @@ function abrirModal(idFundo, idModal){
   else{
     document.getElementById(idFundo).style.display="flex";
     document.getElementById(idModal).style.display = "flex";
+
+     if (postID !== null) {
+        const inputExcluir = document.getElementById('input-id-excluir');
+        inputExcluir.value = postID;
+     }
   }
   //funcao para redimensionar o mapa apos a abertura de modais
   setTimeout(() => {

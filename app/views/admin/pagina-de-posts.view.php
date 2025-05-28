@@ -58,13 +58,13 @@
                         <td><?= $post->data ?></td>
 
                         <td class="operacoes">
-                            <button><i class="bi bi-eye-fill" onclick="abrirModal('fundoVisualizar','idModalVisualizar')"<?= $post->id ?>></i></button>
+                            <button><i class="bi bi-eye-fill" onclick="abrirModal('fundoVisualizar<?= $post->id ?>','idModalVisualizar<?= $post->id ?>')"></i></button>
                             <button><i class="bi bi-pencil-square" onclick="abrirModal('fundoEditar','idModalEditar')"></i></button>
-                            <button><i class="bi bi-trash-fill" onclick="abrirModal('fundo-modal-excluir-post','modal-excluir-post')"></i></button>
+                            <button><i class="bi bi-trash-fill" onclick="abrirModal('fundo-modal-excluir-post<?= $post->id ?>','modal-excluir-post<?= $post->id ?>',<?= $post->id ?> )"></i></button>
                         </td>
                     </tr>
 
-                    <?php endforeach ?>
+                <?php endforeach ?>
                 </tbody>
             </table>
         </div>
@@ -145,8 +145,9 @@
     </div>
 </form>
     <!-- Modal Excluir -->
-    <div onclick="fecharModal('fundo-modal-excluir-post','modal-excluir-post')" class="overlay-excluir-post" id="fundo-modal-excluir-post"></div>
-    <div class="modal-excluir-post" id="modal-excluir-post">
+    <div onclick="fecharModal('fundo-modal-excluir-post<?= $post->id ?>','modal-excluir-post<?= $post->id ?>')" class="overlay-excluir-post" id="fundo-modal-excluir-post<?= $post->id ?>"></div>
+    <form class="modal-excluir-post" id="modal-excluir-post<?= $post->id ?>" method="POST" action="/posts/delete" enctype="multipart/form-data">
+        
         <div class="cabecalho-modal-excluir-post">
             <div class="icone-modal-excluir-post">
                 <i class="bi bi-trash-fill"></i>
@@ -158,16 +159,17 @@
         <div class="mensagem-modal-excluir-post">
             <p>Tem certeza que deseja excluir a publicação?</p>
         </div>
+        <input type="hidden" name="id" id="input-id-excluir">
         <div class="botoes-modal-excluir-post">
             <button class="botao-modal-excluir-post confirmar">Excluir</button>
             <button class="botao-modal-excluir-post cancelar"
-                onclick="fecharModal('fundo-modal-excluir-post','modal-excluir-post')">Cancelar</button>
+                onclick="fecharModal('fundo-modal-excluir-post<?= $post->id ?>','modal-excluir-post<?= $post->id ?>')">Cancelar</button>
         </div>
-    </div>
+    </form>
     <!--Modal visualizar-->
     
-    <div onclick="fecharModal('idModalVisualizar','fundoVisualizar')" class="modalVisualizar" id="fundoVisualizar"> </div>
-        <div class="visualizar" id="idModalVisualizar">
+    <div onclick="fecharModal('idModalVisualizar<?= $post->id ?>','fundoVisualizar<?= $post->id ?>')" class="modalVisualizar" id="fundoVisualizar<?= $post->id ?>"> </div>
+        <div class="visualizar" id="idModalVisualizar<?= $post->id ?>">
             <div class="tituloModalVisualizar">
                 <p>Visualizar Publicação</p>
             </div>
@@ -218,7 +220,7 @@
                 </div>
             </div>
             <div class="botaoVisualizar">
-                <button class="visualizarBotao" onclick="fecharModal('fundoVisualizar','idModalVisualizar')">Fechar</button>
+                <button class="visualizarBotao" onclick="fecharModal('fundoVisualizar<?= $post->id ?>','idModalVisualizar<?= $post->id ?>')">Fechar</button>
             </div>
         </div>
     </div>
