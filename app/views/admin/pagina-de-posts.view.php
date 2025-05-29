@@ -122,7 +122,7 @@
             <div class="adicionar-tag-criar-post">
                 <p>Tag</p>
                 <div class="input-tag-criar-post">
-                    <input id="inputTagCriar" class="custom-input-img" type="file" name="tag" style="display: none;">
+                    <input id="inputTagCriar" class="custom-input-img" type="file" name="img_tag">
                     <label id="labelTagCriar" for="inputTagCriar" class="custom-label-tag">
                         Selecionar imagem da tag 
                         <img id="imgPadraoTagCriar" src="/public/assets/icone-imagem.svg" />
@@ -212,7 +212,7 @@
                     <div class="tagVisualizar">
                         <p>Tag</p>
                         <div class="conteudoTagVisualizar">
-                            <img src="../../../public/assets/Tag.png" alt="Tag">
+                            <img src="/<?= $post->img_tag?>" alt="Tag">
                         </div>
                     </div>
                 </div>
