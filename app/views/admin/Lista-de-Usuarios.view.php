@@ -195,7 +195,7 @@
                 <i class="bi bi-skip-backward"></i>
             </a>
             <?php for($page_number = 1; $page_number <= 4; $page_number++): ?>
-                <a class="paginas" class="page-link <?= $page_number == 3 ? "active" : "" ?>" href="?paginacaonumero=<?= $page_number ?>">
+                <a class="paginas page-link<?= $page_number == 3 ?"-active" : "" ?>" href="?paginacaonumero=<?= $page_number ?>">
                     <p> <?= $page_number ?> </p>
                 </a>
             <?php endfor ?>   
