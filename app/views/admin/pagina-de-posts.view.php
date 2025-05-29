@@ -254,7 +254,7 @@
         <div class="arteEditar">
             <p>Arte</p>
             <div class="arteInput"> 
-                <input id="inputArte<?= $post->id ?>" class="inputImg" type="file" name="arte">
+                <input id="inputArte<?= $post->id ?>" class="inputImg" type="file" name="img_arte">
                 <label id="labelArte<?= $post->id ?>" for="inputArte<?= $post->id ?>" class="labelImgArte">
                     <img id="imagemAtualEditar<?= $post->id ?>" src="<?= $post->img_arte ?>"/>
                     <div class="conteudoArteInput">
@@ -277,7 +277,7 @@
             <div class="tagEditar">
                 <p>Tag</p>
                 <div class="tagInput">
-                    <input id="inputTag<?= $post->id ?>" class="inputImg" type="file" name="tag">
+                    <input id="inputTag<?= $post->id ?>" class="inputImg" type="file" name="img_tag">
                     <label id="labelTag<?= $post->id ?>" for="inputTag<?= $post->id ?>" class="labelImgTag">
                         <img src="<?= $post->img_tag ?>"/>
                         <div class="conteudoTagInput">
