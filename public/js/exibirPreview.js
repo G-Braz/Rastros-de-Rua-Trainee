@@ -1,4 +1,4 @@
-
+/*
 function exibirPreview(inputArquivo, labelArquivo, preview, imagemPadrao) {
       inputArquivo.addEventListener('change', function () {
          const file = this.files[0];
@@ -36,3 +36,4 @@ exibirPreview(
    document.getElementById('previewTagCriar'),
    document.getElementById('imgPadraoTagCriar')
 );
+*/

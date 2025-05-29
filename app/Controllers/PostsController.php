@@ -16,8 +16,14 @@ class PostsController
     
     public function create()
     {
-        $arteNome = $_FILES['arte']['name'] ?? null;
-        $tagNome = $_FILES['tag']['name'] ?? null;
+
+        $tempArte= $_FILES['img_arte']['tmp_name'];
+        $nomeImagem= sha1(uniqid($_FILES['img_arte']['name'], true)) . "." . pathinfo($_FILES['img_arte']['name'],PATHINFO_EXTENSION) ;
+
+        $caminhoImg= "public/assets/imagensPosts/" . $nomeImagem; 
+
+        move_uploaded_file($tempArte, $caminhoImg);
+        
 
         $parameters = [
             'titulo'     => $_POST['titulo'],
@@ -28,8 +34,8 @@ class PostsController
             'longitude'  => 0,
             'local'      => 'juiz de fora',
             'usuarios_id'   => 6,
-            'img_arte'    => $arteNome,
-            'img_tag'     => $tagNome
+            'img_arte'    => $caminhoImg,
+            //'img_tag'     => $tagNome
         ];
 
         App::get('database')->insert('publicacoes', $parameters);

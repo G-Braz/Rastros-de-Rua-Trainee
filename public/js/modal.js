@@ -9,11 +9,6 @@ function abrirModal(idFundo, idModal, postID = null){
   else{
     document.getElementById(idFundo).style.display="flex";
     document.getElementById(idModal).style.display = "flex";
-
-     if (postID !== null) {
-        const inputExcluir = document.getElementById('input-id-excluir');
-        inputExcluir.value = postID;
-     }
   }
   //funcao para redimensionar o mapa apos a abertura de modais
   setTimeout(() => {

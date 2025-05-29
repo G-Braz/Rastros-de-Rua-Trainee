@@ -101,7 +101,7 @@
         <div class="adicionar-arte-criar-post">
             <div>Arte</div>
             <div class="input-arte-criar-post"> 
-                <input id="inputArteCriar" class="custom-input-img" type="file" name="arte" style="display: none;" onchange="exibirPreview('inputArteCriar', 'previewArteCriar', 'imgPadraoArteCriar')">
+                <input id="inputArteCriar" class="custom-input-img" type="file" name="img_arte">
                 <label id="labelArteCriar" for="inputArteCriar" class="custom-label-art">
                     Selecionar imagem da arte 
                     <img id="imgPadraoArteCriar" src="/public/assets/icone-imagem.svg" /> 
@@ -197,7 +197,7 @@
                 <div class="arteVisualizar">
                     <div class="arteContent">Arte</div>
                     <div class="conteudoArteVisualizar"> 
-                        <img src="../../../public/assets/imagemTeste.jpg" alt="Arte" name="arteVisualizar">
+                        <img src="/<?= $post->img_arte?>" alt="Arte" name="arteVisualizar">
                     </div>
                 </div>
                 <div class="campos">
