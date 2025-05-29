@@ -194,18 +194,11 @@
             <a class="skip">
                 <i class="bi bi-skip-backward"></i>
             </a>
-                <a class="paginas">
-                    <p> 1 </p>
+            <?php for($page_number = 1; $page_number <= 4; $page_number++): ?>
+                <a class="paginas" class="page-link <?= $page_number == 3 ? "active" : "" ?>" href="?paginacaonumero=<?= $page_number ?>">
+                    <p> <?= $page_number ?> </p>
                 </a>
-                <a class="paginas">
-                    <p> 2 </p>
-                </a>
-                <a class="paginas">
-                    <p> 3 </p>
-                </a>
-                <a class="paginas">
-                    <p> 4 </p>
-                </a >
+            <?php endfor ?>   
             <a class="skip">
                 <i class="bi bi-skip-forward"></i>
             </a>
