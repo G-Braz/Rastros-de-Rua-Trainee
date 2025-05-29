@@ -13,6 +13,7 @@ class PostsController
         $posts = APP::get('database')->selectAll('publicacoes');
         return view('admin/pagina-de-posts', compact('posts'));
     }
+    
     public function create()
     {
         $arteNome = $_FILES['arte']['name'] ?? null;
@@ -47,7 +48,6 @@ class PostsController
             'latitude'   => 0,
             'longitude'  => 0,
             'local'      => 'juiz de fora',
-            'data'=> date('d/m/Y'),
             'usuarios_id'   => 6,
             'img_arte'    => $arteNome,
             'img_tag'     => $tagNome

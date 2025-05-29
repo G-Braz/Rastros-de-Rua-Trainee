@@ -55,7 +55,7 @@
                         <td><?= $post->id ?></td>
                         <td><?= $post->titulo ?></td>
                         <td><?= $post->autor ?></td>
-                        <td><?= $post->data ?></td>
+                        <td><?= (new DateTime($post->data))->format('d/m/Y')?></td> 
 
                         <td class="operacoes">
                             <button><i class="bi bi-eye-fill" onclick="abrirModal('fundoVisualizar<?= $post->id ?>','idModalVisualizar<?= $post->id ?>')"></i></button>
@@ -68,7 +68,28 @@
                 </tbody>
             </table>
         </div>
-    <?php foreach($posts as $post): ?>   
+    <!--PAGINAÇÃO-->
+    <div class="paginacao">
+            <a href="" class="skip">
+                <i class="bi bi-skip-backward"></i>
+            </a href="">
+                <a href="" class="paginas">
+                    <p> 1 </p>
+                </a href="">
+                <a href="" class="paginas">
+                    <p> 2 </p>
+                </a href="">
+                <a href="" class="paginas">
+                    <p> 3 </p>
+                </a href="">
+                <a href="" class="paginas">
+                    <p> 4 </p>
+                </a href="">
+            <a href="" class="skip">
+                <i class="bi bi-skip-forward"></i>
+            </a href="">
+        </div>
+    </div>
     <!--Modal Criar-->
 <div onclick="fecharModal('fundo-modal-criar-post','id-modal-criar-post')" class="overlay-criar-post" id="fundo-modal-criar-post"></div>
 <form class="modal-criar-post" id="id-modal-criar-post" method="POST" action="/posts/create" enctype="multipart/form-data">
@@ -144,10 +165,12 @@
         <button type="button" class="botao-modal botao-modal-cancelar" onclick="fecharModal('fundo-modal-criar-post','id-modal-criar-post')">Cancelar</button>
     </div>
 </form>
+    <?php foreach($posts as $post): ?>   
+    
     <!-- Modal Excluir -->
     <div onclick="fecharModal('fundo-modal-excluir-post<?= $post->id ?>','modal-excluir-post<?= $post->id ?>')" class="overlay-excluir-post" id="fundo-modal-excluir-post<?= $post->id ?>"></div>
     <form class="modal-excluir-post" id="modal-excluir-post<?= $post->id ?>" method="POST" action="/posts/delete" enctype="multipart/form-data">
-        
+         <input type="hidden" name="id" id="input-id-excluir" value="<?= $post->id ?>">
         <div class="cabecalho-modal-excluir-post">
             <div class="icone-modal-excluir-post">
                 <i class="bi bi-trash-fill"></i>
@@ -159,11 +182,9 @@
         <div class="mensagem-modal-excluir-post">
             <p>Tem certeza que deseja excluir a publicação?</p>
         </div>
-        <input type="hidden" name="id" id="input-id-excluir">
         <div class="botoes-modal-excluir-post">
-            <button class="botao-modal-excluir-post confirmar">Excluir</button>
-            <button class="botao-modal-excluir-post cancelar"
-                onclick="fecharModal('fundo-modal-excluir-post<?= $post->id ?>','modal-excluir-post<?= $post->id ?>')">Cancelar</button>
+            <button class="botao-modal-excluir-post confirmar" type="submit">Excluir</button>
+            <button class="botao-modal-excluir-post cancelar" type="button" onclick="fecharModal('fundo-modal-excluir-post<?= $post->id ?>','modal-excluir-post<?= $post->id ?>')">Cancelar</button>
         </div>
     </form>
     <!--Modal visualizar-->
@@ -210,12 +231,11 @@
                     <p class="TituloLocalVisualizar">Local</p>
                     <button onclick="abrirModal('idMapaPost','idConteudoMapaP')" class="conteudoLocalVisualizar">
                         <i class=" icone-geo-mapa bi bi-geo-alt-fill"></i>
-                        Visualizar no mapa
                     </button>
                 </div>
                 <div class="dataVisualizar">
                     <p class="visualizarData">Data de Criação</p>
-                    <p class="conteudoDataVisualizar"><?=$post->data?></p>
+                    <p class="conteudoDataVisualizar"><?=(new DateTime($post->data))->format('d/m/Y')?></p>
                 </div>
             </div>
             <div class="botaoVisualizar">
@@ -291,7 +311,7 @@
         </div>
         <div class="dataEditar">
             <p>Data de Criação</p>
-            <p class="conteudoDataEditar" name="data"><?=$post->data ?></p>
+            <p class="conteudoDataEditar" name="data"><?=(new DateTime($post->data))->format('d/m/Y') ?></p>
         </div>
     </div>
 
@@ -332,28 +352,7 @@
                 <button onclick="fecharModal('idMapaPost','idConteudoMapaP')" class="btn-fechar-mapa">Fechar</button>
             </div>
         </div>
-    <!--PAGINAÇÃO-->
-    <div class="paginacao">
-            <a href="" class="skip">
-                <i class="bi bi-skip-backward"></i>
-            </a href="">
-                <a href="" class="paginas">
-                    <p> 1 </p>
-                </a href="">
-                <a href="" class="paginas">
-                    <p> 2 </p>
-                </a href="">
-                <a href="" class="paginas">
-                    <p> 3 </p>
-                </a href="">
-                <a href="" class="paginas">
-                    <p> 4 </p>
-                </a href="">
-            <a href="" class="skip">
-                <i class="bi bi-skip-forward"></i>
-            </a href="">
-        </div>
-    </div>
+    
 </body>
 <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 <script src="../../../public/js/mapas.js"></script>
