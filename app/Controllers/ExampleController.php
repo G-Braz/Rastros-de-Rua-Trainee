@@ -7,7 +7,6 @@ use Exception;
 
 class ExampleController
 {
-
     public function index()
     {
         return view('site/index');
