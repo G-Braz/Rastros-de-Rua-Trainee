@@ -191,15 +191,15 @@
 
         <!-- Paginação -->
         <div class="paginacao"> 
-            <a class="skip">
+            <a class="skip page-item<?= $page <= 1 ? "-disabled" : ""?>" href="?paginacaoNumero=<?= $page - 1 ?>">
                 <i class="bi bi-skip-backward"></i>
             </a>
-            <?php for($page_number = 1; $page_number <= 4; $page_number++): ?>
-                <a class="paginas page-link<?= $page_number == 3 ?"-active" : "" ?>" href="?paginacaonumero=<?= $page_number ?>">
+            <?php for($page_number = 1; $page_number <= $total_pages; $page_number++): ?>
+                <a class="paginas page-link<?= $page_number == $page ?"-active" : "" ?>" href="?paginacaoNumero=<?= $page_number ?>">
                     <p> <?= $page_number ?> </p>
                 </a>
             <?php endfor ?>   
-            <a class="skip">
+            <a class="skip page-item<?= $page >= $total_pages ? "-disabled" : ""?>" href="?paginacaoNumero=<?= $page + 1 ?>">
                 <i class="bi bi-skip-forward"></i>
             </a>
         </div>

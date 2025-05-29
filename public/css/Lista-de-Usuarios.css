@@ -144,6 +144,9 @@ td{ /*Corpo da tabela*/
     background: rgb(12, 28, 49, 0.8);
     border: 1px solid rgb(245, 245, 245, 0.4);
 }
+.skip.page-item-disabled {
+    pointer-events: none;
+}
 .skip:hover, .paginas:hover{ /*Efeito de hover ao passar o mouse nos botões de paginação*/
     background: rgb(0,11,26,0.3);
     border:1px solid rgb(245, 245, 245, 0.4);
