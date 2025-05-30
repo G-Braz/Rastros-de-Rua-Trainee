@@ -93,8 +93,8 @@
     <!--Modal Criar-->
 <div onclick="fecharModal('fundo-modal-criar-post','id-modal-criar-post')" class="overlay-criar-post" id="fundo-modal-criar-post"></div>
 <form class="modal-criar-post" id="id-modal-criar-post" method="POST" action="/posts/create" enctype="multipart/form-data">
-    <input type="hidden" name="latitude" id="latitude" value="0">
-    <input type="hidden" name="longitude" id="longitude" value="0">
+    <input type="hidden" name="latitude" id="latitude" value="0" required>
+    <input type="hidden" name="longitude" id="longitude" value="0" required>
     <div class="titulo-modal-criar-post">
         <p>Criar Publicação</p>
     </div>
@@ -103,7 +103,7 @@
         <div class="adicionar-arte-criar-post">
             <div>Arte</div>
             <div class="input-arte-criar-post"> 
-                <input id="inputArteCriar" class="custom-input-img" type="file" name="img_arte" onchange="exibirPreview('inputArteCriar', 'previewArteCriar', 'imgPadraoArteCriar')" style="display: none;">
+                <input id="inputArteCriar" class="custom-input-img" type="file" name="img_arte" onchange="exibirPreview('inputArteCriar', 'previewArteCriar', 'imgPadraoArteCriar')" style="display: none;" required>
                 <label id="labelArteCriar" for="inputArteCriar" class="custom-label-art">
                     Selecionar imagem da arte 
                     <img id="imgPadraoArteCriar" src="/public/assets/icone-imagem.svg" /> 
@@ -115,16 +115,16 @@
         <div class="campos-superior-direita-criar">
             <div class="campo-titulo-criar-post">
                 <p>Título</p>
-                <input class="input-titulo-criar-post" type="text" placeholder="Insira o Título" name="titulo">
+                <input class="input-titulo-criar-post" type="text" placeholder="Insira o Título" name="titulo" required>
             </div>
             <div class="campo-autor-criar-post">
                 <p>Autor</p>
-                <input class="input-autor-criar-post" type="text" placeholder="Insira o Autor" name="autor">
+                <input class="input-autor-criar-post" type="text" placeholder="Insira o Autor" name="autor" required>
             </div>
             <div class="adicionar-tag-criar-post">
                 <p>Tag</p>
                 <div class="input-tag-criar-post">
-                    <input id="inputTagCriar" class="custom-input-img" type="file" name="img_tag" onchange="exibirPreview('inputTagCriar', 'previewTagCriar', 'imgPadraoTagCriar')" style="display: none;">
+                    <input id="inputTagCriar" class="custom-input-img" type="file" name="img_tag" onchange="exibirPreview('inputTagCriar', 'previewTagCriar', 'imgPadraoTagCriar')" style="display: none;" required>
                     <label id="labelTagCriar" for="inputTagCriar" class="custom-label-tag">
                         Selecionar imagem da tag 
                         <img id="imgPadraoTagCriar" src="/public/assets/icone-imagem.svg" />
@@ -137,12 +137,12 @@
 
     <div class="campo-descricao-criar-post">
         <p>Descrição</p>
-        <textarea class="input-descricao-criar-post" rows="3" cols="10" placeholder="Insira a Descrição" name="descricao"></textarea>
+        <textarea class="input-descricao-criar-post" rows="3" cols="10" placeholder="Insira a Descrição" name="descricao" required></textarea>
     </div>
 
     <div class="campo-materiais-criar-post">
         <p>Materiais</p>
-        <textarea class="input-materiais-criar-post" rows="2" cols="10" placeholder="Insira os Materiais" name="materiais"></textarea>
+        <textarea class="input-materiais-criar-post" rows="2" cols="10" placeholder="Insira os Materiais" name="materiais" required></textarea>
     </div>
 
     <div class="local-e-data-criar">
@@ -248,8 +248,8 @@
     <!--Modal editar-->
 <div onclick="fecharModal('idModalEditar<?= $post->id ?>','fundoEditar<?= $post->id ?>')" class="modalEditar" id="fundoEditar<?= $post->id ?>"></div>
 <form class="editar" id="idModalEditar<?= $post->id ?>" method="POST" action="/posts/edit" enctype="multipart/form-data">
-<input type="hidden" name="latitude" id="latitudeEditar<?= $post->id ?>" value="0">
-<input type="hidden" name="longitude" id="longitudeEditar<?= $post->id ?>" value="0">
+<input type="hidden" name="latitude" id="latitudeEditar<?= $post->id ?>" value="0" required>
+<input type="hidden" name="longitude" id="longitudeEditar<?= $post->id ?>" value="0" required>
 
     <input type="hidden" name="id" value="<?= $post->id ?>">
     <div class="tituloModalEditar">
@@ -274,11 +274,11 @@
         <div class="camposEditar">
             <div class="tituloPublicacaoEditar">
                 <p>Título</p>
-                <input class="tituloInput" id="tituloPublicacaoEditar" type="text" value="<?=$post->titulo ?>" name="titulo">
+                <input class="tituloInput" id="tituloPublicacaoEditar" type="text" value="<?=$post->titulo ?>" name="titulo"required>
             </div>
             <div class="autorEditar">
                 <p>Autor</p>
-                <input class="inputAutor" id="inputAutor" type="text" value="<?=$post->autor ?>" name="autor">
+                <input class="inputAutor" id="inputAutor" type="text" value="<?=$post->autor ?>" name="autor"required>
             </div>
             <div class="tagEditar">
                 <p>Tag</p>
@@ -299,12 +299,12 @@
 
     <div class="descricaoModalEditar">
         <p>Descrição</p>
-        <textarea class="inputDescricaoEditar" id="textAreaDescricaoEditar" name="descricao" oninput="autoResize(this)"><?=$post->descricao ?></textarea>
+        <textarea class="inputDescricaoEditar" id="textAreaDescricaoEditar" name="descricao" oninput="autoResize(this)"required><?=$post->descricao ?></textarea>
     </div>
 
     <div class="MateriaisModalEditar">
         <p>Materiais</p>
-        <textarea class="inputMateriaisEditar" id="textAreaMateriaisEditar" name="materiais" oninput="autoResize(this)"><?=$post->materiais ?></textarea>
+        <textarea class="inputMateriaisEditar" id="textAreaMateriaisEditar" name="materiais" oninput="autoResize(this)"required><?=$post->materiais ?></textarea>
     </div>
 
     <div class="dataLocalEditar">
