@@ -16,7 +16,7 @@
 * Caio Ribeiro (coloque o link do github)
 * Luiza Caldeira (https://github.com/luizacaldeira)
 * Amanda Alvaro (coloque o link do github)
-* Mickaell de Oliveira (coloque o link do github)
+* Mickaell de Oliveira (https://github.com/Mickaell-Oliveira)
 
 
 #### Scrum Master:

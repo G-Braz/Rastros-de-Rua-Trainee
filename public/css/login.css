@@ -141,6 +141,15 @@ body {
     z-index: 1;
 }
 
+.msgErro{
+    color: red;
+    font-size: 200%;
+    font-family: "Urbanist", sans-serif;
+    font-weight: 400;
+    margin-top: 2%;
+    text-align: center;
+}
+
 /*Responsividades*/
 
 /*celulares*/
