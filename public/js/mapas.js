@@ -1,4 +1,6 @@
 
+    // script dos mapas
+
 // -----Código compartilhado entre os dois mapas-----
 
 let mapaModal, mapaPost, marcadorModal, marcadorPost;
@@ -18,10 +20,13 @@ function centralizarMapaNoMarcador(marcador, mapa) {
         }
 
 function atualizaMapaPost(lat, long) {
+        console.log(lat, long);
         if(marcadorPost) {
                 marcadorPost.setLatLng([lat, long]);
                 centralizarMapaNoMarcador(marcadorPost, mapaPost);
         }
+        
+        
 }
 
 // -----Código para mapa do post individual-----
@@ -47,18 +52,32 @@ function inicializarMapaPost() {
 
 // -----Código para o mapa do Modal-----
 function atualizaMarcadorPorClique(evento) {
-        const latitude = evento.latlng.lat;
-        const longitude = evento.latlng.lng;
+    let lat = evento.latlng.lat;
+    let lng = evento.latlng.lng;
 
-        marcadorModal.setLatLng([latitude, longitude]);
-        atualizaMapaPost(latitude, longitude);
+    let inputLat = document.getElementById('latitudeEditar' + postIdAberto) || document.getElementById('latitude');
+    let inputLng = document.getElementById('longitudeEditar' + postIdAberto) || document.getElementById('longitude');
+
+    inputLat.value = lat;
+    inputLng.value = lng;
+
+    marcadorModal.setLatLng([lat, lng]);
+    atualizaMapaPost(lat, lng);
 }
 
 function atualizaMarcadorArrastando(evento) {
-        const posicao = evento.target.getLatLng();
-        atualizaMapaPost(posicao.lat, posicao.lng);
-}
+    let lat = evento.latlng.lat;
+    let lng = evento.latlng.lng;
 
+    let inputLat = document.getElementById('latitudeEditar' + postIdAberto) || document.getElementById('latitude');
+    let inputLng = document.getElementById('longitudeEditar' + postIdAberto) || document.getElementById('longitude');
+
+    inputLat.value = lat;
+    inputLng.value = lng;
+
+    marcadorModal.setLatLng([lat, lng]);
+    atualizaMapaPost(lat, lng);
+}
 
 function inicializarMapaModal() {
         // Só inicializa se não existir
@@ -74,4 +93,17 @@ function inicializarMapaModal() {
                 mapaModal.on('click', atualizaMarcadorPorClique);
                 marcadorModal.on('drag', atualizaMarcadorArrastando);
         }
+}
+function atualizaMapaModal(lat, long) {
+    if (mapaModal && marcadorModal) {
+        marcadorModal.setLatLng([lat, long]);
+        mapaModal.setView([lat, long], mapaModal.getZoom());
+    }
+}
+let postIdAberto = null;
+
+function abrirModalMapaEditar(id, lat, lng) {
+    postIdAberto = id;
+    abrirModal('idModalMapa','idConteudoMapaM');
+    setTimeout(() => atualizaMapaModal(lat, lng), 50);
 }

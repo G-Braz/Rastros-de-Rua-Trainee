@@ -93,6 +93,8 @@
     <!--Modal Criar-->
 <div onclick="fecharModal('fundo-modal-criar-post','id-modal-criar-post')" class="overlay-criar-post" id="fundo-modal-criar-post"></div>
 <form class="modal-criar-post" id="id-modal-criar-post" method="POST" action="/posts/create" enctype="multipart/form-data">
+    <input type="hidden" name="latitude" id="latitude" value="0">
+    <input type="hidden" name="longitude" id="longitude" value="0">
     <div class="titulo-modal-criar-post">
         <p>Criar Publicação</p>
     </div>
@@ -229,7 +231,7 @@
             <div class="dataLocalVisualizar">
                 <div class="localVisualizar">
                     <p class="TituloLocalVisualizar">Local</p>
-                    <button onclick="abrirModal('idMapaPost','idConteudoMapaP')" class="conteudoLocalVisualizar">
+                    <button onclick="abrirModal('idMapaPost','idConteudoMapaP'); setTimeout(() => atualizaMapaPost(<?= (double)$post->latitude ?>, <?= (double)$post->longitude ?>), 100)" class="conteudoLocalVisualizar">
                         <i class=" icone-geo-mapa bi bi-geo-alt-fill"></i>
                     </button>
                 </div>
@@ -246,6 +248,9 @@
     <!--Modal editar-->
 <div onclick="fecharModal('idModalEditar<?= $post->id ?>','fundoEditar<?= $post->id ?>')" class="modalEditar" id="fundoEditar<?= $post->id ?>"></div>
 <form class="editar" id="idModalEditar<?= $post->id ?>" method="POST" action="/posts/edit" enctype="multipart/form-data">
+<input type="hidden" name="latitude" id="latitudeEditar<?= $post->id ?>" value="0">
+<input type="hidden" name="longitude" id="longitudeEditar<?= $post->id ?>" value="0">
+
     <input type="hidden" name="id" value="<?= $post->id ?>">
     <div class="tituloModalEditar">
         <p>Editar Publicação</p>
@@ -305,7 +310,7 @@
     <div class="dataLocalEditar">
         <div class="localEditar">
             <p>Local</p>
-            <button onclick="abrirModal('idModalMapa','idConteudoMapaM')" class="inputLocalEditar" type="button">
+            <button onclick="abrirModalMapaEditar(<?= $post->id ?>, <?= (double)$post->latitude ?>, <?= (double)$post->longitude ?>)" class="inputLocalEditar" type="button">
                 <i class="icone-geo-mapa bi bi-geo-alt-fill"></i>
                 <?=$post->local ?>
             </button>
@@ -356,7 +361,7 @@
     
 </body>
 <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
-<script src="../../../public/js/mapas.js"></script>
 <script src="../../../public/js/modal.js"></script>
 <script src="../../../public/js/exibirPreview.js"></script>
+<script src="../../../public/js/mapas.js"></script>
 </html>
