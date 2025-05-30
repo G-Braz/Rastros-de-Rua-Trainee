@@ -101,7 +101,7 @@
         <div class="adicionar-arte-criar-post">
             <div>Arte</div>
             <div class="input-arte-criar-post"> 
-                <input id="inputArteCriar" class="custom-input-img" type="file" name="img_arte" onchange="exibirPreview('inputArteCriar', 'previewArteCriar', 'imgPadraoArteCriar')">
+                <input id="inputArteCriar" class="custom-input-img" type="file" name="img_arte" onchange="exibirPreview('inputArteCriar', 'previewArteCriar', 'imgPadraoArteCriar')" style="display: none;">
                 <label id="labelArteCriar" for="inputArteCriar" class="custom-label-art">
                     Selecionar imagem da arte 
                     <img id="imgPadraoArteCriar" src="/public/assets/icone-imagem.svg" /> 
@@ -122,7 +122,7 @@
             <div class="adicionar-tag-criar-post">
                 <p>Tag</p>
                 <div class="input-tag-criar-post">
-                    <input id="inputTagCriar" class="custom-input-img" type="file" name="img_tag" onchange="exibirPreview('inputTagCriar', 'previewTagCriar', 'imgPadraoTagCriar')">
+                    <input id="inputTagCriar" class="custom-input-img" type="file" name="img_tag" onchange="exibirPreview('inputTagCriar', 'previewTagCriar', 'imgPadraoTagCriar')" style="display: none;">
                     <label id="labelTagCriar" for="inputTagCriar" class="custom-label-tag">
                         Selecionar imagem da tag 
                         <img id="imgPadraoTagCriar" src="/public/assets/icone-imagem.svg" />
