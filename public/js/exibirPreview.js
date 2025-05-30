@@ -1,4 +1,4 @@
-/*
+
 function exibirPreview(inputArquivo, labelArquivo, preview, imagemPadrao) {
       inputArquivo.addEventListener('change', function () {
          const file = this.files[0];
@@ -19,9 +19,49 @@ function exibirPreview(inputArquivo, labelArquivo, preview, imagemPadrao) {
             imagemPadrao.style.display = 'block';
             labelArquivo.textContent = "Selecione uma imagem";
          }
-         this.value = '';
       });
    }
+
+
+function trocaImagem(id){
+   const painel = document.querySelector('#labelArte'+id);
+   const inputImagem = document.querySelector('#inputArte' +id);
+   const spanImage = painel.querySelector('#imagemAtualEditar'+id);
+   if (inputImagem) {
+        
+           const arquivo = inputImagem.files[0];
+           if (arquivo) {
+               const reader = new FileReader();
+               reader.addEventListener('load', function(e) {
+                   const readerTarget = e.target;
+                   spanImage.src = readerTarget.result;
+               });
+               reader.readAsDataURL(arquivo);
+           } else {
+               spanImage.src = "../../../public/assets/profile-picture-973460_1280.webp";
+           }
+   };
+}
+
+function trocaImagemTag(id){
+   const painel = document.querySelector('#labelTag'+id);
+   const inputImagem = document.querySelector('#inputTag' +id);
+   const spanImage = painel.querySelector('#imagemAtualTag'+id);
+   if (inputImagem) {
+        
+           const arquivo = inputImagem.files[0];
+           if (arquivo) {
+               const reader = new FileReader();
+               reader.addEventListener('load', function(e) {
+                   const readerTarget = e.target;
+                   spanImage.src = readerTarget.result;
+               });
+               reader.readAsDataURL(arquivo);
+           } else {
+               spanImage.src = "../../../public/assets/profile-picture-973460_1280.webp";
+           }
+   };
+}
 
 exibirPreview(
    document.getElementById('inputArteCriar'),
@@ -36,4 +76,3 @@ exibirPreview(
    document.getElementById('previewTagCriar'),
    document.getElementById('imgPadraoTagCriar')
 );
-*/

@@ -101,7 +101,7 @@
         <div class="adicionar-arte-criar-post">
             <div>Arte</div>
             <div class="input-arte-criar-post"> 
-                <input id="inputArteCriar" class="custom-input-img" type="file" name="img_arte">
+                <input id="inputArteCriar" class="custom-input-img" type="file" name="img_arte" onchange="exibirPreview('inputArteCriar', 'previewArteCriar', 'imgPadraoArteCriar')">
                 <label id="labelArteCriar" for="inputArteCriar" class="custom-label-art">
                     Selecionar imagem da arte 
                     <img id="imgPadraoArteCriar" src="/public/assets/icone-imagem.svg" /> 
@@ -122,7 +122,7 @@
             <div class="adicionar-tag-criar-post">
                 <p>Tag</p>
                 <div class="input-tag-criar-post">
-                    <input id="inputTagCriar" class="custom-input-img" type="file" name="img_tag">
+                    <input id="inputTagCriar" class="custom-input-img" type="file" name="img_tag" onchange="exibirPreview('inputTagCriar', 'previewTagCriar', 'imgPadraoTagCriar')">
                     <label id="labelTagCriar" for="inputTagCriar" class="custom-label-tag">
                         Selecionar imagem da tag 
                         <img id="imgPadraoTagCriar" src="/public/assets/icone-imagem.svg" />
@@ -254,16 +254,17 @@
         <div class="arteEditar">
             <p>Arte</p>
             <div class="arteInput"> 
-                <input id="inputArte<?= $post->id ?>" class="inputImg" type="file" name="img_arte">
-                <label id="labelArte<?= $post->id ?>" for="inputArte<?= $post->id ?>" class="labelImgArte">
-                    <img id="imagemAtualEditar<?= $post->id ?>" src="<?= $post->img_arte ?>"/>
+                <input id="inputArte<?= $post->id?>" class="inputImg" type="file" name="img_arte" onchange="trocaImagem('<?= $post->id?>')">
+                <label id="labelArte<?= $post->id?>" for="inputArte<?= $post->id?>" class="labelImgArte">
+                    <img id="imagemAtualEditar<?= $post->id?>" src="<?= $post->img_arte ?>"/>
                     <div class="conteudoArteInput">
                         <p>Selecionar nova imagem</p>
                         <i class="bi bi-upload"></i>
                     </div>
                 </label>
-                <img id="previewArte<?= $post->id ?>" src="" alt="Pré-visualização" style="display: none;" />
+                <img id="previewArte<?= $post->id?>" src="" alt="Pré-visualização" style="display: none;" />
             </div>
+        
         </div>
         <div class="camposEditar">
             <div class="tituloPublicacaoEditar">
@@ -277,15 +278,15 @@
             <div class="tagEditar">
                 <p>Tag</p>
                 <div class="tagInput">
-                    <input id="inputTag<?= $post->id ?>" class="inputImg" type="file" name="img_tag">
-                    <label id="labelTag<?= $post->id ?>" for="inputTag<?= $post->id ?>" class="labelImgTag">
-                        <img src="<?= $post->img_tag ?>"/>
+                    <input id="inputTag<?= $post->id?>" class="inputImg" type="file" name="img_tag" onchange="trocaImagemTag('<?= $post->id?>')">
+                    <label id="labelTag<?= $post->id?>" for="inputTag<?= $post->id?>" class="labelImgTag">
+                        <img id="imagemAtualTag<?= $post->id?>"src="<?= $post->img_tag ?>"/>
                         <div class="conteudoTagInput">
                             <p>Selecionar nova tag</p>
                             <i class="bi bi-upload"></i>
                         </div>
                     </label>
-                    <img id="previewTag" src="" alt="Pré-visualização" style="display: none;" />
+                    <img id="previewTag<?= $post->id?>" src="" alt="Pré-visualização" style="display: none;" />
                 </div>
             </div>
         </div>
