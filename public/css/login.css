@@ -22,9 +22,10 @@ body {
     height: 70%;
     background-color: rgba(0, 0, 0, 0.75); 
     border-radius: 25px;
+    gap:0px;
 }
 
-.texto { /*Titulo do login*/
+.texto{ /*Titulo do login*/
     
     font-family: "Staatliches", sans-serif;
     font-weight: 200;
@@ -90,7 +91,7 @@ body {
     border-radius: 12px;
     background-color: white;
     opacity: 0.8;
-    font-size: 260%;
+    font-size: 200%;
     padding-left: 1.5%;
     border:none;
 }
@@ -111,7 +112,7 @@ body {
     padding-left: 1.5%;
     border:none;
 }
-#senha:focus{
+input:focus{
     outline: none;
 }
 
@@ -127,7 +128,7 @@ body {
     height: fit-content;
     width: 100%;
     background-color: white;
-    font-size:320%;
+    font-size:300%;
     font-family: "Urbanist", sans-serif;
     font-weight: 400;
 }
@@ -683,7 +684,7 @@ body {
 @media only screen and (min-width: 1281px) and (max-width:1439px)and (min-height: 600px) and (max-height:869px){
     .fundo{
         width: 40%;
-        height: 75%;
+        height: 80%;
         font-size: 100%;
     }
     .texto{
@@ -695,31 +696,33 @@ body {
     }
     .entrarBotao
     {
-        width: 30%;
+        width: 33%;
         max-height: 100%;
+        padding:2px;
+        border-radius: 16px;
     }
     .textoBotao{
         font-size: 90%;
     }
     .tituloEmail{
-        font-size: 300%;
+        font-size: 250%;
     }
     .tituloSenha{
-        font-size: 300%;
+        font-size: 250%;
     }
     .email{
-        height: 45%;
+        height: 55%;
     }
     .senha{
-        height: 45%;
+        height: 55%;
     }
 
     #email{
-        font-size: 180%;
+        font-size: 150%;
         padding-left: 2%;
     }
     #senha{
-        font-size: 180%;
+        font-size: 150%;
         padding-left: 2%;
     }
 
