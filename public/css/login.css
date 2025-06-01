@@ -49,7 +49,7 @@ body {
     font-size: 100%;
     font-style: normal;
     width: 90%;
-    height: 70%;
+    height: 55%;
     
 }
 
@@ -108,8 +108,8 @@ body {
 }
 #senha{ /*Input de senha*/
     width: 100%;
-    font-size: 260%;
     padding-left: 1.5%;
+    font-size: 200%;
     border:none;
 }
 input:focus{
@@ -120,7 +120,7 @@ input:focus{
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 100%;
+    width: 40%;
 }
 
 .entrarBotao{ /*Botão de entrar*/
@@ -131,6 +131,7 @@ input:focus{
     font-size:300%;
     font-family: "Urbanist", sans-serif;
     font-weight: 400;
+    margin-top: 100px;
 }
 
 .textoBotao{ /*Texto do botão de entrar*/
