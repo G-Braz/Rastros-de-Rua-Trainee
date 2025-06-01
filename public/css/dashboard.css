@@ -74,6 +74,11 @@ body * {
     transition: .5s;
     font-weight: 500;
 }
+
+.botao{
+    background-color: transparent;
+    border: none;
+}
 .caixaBotao:hover{
     /*scale: 1.05;*/
     background-color: rgba(13, 13, 13, 80%);

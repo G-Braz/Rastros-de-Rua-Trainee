@@ -23,10 +23,12 @@
                 <i class="bi bi-file-post-fill"></i>
                 <p class="titulo">Posts</p>
             </a>
-            <a href="dashboard.html"  href="dashboard.html" class="caixaBotao">
-                <i class="bi bi-door-open-fill"></i>
-                <p class="titulo">Logout</p>
-            </a>
+            <form action="/logout" method="POST" class="caixaBotao" >
+                <button class="botao" type="submit">
+                    <i class="bi bi-door-open-fill"></i>
+                    <p class="titulo" type="submit">Logout</p>
+                </button>
+            </form>
         </div>
     </div>
 </body>

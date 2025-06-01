@@ -12,6 +12,9 @@
         public function exibirDashboard(){
             return view('admin/dashboard');
         }
+        public function exibirLandingPage(){
+            return view('site/paginaInicial');
+        }
 
         public function efetuarLogin(){
             $email=$_POST['email'];
@@ -29,6 +32,13 @@
                 header('Location: /login');
             }
 
+        }
+        
+        public function logout(){
+            session_start();
+            session_unset();
+            session_destroy();
+            header('Location: /landingPage');
         }
 
     }
