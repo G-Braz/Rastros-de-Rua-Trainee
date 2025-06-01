@@ -41,8 +41,10 @@
 
         <div class="senha">
             <label class="tituloSenha">Senha</label>
+            <div class="caixaSenha">
             <input type="password" id="senha" name="senha" required>
             <i class="bi bi-eye-fill" id="olinho" onclick="mostrarSenha('senha','olinho')"></i>
+            </div>
         </div>
 
         <div class="botao">

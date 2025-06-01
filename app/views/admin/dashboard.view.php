@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard</title>
     <link rel="stylesheet" href="../../../public/css/dashboard.css">
-    <link rel="stylesheet" href="../../../public/css/listaPosts.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Staatliches&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
@@ -19,10 +18,12 @@
                 <i class="bi bi-people-fill"></i>
                 <p class="titulo">Usuários</p>
             </a>
-            <a href="dashboard.html"  class="caixaBotao">
-                <i class="bi bi-file-post-fill"></i>
-                <p class="titulo">Posts</p>
-            </a>
+            <form action="" method="POST" class="caixaBotao" >
+                <button class="botao" type="submit">
+                    <i class="bi bi-file-post-fill"></i>
+                    <p class="titulo">Posts</p>
+                </button>
+            </form>
             <form action="/logout" method="POST" class="caixaBotao" >
                 <button class="botao" type="submit">
                     <i class="bi bi-door-open-fill"></i>
