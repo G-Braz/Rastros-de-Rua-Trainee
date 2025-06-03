@@ -22,8 +22,6 @@ body{
     width: 12%;
     transform: scaleX(-1);
 }
-
-
 .descricao{ /*organiza o título e do botão de criar*/
     display: flex;
     justify-content: space-between;
@@ -56,7 +54,7 @@ body{
     border-radius: 10px;
     font-size: 170%;
     height:44%;
-    width: 16%;
+    width: 20%;
     cursor: pointer;
 }
 
@@ -73,7 +71,6 @@ body{
 
 
 table{ /*Tabela de usuários*/
-
     background: #1E3A5F;
     width: 90%;
     height: 82%;
