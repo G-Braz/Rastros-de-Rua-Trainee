@@ -7,13 +7,31 @@ use Exception;
 
 class PostsController
 {
-
     public function index()
     {
-        $posts = APP::get('database')->selectAll('publicacoes');
-        return view('admin/pagina-de-posts', compact('posts'));
+        $page = 1;
+        if(isset($_GET['paginacaoNumero']) && !empty($_GET['paginacaoNumero'])){
+                $page = intval($_GET['paginacaoNumero']);
+        }
+        if($page<=0){
+                return redirect('admin/pagina-de-posts');
+        }
+        $itens_page = 5;
+        $inicio = $itens_page * $page - $itens_page;
+        $num_linhas = App::get('database')->countAll('publicacoes');
+
+        if($inicio > $num_linhas){
+                return redirect('admin/pagina-de-posts');
+        }
+        $publicacoes = App::get('database')->selectAll('publicacoes', $inicio, $itens_page);
+        $total_pages = ceil($num_linhas /$itens_page);
+        return view('admin/pagina-de-posts', [
+                'publicacoes' => $publicacoes,
+                'page' => $page,
+                'total_pages' => $total_pages
+        ]);
     }
-    
+
     public function create()
     {
         //Imagem
