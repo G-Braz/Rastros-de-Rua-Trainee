@@ -71,15 +71,40 @@
     <!--PAGINAÇÃO-->
     <div class="paginacao"> 
         <a class="skip page-item<?= $page <= 1 ? "-disabled" : ""?>" href="?paginacaoNumero=<?= $page - 1 ?>">
-            <i class="bi bi-skip-backward"></i>
+            <i class="bi bi-chevron-left"></i>
         </a>
-        <?php for($page_number = 1; $page_number <= $total_pages; $page_number++): ?>
-            <a class="paginas page-link<?= $page_number == $page ?"-active" : "" ?>" href="?paginacaoNumero=<?= $page_number ?>">
-                <p> <?= $page_number ?> </p>
+        <?php
+            $range = 1; // Quantas páginas mostrar antes/depois da atual
+            $show_pages = [];
+
+            $show_pages[] = 1;
+            for ($i = $page - $range; $i <= $page + $range; $i++) {
+                if ($i > 1 && $i < $total_pages) {
+                    $show_pages[] = $i;
+                }
+            }
+            if ($total_pages > 1) {
+                $show_pages[] = $total_pages;
+            }
+
+            $show_pages = array_unique($show_pages);
+            sort($show_pages);
+
+            $prev = 0;
+            foreach ($show_pages as $page_number):
+                if ($prev && $page_number > $prev + 1):
+            ?>
+            <?php
+                endif;
+                $prev = $page_number;
+            ?>
+            <a class="paginas page-link<?= $page_number == $page ? "-active" : "" ?>" href="?paginacaoNumero=<?= $page_number ?>">
+                <p><?= $page_number ?></p>
             </a>
-        <?php endfor ?>   
+            <?php endforeach; 
+        ?>    
         <a class="skip page-item<?= $page >= $total_pages ? "-disabled" : ""?>" href="?paginacaoNumero=<?= $page + 1 ?>">
-            <i class="bi bi-skip-forward"></i>
+            <i class="bi bi-chevron-right"></i>
         </a>
     </div>
     <!--Modal Criar-->
