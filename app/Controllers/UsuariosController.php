@@ -7,7 +7,9 @@ use Exception;
 
 class UsuariosController
 {
-
+    // ------------------------------------------------------------------------
+    // Lista todos os usuários com paginação
+    // ------------------------------------------------------------------------
     public function index()
     {
         $page = 1;
@@ -19,20 +21,22 @@ class UsuariosController
         }
         $itens_page = 5;
         $inicio = $itens_page * $page - $itens_page;
-        $rows_count = App::get('database')->countAll('usuarios');
+        $num_linhas = App::get('database')->countAll('usuarios');
 
-        if($inicio > $rows_count){
+        if($inicio > $num_linhas){
                 return redirect('admin/Lista-de-Usuarios');
         }
         $usuarios = App::get('database')->selectAll('usuarios', $inicio, $itens_page);
-        $total_pages = ceil($rows_count/$itens_page);
+        $total_pages = ceil($num_linhas /$itens_page);
         return view('admin/Lista-de-Usuarios', [
                 'usuarios' => $usuarios,
                 'page' => $page,
                 'total_pages' => $total_pages
         ]);
     }
-
+     // ------------------------------------------------------------------------
+    // Cria um novo usuário
+    // ------------------------------------------------------------------------
     public function criar_usuario()
     {
         $parameters = [
@@ -44,6 +48,9 @@ class UsuariosController
 
         header('Location: /usuarios');
     }
+    // ------------------------------------------------------------------------
+    // Atualiza um usuário existente
+    // ------------------------------------------------------------------------
     public function editar_usuario(){
         $parameters = [
             'nome' => $_POST['nome'],
@@ -55,7 +62,9 @@ class UsuariosController
         App::get('database')->update('usuarios', $id, $parameters);
         header('Location: /usuarios');
     }
-
+     // ------------------------------------------------------------------------
+    // Exclui um usuário
+    // ------------------------------------------------------------------------
     public function excluir_usuario()
     {
         $id = $_POST['id'];

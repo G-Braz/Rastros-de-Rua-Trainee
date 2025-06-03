@@ -8,17 +8,16 @@ class QueryBuilder
 {
     protected $pdo;
 
-
     public function __construct($pdo)
     {
         $this->pdo = $pdo;
     }
 
-    public function selectAll($table, $inicio=null, $rows_count=null)
+    public function selectAll($table, $inicio=null, $num_linhas=null)
     {
         $sql = "select * from {$table}";
-        if($inicio>=0 && $rows_count > 0){
-            $sql .= " LIMIT {$inicio}, {$rows_count}";
+        if($inicio>=0 && $num_linhas > 0){
+            $sql .= " LIMIT {$inicio}, {$num_linhas}";
         }
         try {
             $stmt = $this->pdo->prepare($sql);
