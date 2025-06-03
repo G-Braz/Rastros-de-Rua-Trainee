@@ -203,6 +203,16 @@ button:hover{
     transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
 }
 
+/* Estiliza número selecionado na paginação */
+.paginas.page-link-active {
+    background: rgb(12, 28, 49, 0.8);
+    border: 1px solid rgb(245, 245, 245, 0.4);
+}
+
+.skip.page-item-disabled {
+    pointer-events: none;
+}
+
 /*Responsividade para Tablets*/
 /* Ipad mini / Ipad air / Ipad Pro / Surface Pro 7 / Surface Duo / Asus Zenbook Fold*/
 @media screen and (min-width: 431px) and (max-width: 1124px) and (min-height: 720px) {

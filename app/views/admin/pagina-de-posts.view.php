@@ -69,26 +69,18 @@
             </table>
         </div>
     <!--PAGINAÇÃO-->
-    <div class="paginacao">
-            <a href="" class="skip">
-                <i class="bi bi-skip-backward"></i>
-            </a href="">
-                <a href="" class="paginas">
-                    <p> 1 </p>
-                </a href="">
-                <a href="" class="paginas">
-                    <p> 2 </p>
-                </a href="">
-                <a href="" class="paginas">
-                    <p> 3 </p>
-                </a href="">
-                <a href="" class="paginas">
-                    <p> 4 </p>
-                </a href="">
-            <a href="" class="skip">
-                <i class="bi bi-skip-forward"></i>
-            </a href="">
-        </div>
+    <div class="paginacao"> 
+        <a class="skip page-item<?= $page <= 1 ? "-disabled" : ""?>" href="?paginacaoNumero=<?= $page - 1 ?>">
+            <i class="bi bi-skip-backward"></i>
+        </a>
+        <?php for($page_number = 1; $page_number <= $total_pages; $page_number++): ?>
+            <a class="paginas page-link<?= $page_number == $page ?"-active" : "" ?>" href="?paginacaoNumero=<?= $page_number ?>">
+                <p> <?= $page_number ?> </p>
+            </a>
+        <?php endfor ?>   
+        <a class="skip page-item<?= $page >= $total_pages ? "-disabled" : ""?>" href="?paginacaoNumero=<?= $page + 1 ?>">
+            <i class="bi bi-skip-forward"></i>
+        </a>
     </div>
     <!--Modal Criar-->
 <div onclick="fecharModal('fundo-modal-criar-post','id-modal-criar-post')" class="overlay-criar-post" id="fundo-modal-criar-post"></div>
@@ -172,7 +164,7 @@
     <!-- Modal Excluir -->
     <div onclick="fecharModal('fundo-modal-excluir-post<?= $post->id ?>','modal-excluir-post<?= $post->id ?>')" class="overlay-excluir-post" id="fundo-modal-excluir-post<?= $post->id ?>"></div>
     <form class="modal-excluir-post" id="modal-excluir-post<?= $post->id ?>" method="POST" action="/posts/delete" enctype="multipart/form-data">
-         <input type="hidden" name="id" id="input-id-excluir" value="<?= $post->id ?>">
+        <input type="hidden" name="id" id="input-id-excluir" value="<?= $post->id ?>">
         <div class="cabecalho-modal-excluir-post">
             <div class="icone-modal-excluir-post">
                 <i class="bi bi-trash-fill"></i>

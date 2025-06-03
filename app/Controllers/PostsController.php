@@ -23,10 +23,10 @@ class PostsController
         if($inicio > $num_linhas){
                 return redirect('admin/pagina-de-posts');
         }
-        $publicacoes = App::get('database')->selectAll('publicacoes', $inicio, $itens_page);
+        $posts = App::get('database')->selectAll('publicacoes', $inicio, $itens_page);
         $total_pages = ceil($num_linhas /$itens_page);
         return view('admin/pagina-de-posts', [
-                'publicacoes' => $publicacoes,
+                'posts' => $posts,
                 'page' => $page,
                 'total_pages' => $total_pages
         ]);
@@ -39,7 +39,6 @@ class PostsController
         $nomeImagem= sha1(uniqid($_FILES['img_arte']['name'], true)) . "." . pathinfo($_FILES['img_arte']['name'],PATHINFO_EXTENSION) ;
 
         $caminhoImg= "public/assets/imagensPosts/" . $nomeImagem; 
-
         move_uploaded_file($tempArte, $caminhoImg);
 
         //TAG
@@ -58,7 +57,7 @@ class PostsController
             'latitude'   => $_POST['latitude'],
             'longitude'  => $_POST['longitude'],
             'local'      => 'juiz de fora',
-            'usuarios_id'   => 6,
+            'usuarios_id'   => 1,
             'img_arte'    => $caminhoImg,
             'img_tag'     => $caminhoTag,
         ];
