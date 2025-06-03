@@ -156,6 +156,14 @@ td{ /*Corpo da tabela*/
 .paginacao .bi:hover{ /*Muda os icones da paginação para branco ao passar o mouse*/
     color: #F5F5F5;
 }
+.paginacao a:hover {
+    /*Deixa os icones da paginação transparentes ao passar o mouse*/
+    background: rgb(12, 28, 49, 0.8);
+    border: 1px solid rgb(245, 245, 245, 0.4);
+    color: #F5F5F5;
+    transform: scale(1.05);
+    transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
 
 .bi-eye-fill, .bi-pencil-square, .bi-trash-fill{ /*Ícones de operações*/
     color: #0C1C31;
@@ -164,14 +172,6 @@ td{ /*Corpo da tabela*/
 
 .Usuario:hover{ /*Efeito de hover ao passar o mouse pelos usuários*/
     background-color: #0C1C31; 
-}
-
-.paginacao a:hover {/*Deixa os icones da paginação transparentes ao passar o mouse*/
-    background: rgb(12, 28, 49, 0.8);
-    border: 1px solid rgb(245, 245, 245, 0.4);
-    color: #F5F5F5;
-    transform: scale(1.05);
-    transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
 }
 
 /* Modal Visualizar, Criar e Editar */
