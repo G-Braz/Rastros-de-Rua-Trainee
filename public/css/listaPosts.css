@@ -188,7 +188,7 @@ ul{
     gap: 50px 60px;
     height: 100%;
     width: 100%;
-    align-items: center;
+    align-content: center;
     justify-items: center;
 }
 
@@ -215,21 +215,21 @@ ul{
     transition: all .5s;
     box-shadow: 0 4px 15px #0D0D0D;
     position: relative;
-    
+    height: 57vh;
 }
 
 .post .fotoCapa{
     padding: 10px 15px;
     width: 100%;
-    height: 100%;
+    height: 32vh;
     object-fit: cover;
-    
+    border-radius: 16px;
 }
 
 .post .fotoTag{
     position: absolute;
     left:58%;
-    top: 36.5%;
+    top: 37%;
     border-radius: 16px;
     width: 39%;
     height: 19%;
@@ -346,6 +346,9 @@ ul{
         width: 100%;
         padding:30px 15px;
     }
+    .post{
+        height: fit-content;
+    }
     .post .fotoCapa{
         padding: 10px 13px;
         width: 100%;
@@ -415,7 +418,7 @@ ul{
     }
     .post{
         width: 100%;
-        height: 100%;
+        height: fit-content;
     }
     .post .fotoCapa{
         padding: 10px 13px;
@@ -485,6 +488,9 @@ ul{
         width: 100%;
         padding: 30px 22px;
     }
+    .post{
+        height: fit-content;
+    }
     .post .fotoCapa{
         padding: 10px 13px;
         width: 100%;
@@ -552,6 +558,9 @@ ul{
         flex-direction: column;
         width: 100%;
         padding: 30px 25px;
+    }
+    .post{
+        height: fit-content;
     }
     .post .fotoCapa{
         padding: 10px 13px;
@@ -623,6 +632,9 @@ ul{
         flex-direction: column;
         width: 85%;
     }
+    .post{
+        height: fit-content;
+    }
     .post .fotoCapa{
         padding: 10px 13px;
         width: 100%;
@@ -679,7 +691,7 @@ ul{
     }
     .post{
         width: 100%;
-        height: 100%;
+        height: fit-content;
     }
     .post .fotoCapa{
         padding: 8px 13px;

@@ -7,9 +7,9 @@ use Exception;
 
 class ListaPostsController
 {
-        public function index()
+        public function exibirLista()
         {
-                $page = 1;
+                /*$page = 1;
                 if(isset($_GET['paginacaoNumero']) && !empty($_GET['paginacaoNumero'])){
                         $page = intval($_GET['paginacaoNumero']);
                 }
@@ -24,11 +24,12 @@ class ListaPostsController
                         return redirect('site/listaPosts');
                 }
                 $posts = App::get('database')->selectAll('publicacoes', $inicio, $itens_page);
-                $total_pages = ceil($num_posts / $itens_page);
-                return view('site/listaPosts', [
+                $total_pages = ceil($num_posts / $itens_page);*/
+                $posts = App::get('database')->selectAll('publicacoes');
+                return view('site/listaPosts'/*, [
                         'posts' => $posts,
                         'page' => $page,
                         'total_pages' => $total_pages
-                ]);
+                ]*/, compact('posts'));
         }
 }

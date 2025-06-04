@@ -36,59 +36,18 @@
             </div>
         </div>
         <ul class="listaDePosts">
-            
+            <?php foreach($posts as $post): ?>
                 <li>
                     <a href="listaPosts.html" class="post">
-                        <img src="../../../public/assets/FotoPost.jpg" class="fotoCapa">
-                        <img src="../../../public/assets/Tag-rastrosderua 2.png" class="fotoTag">
+                        <img src="/<?= $post->img_arte?>" class="fotoCapa">
+                        <img src="/<?= $post->img_tag?>" class="fotoTag">
                         <div class="textoPost">
-                            <h1>Arte 1</h1>
-                            <p>Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups.</p>
+                            <h1><?= $post-> titulo ?></h1>
+                            <p><?= $post-> descricao ?></p>
                         </div>
                     </a>
                 </li>
-                <li>
-                    <a href="listaPosts.html" class="post">
-                        <img src="../../../public/assets/FotoPost.jpg" class="fotoCapa">
-                        <img src="../../../public/assets/Tag-rastrosderua 2.png" class="fotoTag">
-                        <div class="textoPost">
-                            <h1>Arte 1</h1>
-                            <p>Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups.</p>
-                        </div>
-                    </a>
-                </li>
-                <li>
-                    <a href="listaPosts.html" class="post">
-                        <img src="../../../public/assets/FotoPost.jpg" class="fotoCapa">
-                        <img src="../../../public/assets/Tag-rastrosderua 2.png" class="fotoTag">
-                        <div class="textoPost">
-                            <h1>Arte 1</h1>
-                            <p>Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups.</p>
-                        </div>
-                    </a>
-                </li>
-            
-            
-                <li>
-                    <a href="listaPosts.html" class="post">
-                        <img src="../../../public/assets/FotoPost.jpg" class="fotoCapa">
-                        <img src="../../../public/assets/Tag-rastrosderua 2.png" class="fotoTag">
-                        <div class="textoPost">
-                            <h1>Arte 1</h1>
-                            <p>Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups.</p>
-                        </div>
-                    </a>
-                </li>
-                <li>
-                    <a href="listaPosts.html" class="post">
-                        <img src="../../../public/assets/FotoPost.jpg" class="fotoCapa">
-                        <img src="../../../public/assets/Tag-rastrosderua 2.png" class="fotoTag">
-                        <div class="textoPost">
-                            <h1>Arte 1</h1>
-                            <p>Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups.</p>
-                        </div>
-                    </a>
-                </li>
+            <?php endforeach ?>
                 <li>
                     <a href="listaPosts.html" class="post">
                         <img src="../../../public/assets/FotoPost.jpg" class="fotoCapa">
