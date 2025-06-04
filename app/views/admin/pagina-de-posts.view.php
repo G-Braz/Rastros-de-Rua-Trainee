@@ -243,6 +243,10 @@
 <input type="hidden" name="latitude" id="latitudeEditar<?= $post->id ?>" value="0" required>
 <input type="hidden" name="longitude" id="longitudeEditar<?= $post->id ?>" value="0" required>
 
+<input type="hidden" name="img_arte_atual" value="<?= $post->img_arte ?>">
+<input type="hidden" name="img_tag_atual" value="<?= $post->img_tag ?>">
+
+
     <input type="hidden" name="id" value="<?= $post->id ?>">
     <div class="tituloModalEditar">
         <p>Editar Publicação</p>
