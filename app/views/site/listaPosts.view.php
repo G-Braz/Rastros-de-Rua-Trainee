@@ -38,7 +38,7 @@
         <ul class="listaDePosts">
             <?php foreach($posts as $post): ?>
                 <li>
-                    <a href="listaPosts.html" class="post">
+                    <a href="listaPosts" class="post">
                         <img src="/<?= $post->img_arte?>" class="fotoCapa">
                         <img src="/<?= $post->img_tag?>" class="fotoTag">
                         <div class="textoPost">
@@ -48,41 +48,46 @@
                     </a>
                 </li>
             <?php endforeach ?>
-                <li>
-                    <a href="listaPosts.html" class="post">
-                        <img src="../../../public/assets/FotoPost.jpg" class="fotoCapa">
-                        <img src="../../../public/assets/Tag-rastrosderua 2.png" class="fotoTag">
-                        <div class="textoPost">
-                            <h1>Arte 1</h1>
-                            <p>Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups.</p>
-                        </div>
-                    </a>
-                </li>
-            
-            
         </ul>
-        <div class="paginacao">
-            <a href="listaPosts.html" class="skip">
-                <i class="bi bi-skip-backward"></i>
-            </a href="listaPosts.html">
-                <a href="listaPosts.html" class="paginas">
-                    <p> 1 </p>
-                </a href="listaPosts.html">
-                <a href="listaPosts.html" class="paginas">
-                    <p> 2 </p>
-                </a href="listaPosts.html">
-                <a href="listaPosts.html" class="paginas">
-                    <p> 3 </p>
-                </a href="listaPosts.html">
-                <a href="listaPosts.html" class="paginas">
-                    <p> 4 </p>
-                </a href="listaPosts.html">
-            <a href="listaPosts.html" class="skip">
-                <i class="bi bi-skip-forward"></i>
-            </a href="listaPosts.html">
-        </div>
-    </div>
+    <!-------Paginação------->
+    <div class="paginacao"> 
+        <a class="skip page-item<?= $page <= 1 ? "-disabled" : ""?>" href="?paginacaoNumero=<?= $page - 1 ?>">
+            <i class="bi bi-chevron-left"></i>
+        </a>
+        <?php
+            $range = 1;
+            $show_pages = [];
 
+            $show_pages[] = 1;
+            for ($i = $page - $range; $i <= $page + $range; $i++) {
+                if ($i > 1 && $i < $total_pages) {
+                    $show_pages[] = $i;
+                }
+            }
+            if ($total_pages > 1) {
+                $show_pages[] = $total_pages;
+            }
+
+            $show_pages = array_unique($show_pages);
+            sort($show_pages);
+
+            $prev = 0;
+            foreach ($show_pages as $page_number):
+                if ($prev && $page_number > $prev + 1):
+            ?>
+            <?php
+                endif;
+                $prev = $page_number;
+            ?>
+            <a class="paginas page-link<?= $page_number == $page ? "-active" : "" ?>" href="?paginacaoNumero=<?= $page_number ?>">
+                <p><?= $page_number ?></p>
+            </a>
+            <?php endforeach; 
+        ?>    
+        <a class="skip page-item<?= $page >= $total_pages ? "-disabled" : ""?>" href="?paginacaoNumero=<?= $page + 1 ?>">
+            <i class="bi bi-chevron-right"></i>
+        </a>
+    </div>
     <script src="../../../public/js/listaPosts.js"></script>
 </body>
 </html>

@@ -308,6 +308,16 @@ ul{
     border:1px solid rgb(245, 245, 245, 0.4);
 }
 
+/* Estiliza número selecionado na paginação */
+.paginas.page-link-active {
+    background: rgb(12, 28, 49, 0.8);
+    border: 1px solid rgb(245, 245, 245, 0.4);
+}
+
+.skip.page-item-disabled {
+    pointer-events: none;
+}
+
 @media (max-width:345px) {
     .conteudo{
         gap:5px;
