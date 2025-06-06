@@ -57,15 +57,43 @@ class Router
      * @param string $uri
      * @param string $requestType
      */
-    public function direct($uri, $requestType)
-    {
-        if (array_key_exists($uri, $this->routes[$requestType])) {
-            return $this->callAction(
-                ...explode('@', $this->routes[$requestType][$uri])
-            );
-        }
-        throw new Exception('No route defined for this URI.');
+public function direct($uri, $requestType)
+{
+    // 1. Verifica correspondência exata
+    if (array_key_exists($uri, $this->routes[$requestType])) {
+        return $this->callAction(
+            ...explode('@', $this->routes[$requestType][$uri])
+        );
     }
+
+    // 2. Verifica rotas dinâmicas
+foreach ($this->routes[$requestType] as $route => $controller) {
+    // Substitui {param} por regex para capturar valores
+    $pattern = preg_replace('/\{[^\}]+\}/', '([^\/]+)', $route);
+    if (preg_match("#^{$pattern}$#", $uri, $matches)) {
+        array_shift($matches); // Remove o match completo
+        $parts = explode('@', $controller);
+        return $this->callActionWithParams($parts[0], $parts[1], $matches);
+    }
+}
+
+    throw new Exception('No route defined for this URI.');
+}
+
+// Adicione este novo método:
+protected function callActionWithParams($controller, $action, $params = [])
+{
+    $controller = "App\\Controllers\\{$controller}";
+    $controller = new $controller;
+
+    if (!method_exists($controller, $action)) {
+        throw new Exception(
+            "{$controller} does not respond to the {$action} action."
+        );
+    }
+
+    return call_user_func_array([$controller, $action], $params);
+}
 
     /**
      * Load and call the relevant controller action.

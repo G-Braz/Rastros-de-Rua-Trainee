@@ -112,6 +112,7 @@
 <form class="modal-criar-post" id="id-modal-criar-post" method="POST" action="/posts/create" enctype="multipart/form-data">
     <input type="hidden" name="latitude" id="latitude" value="0" required>
     <input type="hidden" name="longitude" id="longitude" value="0" required>
+    <input type="hidden" name="local" id="nomeDoLocalInput"> 
     <div class="titulo-modal-criar-post">
         <p>Criar Publicação</p>
     </div>
@@ -250,6 +251,7 @@
                     <p class="TituloLocalVisualizar">Local</p>
                     <button onclick="abrirModal('idMapaPost','idConteudoMapaP'); setTimeout(() => atualizaMapaPost(<?= (double)$post->latitude ?>, <?= (double)$post->longitude ?>), 100)" class="conteudoLocalVisualizar">
                         <i class=" icone-geo-mapa bi bi-geo-alt-fill"></i>
+                        <?=$post->local?>
                     </button>
                 </div>
                 <div class="dataVisualizar">

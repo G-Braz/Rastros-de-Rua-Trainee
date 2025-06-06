@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Publicação Individual</title>
+    <title><?=$post['titulo']?></title>
     <link rel="stylesheet" href="../../../public/css/mapa.css" />
     <link rel="stylesheet" href="/public/css/postIndividual.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -19,34 +19,34 @@
         <div class="publicacao">
             <div class="conteudo-principal">
                 <div class="imagem-post">
-                    <img src="/public/assets/postIndividual-imgPrincipal.jpg" alt="Imagem da Publicação">
+                    <img src="/<?=$post['img_arte']?>" alt="Imagem da Publicação">
                 </div>
                 <div class="informacoes">
-                    <h1 class="titulo-post">Lorem Ipsum</h1>
+                    <h1 class="titulo-post"><?=$post['titulo']?></h1>
                     <div class="dados">
-                        <p class="autor"><strong>Autor:</strong> Lorem Ipsum</p>
-                        <p class="data"><strong>Data:</strong> 01/04/2025</p>
-                        <p class="local"><strong>Local:</strong> Lorem Ipsum</p>
+                        <p class="autor"><strong>Autor:</strong> <?=$post['autor']?></p>
+                        <p class="data"><strong>Data:</strong> <?=(new DateTime($post['data']))->format('d/m/Y')?></p>
+                        <p class="local"><strong>Local:</strong> <?=$post['local']?></p>
                         <div class="conteudo-btn-mapa-post">
-                            <button onclick="abrirModal('idMapaPost','idConteudoMapaP')" class="btn-local-mapa">
+                            <button onclick="abrirModal('idMapaPost','idConteudoMapaP'); setTimeout(() => atualizaMapaPost(<?= (double)$post['latitude'] ?>, <?= (double)$post['longitude'] ?>), 100)" class="btn-local-mapa">
                                 <i class="bi bi-geo-alt-fill"></i>
                                 Visualizar no mapa
                             </button>
                         </div>
                     </div>
                     <div class="tag">
-                        <img src="/public/assets/postIndividual-tag-assinatura.jpg" alt="Imagem da Tag">
+                        <img src="/<?= $post['img_tag']?>" alt="Imagem da Tag">
                     </div>
                 </div>
             </div>
             <div class="conteudo-complementar">
                 <div class="materiais">
                     <h2 class="titulo-complementar">Materiais Utilizados</h2>
-                    <p class="texto-complementar">Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups.</p>
+                    <p class="texto-complementar"><?=$post['materiais']?></p>
                 </div>
                 <div class="descricao">
-                    <h2 class="titulo-complementar">Descrição e Proposta Artística</h2>
-                    <p class="texto-complementar">Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups.Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups.Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups.</p>
+                    <h2 class="titulo-complementar">Descrição</h2>
+                    <p class="texto-complementar"><?=$post['descricao']?></p>
                 </div>
             </div>
         </div>

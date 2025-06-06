@@ -31,4 +31,10 @@ class ListaPostsController
                         'total_pages' => $total_pages
                 ],);
         }
+        public function exibirPost($id)
+        {
+            $post = App::get('database')->findById('publicacoes', $id);
+        
+            return view('site/postIndividual', ['post' => $post]);
+        }
 }

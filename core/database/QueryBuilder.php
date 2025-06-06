@@ -93,4 +93,10 @@ class QueryBuilder
             die($e->getMessage());
         }
     }
+    public function findById($table, $id)
+    {
+        $statement = $this->pdo->prepare("SELECT * FROM {$table} WHERE id = ?");
+        $statement->execute([$id]);
+        return $statement->fetch(\PDO::FETCH_ASSOC);
+    }
 }

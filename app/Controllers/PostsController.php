@@ -56,7 +56,7 @@ class PostsController
             'materiais'  => $_POST['materiais'],
             'latitude'   => $_POST['latitude'],
             'longitude'  => $_POST['longitude'],
-            'local'      => 'juiz de fora',
+            'local'      => $_POST['local'],
             'usuarios_id'   => 1,
             'img_arte'    => $caminhoImg,
             'img_tag'     => $caminhoTag,
