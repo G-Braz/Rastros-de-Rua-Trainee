@@ -10,3 +10,4 @@ $router->post('posts/create','PostsController@create');
 $router->post('posts/edit','PostsController@edit');
 $router->post('posts/delete','PostsController@delete');
 $router->get('listaPosts', 'ListaPostsController@exibirLista');
+$router->get('listaPosts/{id}', 'ListaPostsController@exibirPost');
