@@ -251,7 +251,7 @@
                     <p class="TituloLocalVisualizar">Local</p>
                     <button onclick="abrirModal('idMapaPost','idConteudoMapaP'); setTimeout(() => atualizaMapaPost(<?= (double)$post->latitude ?>, <?= (double)$post->longitude ?>), 100)" class="conteudoLocalVisualizar">
                         <i class=" icone-geo-mapa bi bi-geo-alt-fill"></i>
-                        <?=$post->local?>
+                        <?=$post->local ?>
                     </button>
                 </div>
                 <div class="dataVisualizar">
