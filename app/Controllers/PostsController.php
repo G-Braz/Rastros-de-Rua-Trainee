@@ -50,16 +50,17 @@ class PostsController
         move_uploaded_file($tempTag, $caminhoTag);    
 
         $parameters = [
-            'titulo'     => $_POST['titulo'],
-            'autor'      => $_POST['autor'],
-            'descricao'  => $_POST['descricao'],
-            'materiais'  => $_POST['materiais'],
-            'latitude'   => $_POST['latitude'],
-            'longitude'  => $_POST['longitude'],
-            'local'      => $_POST['local'],
+            'titulo'        => $_POST['titulo'],
+            'autor'         => $_POST['autor'],
+            'descricao'     => $_POST['descricao'],
+            'materiais'     => $_POST['materiais'],
+            'latitude'      => $_POST['latitude'],
+            'longitude'     => $_POST['longitude'],
+            'local'         => $_POST['local'],
             'usuarios_id'   => 1,
-            'img_arte'    => $caminhoImg,
-            'img_tag'     => $caminhoTag,
+            'img_arte'      => $caminhoImg,
+            'img_tag'       => $caminhoTag,
+            'tipo'          => $_POST['tipo'],
         ];
 
         App::get('database')->insert('publicacoes', $parameters);
@@ -103,17 +104,18 @@ class PostsController
 
 
         $parameters = [
-            'titulo'     => $_POST['titulo'],
-            'autor'      => $_POST['autor'],
-            'descricao'  => $_POST['descricao'],
-            'materiais'  => $_POST['materiais'],
-            'latitude'   => $_POST['latitude'],
-            'longitude'  => $_POST['longitude'],
-            'local'      => 'juiz de fora',
+            'titulo'        => $_POST['titulo'],
+            'autor'         => $_POST['autor'],
+            'descricao'     => $_POST['descricao'],
+            'materiais'     => $_POST['materiais'],
+            'latitude'      => $_POST['latitude'],
+            'longitude'     => $_POST['longitude'],
+            'local'         => $_POST['local'],
             'usuarios_id'   => 1,
             
-            'img_arte'    => $caminhoImg,
-            'img_tag'     => $caminhoTag,
+            'img_arte'      => $caminhoImg,
+            'img_tag'       => $caminhoTag,
+            'tipo'          => $_POST['tipo'],
             ];
         $id= $_POST['id'];
 

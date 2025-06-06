@@ -176,7 +176,7 @@
         </div>
         <div class="campo-data-criar-post">
             <p>Estilo</p>
-            <select class="data-criar-post">
+            <select class="data-criar-post" name="tipo" required>
                 <option value="#" selected>Selecione um estilo</option>
                 <option value="1">Estilo 1</option>
                 <option value="2">Estilo 2</option>
@@ -263,14 +263,7 @@
                 </div>
                 <div class="dataVisualizar">
                     <p class="visualizarData">Estilo</p>
-                        <select class="data-criar-post">
-                            <option value="#" selected>Selecione um estilo</option>
-                            <option value="1">Estilo 1</option>
-                            <option value="2">Estilo 2</option>
-                            <option value="3">Estilo 3</option>
-                            <option value="4">Estilo 4</option>
-                            <option value="5">Estilo 5</option>
-                        </select>
+                    <p class="data-criar-post"><?=$post->tipo?></p>
                 </div>
             </div>
             <div class="botaoVisualizar">
@@ -281,12 +274,15 @@
     <!--Modal editar-->
 <div onclick="fecharModal('idModalEditar<?= $post->id ?>','fundoEditar<?= $post->id ?>')" class="modalEditar" id="fundoEditar<?= $post->id ?>"></div>
 <form class="editar" id="idModalEditar<?= $post->id ?>" method="POST" action="/posts/edit" enctype="multipart/form-data">
-<input type="hidden" name="latitude" id="latitudeEditar<?= $post->id ?>" value="0" required>
-<input type="hidden" name="longitude" id="longitudeEditar<?= $post->id ?>" value="0" required>
-
-<input type="hidden" name="img_arte_atual" value="<?= $post->img_arte ?>">
-<input type="hidden" name="img_tag_atual" value="<?= $post->img_tag ?>">
-
+    <input type="hidden" name="latitude" id="latitudeEditar<?= $post->id ?>" value="0" required>
+    <input type="hidden" name="longitude" id="longitudeEditar<?= $post->id ?>" value="0" required>
+        
+    <input type="hidden" name="img_arte_atual" value="<?= $post->img_arte ?>">
+    <input type="hidden" name="img_tag_atual" value="<?= $post->img_tag ?>">
+        
+    <input type="hidden" name="local" id="nomeDoLocalInputEditar<?= $post->id ?>" value="<?= $post->local ?>">
+        
+    <input type="hidden" name="tipo" value="<?= $post->tipo ?>">
 
     <input type="hidden" name="id" value="<?= $post->id ?>">
     <div class="tituloModalEditar">
@@ -354,8 +350,8 @@
         </div>
         <div class="dataEditar">
             <p>Estilo</p>
-            <select class="data-criar-post">
-                <option value="#" selected>Selecione um estilo</option>
+            <select class="data-criar-post" name="tipo" required>
+                <option value="#" selected><?=$post->tipo?></option>
                 <option value="1">Estilo 1</option>
                 <option value="2">Estilo 2</option>
                 <option value="3">Estilo 3</option>

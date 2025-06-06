@@ -97,33 +97,53 @@ function inicializarMapaPost() {
 
 
 // -----Código para o mapa do Modal de Edição/Criação-----
-function atualizaCamposFormularioComLocal(lat, lng, nomeRua, erro, dados) {
+function atualizaCamposFormularioComLocal(lat, lng, nomeDaRuaOuDisplayName, erro, dadosCompletosNominatim) {
     const idSufixo = postIdAberto ? 'Editar' + postIdAberto : '';
     const inputLat = document.getElementById('latitude' + idSufixo);
     const inputLng = document.getElementById('longitude' + idSufixo);
     
-    const nomeInput = document.getElementById('nomeDoLocalInput');
+    // ** LÓGICA ATUALIZADA PARA SELECIONAR O INPUT DE LOCAL CORRETO **
+    let nomeLocalInputElement;
+    if (postIdAberto) { // Estamos no modo de edição
+        nomeLocalInputElement = document.getElementById('nomeDoLocalInputEditar' + postIdAberto);
+    } else { // Estamos no modo de criação
+        nomeLocalInputElement = document.getElementById('nomeDoLocalInput');
+    }
+    // ***************************************************************
 
     if (inputLat) inputLat.value = lat !== null ? lat.toFixed(6) : '';
     if (inputLng) inputLng.value = lng !== null ? lng.toFixed(6) : '';
 
-    const valorInput = dados && dados.address && dados.address.road ? dados.address.road : nomeRua;
+    const valorParaInputLocal = dadosCompletosNominatim && dadosCompletosNominatim.address && dadosCompletosNominatim.address.road 
+                                ? dadosCompletosNominatim.address.road 
+                                : nomeDaRuaOuDisplayName;
 
-
-    if (nomeInput) {
+    if (nomeLocalInputElement) {
         if (erro) {
-            nomeInput.value = ''; 
+            nomeLocalInputElement.value = ''; 
             console.error("Erro ao obter nome do local:", erro);
-        } else if (valorInput) { 
-            nomeInput.value = valorInput;
-            console.log("Nome do local (rua ou display_name) atualizado no input:", valorInput);
+        } else if (valorParaInputLocal) { 
+            nomeLocalInputElement.value = valorParaInputLocal;
+            console.log("Nome do local (rua ou display_name) atualizado no input:", valorParaInputLocal);
         } else {
-            nomeInput.value = ''; 
+            nomeLocalInputElement.value = ''; 
+        }
+    }
+    
+    // ATUALIZA O TEXTO DO BOTÃO NO MODAL DE EDIÇÃO
+    if (postIdAberto) {
+        const botaoLocal = document.querySelector(`#idModalEditar${postIdAberto} .inputLocalEditar`);
+        if (botaoLocal) {
+            const icone = botaoLocal.querySelector('i.bi-geo-alt-fill');
+            const novoTexto = erro ? "Local não encontrado" : (valorParaInputLocal || "Selecionar localização");
+            botaoLocal.innerHTML = ''; // Limpa o botão
+            if(icone) botaoLocal.appendChild(icone); // Adiciona o ícone de volta
+            botaoLocal.appendChild(document.createTextNode(' ' + novoTexto)); // Adiciona o novo texto
         }
     }
 
     if (marcadorModal) {
-        const popupContent = erro ? "Não foi possível obter o nome do local." : nomeRua || "Local selecionado";
+        const popupContent = erro ? "Não foi possível obter o nome do local." : nomeDaRuaOuDisplayName || "Local selecionado";
         if (marcadorModal.getPopup()) {
             marcadorModal.setPopupContent(popupContent).openPopup();
         } else {
@@ -131,7 +151,6 @@ function atualizaCamposFormularioComLocal(lat, lng, nomeRua, erro, dados) {
         }
     }
 }
-
 
 function atualizaMarcadorPorClique(evento) {
     let lat = evento.latlng.lat;
