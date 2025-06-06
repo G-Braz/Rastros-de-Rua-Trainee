@@ -142,7 +142,7 @@
     align-items: center;
     justify-content: center;
     gap: 14px;
-    padding-top: 5px;
+    padding-top: 10px;
     padding-bottom: 20px;
     width: 100%;
 }
@@ -184,10 +184,11 @@ textarea::placeholder {
 }
 .data-criar-post{
     text-align: center;
-    font-size: 14px;
     width: 100%;
     margin: 0;
+    padding: 10px 10px;
 }
+
 .btn-mapa-modal-criar {
     display: flex;
     justify-content: center;
@@ -202,15 +203,22 @@ textarea::placeholder {
     white-space: nowrap;
     background-color: #1E3A5F;
     text-decoration: none;
+    box-shadow: none;
 }
 .icone-geo-mapa{
     margin-right: 3px;
 }
 
-.btn-mapa-modal-criar:hover {
+.btn-mapa-modal-criar:hover{
     transform: scale(1.03);
     transition: all 0.2s;
     background-color: #0C1C31;
+}
+.data-criar-post:hover {
+    background-color: #0C1C31;
+}
+.data-criar-post .option:hover{
+    background-color: #B22222;
 }
 .campo-titulo-criar-post,
 .campo-autor-criar-post{
@@ -231,6 +239,8 @@ textarea::placeholder {
     width: 100%;
     scrollbar-width:thin;
 }
+
+
 /* dispositivos moveis */
 @media only screen and (max-width: 445px) {
     .modal-criar-post{

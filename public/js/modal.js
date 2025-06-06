@@ -46,6 +46,20 @@ function fecharModal(idFundo, idModal){ // Fecha o modal
         document.getElementById(idModal).style.display = 'none';
     }, 200);
 }
+function salvarModalMapa(idFundo, idModal){ // Fecha o modal
+  document.getElementById(idFundo).classList.remove('opacidade');
+  setTimeout(() => {
+      document.getElementById(idFundo).style.display = 'none';
+      document.getElementById(idModal).style.display = 'none';
+  }, 200);
+
+    // Altera o texto do botão de seleção de localização
+    var btnLocalizacao = document.querySelector('.btn-mapa-modal-criar');
+    if (btnLocalizacao) {
+        // Substitui o ícone e o texto
+        btnLocalizacao.innerHTML = '<i class="icone-geo-mapa bi bi-check-circle-fill"></i> Localização selecionada';
+    }
+}
 function autoResize(el) { // função para ajustar o tamanho
   el.style.height = 'auto';
   el.style.height = (el.scrollHeight) + 'px';

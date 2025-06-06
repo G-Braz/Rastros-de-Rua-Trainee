@@ -107,7 +107,7 @@
             <i class="bi bi-chevron-right"></i>
         </a>
     </div>
-    <!--Modal Criar-->
+<!--Modal Criar-->
 <div onclick="fecharModal('fundo-modal-criar-post','id-modal-criar-post')" class="overlay-criar-post" id="fundo-modal-criar-post"></div>
 <form class="modal-criar-post" id="id-modal-criar-post" method="POST" action="/posts/create" enctype="multipart/form-data">
     <input type="hidden" name="latitude" id="latitude" value="0" required>
@@ -174,8 +174,15 @@
             </button>
         </div>
         <div class="campo-data-criar-post">
-            <p>Data</p>
-            <input class="data-criar-post" type="date" readonly name="data">
+            <p>Estilo</p>
+            <select class="data-criar-post">
+                <option value="#" selected>Selecione um estilo</option>
+                <option value="1">Estilo 1</option>
+                <option value="2">Estilo 2</option>
+                <option value="3">Estilo 3</option>
+                <option value="4">Estilo 4</option>
+                <option value="5">Estilo 5</option>
+            </select>
         </div>
     </div>
 
@@ -253,8 +260,15 @@
                     </button>
                 </div>
                 <div class="dataVisualizar">
-                    <p class="visualizarData">Data de Criação</p>
-                    <p class="conteudoDataVisualizar"><?=(new DateTime($post->data))->format('d/m/Y')?></p>
+                    <p class="visualizarData">Estilo</p>
+                        <select class="data-criar-post">
+                            <option value="#" selected>Selecione um estilo</option>
+                            <option value="1">Estilo 1</option>
+                            <option value="2">Estilo 2</option>
+                            <option value="3">Estilo 3</option>
+                            <option value="4">Estilo 4</option>
+                            <option value="5">Estilo 5</option>
+                        </select>
                 </div>
             </div>
             <div class="botaoVisualizar">
@@ -337,8 +351,15 @@
             </button>
         </div>
         <div class="dataEditar">
-            <p>Data de Criação</p>
-            <p class="conteudoDataEditar" name="data"><?=(new DateTime($post->data))->format('d/m/Y') ?></p>
+            <p>Estilo</p>
+            <select class="data-criar-post">
+                <option value="#" selected>Selecione um estilo</option>
+                <option value="1">Estilo 1</option>
+                <option value="2">Estilo 2</option>
+                <option value="3">Estilo 3</option>
+                <option value="4">Estilo 4</option>
+                <option value="5">Estilo 5</option>
+            </select>
         </div>
     </div>
 
@@ -361,7 +382,7 @@
                         <li><strong>Salve ou confirme:</strong> continue com o formulário normalmente.</li>
                     </ol>
                     <p class="dica"> Use o zoom do mapa para mais precisão.</p>
-                    <button onclick="fecharModal('idModalMapa','idConteudoMapaM')" class="btn-salvar-mapa">Salvar</button>
+                    <button onclick="salvarModalMapa('idModalMapa','idConteudoMapaM')" class="btn-salvar-mapa">Salvar</button>
                 </div>
                 <div id="map"></div>
             </div>

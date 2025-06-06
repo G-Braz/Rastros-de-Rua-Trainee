@@ -66,6 +66,11 @@
     padding-top: 5px;
     padding-bottom: 20px;
 }
+.inputLocalEditar:hover{
+    transform: scale(1.03);
+    transition: all 0.2s;
+    background-color: #0C1C31;
+}
 .arteInput,
 .tagInput {
     display: flex;
