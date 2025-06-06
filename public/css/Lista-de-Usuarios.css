@@ -95,7 +95,7 @@ td{ /*Corpo da tabela*/
 }
 .operacoes i{ /*Ícones de operações*/
     background-color: white;
-    color: black;
+    color: #0C1C31;
     font-size: 100%;
     cursor: pointer;
     padding: 1.6% 2.6% 1.6% 2.6%;
@@ -110,11 +110,12 @@ td{ /*Corpo da tabela*/
 
 .paginacao{ /*Paginação*/
     display: flex;
-    justify-content: center;
+    flex-direction: row;
+    gap: 0.6vw;
+    padding: 3vh;
     align-items: center;
+    justify-content: center;
     width: 100%;
-    gap: 0.6%;
-    padding: 3%;
 }
 
 .skip, .paginas{ /*Botões de paginação*/
@@ -253,6 +254,13 @@ td{ /*Corpo da tabela*/
     flex-direction: row;
     justify-content: space-between;
     gap: 1vw;
+}
+
+.input-senha-user{
+    background-color: transparent;
+    border:none;
+    font-size: 3.2vh;
+    color: #F5F5F5;
 }
 
 .icone-senha i { /* Ícone olho */

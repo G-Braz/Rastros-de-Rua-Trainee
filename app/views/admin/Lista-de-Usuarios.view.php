@@ -80,11 +80,17 @@
                 <div class="item-info">
                     <p class="titulo">Senha:</p>
                     <div class="box senha-box">
-                        <p><?= $usuario->senha ?></p>
+                        <input class="input-senha-user" type="password" id="senha-user" value="<?= $usuario->senha ?>" disabled>
                         <div class="icone-senha">
-                            <i class="bi bi-eye-fill"></i>
+                            <i id="olho-user" class="bi bi-eye-fill" alt="Visualizar senha" onclick="mostrarSenha('senha-user','olho-user')"></i>
                         </div>
                     </div>
+                    <!-- <div class="input-senha">
+                        <input class="bg-view senha" id="senhaInput" type="password" value="" disabled>
+                        <div class="view1">
+                        <img src="../../../public/assets/visua.svg" alt="Visualizar senha" id="viewSenha">
+                        </div>
+                    </div> -->
                 </div>
             </div>
             <div class="botao-modal">
@@ -152,9 +158,9 @@
                     <div class="item-info">
                         <p class="titulo">Senha:</p>
                         <div class="boxCriar senha-box-criar">
-                            <input type="text" class="boxSenha" name="senha" value="<?= $usuario->senha?>">
+                            <input class="boxSenha" name="senha" type="password" id="senha-user-editar" value="<?= $usuario->senha ?>" disabled>
                             <div class="icone-senha">
-                                <i class="bi bi-eye-fill"></i>
+                                <i id="olho-user-editar" class="bi bi-eye-fill" alt="Editar senha" onclick="mostrarSenha('senha-user-editar','olho-user-editar')"></i>
                             </div>
                         </div>
                     </div>
@@ -230,4 +236,5 @@
     </div>
 </body>
 <script src="../../../public/js/Lista-de-Usuarios.js"></script>
+<script src="../../../public/js/login.js"></script>
 </html>
