@@ -34,35 +34,70 @@ class UsuariosController
                 'total_pages' => $total_pages
         ]);
     }
-     // ------------------------------------------------------------------------
+
+    // -------------------------------------------------------------------------
+    // Função para verificar a existência de dois e-mails
+    // -------------------------------------------------------------------------
+
+    private function verificarEmailExistente($email, $id_usuario = null) {
+        $conditions = ['email' => $email];
+        $existing_user = App::get('database')->selectOne('usuarios', $conditions, $id_usuario);
+        
+        if($existing_user) {
+            header('Content-Type: application/json');
+            echo json_encode(['success' => false]);
+            exit;
+        }
+    }
+
+    // -------------------------------------------------------------------------
     // Cria um novo usuário
-    // ------------------------------------------------------------------------
-    public function criar_usuario()
-    {
+    // -------------------------------------------------------------------------
+
+    public function criar_usuario() {
+        $this->verificarEmailExistente($_POST['email']);
+        
         $parameters = [
             'nome' => $_POST['nome'],
             'email' => $_POST['email'],
             'senha' => $_POST['senha']
         ];
+        
         App::get('database')->insert('usuarios', $parameters);
-
-        header('Location: /usuarios');
+        
+        header('Content-Type: application/json');
+        echo json_encode([
+            'success' => true,
+            'redirect' => '/usuarios'
+        ]);
+        exit;
     }
     // ------------------------------------------------------------------------
     // Atualiza um usuário existente
     // ------------------------------------------------------------------------
-    public function editar_usuario(){
+    public function editar_usuario() {
+        $id_usuario = $_POST['id'];
+        $this->verificarEmailExistente($_POST['email'], $id_usuario);
+
         $parameters = [
             'nome' => $_POST['nome'],
-            'email' => $_POST['email'],
-            'senha' => $_POST['senha']
+            'email' => $_POST['email']
         ];
-        $id = $_POST['id'];
-
-        App::get('database')->update('usuarios', $id, $parameters);
-        header('Location: /usuarios');
+        
+        if(!empty($_POST['senha'])) {
+            $parameters['senha'] = $_POST['senha'];
+        }
+        
+        App::get('database')->update('usuarios', $id_usuario, $parameters);
+        
+        header('Content-Type: application/json');
+        echo json_encode([
+            'success' => true,
+            'redirect' => '/usuarios'
+        ]);
+        exit;
     }
-     // ------------------------------------------------------------------------
+    // ------------------------------------------------------------------------
     // Exclui um usuário
     // ------------------------------------------------------------------------
     public function excluir_usuario()

@@ -26,7 +26,7 @@
                 <img src="../../../public/assets/LogoRastrosDeRua.png" alt="Logo Rastros de Rua Rato">
                 <h1>Tabela de Usuários</h1>
             </div>
-            <div class="createButton" onclick="abrirModal('criar')">
+            <div class="createButton" onclick="abrirModal('criar', null)">
                 <i class="bi bi-plus-square-fill"></i>
                 Criar Usuário
             </div>
@@ -45,17 +45,56 @@
                 <td><?= $usuario->nome; ?></td>
                     
                 <td class="operacoes" >
-                    <i class="bi bi-eye-fill" onclick="abrirModal('visualizar-<?= $usuario->id ?>')"></i>
-                    <i class="bi bi-pencil-square" onclick="abrirModal('editar-<?= $usuario->id ?>')"></i>
-                    <i class="bi bi-trash-fill" onclick="abrirModal('excluir-<?= $usuario->id ?>')"></i>
+                    <i class="bi bi-eye-fill" onclick="abrirModal('visualizar', <?= $usuario->id ?>)"></i>
+                    <i class="bi bi-pencil-square" onclick="abrirModal('editar',<?= $usuario->id ?>)"></i>
+                    <i class="bi bi-trash-fill" onclick="abrirModal('excluir',<?= $usuario->id ?>)"></i>
                 </td>
             </tr>
             <?php endforeach; ?>
-        </table>   
+        </table>  
+        
+        <!-- Modal Criar -->
+        <form id="form-criar-usuario" class="modalUsuario" action="/usuarios/criar_usuario" method="POST">
+            <div class="topo-info">
+                <div class="icone-info">
+                    <i class="bi bi-person-plus-fill"></i>
+                </div>
+                <div class="titulo-info">
+                    <h2>Criar usuário</h2>
+                </div>
+            </div>
+            <div class="conteiner-info">
+                <div class="item-info">
+                    <p class="titulo">Nome:</p>
+                    <input type="text" class="boxCriar" name="nome" placeholder="Usuário">
+                </div>
+                <div class="item-info">
+                    <p class="titulo">E-mail:</p>
+                    <input type="text" class="boxCriar" name="email" placeholder="email@email.com">
+                </div>
+                <div id="msg-email" style="display:none">
+                    <p>Esse e-mail já está sendo utilizado!</p>
+                </div>
+                <div class="item-info">
+                    <p class="titulo">Senha:</p>
+                    <div class="boxCriar senha-box-criar">
+                        <input type="text" class="boxSenha" name="senha" placeholder="senha">
+                        <div class="icone-senha">
+                            <i class="bi bi-eye-fill"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="botao-modal">
+                <button type="submit" class="botao" id="salvar">salvar</button>
+                <button type="button" class="botao" id="cancelar" onclick="fecharModal('criar',null)">cancelar</button>
+            </div>
+        </form>
+
         
         <?php foreach ($usuarios as $usuario): ?>
         <!-- Modal Visualizar -->
-        <div id="visualizar-<?= $usuario->id ?>" class="modalUsuario">
+        <div id="form-visualizar-usuario-<?= $usuario->id ?>" class="modalUsuario">
             <div class="topo-info">
                 <div class="icone-info">
                     <i class="bi bi-person-circle"></i>
@@ -79,62 +118,23 @@
                 </div>
                 <div class="item-info">
                     <p class="titulo">Senha:</p>
-                    <div class="box senha-box">
-                        <input class="input-senha-user" type="password" id="senha-user" value="<?= $usuario->senha ?>" disabled>
+                    <div class="box">
+                        <span class="input-senha-user senha-box" id="senha-user-<?= $usuario->id ?>">
+                        <?= $usuario->senha ?>
                         <div class="icone-senha">
-                            <i id="olho-user" class="bi bi-eye-fill" alt="Visualizar senha" onclick="mostrarSenha('senha-user','olho-user')"></i>
+                            <i id="olho-user-<?= $usuario->id ?>" class="bi bi-eye-fill" alt="Visualizar senha" onclick="mostrarSenha('senha-user-<?= $usuario->id ?>','olho-user-<?= $usuario->id ?>')"></i>
                         </div>
+                        </span>
                     </div>
-                    <!-- <div class="input-senha">
-                        <input class="bg-view senha" id="senhaInput" type="password" value="" disabled>
-                        <div class="view1">
-                        <img src="../../../public/assets/visua.svg" alt="Visualizar senha" id="viewSenha">
-                        </div>
-                    </div> -->
                 </div>
             </div>
             <div class="botao-modal">
-                <button class="botao" onclick="fecharModal('visualizar-<?= $usuario->id ?>')">fechar</button>
+                <button class="botao" onclick="fecharModal('visualizar',<?= $usuario->id ?>)">fechar</button>
             </div>
         </div>
         
-        <!-- Modal Criar -->
-        <form id="criar" class="modalUsuario" action="/usuarios/criar_usuario" method="POST">
-            <div class="topo-info">
-                <div class="icone-info">
-                    <i class="bi bi-person-plus-fill"></i>
-                </div>
-                <div class="titulo-info">
-                    <h2>Criar usuário</h2>
-                </div>
-            </div>
-            <div class="conteiner-info">
-                <div class="item-info">
-                    <p class="titulo">Nome:</p>
-                    <input type="text" class="boxCriar" name="nome" placeholder="Usuário">
-                </div>
-                <div class="item-info">
-                    <p class="titulo">E-mail:</p>
-                    <input type="text" class="boxCriar" name="email" placeholder="email@email.com">
-                </div>
-                <div class="item-info">
-                    <p class="titulo">Senha:</p>
-                    <div class="boxCriar senha-box-criar">
-                        <input type="text" class="boxSenha" name="senha" placeholder="senha">
-                        <div class="icone-senha">
-                            <i class="bi bi-eye-fill"></i>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="botao-modal">
-                <button type="submit" class="botao" id="salvar">salvar</button>
-                <button type="button" class="botao" id="cancelar" onclick="fecharModal('criar')">cancelar</button>
-            </div>
-        </form>
-
         <!-- Modal Editar -->
-        <form id="form-editar" action="/usuarios/editar_usuario" method="POST">
+        <form id="form-editar-usuario-<?= $usuario->id ?>" action="/usuarios/editar_usuario" method="POST">
             <div id="editar-<?= $usuario->id ?>" class="modalUsuario">
                 <div class="topo-info">
                     <div class="icone-info">
@@ -155,25 +155,29 @@
                         <p class="titulo">E-mail:</p>
                         <input type="text" class="boxEditar" name="email" value="<?= $usuario->email ?>">
                     </div>
+                    <div id="msg-email2-<?= $usuario->id ?>" style="display:none">
+                        <p>Esse e-mail já está sendo utilizado!</p>
+                    </div>
                     <div class="item-info">
                         <p class="titulo">Senha:</p>
                         <div class="boxCriar senha-box-criar">
-                            <input class="boxSenha" name="senha" type="password" id="senha-user-editar" value="<?= $usuario->senha ?>" disabled>
+                            <input class="boxSenha" name="senha" type="password" id="senha-user-editar-<?= $usuario->id ?>" placeholder="Digite a nova senha">
                             <div class="icone-senha">
-                                <i id="olho-user-editar" class="bi bi-eye-fill" alt="Editar senha" onclick="mostrarSenha('senha-user-editar','olho-user-editar')"></i>
+                                <i id="olho-user-editar-<?= $usuario->id ?>" class="bi bi-eye-fill" alt="Editar senha" onclick="mostrarSenha('senha-user-editar-<?= $usuario->id ?>','olho-user-editar-<?= $usuario->id ?>')"></i>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="botao-modal">
-                    <button type="submit" class="botao" id="salvar">salvar</button>
-                    <button type="button" class="botao" id="cancelar" onclick="fecharModal('editar-<?= $usuario->id ?>')">cancelar</button>
+                    <button type="submit" class="botao" id="salvar-edicao-<?= $usuario->id ?>">salvar</button>
+                    <button type="button" class="botao" id="cancelar-edicao-<?= $usuario->id ?>" onclick="fecharModal('editar',
+                    <?= $usuario->id ?>)">cancelar</button>
                 </div>
             </div>
         </form>
 
         <!-- Modal Excluir -->
-        <form id="form-excluir" action="/usuarios/excluir_usuario" method="POST">
+        <form id="form-excluir-usuario-<?= $usuario->id ?>" action="/usuarios/excluir_usuario" method="POST">
         <div id="excluir-<?= $usuario->id ?>" class="modalUsuarioExcluir">
             <input type="hidden" value="<?= $usuario->id ?>" name="id">
             <div class="topo-excluir">
@@ -189,7 +193,7 @@
             </div>
             <div class="botoes-modal">
                 <button type="submit" class="excluir">Excluir</button>
-                <button type="button" class="cancelar" onclick="fecharModal('excluir-<?= $usuario->id ?>')">Cancelar</button>
+                <button type="button" class="cancelar" onclick="fecharModal('excluir',<?= $usuario->id ?>)">Cancelar</button>
             </div>
         </div> 
         </form>
