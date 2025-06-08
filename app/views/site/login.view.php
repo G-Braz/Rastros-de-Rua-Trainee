@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rastros de rua</title>
+    <title>Login</title>
     <link rel="stylesheet" href="../../../public/css/login.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -22,24 +22,39 @@
     <div class="texto">
         <h1>Login</h1>
     </div>
-    <form class="infos">
+    <div class="msgErro">
+        <p>
+            <?php
+            session_start();
+            if (isset($_SESSION['erro'])) {
+                echo $_SESSION['erro'];
+                unset($_SESSION['erro']);
+            }
+            ?>
+        </p>
+    </div>
+    <form class="infos" method="POST" action="/login">
         <div class="email">
             <p class="tituloEmail">Email</p>
             <input type="email" id="email" name="email" required>
-
         </div>
+
         <div class="senha">
             <label class="tituloSenha">Senha</label>
+            <div class="caixaSenha">
             <input type="password" id="senha" name="senha" required>
-            <i class="bi bi-eye-fill" id="olinho"onclick="mostrarSenha('senha','olinho')"></i>
+            <i class="bi bi-eye-fill" id="olinho" onclick="mostrarSenha('senha','olinho')"></i>
+            </div>
+        </div>
+
+        <div class="botao">
+            <button type="submit" class="entrarBotao">
+                <div class="textoBotao">Entrar</div>
+            </button>
         </div>
     </form>
-    <div class="botao">
-        <button type="submit" class="entrarBotao">
-            <div class="textoBotao">Entrar</div>
-        </button>
-    </div>
 </div>
+
 
 </body>
 
