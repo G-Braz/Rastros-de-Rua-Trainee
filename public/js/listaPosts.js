@@ -12,3 +12,31 @@ function fecharFiltro(idFiltro){
     document.getElementById(idFiltro).style.display="none";
     tela.style.display="none";
 }
+
+function pesquisarPosts(page = 1) {
+    const inputPesquisa = document.getElementById('idInputPesquisa');
+    const filtro = inputPesquisa.value;
+
+    fetch(`/listaPosts/buscaPorTitulo?termo=${encodeURIComponent(filtro)}&paginacaoNumero=${page}`)
+        .then(response => response.json())
+        .then(data => {
+            document.querySelector('.listaDePosts').innerHTML = data.html;
+            atualizarPaginacao(data.total_pages, data.page, filtro);
+        });
+}
+
+function atualizarPaginacao(totalPages, currentPage, termo) {
+    let paginacaoHtml = '';
+
+    paginacaoHtml += `<a class="skip page-item${currentPage <= 1 ? "-disabled" : ""}" href="#" onclick="pesquisarPosts(${currentPage - 1}, 
+    '${termo}');return false;"><i class="bi bi-chevron-left"></i></a>`;
+
+    for (let i = 1; i <= totalPages; i++) {
+        paginacaoHtml += `<a class="paginas${i === currentPage ? " active" : ""}" href="#" onclick="pesquisarPosts(${i}, '${termo}');return false;">${i}</a>`;
+    }
+
+    paginacaoHtml += `<a class="skip page-item${currentPage >= totalPages ? "-disabled" : ""}" href="#" onclick="pesquisarPosts(${currentPage + 1},
+    '${termo}');return false;"><i class="bi bi-chevron-right"></i></a>`;
+
+    document.querySelector('.paginacao').innerHTML = paginacaoHtml;
+}

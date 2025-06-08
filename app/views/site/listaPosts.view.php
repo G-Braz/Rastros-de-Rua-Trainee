@@ -17,7 +17,7 @@
             <div class="barraDePesquisa">
                 <div class="caixaDePesquisa">
                         <i class="bi bi-search"></i>
-                        <input type="text" class="inputPesquisa" name="text" placeholder="Buscar Post">
+                        <input type="text" class="inputPesquisa" id="idInputPesquisa" name="text" value="" placeholder="Buscar Post" onkeyup="pesquisarPosts()" >
                         </input>
                         <i class="bi bi-x-lg" onclick= "apagarTexto('inputPesquisa')"></i>
                 </div>

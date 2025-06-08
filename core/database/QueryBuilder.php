@@ -40,22 +40,22 @@ class QueryBuilder
     }
 
 
-    public function selectAll($table, $inicio=null, $num_linhas=null)
-    {
-        $sql = "select * from {$table}";
-        if($inicio>=0 && $num_linhas > 0){
-            $sql .= " LIMIT {$inicio}, {$num_linhas}";
-        }
-        try {
-            $stmt = $this->pdo->prepare($sql);
-            $stmt->execute();
+public function selectAll($table, $inicio = 0, $itens_page = 10)
+{
+    $sql = "SELECT * FROM {$table} ORDER BY id DESC LIMIT {$inicio}, {$itens_page}";
 
-            return $stmt->fetchAll(PDO::FETCH_CLASS);
+    try {
+        $stmt = $this->pdo->prepare($sql);
 
-        } catch (Exception $e) {
-            die($e->getMessage());
-        }
+        $stmt->execute();
+
+        return $stmt->fetchAll(\PDO::FETCH_OBJ);
+
+    } catch (Exception $e) {
+
+        die($e->getMessage());
     }
+}
 
     public function countAll($table)
     {
@@ -142,5 +142,22 @@ class QueryBuilder
         }
 
     }
+
+public function buscaPorTitulo($titulo){
+    $sql = 'SELECT * FROM publicacoes WHERE titulo LIKE :titulo ORDER BY id DESC';
+
+    try {
+
+        $stmt = $this->pdo->prepare($sql);
+
+        $stmt->execute(['titulo' => $titulo . '%']);
+
+        return $stmt->fetchAll(\PDO::FETCH_OBJ);
+
+    } catch (Exception $e) {
+        
+        die($e->getMessage());
+    }
+}
 
 }

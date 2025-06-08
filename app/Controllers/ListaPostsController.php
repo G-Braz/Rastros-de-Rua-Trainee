@@ -37,4 +37,39 @@ class ListaPostsController
         
             return view('site/postIndividual', ['post' => $post]);
         }
+        public function buscaPorTitulo()
+        {
+            $termo = $_GET['termo'] ?? '';
+            $page = isset($_GET['paginacaoNumero']) ? intval($_GET['paginacaoNumero']) : 1;
+            $itens_page = 6;
+            $inicio = $itens_page * $page - $itens_page;
+
+            $todosPosts = App::get('database')->buscaPorTitulo($termo);
+            $num_posts = count($todosPosts);
+
+            $posts = array_slice($todosPosts, $inicio, $itens_page);
+            
+            $html = '';
+            foreach ($posts as $post) {
+                $html .= '<li>
+                    <a href="/listaPosts/' . $post->id . '" class="post">
+                        <img src="/' . $post->img_arte . '" class="fotoCapa">
+                        <img src="/' . $post->img_tag . '" class="fotoTag">
+                        <div class="textoPost">
+                            <h1>' . htmlspecialchars($post->titulo) . '</h1>
+                            <p>' . htmlspecialchars($post->descricao) . '</p>
+                        </div>
+                    </a>
+                </li>';
+            }
+
+            $total_pages = ceil($num_posts / $itens_page);
+
+            echo json_encode([
+                'html' => $html,
+                'total_pages' => $total_pages,
+                'page' => $page
+            ]);
+            exit;
+        }
 }
