@@ -1,0 +1,1369 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-image: url(../assets/FundoUsuários.png);
+    background-size: cover;
+    height: 100vh;
+}
+.fundo{ /*Fundo da página*/
+    display: flex;
+    flex-direction: column;
+    place-items: center;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    font-family: "urbanist", sans-serif;
+}
+.descricao img{
+    width: 12%;
+    transform: scaleX(-1);
+}
+
+
+.descricao{ /*organiza o título e do botão de criar*/
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    font-weight: 480;
+    font-size: larger;
+    padding: 1.5% 0 1.5% 0;
+}
+.Titulo { /*Organiza o título e a Logo*/
+    display: flex;
+    align-items: center;
+    width: 50%;
+    height: 80%;
+}
+
+.Titulo h1{
+    font-family: "staatliches", sans-serif;
+    color: #F5F5F5;
+    font-size: 360%;
+    padding-left: 3%;
+    letter-spacing: 1.8px;
+}
+
+.createButton{ /*Botão de criar usuário*/
+    display: flex;
+    background: #F5F5F5;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    font-size: 170%;
+    height:44%;
+    width: 16%;
+    cursor: pointer;
+}
+
+.createButton:hover{ /*Deixa o botão de criar usuário maior ao passar o mouse*/
+    transform: scale(1.05);
+    transition: transform 0.2s ease-in-out;
+}
+
+
+.bi-plus-square-fill{ /*Ícone do botão de criar usuário*/
+    color: #0C1C31;
+    padding-right: 5%;
+}
+
+
+table{ /*Tabela de usuários*/
+
+    background: #1E3A5F;
+    width: 90%;
+    height: 82%;
+    border-radius: 15px;
+    text-align: center;
+    font-size: 180%;
+    border-collapse:collapse;
+
+}
+tr{ /*Linhas da tabela*/
+    color: white;
+    font-size: 120%;
+    height: 10%;
+}
+th{ /*Cabeçalho da tabela*/
+    border-bottom: 1.5px solid rgba(255, 255, 255, 0.7);
+    padding: 0 15px 0 15px;
+}
+td{ /*Corpo da tabela*/
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    padding:0 10px 0 10px ;
+}
+.operacoes i{ /*Ícones de operações*/
+    background-color: white;
+    color: black;
+    font-size: 100%;
+    cursor: pointer;
+    padding: 1.6% 2.6% 1.6% 2.6%;
+    border-radius: 10px;
+    display: inline-block; /* Usado para fazer o hover funcionar corretamente */
+}
+
+.operacoes i:hover{ /*Efeito de hover ao passar o mouse nos ícones de operações*/
+    transform: scale(1.1);
+    transition: transform 0.2s ease-in-out;
+}
+
+.paginacao{ /*Paginação*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: 0.6%;
+    padding: 3%;
+}
+
+.skip, .paginas{ /*Botões de paginação*/
+    display: flex;
+    justify-content: center;
+    background: rgb(0,11,26,0.8);
+    color:#F5F5F5;
+    font-weight:400 ;
+    border-radius: 200px;
+    width: 5%;
+    height: 100%;
+    font-size: 230%;
+    padding: 0.3% 1.8% 0.3% 1.8%;
+    border: 1px solid transparent;
+    box-shadow: 0 4px 15px #0D0D0D;
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+
+    transition: background 0.2s;
+
+}
+
+.skip:hover, .paginas:hover{ /*Efeito de hover ao passar o mouse nos botões de paginação*/
+    background: rgb(0,11,26,0.3);
+    border:1px solid rgb(245, 245, 245, 0.4);
+    cursor: pointer;
+}
+
+.paginacao .bi:hover{ /*Muda os icones da paginação para branco ao passar o mouse*/
+    color: #F5F5F5;
+}
+
+.bi-eye-fill, .bi-pencil-square, .bi-trash-fill{ /*Ícones de operações*/
+    color: #0C1C31;
+    font-size: 110%;
+}
+
+.Usuario:hover{ /*Efeito de hover ao passar o mouse pelos usuários*/
+    background-color: #0C1C31; 
+}
+
+.paginacao a:hover {/*Deixa os icones da paginação transparentes ao passar o mouse*/
+    background: rgb(12, 28, 49, 0.8);
+    border: 1px solid rgb(245, 245, 245, 0.4);
+    color: #F5F5F5;
+    transform: scale(1.05);
+    transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+
+/* Modal Visualizar, Criar e Editar */
+.modalUsuario {
+    z-index: 1;
+    width: 30%;
+    height: fit-content;
+    position: absolute;
+    top: 6%;
+    left: 35%;
+    background: #F5F5F5;
+    border-radius: 0.6vw;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+    display: none;
+    flex-direction: column;
+    align-items: center;
+}
+
+.topo-info { /* Cabeçalho azul com o ícone e com o título */
+    width: 100%;
+    text-align: center;
+    background: #1E3A5F;
+    padding: 1vh;
+    border-top-right-radius: 0.5vw;
+    border-top-left-radius: 0.5vw;
+}
+
+.icone-info{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.icone-info i { /* Ícone usuário*/
+    font-size: 11vh;
+    color: #F5F5F5;
+}
+
+.titulo-info h2 { /* Título Informações */
+    font-size: 4.5vh;
+    font-family: "Staatliches", sans-serif;
+    color: #F5F5F5;
+    font-weight: 200;
+}
+
+.conteiner-info {  /* Parte com os dados do usuário */
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    gap: 3vh;
+    padding: 3vh;
+}
+
+.item-info { /* Parte de cada dado do usuário */
+    display: flex;
+    flex-direction: column;
+    gap: 0.5vh;
+}
+
+.titulo {
+    font-size: 3.5vh;
+    font-family: "Urbanist", sans-serif;
+    font-weight: bold;
+    color: #0C1C31;
+}
+
+.box { /* Caixa de texto com a informação */
+    background: #1E3A5F;
+    padding: 1vh;
+    border-radius: 0.6vw;
+    color: #F5F5F5;
+    font-size: 3.2vh;
+    box-shadow: 0 4px 4px rgba(0,0,0,0.25);
+}
+
+.box:hover { /* Muda a cor da caixa de texto com a informação ao passar o mouse */
+    background: #0C1C31;
+}
+
+.senha-box { /* Caixa de texto com a senha e o ícone */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 1vw;
+}
+
+.icone-senha i { /* Ícone olho */
+    color: #F5F5F5;
+    font-size: 3.2vh;
+    cursor: pointer;
+}
+
+.icone-senha:hover { /* Efeito no ícone ao passar o mouse */
+    transform: scale(1.05);
+    transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+
+.botao-modal { /* Parte com o botão de fechar */
+    padding: 1vh 0 3vh 0; 
+    display: flex;
+    gap:2vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.botao { /* botão fechar */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #1E3A5F;
+    color: #F5F5F5;
+    padding: 1vh 2vh;
+    font-size: 3.5vh;
+    font-family: "Staatliches", sans-serif;
+    border-radius: 0.6vw;
+    cursor: pointer;
+    border: none;
+    box-shadow: 0 4px 4px rgba(0,0,0,0.25);
+    
+}
+
+.botao:hover { /* Efeito no botão fechar ao passar o mouse */
+    background:  rgb(178, 34, 34);
+    transform: scale(1.05);
+    transition: all 0.3s;
+}
+#salvar:hover{
+    background: rgb(5, 172, 75);
+}
+#cancelar:hover{
+    background: rgb(178, 34, 34);
+}
+
+/*Modal Editar e Criar*/
+.boxCriar{
+    background: #1E3A5F;
+    padding: 1vh;
+    border-radius: 0.6vw;
+    color: #F5F5F5;
+    font-size: 3.2vh;
+    box-shadow: 0 4px 4px rgba(0,0,0,0.25);
+    outline: none;
+    border-color: transparent;
+}
+.senha-box-criar{  /* Caixa de texto com a senha e o ícone */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1vw;
+    
+}
+.boxSenha{
+    background: #1E3A5F;
+    border-radius: 0.6vw;
+    color: #F5F5F5;
+    font-size: 3.2vh;
+    outline: none;
+    border-color: transparent;
+    width: 100%;
+}
+
+.boxCriar::placeholder{
+    color: rgba(255,255,255,0.55);
+}
+.boxSenha::placeholder{
+    color: rgba(255,255,255,0.55);
+}
+/*Modal Editar*/
+.topo-info .bi-pencil-square { /* Cabeçalho azul com o ícone e com o título */
+    font-size: 6vh;
+    
+}
+.boxEditar{
+    background: #1E3A5F;
+    padding: 1vh;
+    border-radius: 0.6vw;
+    color: #F5F5F5;
+    font-size: 3.2vh;
+    box-shadow: 0 4px 4px rgba(0,0,0,0.25);
+    outline: none;
+    border-color: transparent;
+}
+
+/* Modal Excluir */
+.modalUsuarioExcluir {
+    z-index: 1;
+    width: 30%;
+    height: fit-content;
+    position: absolute;
+    top: 30%;
+    left: 35%;
+    background: #F5F5F5;
+    border-radius: 0.6vw;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+    display: none;
+    flex-direction: column;
+    align-items: center;
+}
+
+.topo-excluir { /* Cabeçalho azul com o ícone e com o título */
+    width: 100%;
+    text-align: center;
+    background: #1E3A5F;
+    padding: 1vh;
+    border-top-right-radius: 0.5vw;
+    border-top-left-radius: 0.5vw;
+}
+
+.icone-excluir i { /* Ícone excluir*/
+    font-size: 11vh;
+    color: #F5F5F5;
+}
+
+.titulo-excluir h2 { /* Título Excluir Usuário */
+    font-size: 4vh;
+    font-family: "Staatliches", sans-serif;
+    color: #F5F5F5;
+    font-weight: 200;
+}
+
+.pergunta { /* Pergunta de alerta */
+    font-size: 2.6vh;
+    font-family: "Urbanist", sans-serif;
+    font-weight: bold;
+    color: #0C1C31;
+    margin-top: 3vh;
+    padding: 1vh;
+    text-align: center;
+}
+
+.pergunta:hover { /* Efeito na pergunta ao passar o mouse  */
+    transform: scale(1.05);
+    transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+
+.botoes-modal { /* Parte com os botões */
+    display: flex;
+    gap: 2vh;
+    padding: 3vh;
+}
+
+.cancelar, .excluir{ /* Botões de cancelar e excluir */
+    background: #1E3A5F;
+    color: #F5F5F5;
+    padding: 1vh 2vh;
+    font-size: 3.5vh;
+    font-family: "Staatliches", sans-serif;
+    border-radius: 0.6vw;
+    cursor: pointer;
+    border: none;
+    box-shadow: 0 4px 4px rgba(0,0,0,0.25);
+}
+
+.cancelar:hover { /* Efeito no botão de cancelar ao passar o mouse*/
+    background:  rgb(178, 34, 34);
+    transform: scale(1.05);
+    transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+
+.excluir:hover { /* Efeito no botão de excluir ao passar o mouse*/
+    background: #05AC4B;
+    /*background: #d85f02; Cor parecida com a pumpkin #FF6F00*/
+    transform: scale(1.05);
+    transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+/*Tela de fundo Modais*/
+#tela{
+    z-index: 1;
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.4);
+    backdrop-filter: blur(3px);
+}
+
+
+/* Responsividade*/
+
+/*Celulares*/
+/*Galaxy Z Fold 5*/
+@media only screen and (min-width: 0px) and (max-width: 344px){
+    .descricao {
+        flex-direction: column;
+        padding: 1%;
+    }
+
+    .Titulo {
+        width: 100%;
+        height: 50%;
+        padding-top: 5%;
+    }
+
+    .Titulo h1 {
+        font-size: 200%; 
+        padding-left: 0;
+        text-align: center;
+        width: 70%;
+    }
+
+    .Titulo img {
+        width: 26%;
+        
+    }
+
+    .createButton {
+        width: 58%;
+        height: 22%;
+        font-size: 120%;
+        margin-bottom: 8%;
+        border-radius: 7px;
+    }
+
+    table {
+        width: 99%;
+        font-size: 78%;
+    }
+
+
+    td{
+        padding: 0;
+    }
+
+    .operacoes i {
+        font-size: 80%;
+        padding: 3%;
+        border-radius: 7px;
+    }
+
+    .paginacao {
+        gap:5px;
+        width:100%;
+        height: 6%;
+    }
+
+    .skip, .paginas {
+        align-items: center;
+        width: 15%;
+        height: 100%;
+        font-size: 128%;
+    }
+    .operacoes{
+        gap:2%;
+        font-size: 120%;
+    }
+    
+    /* Modal Visualizar */
+    .modalUsuario {
+        width: 85vw;
+        top: 12%;
+        left: 8%;
+    }
+
+    .icone-info i { /* Ícone usuário*/
+        font-size: 8vh;
+        color: #F5F5F5;
+    }
+
+    .titulo-info h2 { /* Título Informações */
+        font-size: 3.5vh;
+    }
+
+    .titulo {
+        font-size: 2.8vh;
+    }
+
+    .box { /* Caixa de texto com a informação */
+        padding: 1vh;
+        font-size: 2.5vh;
+    }
+
+    .icone-senha i { /* Ícone olho */
+        font-size: 2.8vh;
+    }
+
+    .botao { /* botão fechar */
+        font-size: 3vh
+    }
+
+    /*Modal Editar*/
+    .boxEditar{
+        padding:1vh;
+        font-size: 2.5vh;
+    }
+    .boxSenha{
+        font-size: 2.5vh;
+    }
+
+    /*Modal Criar*/ 
+    .boxCriar{
+        padding:1vh;
+        font-size: 2.5vh;
+    }
+
+
+    /* Modal Excluir */
+    .modalUsuarioExcluir {
+        width: 70vw;
+        top: 30%;
+        left: 15%;
+    }
+
+    .icone-excluir i { /* Ícone excluir*/
+        font-size: 8vh;
+    }
+    
+    .titulo-excluir h2 { /* Título Excluir Usuário */
+        font-size: 3vh;
+    }
+
+    .pergunta { /* Pergunta de alerta */
+        font-size: 2.2vh;
+        text-align: center;
+    }
+
+    .botoes-modal { /* Parte com os botões */
+        flex-direction: column;
+    }
+    
+    .cancelar, .excluir{ /* Botões de cancelar e excluir */
+        font-size: 2.5vh;
+    }
+}
+
+
+/*Iphone SE*/
+@media only screen and (min-width:345px) and (max-width: 375px) {
+    .descricao {
+        flex-direction: column;
+        padding: 1%;
+    }
+
+    .Titulo {
+        width: 100%;
+        height: 50%;
+        padding-top: 5%;
+    }
+
+    .Titulo h1 {
+        font-size: 200%; 
+        padding-left: 0;
+        text-align: center;
+        width: 70%;
+    }
+
+    .Titulo img {
+        width: 26%;
+        
+    }
+
+    .createButton {
+        width: 58%;
+        height: 22%;
+        font-size: 120%;
+        margin-bottom: 8%;
+    }
+
+    table {
+        width: 99%;
+        font-size: 80%;
+    }
+
+    td{
+        padding: 0;
+    }
+    .operacoes i{
+        font-size: 120%;
+        padding: 3%;
+        border-radius: 6px;
+    }
+
+    .paginacao {
+        gap:5px;
+        width:100%;
+        height: 8%;
+    }
+
+    .skip, .paginas {
+        align-items: center;
+        width: 12%;
+        height: 100%;
+        font-size: 128%;
+    }
+
+    /* Modal Visualizar */
+    .modalUsuario {
+        width: 75vw;
+        top: 12%;
+        left: 13%;
+    }
+
+    .icone-info i { /* Ícone usuário*/
+        font-size: 8vh;
+        color: #F5F5F5;
+    }
+
+    .titulo-info h2 { /* Título Informações */
+        font-size: 3.5vh;
+    }
+
+    .titulo {
+        font-size: 2.8vh;
+    }
+
+    .box { /* Caixa de texto com a informação */
+        padding: 1vh;
+        font-size: 2.5vh;
+    }
+
+    
+
+    .icone-senha i { /* Ícone olho */
+        font-size: 2.8vh;
+    }
+
+    .botao { /* botão fechar */
+        font-size: 3vh
+    }
+   /*Modal Editar*/
+    .boxEditar{
+        padding:1vh;
+        font-size: 2.5vh;
+    }
+    .boxSenha{
+        font-size: 2.5vh;
+    }
+
+    /*Modal Criar*/ 
+    .boxCriar{
+        padding:1vh;
+        font-size: 2.5vh;
+    }
+
+    /* Modal Excluir */
+    .modalUsuarioExcluir {
+        width: 70vw;
+        top: 35%;
+        left: 15%;
+    }
+
+    .icone-excluir i { /* Ícone excluir*/
+        font-size: 8vh;
+    }
+    
+    .titulo-excluir h2 { /* Título Excluir Usuário */
+        font-size: 3vh;
+    }
+
+    .pergunta { /* Pergunta de alerta */
+        font-size: 2.2vh;
+        text-align: center;
+    }
+    
+    .cancelar, .excluir{ /* Botões de cancelar e excluir */
+        font-size: 2.5vh;
+    }
+}
+
+/*Iphone XR*/
+@media only screen and (min-width: 376px) and (max-width: 430px) {
+    .descricao {
+        flex-direction: column;
+        padding: 0;
+        padding-top: 2%;
+    }
+    .Titulo {
+        width: 100%;
+        height: 60%;
+        padding-bottom: 4%;
+    }
+
+    .Titulo h1 {
+        font-size: 200%; 
+        padding-left: 0;
+        text-align: center;
+        width: 70%;
+    }
+
+    .Titulo img {
+        width: 30%;
+        padding-left: 10%;
+    }
+
+    .createButton {
+        justify-content: center;
+        width: 64%;
+        height: 35%;
+        font-size: 140%;
+        margin-bottom: 8%;
+    }
+
+    table {
+        width: 99%;
+        font-size: 86%;
+    }
+
+    .operacoes i {
+        font-size: 100%;
+        padding: 5%;
+        border-radius: 6px;
+    }
+
+    .paginacao {
+        gap: 8px;
+        width: 100%;
+        height: 7%;
+    }
+
+    .skip, .paginas {
+        align-items: center;
+        width: 12%;
+        height: 100%;
+        font-size: 130%;
+    }
+    .operacoes{
+        gap: 3%;
+    }
+
+    /* Modal Visualizar */
+    .modalUsuario {
+        width: 85vw;
+        top: 12%;
+        left: 8%;
+    }
+
+    .icone-info i { /* Ícone usuário*/
+        font-size: 8vh;
+        color: #F5F5F5;
+    }
+
+    .titulo-info h2 { /* Título Informações */
+        font-size: 3.5vh;
+    }
+
+    .titulo {
+        font-size: 2.8vh;
+    }
+
+    .box { /* Caixa de texto com a informação */
+        padding: 1vh;
+        font-size: 2.5vh;
+    }
+
+    .icone-senha i { /* Ícone olho */
+        font-size: 2.8vh;
+    }
+
+    .botao { /* botão fechar */
+        font-size: 3vh
+    }
+
+    /*Modal Editar*/
+    .boxEditar{
+        padding:1vh;
+        font-size: 2.5vh;
+    }
+    .boxSenha{
+        font-size: 2.5vh;
+    }
+
+    /*Modal Criar*/ 
+    .boxCriar{
+        padding:1vh;
+        font-size: 2.5vh;
+    }
+
+    /* Modal Excluir */
+    .modalUsuarioExcluir {
+        width: 65vw;
+        top: 30%;
+        left: 17%;
+    }
+
+    .icone-excluir i { /* Ícone excluir*/
+        font-size: 8vh;
+    }
+    
+    .titulo-excluir h2 { /* Título Excluir Usuário */
+        font-size: 3vh;
+    }
+
+    .pergunta { /* Pergunta de alerta */
+        font-size: 2.2vh;
+        text-align: center;
+    }
+    
+    .cancelar, .excluir{ /* Botões de cancelar e excluir */
+        font-size: 2.5vh;
+    }
+}
+/*Tablets*/
+/*Ipad mini/ Ipad Air/ Surface Pro 7*/
+@media only screen and (min-width: 431px) and (max-width: 1023px) and (min-height: 721px) {
+    .descricao {
+        flex-direction: column;
+    }
+    .Titulo {
+        
+        width: 100%;
+        height: 60%;
+        padding-top: 5%;
+        padding-bottom: 1%;
+    }
+
+    .Titulo h1 {
+        font-size: 320%; 
+        padding-left: 0;
+        text-align: center;
+        width: 100%;
+    }
+
+    .Titulo img {
+        width: 28%;
+        padding-left: 8%;
+    }
+
+    tr{
+        font-size: 110%;
+    }
+
+    .createButton {
+        width: 43%;
+        height: 18%;
+        font-size: 200%;
+        margin-bottom: 8%;
+    }
+
+    td i {
+        font-size: 100%;
+        padding: 3%;
+        border-radius: 4px;
+    }
+
+    .paginacao {
+        gap: 8px;
+        width: 100%;
+        height: 8%;
+    }
+
+    .skip, .paginas {
+        align-items: center;
+        width: 9%;
+        height: 100%;
+        font-size:160%;
+    }
+    .operacoes{
+        gap: 3%;
+        font-size: 80%;
+    }
+    
+    /* Modal Visualizar */
+    .modalUsuario {
+        width:72%;
+        top: 12%;
+        left: 15%;
+    }
+    
+    .icone-info i { /* Ícone usuário*/
+        font-size: 8vh;
+        color: #F5F5F5;
+    }
+    
+    .titulo-info h2 { /* Título Informações */
+        font-size: 3.5vh;
+    }
+    
+    .titulo {
+        font-size: 2.8vh;
+    }
+    
+    .box { /* Caixa de texto com a informação */
+        padding: 1vh;
+        font-size: 2.5vh;
+    }
+    
+    .icone-senha i { /* Ícone olho */
+        font-size: 2.8vh;
+    }
+    
+    .botao { /* botão fechar */
+        font-size: 3vh
+    }
+    
+    /*Modal Editar*/
+    .boxEditar{
+        padding:1vh;
+        font-size: 2.5vh;
+    }
+    .boxSenha{
+        font-size: 2.5vh;
+    }
+
+    /*Modal Criar*/ 
+    .boxCriar{
+        padding:1vh;
+        font-size: 2.5vh;
+    }
+
+    /* Modal Excluir */
+    .modalUsuarioExcluir {
+        width: 65vw;
+        top: 35%;
+        left: 20%;
+    }
+    
+    .icone-excluir i { /* Ícone excluir*/
+        font-size: 9vh;
+    }
+        
+    .titulo-excluir h2 { /* Título Excluir Usuário */
+        font-size: 3.5vh;
+    }
+    
+    .pergunta { /* Pergunta de alerta */
+        font-size: 2.8vh;
+        text-align: center;
+    }
+        
+    .cancelar, .excluir{ /* Botões de cancelar e excluir */
+        font-size: 3vh;
+    }
+}
+
+/*Ipad Pro*/
+@media only screen and (min-width: 1024px) and (max-width: 1024px) and (min-height: 1366px) {
+    .descricao {
+        flex-direction: column;
+    }
+    .Titulo {
+        
+        width: 100%;
+        height: 30%;
+        padding-top: 10%;
+    }
+
+    .Titulo h1 {
+        font-size: 460%; 
+        padding-left: 0;
+        text-align: center;
+        width: 100%;
+    }
+
+    .Titulo img {
+        width: 23%;
+        padding-left: 6%;
+    }
+
+    .createButton {
+        width: 50%;
+        height: 20%;
+        font-size: 300%;
+        margin-bottom: 6%;
+    }
+
+    table{
+        width: 95%;
+        font-size: 160%;
+    }
+
+    td i {
+        font-size: 100%;
+        padding: 5%;
+        border-radius: 30%;
+    }
+
+    .paginacao {
+        gap: 8px;
+        width: 100%;
+        height: 12%;
+    }
+
+    .skip, .paginas {
+        align-items: center;
+        width: 11%;
+        height: 100%;
+        font-size: 260%;
+    }
+    .operacoes{
+        gap: 5%;
+    }
+
+    /* Modal Visualizar */
+    .modalUsuario {
+        width: 70vw;
+        top: 12%;
+        left: 15%;
+    }
+
+    .icone-info i { /* Ícone usuário*/
+        font-size: 8vh;
+        color: #F5F5F5;
+    }
+
+    .titulo-info h2 { /* Título Informações */
+        font-size: 3.5vh;
+    }
+
+    .titulo {
+        font-size: 2.8vh;
+    }
+
+    .box { /* Caixa de texto com a informação */
+        padding: 1vh;
+        font-size: 2.5vh;
+    }
+
+    .icone-senha i { /* Ícone olho */
+        font-size: 2.8vh;
+    }
+
+    .botao { /* botão fechar */
+        font-size: 3vh
+    }
+    /*Modal Editar*/
+    .boxEditar{
+        padding:1vh;
+        font-size: 2.5vh;
+    }
+    .boxSenha{
+        font-size: 2.5vh;
+    }
+
+    /*Modal Criar*/ 
+    .boxCriar{
+        padding:1vh;
+        font-size: 2.5vh;
+    }
+
+    /* Modal Excluir */
+    .modalUsuarioExcluir {
+        width: 70vw;
+        top: 35%;
+        left: 15%;
+    }
+
+    .icone-excluir i { /* Ícone excluir*/
+        font-size: 9vh;
+    }
+    
+    .titulo-excluir h2 { /* Título Excluir Usuário */
+        font-size: 3.5vh;
+    }
+
+    .pergunta { /* Pergunta de alerta */
+        font-size: 2.8vh;
+        text-align: center;
+    }
+    
+    .cancelar, .excluir{ /* Botões de cancelar e excluir */
+        font-size: 3vh;
+    }
+
+}
+
+/*Surface Duo*/
+
+@media only screen and (min-width: 540px) and (max-width:540px) and (max-height: 720px) {
+    .descricao {
+        flex-direction: column;
+    }
+    .Titulo {
+        
+        width: 100%;
+        height: 30%;
+        padding-top: 10%;
+    }
+
+    .Titulo h1 {
+        font-size: 230%; 
+        padding-left: 0;
+        text-align: center;
+        width: 100%;
+    }
+
+    .Titulo img {
+        width: 25%;
+        padding-left: 6%;
+    }
+
+    .createButton {
+        width: 48%;
+        height: 18%;
+        font-size: 140%;
+        margin-bottom: 6%;
+    }
+
+    table{
+        width: 95%;
+        font-size: 82%;
+    }
+
+    .operacoes i {
+        font-size: 110%;
+        padding: 3%;
+        border-radius: 6px;
+    }
+
+    .paginacao {
+        gap: 8px;
+        width: 100%;
+        height: 10%;
+    }
+
+    .skip, .paginas {
+        align-items: center;
+        width: 12%;
+        height: 100%;
+        font-size: 160%;
+    }
+    .operacoes{
+        gap: 5%;
+    }
+
+    /* Modal Visualizar */
+    .modalUsuario {
+        width: 70vw;
+        top: 12%;
+        left: 15%;
+    }
+
+    .icone-info i { /* Ícone usuário*/
+        font-size: 8vh;
+        color: #F5F5F5;
+    }
+
+    .titulo-info h2 { /* Título Informações */
+        font-size: 3.5vh;
+    }
+
+    .titulo {
+        font-size: 2.8vh;
+    }
+
+    .box { /* Caixa de texto com a informação */
+        padding: 1vh;
+        font-size: 2.5vh;
+    }
+
+    .icone-senha i { /* Ícone olho */
+        font-size: 2.8vh;
+    }
+
+    .botao { /* botão fechar */
+        font-size: 3vh
+    }
+
+    /*Modal Editar*/
+    .boxEditar{
+        padding:1vh;
+        font-size: 2.5vh;
+    }
+    .boxSenha{
+        font-size: 2.5vh;
+    }
+
+    /*Modal Criar*/ 
+    .boxCriar{
+        padding:1vh;
+        font-size: 2.5vh;
+    }
+
+    /* Modal Excluir */
+    .modalUsuarioExcluir {
+        width: 65vw;
+        top: 35%;
+        left: 20%;
+    }
+
+    .icone-excluir i { /* Ícone excluir*/
+        font-size: 9vh;
+    }
+    
+    .titulo-excluir h2 { /* Título Excluir Usuário */
+        font-size: 3.5vh;
+    }
+
+    .pergunta { /* Pergunta de alerta */
+        font-size: 2.8vh;
+        text-align: center;
+    }
+    
+    .cancelar, .excluir{ /* Botões de cancelar e excluir */
+        font-size: 3vh;
+    }
+}
+
+/*Nest Hub*/
+@media only screen and (min-width: 1024px) and (max-height:600px){
+    .Titulo {
+        width: 80%;
+
+    }
+    .Titulo h1{
+        font-size: 240%;
+    }
+    .Titulo img{
+        width:12%;
+    }
+    .createButton{
+        width:30%;
+        height: 54%;
+    }
+    table{
+        font-size: 120%;
+    }
+    .paginacao{
+        width: 55%;
+        gap: 2%;
+    }
+    .skip, .paginas {
+        align-items: center;
+        width: 1%;
+        height: 100%;
+        font-size: 160%;
+    }
+    .operacoes i{
+        border-radius: 8px;
+        font-size: 90%;
+    }
+}
+
+/*Next Hub Max*/
+@media only screen and (min-width: 1280px) and (min-height:800px) and(max-height:800px){
+    .Titulo h1{
+        font-size:300%;
+    }
+    .Titulo img{
+        width:20%;
+    }
+    .createButton{
+        font-size: 160%;
+        width:22%;
+        height: 2%;
+    }
+    table{
+        font-size: 80%;
+    }
+    .paginacao{
+        width: 40%;
+        gap: 1.5%;
+    }
+    .skip, .paginas {
+        align-items: center;
+        width: 22%;
+        height: 100%;
+        font-size: 160%;
+        border-radius: 6px;
+    }
+    .operacoes i{
+        border-radius: 6px;
+        font-size: 70%;
+    }
+}
+
+/*Laptops*/
+@media only screen and (min-width: 1025px) and (max-width: 1440px) and (min-height: 600px) {
+    .createButton{
+        width:23%;
+        height: 55%;
+    }
+    .table{
+        font-size: 60%;
+    }
+    .Titulo h1{
+        font-size: 280%;
+    }
+    .operacoes i{
+        font-size: 70%;
+    }
+    .skip, .paginas {
+        font-size: 160%;
+    }
+    tr{
+        font-size: 100%;
+    }
+}
+@media only screen and (min-width: 1024px) and (max-width: 1024px) and (max-height: 869px){
+    .Titulo{
+        width: 80%;
+    }
+    .Titulo h1{
+        font-size: 290%;
+    }
+    .createButton{
+        width:30%;
+        height: 48%;
+        font-size: 150%;
+    }
+    table{
+        font-size: 140%;
+    }
+    td , th{
+        padding: 0;
+        border:0;
+    }
+    .skip, .paginas {
+        width: 13%;
+        height: 100%;
+
+    }
+}
