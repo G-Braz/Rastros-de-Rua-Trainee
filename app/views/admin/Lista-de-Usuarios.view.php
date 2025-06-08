@@ -66,11 +66,11 @@
             <div class="conteiner-info">
                 <div class="item-info">
                     <p class="titulo">Nome:</p>
-                    <input type="text" class="boxCriar" name="nome" placeholder="Usuário">
+                    <input type="text" class="boxCriar" name="nome" placeholder="Usuário" required>
                 </div>
                 <div class="item-info">
                     <p class="titulo">E-mail:</p>
-                    <input type="text" class="boxCriar" name="email" placeholder="email@email.com">
+                    <input type="email" class="boxCriar" name="email" placeholder="email@email.com" required>
                 </div>
                 <div id="msg-email" style="display:none">
                     <p>Esse e-mail já está sendo utilizado!</p>
@@ -78,9 +78,9 @@
                 <div class="item-info">
                     <p class="titulo">Senha:</p>
                     <div class="boxCriar senha-box-criar">
-                        <input type="text" class="boxSenha" name="senha" placeholder="senha">
+                        <input type="password" class="boxSenha" name="senha" placeholder="senha" id="senha-user-criar" required>
                         <div class="icone-senha">
-                            <i class="bi bi-eye-fill"></i>
+                            <i id="olho-user-criar" class="bi bi-eye-fill" alt="Visualizar senha" onclick="mostrarSenha('senha-user-criar','olho-user-criar')"></i>
                         </div>
                     </div>
                 </div>
