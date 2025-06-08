@@ -22,8 +22,6 @@ body{
     width: 12%;
     transform: scaleX(-1);
 }
-
-
 .descricao{ /*organiza o título e do botão de criar*/
     display: flex;
     justify-content: space-between;
@@ -56,7 +54,7 @@ body{
     border-radius: 10px;
     font-size: 170%;
     height:44%;
-    width: 16%;
+    width: 20%;
     cursor: pointer;
 }
 
@@ -73,7 +71,6 @@ body{
 
 
 table{ /*Tabela de usuários*/
-
     background: #1E3A5F;
     width: 90%;
     height: 82%;
@@ -98,7 +95,7 @@ td{ /*Corpo da tabela*/
 }
 .operacoes i{ /*Ícones de operações*/
     background-color: white;
-    color: black;
+    color: #0C1C31;
     font-size: 100%;
     cursor: pointer;
     padding: 1.6% 2.6% 1.6% 2.6%;
@@ -113,14 +110,16 @@ td{ /*Corpo da tabela*/
 
 .paginacao{ /*Paginação*/
     display: flex;
-    justify-content: center;
+    flex-direction: row;
+    gap: 0.6vw;
+    padding: 3vh;
     align-items: center;
+    justify-content: center;
     width: 100%;
-    gap: 0.6%;
-    padding: 3%;
 }
 
 .skip, .paginas{ /*Botões de paginação*/
+    text-decoration: none;
     display: flex;
     justify-content: center;
     background: rgb(0,11,26,0.8);
@@ -135,11 +134,17 @@ td{ /*Corpo da tabela*/
     box-shadow: 0 4px 15px #0D0D0D;
     backdrop-filter: blur(15px);
     -webkit-backdrop-filter: blur(15px);
-
     transition: background 0.2s;
 
 }
-
+/* Estiliza número selecionado na paginação */
+.paginas.page-link-active {
+    background: rgb(12, 28, 49, 0.8);
+    border: 1px solid rgb(245, 245, 245, 0.4);
+}
+.skip.page-item-disabled {
+    pointer-events: none;
+}
 .skip:hover, .paginas:hover{ /*Efeito de hover ao passar o mouse nos botões de paginação*/
     background: rgb(0,11,26,0.3);
     border:1px solid rgb(245, 245, 245, 0.4);
@@ -149,6 +154,14 @@ td{ /*Corpo da tabela*/
 .paginacao .bi:hover{ /*Muda os icones da paginação para branco ao passar o mouse*/
     color: #F5F5F5;
 }
+.paginacao a:hover {
+    /*Deixa os icones da paginação transparentes ao passar o mouse*/
+    background: rgb(12, 28, 49, 0.8);
+    border: 1px solid rgb(245, 245, 245, 0.4);
+    color: #F5F5F5;
+    transform: scale(1.05);
+    transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
 
 .bi-eye-fill, .bi-pencil-square, .bi-trash-fill{ /*Ícones de operações*/
     color: #0C1C31;
@@ -157,14 +170,6 @@ td{ /*Corpo da tabela*/
 
 .Usuario:hover{ /*Efeito de hover ao passar o mouse pelos usuários*/
     background-color: #0C1C31; 
-}
-
-.paginacao a:hover {/*Deixa os icones da paginação transparentes ao passar o mouse*/
-    background: rgb(12, 28, 49, 0.8);
-    border: 1px solid rgb(245, 245, 245, 0.4);
-    color: #F5F5F5;
-    transform: scale(1.05);
-    transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
 }
 
 /* Modal Visualizar, Criar e Editar */
@@ -249,6 +254,13 @@ td{ /*Corpo da tabela*/
     flex-direction: row;
     justify-content: space-between;
     gap: 1vw;
+}
+
+.input-senha-user{
+    background-color: transparent;
+    border:none;
+    font-size: 3.2vh;
+    color: #F5F5F5;
 }
 
 .icone-senha i { /* Ícone olho */

@@ -8,10 +8,35 @@ class QueryBuilder
 {
     protected $pdo;
 
-
     public function __construct($pdo)
     {
         $this->pdo = $pdo;
+    }
+
+    public function selectOne($table, $parameters, $id=null){
+        $sql = sprintf(
+            'SELECT * FROM %s WHERE %s = :%s',
+            $table,
+            implode(', ', array_keys($parameters)),
+            implode(', :', array_keys($parameters)),
+        );
+        try{
+            $stmt = $this->pdo->prepare($sql);
+            $stmt->execute($parameters);
+            $dados = $stmt->fetch(PDO::FETCH_OBJ);
+            if ($dados) {
+                if ($id !== null) {
+                    if ($id == $dados->id) {
+                        return null;
+                    }
+                    return $dados;
+                }
+                return $dados;
+            }
+            return null;
+        } catch (Exception $e) {
+            die($e->getMessage());
+        }
     }
 
 
