@@ -13,7 +13,7 @@ function fecharFiltro(idFiltro){
     tela.style.display="none";
 }
 
-function pesquisarPosts(page = 1) {
+function pesquisarPostsTitulo(page = 1) {
     const inputPesquisa = document.getElementById('idInputPesquisa');
     const filtro = inputPesquisa.value;
 
@@ -22,6 +22,15 @@ function pesquisarPosts(page = 1) {
         .then(data => {
             document.querySelector('.listaDePosts').innerHTML = data.html;
             atualizarPaginacao(data.total_pages, data.page, filtro);
+        });
+}
+function pesquisarPostsTipo(tipo, page = 1) {
+    console.log("entrou");
+    fetch(`/listaPosts/buscaPorTipo?tipo=${encodeURIComponent(tipo)}&paginacaoNumero=${page}`)
+        .then(response => response.json())
+        .then(data => {
+            document.querySelector('.listaDePosts').innerHTML = data.html;
+            atualizarPaginacao(data.total_pages, data.page, tipo);
         });
 }
 

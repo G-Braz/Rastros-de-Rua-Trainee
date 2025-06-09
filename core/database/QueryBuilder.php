@@ -160,4 +160,16 @@ public function buscaPorTitulo($titulo){
     }
 }
 
+public function buscaPorTipo($tipo){
+    $sql = 'SELECT * FROM publicacoes WHERE tipo = :tipo ORDER BY id DESC';
+
+    try {
+        $stmt = $this->pdo->prepare($sql);
+        $stmt->execute(['tipo' => $tipo]);
+        return $stmt->fetchAll(\PDO::FETCH_OBJ);
+    } catch (Exception $e) {
+        die($e->getMessage());
+    }
+}
+
 }

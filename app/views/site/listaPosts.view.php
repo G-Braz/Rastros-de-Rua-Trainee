@@ -17,7 +17,7 @@
             <div class="barraDePesquisa">
                 <div class="caixaDePesquisa">
                         <i class="bi bi-search"></i>
-                        <input type="text" class="inputPesquisa" id="idInputPesquisa" name="text" value="" placeholder="Buscar Post" onkeyup="pesquisarPosts()" >
+                        <input type="text" class="inputPesquisa" id="idInputPesquisa" name="text" value="" placeholder="Buscar Post" onkeyup="pesquisarPostsTitulo()" >
                         </input>
                         <i class="bi bi-x-lg" onclick= "apagarTexto('inputPesquisa')"></i>
                 </div>
@@ -27,12 +27,12 @@
                 <p class="textoFiltro">Filtro</p>
             </div>
             <div class="tiposFiltro" id="tiposFiltro">
-                    <p>tipo1</p>
-                    <p>tipo2</p>
-                    <p>tipo3</p>
-                    <p>tipo4</p>
-                    <p>tipo5</p>
-                    <p>tipo6</p>
+                    <p onclick="pesquisarPostsTipo('')">Todos</p>
+                    <p onclick="pesquisarPostsTipo('tipo1')">tipo1</p>
+                    <p onclick="pesquisarPostsTipo('tipo2')">tipo2</p>
+                    <p onclick="pesquisarPostsTipo('tipo3')">tipo3</p>
+                    <p onclick="pesquisarPostsTipo('tipo4')">tipo4</p>
+                    <p onclick="pesquisarPostsTipo('tipo5')">tipo5</p>
             </div>
         </div>
         <ul class="listaDePosts">
