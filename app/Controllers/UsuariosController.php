@@ -88,7 +88,7 @@ class UsuariosController
             $parameters['senha'] = $_POST['senha'];
         }
         
-        App::get('database')->update('usuarios', $id_usuario, $parameters);
+        App::get('database')->update('usuarios', $parameters, $id_usuario);
         
         header('Content-Type: application/json');
         echo json_encode([
