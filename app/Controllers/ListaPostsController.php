@@ -72,6 +72,7 @@ class ListaPostsController
             ]);
             exit;
         }
+        
        public function buscaPorTipo()
         {
             $tipo = $_GET['tipo'] ?? '';
