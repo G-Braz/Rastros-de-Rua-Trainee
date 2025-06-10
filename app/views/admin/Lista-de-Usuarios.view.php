@@ -161,11 +161,11 @@
                     <div class="item-info">
                         <input type="hidden" value="<?= $usuario->id ?>" name="id">
                         <p class="titulo">Nome:</p>
-                        <input type="text" class="boxEditar" name="nome" value="<?= $usuario->nome ?>">
+                        <input type="text" class="boxEditar" name="nome" value="<?= $usuario->nome ?>" required>
                     </div>
                     <div class="item-info">
                         <p class="titulo">E-mail:</p>
-                        <input type="text" class="boxEditar" name="email" value="<?= $usuario->email ?>">
+                        <input type="text" class="boxEditar" name="email" value="<?= $usuario->email ?>" required>
                     </div>
                     <div id="msg-email2-<?= $usuario->id ?>" style="display:none">
                         <p>Esse e-mail já está sendo utilizado!</p>
