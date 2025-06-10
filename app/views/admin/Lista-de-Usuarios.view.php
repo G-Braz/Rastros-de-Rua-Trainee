@@ -20,38 +20,50 @@
 </head>
 <body>
     <div id="tela"></div>
-    <div class="fundo">
+    <div class="pagina">
         <div class="descricao">
-            <div class="Titulo">
-                <img src="../../../public/assets/LogoRastrosDeRua.png" alt="Logo Rastros de Rua Rato">
+            <div class="nome-tabela">
+                <img class="mascote" src="../../../public/assets/LogoRastrosDeRua.png" alt="Logo Rastros de Rua Rato">
                 <h1>Tabela de Usuários</h1>
             </div>
-            <div class="createButton" onclick="abrirModal('criar', null)">
-                <i class="bi bi-plus-square-fill"></i>
-                Criar Usuário
+            <div class="botaoadicionar" onclick="abrirModal('criar', null)">
+                <div class="icone-criar">
+                    <i class="bi bi-plus-square-fill"></i>
+                </div>
+                <div class="texto-botao">
+                    Criar Usuário
+                </div>
             </div>
         </div>
-        <table>
-            <tr>
-                <th>ID</th>
-                <th>Email</th>
-                <th>Nome de Usuário</th>
-                <th>Operações</th>
-            </tr>
-            <?php foreach ($usuarios as $usuario): ?>
-            <tr class="Usuario">
-                <td><?= $usuario->id; ?></td>
-                <td><?= $usuario->email; ?></td>
-                <td><?= $usuario->nome; ?></td>
-                    
-                <td class="operacoes" >
-                    <i class="bi bi-eye-fill" onclick="abrirModal('visualizar', <?= $usuario->id ?>)"></i>
-                    <i class="bi bi-pencil-square" onclick="abrirModal('editar',<?= $usuario->id ?>)"></i>
-                    <i class="bi bi-trash-fill" onclick="abrirModal('excluir',<?= $usuario->id ?>)"></i>
-                </td>
-            </tr>
-            <?php endforeach; ?>
-        </table>  
+        <div class="tabela">
+            <table>
+                <tr>
+                    <th>ID</th>
+                    <th>Nome de Usuário</th>
+                    <th>Email</th>
+                    <th>Operações</th>
+                </tr>
+                <?php foreach ($usuarios as $usuario): ?>
+                <tr class="Usuario">
+                    <td><?= $usuario->id; ?></td>
+                    <td><?= $usuario->nome; ?></td>
+                    <td><?= $usuario->email; ?></td>
+                        
+                    <td class="operacoes" >
+                        <div class="btn-operacao">
+                            <i class="bi bi-eye-fill" onclick="abrirModal('visualizar', <?= $usuario->id ?>)"></i>
+                        </div>
+                        <div class="btn-operacao">
+                            <i class="bi bi-pencil-square" onclick="abrirModal('editar',<?= $usuario->id ?>)"></i>
+                        </div>
+                        <div class="btn-operacao">
+                            <i class="bi bi-trash-fill" onclick="abrirModal('excluir',<?= $usuario->id ?>)"></i>
+                        </div>
+                    </td>
+                </tr>
+                <?php endforeach; ?>
+            </table>
+        </div>
         
         <!-- Modal Criar -->
         <form id="form-criar-usuario" class="modalUsuario" action="/usuarios/criar_usuario" method="POST">
@@ -86,8 +98,8 @@
                 </div>
             </div>
             <div class="botao-modal">
-                <button type="submit" class="botao" id="salvar">salvar</button>
-                <button type="button" class="botao" id="cancelar" onclick="fecharModal('criar',null)">cancelar</button>
+                <button type="submit" class="botao botao-salvar" id="salvar">salvar</button>
+                <button type="button" class="botao botao-cancelar" id="cancelar" onclick="fecharModal('criar',null)">cancelar</button>
             </div>
         </form>
 
@@ -169,8 +181,8 @@
                     </div>
                 </div>
                 <div class="botao-modal">
-                    <button type="submit" class="botao" id="salvar-edicao-<?= $usuario->id ?>">salvar</button>
-                    <button type="button" class="botao" id="cancelar-edicao-<?= $usuario->id ?>" onclick="fecharModal('editar',
+                    <button type="submit" class="botao botao-salvar" id="salvar-edicao-<?= $usuario->id ?>">salvar</button>
+                    <button type="button" class="botao botao-cancelar" id="cancelar-edicao-<?= $usuario->id ?>" onclick="fecharModal('editar',
                     <?= $usuario->id ?>)">cancelar</button>
                 </div>
             </div>
