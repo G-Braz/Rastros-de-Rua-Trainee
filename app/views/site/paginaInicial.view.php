@@ -23,70 +23,20 @@
 				<div class="navegacao-cima-pag-inicial swiper-button-prev"></div>
 				<div class="swiper">
 					<div class="swiper-wrapper">
+						<?php
+						$ultimos5 = array_slice($posts, 0, 5);
+						foreach ($ultimos5 as $post) : ?>
 						<div class="swiper-slide">
 							<div class="card-carrossel-pag-inicial">
 								<div class="imagem-card-pag-inicial">
 									<img class="imagem-obra-pag-inicial"
-										src="../../../public/assets/graffiti-sea-monster.jpg">
+										src="<?= $post->img_arte ?>">
 								</div>
-								<h2 class="titulo-card-pag-inicial"> Arte 1 </h2>
-								<p class="descricao-card-pag-inicial">Lorem ipsum is placeholder text commonly used in
-									the graphic, print, and publishing industries for previewing layouts
-									and visual mockups.</p>
+								<h2 class="titulo-card-pag-inicial"> <?= $post->titulo ?> </h2>
+								<p class="descricao-card-pag-inicial"><?= $post->descricao ?></p>
 							</div>
 						</div>
-						<div class="swiper-slide">
-							<div class="card-carrossel-pag-inicial">
-								<div class="imagem-card-pag-inicial">
-									<img class="imagem-obra-pag-inicial"
-										src="../../../public/assets/graffiti-sea-monster.jpg">
-								</div>
-								<h2 class="titulo-card-pag-inicial"> Arte 2 </h2>
-								<p class="descricao-card-pag-inicial">Lorem ipsum is placeholder text commonly used in
-									the graphic, print, and publishing
-									industries for previewing layouts
-									and visual mockups.</p>
-							</div>
-						</div>
-						<div class="swiper-slide">
-							<div class="card-carrossel-pag-inicial">
-								<div class="imagem-card-pag-inicial">
-									<img class="imagem-obra-pag-inicial"
-										src="../../../public/assets/graffiti-sea-monster.jpg">
-								</div>
-								<h2 class="titulo-card-pag-inicial"> Arte 3 </h2>
-								<p class="descricao-card-pag-inicial">Lorem ipsum is placeholder text commonly used in
-									the graphic, print, and publishing
-									industries for previewing layouts
-									and visual mockups.</p>
-							</div>
-						</div>
-						<div class="swiper-slide">
-							<div class="card-carrossel-pag-inicial">
-								<div class="imagem-card-pag-inicial">
-									<img class="imagem-obra-pag-inicial"
-										src="../../../public/assets/graffiti-sea-monster.jpg">
-								</div>
-								<h2 class="titulo-card-pag-inicial"> Arte 4 </h2>
-								<p class="descricao-card-pag-inicial">Lorem ipsum is placeholder text commonly used in
-									the graphic, print, and publishing
-									industries for previewing layouts
-									and visual mockups.</p>
-							</div>
-						</div>
-						<div class="swiper-slide">
-							<div class="card-carrossel-pag-inicial">
-								<div class="imagem-card-pag-inicial">
-									<img class="imagem-obra-pag-inicial"
-										src="../../../public/assets/graffiti-sea-monster.jpg">
-								</div>
-								<h2 class="titulo-card-pag-inicial"> Arte 5 </h2>
-								<p class="descricao-card-pag-inicial">Lorem ipsum is placeholder text commonly used in
-									the graphic, print, and publishing
-									industries for previewing layouts
-									and visual mockups.</p>
-							</div>
-						</div>
+						<?php endforeach; ?>
 					</div>
 				</div>
 				<div class="navegacao-baixo-pag-inicial swiper-button-next"></div>

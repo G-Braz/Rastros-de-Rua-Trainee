@@ -72,7 +72,7 @@ class ListaPostsController
             ]);
             exit;
         }
-        public function buscaPorTipo()
+       public function buscaPorTipo()
         {
             $tipo = $_GET['tipo'] ?? '';
             $page = isset($_GET['paginacaoNumero']) ? intval($_GET['paginacaoNumero']) : 1;
