@@ -111,6 +111,7 @@ i.bi {
 
 /* Seção com os títulos e com os conteúdos de missão, visão e valores */
 .missao, .visao, .valores {
+    cursor: pointer;
     width: 22vw;
     display: flex;
     flex-direction: column;
