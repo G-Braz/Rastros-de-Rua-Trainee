@@ -26,6 +26,8 @@
     <link rel="stylesheet" href="../../../public/css/mapa.css" />
 </head>
 <body>
+    <div class="separa-conteudo">
+    <?php include __DIR__ . '/../admin/sidebar.view.php' ?>
     <div class="pagina">
         <div class="descricao">
             <div class="nome-tabela">
@@ -406,7 +408,7 @@
                 <button onclick="fecharModal('idMapaPost','idConteudoMapaP')" class="btn-fechar-mapa">Fechar</button>
             </div>
         </div>
-    
+    </div>
 </body>
 <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 <script src="../../../public/js/modal.js"></script>

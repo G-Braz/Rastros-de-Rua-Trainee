@@ -10,6 +10,7 @@
 </head>
 
 <body>
+	<?php include __DIR__ . '/../site/navbar.view.php' ?>
 	<div class="conteudo-pag-inicial">
 		<div class="grade-pag-inicial">
 			<div class="heroSection-pag-inicial">
@@ -45,6 +46,6 @@
 		<script src="../../../public/js/paginaInicial.js"></script>
 		<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 	</div>
+	<?php include __DIR__ . '/../site/footer.view.php' ?>
 </body>
-
 </html>

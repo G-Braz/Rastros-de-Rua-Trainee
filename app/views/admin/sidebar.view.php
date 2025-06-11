@@ -13,7 +13,7 @@
     <div class="sidebar">
         <div class="conteudo-sidebar">
             <div class="logotipo">
-                <img src="../../../public/assets/logo-sidebar.png   ">
+                <img src="../../../public/assets/logo-sidebar.png">
             </div>
             <div class="conteudo-interno-sidebar">
                 <div class="redirecionamento-sidebar">

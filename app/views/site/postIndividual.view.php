@@ -15,6 +15,7 @@
     
 </head>
 <body>
+    <?php include __DIR__ . '/../site/navbar.view.php' ?>
     <div class="pagina">
         <div class="publicacao">
             <div class="conteudo-principal">
@@ -63,6 +64,7 @@
             <button onclick="fecharModal('idMapaPost','idConteudoMapaP')" class="btn-fechar-mapa">Fechar</button>
         </div>
     </div>
+    <?php include __DIR__ . '/../site/footer.view.php' ?>
 </body>
 <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 <script src="../../../public/js/mapas.js"></script>

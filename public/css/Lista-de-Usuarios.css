@@ -10,6 +10,12 @@ body{
     height: 100vh;
     overflow-y: hidden;
 }
+.separa-conteudo {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100vh;
+}
 .pagina {
     font-family: 'Urbanist', sans-serif;
     width: 100%;

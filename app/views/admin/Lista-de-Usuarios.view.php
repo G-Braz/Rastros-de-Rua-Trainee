@@ -19,6 +19,8 @@
 
 </head>
 <body>
+    <div class="separa-conteudo">
+    <?php include __DIR__ . '/../admin/sidebar.view.php' ?>
     <div id="tela"></div>
     <div class="pagina">
         <div class="descricao">
@@ -249,6 +251,7 @@
                 <i class="bi bi-chevron-right"></i>
             </a>
         </div>
+    </div>
     </div>
 </body>
 <script src="../../../public/js/Lista-de-Usuarios.js"></script>
