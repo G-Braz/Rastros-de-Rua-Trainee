@@ -45,7 +45,7 @@
                 </tr>
                 <?php foreach ($usuarios as $usuario): ?>
                 <tr class="Usuario">
-                    <td><?= $usuario->id; ?></td>
+                    <td><?= $usuario->id; ?></td> 
                     <td><?= $usuario->nome; ?></td>
                     <td><?= $usuario->email; ?></td>
                         

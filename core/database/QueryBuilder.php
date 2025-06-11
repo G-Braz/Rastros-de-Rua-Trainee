@@ -111,13 +111,24 @@ public function selectAll($table, $inicio = 0, $itens_page = 10)
             $table,
             'id = :id'
         );
+        
         try {
+            if($table == 'usuarios'){
+                $posts_delete = sprintf('DELETE FROM %s WHERE %s',
+                    'publicacoes', 
+                    'usuarios_id = :id'  
+                );
+                $stmt = $this->pdo->prepare($posts_delete);
+                $stmt->execute(compact('id'));
+            }
             $stmt = $this->pdo->prepare($sql);
             $stmt->execute(compact('id'));
+
         } catch (Exception $e) {
             die($e->getMessage());
         }
     }
+
     public function findById($table, $id)
     {
         $statement = $this->pdo->prepare("SELECT * FROM {$table} WHERE id = ?");

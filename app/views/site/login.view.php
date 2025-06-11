@@ -25,11 +25,11 @@
     <div class="msgErro">
         <p>
             <?php
-            session_start();
-            if (isset($_SESSION['erro'])) {
-                echo $_SESSION['erro'];
-                unset($_SESSION['erro']);
-            }
+                session_start();
+                if (isset($_SESSION['erro'])) {
+                    echo $_SESSION['erro'];
+                    unset($_SESSION['erro']);
+                }
             ?>
         </p>
     </div>

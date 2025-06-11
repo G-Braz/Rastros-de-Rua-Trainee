@@ -25,7 +25,7 @@
 
             if($user){
                 session_start();
-                $_SESSION['user']=$user->id;
+                $_SESSION['id'] = $user->id;
                 header('Location: /admin/dashboard');
             }else{
                 session_start();

@@ -1,5 +1,4 @@
 <?php
-
 namespace App\Controllers;
 
 use App\Core\App;
@@ -57,7 +56,8 @@ class PostsController
             'latitude'      => $_POST['latitude'],
             'longitude'     => $_POST['longitude'],
             'local'         => $_POST['local'],
-            'usuarios_id'   => 1,
+            'usuarios_id'   => $_POST['usuarios_id'],
+
             'img_arte'      => $caminhoImg,
             'img_tag'       => $caminhoTag,
             'tipo'          => $_POST['tipo'],
@@ -100,7 +100,6 @@ class PostsController
             
             $caminhoTag = $_POST['img_tag_atual'];
         }
-   
 
 
         $parameters = [
@@ -111,7 +110,7 @@ class PostsController
             'latitude'      => $_POST['latitude'],
             'longitude'     => $_POST['longitude'],
             'local'         => $_POST['local'],
-            'usuarios_id'   => 1,
+            'usuarios_id'   => $_POST['usuarios_id'],
             
             'img_arte'      => $caminhoImg,
             'img_tag'       => $caminhoTag,

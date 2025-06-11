@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="pt">
 <head>
@@ -14,14 +17,16 @@
     <div class="conteudo"> 
         <img src="../../../public/assets/Frame 10.png" class="logo">    
         <div class="container">
-            <a href="dashboard.html"  class="caixaBotao">
-                <i class="bi bi-people-fill"></i>
-                <p class="titulo">Usuários</p>
-            </a>
-            <form action="" method="POST" class="caixaBotao" >
+            <form action="/usuarios" class="caixaBotao">
+                <button class="botao" type="submit">
+                    <i class="bi bi-people-fill"></i>
+                    <p class="titulo" type="submit">Usuários</p>
+                </button>
+            </form>
+            <form action="/posts" class="caixaBotao" >
                 <button class="botao" type="submit">
                     <i class="bi bi-file-post-fill"></i>
-                    <p class="titulo">Posts</p>
+                    <p class="titulo" type="submit">Posts</p>
                 </button>
             </form>
             <form action="/logout" method="POST" class="caixaBotao" >

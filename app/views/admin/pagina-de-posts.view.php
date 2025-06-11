@@ -1,3 +1,10 @@
+<?php
+    session_start();
+    if(!isset($_SESSION['id'])){
+        header('Location: /login');
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -112,7 +119,8 @@
 <form class="modal-criar-post" id="id-modal-criar-post" method="POST" action="/posts/create" enctype="multipart/form-data">
     <input type="hidden" name="latitude" id="latitude" value="0" required>
     <input type="hidden" name="longitude" id="longitude" value="0" required>
-    <input type="hidden" name="local" id="nomeDoLocalInput"> 
+    <input type="hidden" name="local" id="nomeDoLocalInput">
+    <input type="hidden" name="usuarios_id" value="<?php echo ($_SESSION['id']); ?>">
     <div class="titulo-modal-criar-post">
         <p>Criar Publicação</p>
     </div>
