@@ -8,5 +8,6 @@ window.onload = function Carrossel() {
             prevEl: ".swiper-button-prev",
         },
         mousewheel: true,
+        loop: true
     });
 };
