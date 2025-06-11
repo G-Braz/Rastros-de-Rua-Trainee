@@ -514,6 +514,11 @@ td {
         gap: 2vh;
     }
 
+    .separa-conteudo {
+        flex-direction: column;
+        align-items: center;
+    }
+
     .descricao {
         width: 96%;
         flex-direction: column;
@@ -606,6 +611,11 @@ td {
     .pagina {
         justify-content: center;
         gap: 0.3vh;
+    }
+
+    .separa-conteudo {
+        flex-direction: row;
+        align-items: center;
     }
 
     .descricao {
@@ -709,6 +719,11 @@ td {
         justify-content: center;
     }
 
+    .separa-conteudo {
+        flex-direction: column;
+        align-items: center;
+    }
+
     .descricao {
         width: 96%;
         flex-direction: column;
@@ -804,6 +819,11 @@ td {
         justify-content: center;
     }
 
+    .separa-conteudo {
+        flex-direction: column;
+        align-items: center;
+    }
+
     .descricao {
         width: 95%;
         flex-direction: column;
@@ -896,6 +916,11 @@ td {
     .pagina {
         height: 100vh;
         justify-content: center;
+    }
+
+    .separa-conteudo {
+        flex-direction: column;
+        align-items: center;
     }
 
     .descricao {
