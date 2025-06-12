@@ -54,7 +54,7 @@
 }
 
 /* Ícones Redes Sociais */
-i.bi {
+i.bi-instagram, i.bi-linkedin, i.bi-facebook, i.bi-twitter {
     font-size: 3vw;
     color: #F5F5F5;
 }

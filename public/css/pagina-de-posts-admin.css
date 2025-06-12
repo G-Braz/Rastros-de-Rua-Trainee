@@ -63,7 +63,7 @@ h1 {
 
 /* Botão Criar Publicação */
 .botaoadicionar {
-    width: 21%;
+    width: fit-content;
     height: 7vh;
     display: flex;
     justify-content: center;

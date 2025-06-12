@@ -17,26 +17,26 @@
             </div>
             <div class="conteudo-interno-sidebar">
                 <div class="redirecionamento-sidebar">
-                    <div class="dashboard-sidebar">
+                    <a class="dashboard-sidebar" href="admin/dashboard" >
                         <i class="bi bi-columns-gap 
                         icones-sidebar
                         icone-dashboard-sidebar"></i>
                         <span class="texto-sidebar">Dashboard</span>
-                    </div>
-                    <div class="publicacoes-sidebar">
+                    </a>
+                    <a class="publicacoes-sidebar" href="/posts">
                         <i class="bi bi-file-earmark-richtext
                         icones-sidebar
                         icone-publicacoes-sidebar"></i>
                         <span class="texto-sidebar">Publicações</span>
-                    </div>
-                    <div class="usuarios-sidebar">
+                    </a>
+                    <a class="usuarios-sidebar" href="/usuarios">
                         <i class="bi bi-people-fill
                         icones-sidebar
                         icone-usuarios-sidebar"></i>
                         <span class="texto-sidebar">Usuários</span>
-                    </div>
+                    </a>
                 </div>
-                <div class="botao-logout-sidebar">
+                <form class="botao-logout-sidebar" action="/logout" method="POST">
                     <button class="botao-logout">
                         <div logo-logout>
                             <i class="bi bi-box-arrow-right
@@ -45,7 +45,7 @@
                         </div>
                         <span class="texto-botao-sidebar">Logout</span>
                     </button>
-                </div>
+                </form>
             </div>
         </div>
     </div>

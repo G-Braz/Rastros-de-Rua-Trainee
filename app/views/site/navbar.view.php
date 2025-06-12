@@ -22,8 +22,8 @@
         </div>
 
         <div class="links" id="links">
-            <a class="HomeButton" href="/home">Home</a>
-            <a class= "publicacoesButton" href="/publicacoes">Publicações</a>
+            <a class="HomeButton" href="/paginaInicial">Home</a>
+            <a class= "publicacoesButton" href="/listaPosts">Publicações</a>
             <a class= "LoginButton" href="/login">Login</a>
         </div>
     </header>

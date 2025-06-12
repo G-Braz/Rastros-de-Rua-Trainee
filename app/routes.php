@@ -21,3 +21,5 @@ $router->post('usuarios/editar_usuario', 'UsuariosController@editar_usuario');
 $router->post('usuarios/excluir_usuario', 'UsuariosController@excluir_usuario');
 $router->get('listaPosts/buscaPorTitulo', 'ListaPostsController@buscaPorTitulo');
 $router->get('listaPosts/buscaPorTipo', 'ListaPostsController@buscaPorTipo');
+$router->get('paginaInicial','PagInicialController@exibirPaginaInicial');
+$router->get('dashboard', 'LoginController@exibirDashboard');
