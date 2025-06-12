@@ -118,6 +118,7 @@ header {
         padding-bottom: 4%;
         background-color: #1E3A5F;
         height: fit-content; ;
+        z-index: 999;
     }
 
     .links a{
@@ -191,6 +192,7 @@ header {
         padding-bottom: 4%;
         background-color: #1E3A5F;
         height: fit-content;
+        z-index: 999;
     }
     .links a{
         font-size: 180%;
@@ -262,6 +264,7 @@ header {
         padding-bottom: 4%;
         background-color: #1E3A5F;
         height: fit-content;
+        z-index: 999;
     }
     .links a{
         font-size: 280%;
@@ -332,6 +335,7 @@ header {
         padding-bottom: 0px;
         background-color: #1E3A5F;
         height: fit-content;
+        z-index: 999;
     }
     .links a{
         font-size: 150%;
