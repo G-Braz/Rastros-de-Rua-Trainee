@@ -68,7 +68,7 @@
             </div>
             
             <!-- Modal Criar -->
-            <form id="form-criar-usuario" class="modalUsuario" action="/usuarios/criar_usuario" method="POST">
+            <form id="form-criar-usuario" class="modalUsuario modalUsuarioCriar" action="/usuarios/criar_usuario" method="POST">
                 <div class="topo-info">
                     <div class="icone-info">
                         <i class="bi bi-person-plus-fill"></i>
@@ -108,7 +108,7 @@
             
             <?php foreach ($usuarios as $usuario): ?>
             <!-- Modal Visualizar -->
-            <div id="form-visualizar-usuario-<?= $usuario->id ?>" class="modalUsuario">
+            <div id="form-visualizar-usuario-<?= $usuario->id ?>" class="modalUsuario modalUsuarioVisualizar">
                 <div class="topo-info">
                     <div class="icone-info">
                         <i class="bi bi-person-circle"></i>
@@ -129,18 +129,7 @@
                     <div class="item-info">
                         <p class="titulo">E-mail:</p>
                         <div class="box"><?= $usuario->email ?></div>
-                    </div>
-                    <div class="item-info">
-                        <p class="titulo">Senha:</p>
-                        <div class="box">
-                            <span class="input-senha-user senha-box" id="senha-user-<?= $usuario->id ?>">
-                            <?= $usuario->senha ?>
-                            <div class="icone-senha">
-                                <i id="olho-user-<?= $usuario->id ?>" class="bi bi-eye-fill" alt="Visualizar senha" onclick="mostrarSenha('senha-user-<?= $usuario->id ?>','olho-user-<?= $usuario->id ?>')"></i>
-                            </div>
-                            </span>
-                        </div>
-                    </div>
+                </div>
                 </div>
                 <div class="botao-modal">
                     <button class="botao" onclick="fecharModal('visualizar',<?= $usuario->id ?>)">fechar</button>
@@ -149,7 +138,7 @@
             
             <!-- Modal Editar -->
             <form id="form-editar-usuario-<?= $usuario->id ?>" action="/usuarios/editar_usuario" method="POST">
-                <div id="editar-<?= $usuario->id ?>" class="modalUsuario">
+                <div id="editar-<?= $usuario->id ?>" class="modalUsuario modalUsuarioEditar">
                     <div class="topo-info">
                         <div class="icone-info">
                             <i class="bi bi-person-fill"></i>

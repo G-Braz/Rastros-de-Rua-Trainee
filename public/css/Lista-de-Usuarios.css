@@ -10,15 +10,12 @@ body{
     height: 100vh;
     overflow-y: hidden;
 }
-.separa-conteudo {
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    height: 100vh;
+.separa-conteudo{
+    width: 100vw;
 }
+
 .pagina {
     font-family: 'Urbanist', sans-serif;
-    width: 100%;
     min-height: 100vh;
     background: rgba(0, 0, 0, 0.6);
     padding: 1vh 1vw;
@@ -28,7 +25,7 @@ body{
     margin-left: 45px;
 }
 .descricao img{
-    width: 12%;
+    width: 10%;
     transform: scaleX(-1);
 }
 .descricao {
@@ -506,117 +503,20 @@ td {
 
 
 /* Responsividade*/
-
-/*Responsividade para Tablets*/
-/* Ipad mini / Ipad air / Ipad Pro / Surface Pro 7 / Surface Duo / Asus Zenbook Fold*/
-@media screen and (min-width: 431px) and (max-width: 1124px) and (min-height: 720px) {
-    .pagina {
-        padding: 3vh 0vw;
-        gap: 2vh;
-    }
-
-    .separa-conteudo {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .descricao {
-        width: 96%;
-        flex-direction: column;
-        gap: 2vh;
-    }
-
-    .mascote img {
-        width: 14vw;
-    }
-
-    .nome-tabela {
-        gap: 1vw;
-    }
-
-    h1 {
-        font-size: 13vw;
-    }
-
-    .botaoadicionar {
-        width: 60%;
-        height: 5vh;
-        padding: 1vh;
-        gap: 2vw;
-        border-radius: 0.7vw;
-    }
-
-    .botaoadicionar .texto-botao {
-        font-size: 5.8vw;
-    }
-
-    .tabela {
-        width: 96%;
-    }
-
-    th {
-        font-size: 4.7vw;
-        padding: 2vh 1vw;
-        height: 10vh;
-    }
-
-    td {
-        font-size: 4.5vw;
-        padding: 2vh 1vw;
-        height: 11vh;
-    }
-
-    .operacoes {
-        gap: 0.8vw;
-        padding: 3vh 3vw;
-    }
-
-    .btn-operacao {
-        width: 7vw;
-        height: 5vh;
-    }
-
-    .btn-operacao i {
-        font-size: 5vw;
-    }
-
-    .paginacao {
-        gap: 1.5vw;
-        padding: 2vh 0;
-    }
-
-    .paginacao a {
-        font-size: 4.5vw;
-    }
-
-    .paginacao .bi {
-        padding: 2%;
-        font-size: 4.5vw;
-    }
-
-    .paginacao .paginas {
-        width: 13%;
-        height: 4.5vh;
-        padding: 2vh 1vw;
-    }
-
-    .paginacao .skip {
-        width: 13%;
-        height: 4.5vh;
-    }
-}
-
 /*Responsividade para Tablets*/
 /* Ipad mini / Ipad air / Ipad Pro / Surface Pro 7 / Surface Duo / Asus Zenbook Fold*/
 @media screen and (min-width: 431px) and (max-width: 1124px) and (min-height: 720px) {
     .pagina {
         justify-content: center;
         gap: 0.3vh;
+        margin-left: 82px;
+        width: auto;
     }
 
     .separa-conteudo {
         flex-direction: row;
         align-items: center;
+        height: 100vh;
     }
 
     .descricao {
@@ -649,6 +549,7 @@ td {
     .botaoadicionar .texto-botao {
         font-size: 5.3vw;
     }
+
     .icone-criar {
         font-size: 4vw;
     }
@@ -709,6 +610,17 @@ td {
         width: 9%;
         height: 5vh;
     }
+
+    .modalUsuario {
+        width: 50%;
+        left: 30%;
+        top: 5%;
+    }
+    .modalUsuarioExcluir {
+        width: 50%;
+        left: 30%;
+        top: 28%;
+    }
 }
 
 /*Responsividade para Celular*/
@@ -718,11 +630,8 @@ td {
         padding: 2vh 0vw;
         width: fit-content;
         justify-content: center;
-    }
-
-    .separa-conteudo {
-        flex-direction: column;
-        align-items: center;
+        width: auto;
+        margin-left: 0;
     }
 
     .descricao {
@@ -811,6 +720,17 @@ td {
         width: 10%;
         height: 4vh;
     }
+    .modalUsuario {
+        width: 35vh;
+        left: 5%;
+        top: 10%;
+    }
+
+    .modalUsuarioExcluir {
+        width: 35vh;
+        left: 5%;
+        top: 28%;
+    }
 }
 
 /* Iphone SE */
@@ -818,11 +738,10 @@ td {
     .pagina {
         height: 70vh;
         justify-content: center;
-    }
-
-    .separa-conteudo {
-        flex-direction: column;
-        align-items: center;
+        width: auto;
+        margin-left: 0;
+        padding-top: 80px;
+        gap: 0.3vh;
     }
 
     .descricao {
@@ -910,6 +829,28 @@ td {
         height: 4.5vh;
     }
 
+    .modalUsuarioCriar {
+        width: 72%;
+        left: 15%;
+        top: 17%;
+    }
+    .modalUsuarioEditar {
+        width: 78%;
+        left: 11%;
+        top: 17%;
+    }
+    .modalUsuarioVisualizar {
+        width: 70%;
+        left: 14%;
+        top: 11%;
+    }
+
+    .modalUsuarioExcluir {
+        width: 70%;
+        left: 15%;
+        top: 33%;
+    }
+
 }
 
 /* Iphone XR */
@@ -917,11 +858,10 @@ td {
     .pagina {
         height: 100vh;
         justify-content: center;
-    }
-
-    .separa-conteudo {
-        flex-direction: column;
-        align-items: center;
+        width: auto;
+        margin-left: 0;
+        padding-top: 80px;
+        gap: 0.3vh;
     }
 
     .descricao {
@@ -1008,5 +948,28 @@ td {
     .paginacao .skip {
         width: 10%;
         height: 4vh;
+    }
+    .modalUsuarioCriar {
+        width: 85%;
+        left: 8%;
+        top: 16%;
+    }
+
+    .modalUsuarioEditar {
+        width: 78%;
+        left: 11%;
+        top: 17%;
+    }
+
+    .modalUsuarioVisualizar {
+        width: 75%;
+        left: 12%;
+        top: 9%;
+    }
+
+    .modalUsuarioExcluir {
+        width: 77%;
+        left: 12%;
+        top: 32%;
     }
 }
