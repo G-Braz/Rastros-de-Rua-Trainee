@@ -20,7 +20,7 @@
 </head>
 <body>
     <div class="separa-conteudo">
-        <?php include __DIR__ . '/../admin/sidebar.view.php' ?>
+    <?php include __DIR__ . '/../admin/sidebar.view.php' ?>
         <div id="tela"></div>
         <div class="pagina">
             <div class="descricao">
@@ -65,45 +65,6 @@
                     </tr>
                     <?php endforeach; ?>
                 </table>
-            </div>
-
-            <!-- Paginação -->
-            <div class="paginacao"> 
-                <a class="skip page-item<?= $page <= 1 ? "-disabled" : ""?>" href="?paginacaoNumero=<?= $page - 1 ?>">
-                    <i class="bi bi-chevron-left"></i>
-                </a>
-                <?php
-                    $range = 1; // Quantas páginas mostrar antes/depois da atual
-                    $show_pages = [];
-
-                    $show_pages[] = 1;
-                    for ($i = $page - $range; $i <= $page + $range; $i++) {
-                        if ($i > 1 && $i < $total_pages) {
-                            $show_pages[] = $i;
-                        }
-                    }
-                    if ($total_pages > 1) {
-                        $show_pages[] = $total_pages;
-                    }
-
-                    $show_pages = array_unique($show_pages);
-                    sort($show_pages);
-
-                    $prev = 0;
-                    foreach ($show_pages as $page_number):
-                        if ($prev && $page_number > $prev + 1):
-                    ?>
-                    <?php
-                        endif;
-                        $prev = $page_number;
-                ?>
-                    <a class="paginas page-link<?= $page_number == $page ? "-active" : "" ?>" href="?paginacaoNumero=<?= $page_number ?>">
-                        <p><?= $page_number ?></p>
-                    </a>
-                <?php endforeach; ?> 
-                <a class="skip page-item<?= $page >= $total_pages ? "-disabled" : ""?>" href="?paginacaoNumero=<?= $page + 1 ?>">
-                    <i class="bi bi-chevron-right"></i>
-                </a>
             </div>
             
             <!-- Modal Criar -->
@@ -169,6 +130,18 @@
                         <p class="titulo">E-mail:</p>
                         <div class="box"><?= $usuario->email ?></div>
                     </div>
+                    <div class="item-info">
+                        <p class="titulo">Senha:</p>
+                        <div class="box">
+                            <span class="input-senha-user senha-box" id="senha-user-<?= $usuario->id ?>">
+                            <?= $usuario->senha ?>
+                            <div class="icone-senha">
+                                <i id="olho-user-<?= $usuario->id ?>" class="bi bi-eye-fill" alt="Visualizar senha" onclick="mostrarSenha('senha-user-<?= $usuario->id ?>','olho-user-<?= $usuario->id ?>')"></i>
+                            </div>
+                            </span>
+                        </div>
+                    </div>
+                </div>
                 <div class="botao-modal">
                     <button class="botao" onclick="fecharModal('visualizar',<?= $usuario->id ?>)">fechar</button>
                 </div>
@@ -219,26 +192,65 @@
 
             <!-- Modal Excluir -->
             <form id="form-excluir-usuario-<?= $usuario->id ?>" action="/usuarios/excluir_usuario" method="POST">
-                <div id="excluir-<?= $usuario->id ?>" class="modalUsuarioExcluir">
-                    <input type="hidden" value="<?= $usuario->id ?>" name="id">
-                    <div class="topo-excluir">
-                        <div class="icone-excluir">
-                            <i class="bi bi-trash-fill"></i>
-                        </div>
-                        <div class="titulo-excluir">
-                            <h2>Excluir Usuário</h2>
-                        </div>
+            <div id="excluir-<?= $usuario->id ?>" class="modalUsuarioExcluir">
+                <input type="hidden" value="<?= $usuario->id ?>" name="id">
+                <div class="topo-excluir">
+                    <div class="icone-excluir">
+                        <i class="bi bi-trash-fill"></i>
                     </div>
-                    <div class="pergunta">
-                        <p>Tem certeza que deseja excluir o usuário?</p>
+                    <div class="titulo-excluir">
+                        <h2>Excluir Usuário</h2>
                     </div>
-                    <div class="botoes-modal">
-                        <button type="submit" class="excluir">Excluir</button>
-                        <button type="button" class="cancelar" onclick="fecharModal('excluir',<?= $usuario->id ?>)">Cancelar</button>
-                    </div>
-                </div> 
+                </div>
+                <div class="pergunta">
+                    <p>Tem certeza que deseja excluir o usuário?</p>
+                </div>
+                <div class="botoes-modal">
+                    <button type="submit" class="excluir">Excluir</button>
+                    <button type="button" class="cancelar" onclick="fecharModal('excluir',<?= $usuario->id ?>)">Cancelar</button>
+                </div>
+            </div> 
             </form>
             <?php endforeach; ?>
+
+            <!-- Paginação -->
+            <div class="paginacao"> 
+                <a class="skip page-item<?= $page <= 1 ? "-disabled" : ""?>" href="?paginacaoNumero=<?= $page - 1 ?>">
+                    <i class="bi bi-chevron-left"></i>
+                </a>
+                <?php
+                    $range = 1; // Quantas páginas mostrar antes/depois da atual
+                    $show_pages = [];
+
+                    $show_pages[] = 1;
+                    for ($i = $page - $range; $i <= $page + $range; $i++) {
+                        if ($i > 1 && $i < $total_pages) {
+                            $show_pages[] = $i;
+                        }
+                    }
+                    if ($total_pages > 1) {
+                        $show_pages[] = $total_pages;
+                    }
+
+                    $show_pages = array_unique($show_pages);
+                    sort($show_pages);
+
+                    $prev = 0;
+                    foreach ($show_pages as $page_number):
+                        if ($prev && $page_number > $prev + 1):
+                    ?>
+                    <?php
+                        endif;
+                        $prev = $page_number;
+                ?>
+                    <a class="paginas page-link<?= $page_number == $page ? "-active" : "" ?>" href="?paginacaoNumero=<?= $page_number ?>">
+                        <p><?= $page_number ?></p>
+                    </a>
+                <?php endforeach; ?> 
+                <a class="skip page-item<?= $page >= $total_pages ? "-disabled" : ""?>" href="?paginacaoNumero=<?= $page + 1 ?>">
+                    <i class="bi bi-chevron-right"></i>
+                </a>
+            </div>
         </div>
     </div>
 </body>
