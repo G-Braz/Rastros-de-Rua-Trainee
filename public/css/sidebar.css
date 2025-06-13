@@ -33,6 +33,8 @@ body {
     height: 100vh;
     width: fit-content;
     font-family: "Staatliches", sans-serif;
+    position: absolute;
+    z-index: 999;
 }
 
 /* Conteúdo interno da sidebar (parte visual do menu) */
@@ -49,7 +51,6 @@ body {
     letter-spacing: 0.3px;
     overflow: hidden;
     transition: all 0.3s ease-out;
-
     .texto-sidebar {
         display: none;
     }
@@ -75,9 +76,7 @@ body {
         display: flex;
         opacity: 100;
         font-size: 20px;
-    }
-
-    ;
+    };
 
     .redirecionamento-sidebar {
         align-items: start;
@@ -91,6 +90,10 @@ body {
     .texto-botao-sidebar {
         font-size: 20px;
     }
+}
+.sidebar:hover {
+    position: absolute;
+    z-index: 999;
 }
 
 /* Área dos botões/redirecionamentos */

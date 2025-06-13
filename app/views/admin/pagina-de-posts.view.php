@@ -365,11 +365,14 @@
             <p>Estilo</p>
             <select class="data-criar-post" name="tipo" required>
                 <option value="#" selected><?=$post->tipo?></option>
-                <option value="1">Estilo 1</option>
-                <option value="2">Estilo 2</option>
-                <option value="3">Estilo 3</option>
-                <option value="4">Estilo 4</option>
-                <option value="5">Estilo 5</option>
+                <option value="1">Tag / Pixo</option>
+                <option value="2">Throw-up</option>
+                <option value="3">Bubble Style</option>
+                <option value="4">Wildstyle</option>
+                <option value="5">3D Style</option>
+                <option value="6">Realismo</option>
+                <option value="7">Personagens</option>
+                <option value="8">Fades / Degradê</option>
             </select>
         </div>
     </div>

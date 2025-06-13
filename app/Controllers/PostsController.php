@@ -69,6 +69,7 @@ class PostsController
     }
     public function edit()
     {
+        session_start();
         // Imagem Arte
         if (!empty($_FILES['img_arte']['name'])) { // verifica se a imagem foi alterada
 
@@ -110,7 +111,7 @@ class PostsController
             'latitude'      => $_POST['latitude'],
             'longitude'     => $_POST['longitude'],
             'local'         => $_POST['local'],
-            'usuarios_id'   => $_POST['usuarios_id'],
+            'usuarios_id'   => $_SESSION['id'],
             
             'img_arte'      => $caminhoImg,
             'img_tag'       => $caminhoTag,
