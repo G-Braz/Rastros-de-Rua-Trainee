@@ -30,11 +30,14 @@
                 </div>
                 <div class="tiposFiltro" id="tiposFiltro">
                         <p onclick="pesquisarPostsTipo('')">Todos</p>
-                        <p onclick="pesquisarPostsTipo('tipo1')">tipo1</p>
-                        <p onclick="pesquisarPostsTipo('tipo2')">tipo2</p>
-                        <p onclick="pesquisarPostsTipo('tipo3')">tipo3</p>
-                        <p onclick="pesquisarPostsTipo('tipo4')">tipo4</p>
-                        <p onclick="pesquisarPostsTipo('tipo5')">tipo5</p>
+                        <p onclick="pesquisarPostsTipo('Tag / Pixo')">Tag / Pixo</p>
+                        <p onclick="pesquisarPostsTipo('Throw-up')">Throw-up</p>
+                        <p onclick="pesquisarPostsTipo('Bubble Style')">Bubble Style</p>
+                        <p onclick="pesquisarPostsTipo('Wildstyle')">Wildstyle</p>
+                        <p onclick="pesquisarPostsTipo('3D Style')">3D Style</p>
+                        <p onclick="pesquisarPostsTipo('Realismo')">Realismo</p>
+                        <p onclick="pesquisarPostsTipo('Characters (Personagens)')">Characters (Personagens)</p>
+                        <p onclick="pesquisarPostsTipo('Fades / Degradê')">Fades / Degradê</p>
                 </div>
             </div>
             <ul class="listaDePosts">

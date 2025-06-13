@@ -130,18 +130,6 @@
                         <p class="titulo">E-mail:</p>
                         <div class="box"><?= $usuario->email ?></div>
                     </div>
-                    <div class="item-info">
-                        <p class="titulo">Senha:</p>
-                        <div class="box">
-                            <span class="input-senha-user senha-box" id="senha-user-<?= $usuario->id ?>">
-                            <?= $usuario->senha ?>
-                            <div class="icone-senha">
-                                <i id="olho-user-<?= $usuario->id ?>" class="bi bi-eye-fill" alt="Visualizar senha" onclick="mostrarSenha('senha-user-<?= $usuario->id ?>','olho-user-<?= $usuario->id ?>')"></i>
-                            </div>
-                            </span>
-                        </div>
-                    </div>
-                </div>
                 <div class="botao-modal">
                     <button class="botao" onclick="fecharModal('visualizar',<?= $usuario->id ?>)">fechar</button>
                 </div>
