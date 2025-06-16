@@ -23,3 +23,4 @@ $router->get('listaPosts/buscaPorTitulo', 'ListaPostsController@buscaPorTitulo')
 $router->get('listaPosts/buscaPorTipo', 'ListaPostsController@buscaPorTipo');
 $router->get('paginaInicial','PagInicialController@exibirPaginaInicial');
 $router->get('dashboard', 'LoginController@exibirDashboard');
+$router->get('', 'LoginController@exibirLandingPage');
