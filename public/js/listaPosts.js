@@ -1,5 +1,6 @@
 function apagarTexto(idInput){
     document.getElementById(idInput).value="";
+    pesquisarPostsTitulo();
 }
 const tela = document.querySelector('#tela');
 

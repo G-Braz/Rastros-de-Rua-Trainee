@@ -169,6 +169,9 @@ body{
     padding: 10px;
     color: #427AC4;
 }
+.bi-x-lg{
+    cursor: pointer;
+}
 
 ul{
     list-style: none;

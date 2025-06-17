@@ -21,7 +21,7 @@
                             <i class="bi bi-search"></i>
                             <input type="text" class="inputPesquisa" id="idInputPesquisa" name="text" value="" placeholder="Buscar Post" onkeyup="pesquisarPostsTitulo()" >
                             </input>
-                            <i class="bi bi-x-lg" onclick= "apagarTexto('inputPesquisa')"></i>
+                            <i class="bi bi-x-lg" onclick= "apagarTexto('idInputPesquisa')"></i>
                     </div>
                 </div>
                 <div class="filtro" onclick="abrirFiltro('tiposFiltro')">
