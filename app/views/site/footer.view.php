@@ -39,15 +39,15 @@
         <div class="parte-02">
             <div class="missao">
                 <h2 class="titulo">Missão</h2>
-                <p class="conteudo">Valorizar o impacto cultural e social da arte urbana por meio do compartilhamento coletivo, em um espaço digital colaborativo; promovendo o registro, a apreciação e a preservação das manifestações artísticas das ruas.</p>
+                <p class="conteudoFooter">Valorizar o impacto cultural e social da arte urbana por meio do compartilhamento coletivo, em um espaço digital colaborativo; promovendo o registro, a apreciação e a preservação das manifestações artísticas das ruas.</p>
             </div>
             <div class="visao">
                 <h2 class="titulo">Visão</h2>
-                <p class="conteudo">Ser uma plataforma referência em arte urbana, promovendo a democratização da cultura e inspirando comunidades a se envolverem ativamente com a arte nas ruas.</p>
+                <p class="conteudoFooter">Ser uma plataforma referência em arte urbana, promovendo a democratização da cultura e inspirando comunidades a se envolverem ativamente com a arte nas ruas.</p>
             </div>
             <div class="valores">
                 <h2 class="titulo">Valores</h2>
-                <p class="conteudo">Colaboração, Inclusão, Respeito e Criatividade.</p>
+                <p class="conteudoFooter">Colaboração, Inclusão, Respeito e Criatividade.</p>
             </div>
         </div>
     </footer>

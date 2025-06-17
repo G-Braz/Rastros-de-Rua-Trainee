@@ -121,7 +121,7 @@ i.bi-instagram, i.bi-linkedin, i.bi-facebook, i.bi-twitter {
 }
 
 /* Textos do conteúdo de missão, visão e valores */
-.missao .conteudo, .visao .conteudo, .valores .conteudo {
+.missao .conteudoFooter, .visao .conteudoFooter, .valores .conteudoFooter {
     opacity: 0;
     font-size: 0;
     text-align: center;
@@ -130,7 +130,7 @@ i.bi-instagram, i.bi-linkedin, i.bi-facebook, i.bi-twitter {
 }
 
 /* Mostra o conteúdo ao passar o mouse */
-.missao:hover .conteudo, .visao:hover .conteudo, .valores:hover .conteudo {
+.missao:hover .conteudoFooter, .visao:hover .conteudoFooter, .valores:hover .conteudoFooter {
     opacity: 1;
     font-size: 1.5vw;
     font-weight: semibold;
@@ -178,7 +178,7 @@ i.bi-instagram, i.bi-linkedin, i.bi-facebook, i.bi-twitter {
         width: 90%;
     }
 
-    .missao:hover .conteudo, .visao:hover .conteudo, .valores:hover .conteudo {
+    .missao:hover .conteudoFooter, .visao:hover .conteudoFooter, .valores:hover .conteudoFooter {
         font-size: 4vw;
     }
 }
@@ -226,7 +226,7 @@ i.bi-instagram, i.bi-linkedin, i.bi-facebook, i.bi-twitter {
         gap: 1vh;
         width: 95%;
     }
-    .missao:hover .conteudo, .visao:hover .conteudo, .valores:hover .conteudo {
+    .missao:hover .conteudoFooter, .visao:hover .conteudoFooter, .valores:hover .conteudoFooter {
         font-size: 5vw;
     }
 }
