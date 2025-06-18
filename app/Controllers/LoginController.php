@@ -26,6 +26,11 @@
             if($user){
                 session_start();
                 $_SESSION['id'] = $user->id;
+                if ($user->email === 'adm@email.com') {
+                    $_SESSION['adm'] = 1;
+                } else {
+                    $_SESSION['adm'] = 0;
+                }
                 header('Location: /admin/dashboard');
             }else{
                 session_start();

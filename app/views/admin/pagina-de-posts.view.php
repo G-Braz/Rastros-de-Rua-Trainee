@@ -68,8 +68,10 @@
 
                             <td class="operacoes">
                                 <button><i class="bi bi-eye-fill" onclick="abrirModal('fundoVisualizar<?= $post->id ?>','idModalVisualizar<?= $post->id ?>')"></i></button>
-                                <button><i class="bi bi-pencil-square" onclick="abrirModal('fundoEditar<?= $post->id ?>','idModalEditar<?= $post->id ?>',<?= $post->id ?>)"></i></button>
-                                <button><i class="bi bi-trash-fill" onclick="abrirModal('fundo-modal-excluir-post<?= $post->id ?>','modal-excluir-post<?= $post->id ?>',<?= $post->id ?> )"></i></button>
+                                <?php if ($_SESSION['adm'] == 1 || $post->usuarios_id == $_SESSION['id']): ?>
+                                    <button><i class="bi bi-pencil-square" onclick="abrirModal('fundoEditar<?= $post->id ?>','idModalEditar<?= $post->id ?>',<?= $post->id ?>)"></i></button>
+                                    <button><i class="bi bi-trash-fill" onclick="abrirModal('fundo-modal-excluir-post<?= $post->id ?>','modal-excluir-post<?= $post->id ?>',<?= $post->id ?> )"></i></button>
+                                <?php endif; ?>
                             </td>
                         </tr>
 
