@@ -731,6 +731,10 @@ td {
         left: 5%;
         top: 28%;
     }
+    
+    .icone-criar {
+        font-size: 5vw;
+    }
 }
 
 /* Iphone SE */
@@ -849,6 +853,10 @@ td {
         width: 70%;
         left: 15%;
         top: 33%;
+    }
+    
+    .icone-criar {
+        font-size: 4vw;
     }
 
 }
@@ -971,5 +979,9 @@ td {
         width: 77%;
         left: 12%;
         top: 32%;
+    }
+    
+    .icone-criar {
+        font-size: 4.5vw;
     }
 }
