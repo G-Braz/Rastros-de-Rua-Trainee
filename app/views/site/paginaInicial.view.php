@@ -14,10 +14,11 @@
 	<div class="conteudo-pag-inicial">
 		<div class="grade-pag-inicial">
 			<div class="heroSection-pag-inicial">
-				<p class="titulo-pag-inicial">Lorem Ipsum</p>
-				<p class="descricao-pag-inicial">Lorem Ipsum has been the industry's standard dummy text ever since the
-					1500s, Lorem Ipsum has been the industry's standard dummy text ever since the 1500s. </p>
-				<button class="botaoVerMais-pag-inicial">Ver Mais</button>
+				<p class="titulo-pag-inicial">Das Ruas Nascem Novos Rastros</p>
+				<p class="descricao-pag-inicial">Conheça artistas incríveis, veja as intervenções urbanas que transformam paisagens cinzas em verdadeiras galerias a céu aberto e descubra as histórias por trás de cada traço.</p>
+				<form action="/listaPosts" class="caixaBotaoVerMais">
+					<button class="botaoVerMais-pag-inicial">Ver Mais</button>
+				</form>
 			</div>
 			<div class="ultimasPublicacoes-pag-inicial">
 				<h1 class="titulo-carrossel-pag-inicial">Últimas Publicações</h1>
@@ -34,7 +35,7 @@
 										src="<?= $post->img_arte ?>">
 								</div>
 								<h2 class="titulo-card-pag-inicial"> <?= $post->titulo ?> </h2>
-								<p class="descricao-card-pag-inicial"><?= $post->descricao ?></p>
+								<p class="descricao-card-pag-inicial"> <?= $post->descricao ?></p>
 							</div>
 						</div>
 						<?php endforeach; ?>
@@ -43,9 +44,12 @@
 				<div class="navegacao-baixo-pag-inicial swiper-button-next"></div>
 			</div>
 		</div>
-		<script src="../../../public/js/paginaInicial.js"></script>
-		<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 	</div>
+	<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+	<script>
+		const postsCount = <? count($ultimos5) ?>;
+	</script>
+	<script src="../../../public/js/paginaInicial.js"></script>
 	<?php include __DIR__ . '/../site/footer.view.php' ?>
 </body>
 </html>
