@@ -76,7 +76,6 @@ body{
     cursor: pointer;
 }
 .icone-criar{
-    font-weight: 600;
     font-size: 1.9vw;
     color: #0C1C31;
 }
@@ -732,9 +731,6 @@ td {
         left: 5%;
         top: 28%;
     }
-    .icone-criar {
-        font-size: 5vw;
-    }
 }
 
 /* Iphone SE */
@@ -854,9 +850,7 @@ td {
         left: 15%;
         top: 33%;
     }
-      .icone-criar {
-        font-size: 5vw;
-    }
+
 }
 
 /* Iphone XR */
@@ -977,8 +971,5 @@ td {
         width: 77%;
         left: 12%;
         top: 32%;
-    }
-      .icone-criar {
-        font-size: 5vw;
     }
 }
