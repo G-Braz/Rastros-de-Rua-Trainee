@@ -28,8 +28,10 @@
     row-gap: 10px;
     overflow-y: scroll;
     max-height: 90%;
-    left: 15%;
-    top: 5%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
 }
 .tituloModalEditar{
     font-size: 28px;

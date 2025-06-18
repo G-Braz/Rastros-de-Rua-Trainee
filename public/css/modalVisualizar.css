@@ -9,6 +9,7 @@
     opacity: 0;
     transition: all 0.5s ease;
     top: 0%;
+    left: 0%;
 }
 
 .visualizar{/*fundo branco do modal*/
@@ -28,8 +29,10 @@
     row-gap: 10px;
     overflow-y: scroll;
     max-height: 90%;
-    top: 5%;
-    left: 15%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
 }
 .tituloModalVisualizar{ /*Titulo Visualizar Publicação*/
     font-size: 30px;
