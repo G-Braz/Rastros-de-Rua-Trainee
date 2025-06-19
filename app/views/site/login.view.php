@@ -36,15 +36,13 @@
     <form class="infos" method="POST" action="/login">
         <div class="email">
             <p class="tituloEmail">Email</p>
-            <div class="caixaEmail">
-                <input type="email" id="email" name="email" required>
-            </div>
+            <input type="email" id="email" name="email" class="caixaEmail" required>
         </div>
 
         <div class="senha">
             <label class="tituloSenha">Senha</label>
             <div class="caixaSenha">
-                <input type="password" id="senha" name="senha" required>
+                <input type="password" id="senha" name="senha" class="caixaSenha"required>
                 <i class="bi bi-eye-fill" id="olinho" onclick="mostrarSenha('senha','olinho')"></i>
             </div>
         </div>

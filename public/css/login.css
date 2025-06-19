@@ -123,7 +123,7 @@ input:focus{
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 40%;
+    width: 30%;
 }
 
 .entrarBotao{ /*Botão de entrar*/
