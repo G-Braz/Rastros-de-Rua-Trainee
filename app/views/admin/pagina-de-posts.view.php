@@ -278,7 +278,7 @@
                     </div>
                     <div class="dataVisualizar">
                         <p class="visualizarData">Estilo</p>
-                        <p class="data-criar-post"><?=$post->tipo?></p>
+                        <p class="data-visualizar-post"><?=$post->tipo?></p>
                     </div>
                 </div>
                 <div class="botaoVisualizar">

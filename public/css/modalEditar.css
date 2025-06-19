@@ -266,7 +266,7 @@ textarea{
         font-size: 20px;
     }
     .editar{
-        top:5%;
+        top:50%;
         width: 70vw;
         row-gap: 7px;
     }
@@ -361,10 +361,10 @@ textarea{
         font-size:28px;
     }
     .editar{
-        top:5%;
+        top:50%;
         width:55vw;
         row-gap: 4px;
-        left: 20%;
+        left: 55%;
     }
     .arteEditar{
         width: 100%;
@@ -401,7 +401,6 @@ textarea{
     }
     .tagInput{
         width: 100%;
-        align-items: start;
     }
     .arteEditar p,.tituloPublicacaoEditar p,.autorEditar p,.tagEditar p,.descricaoModalEditar p,.localEditar p,.dataEditar p,.MateriaisModalEditar p{
         font-size: 24px;
@@ -505,7 +504,7 @@ textarea{
         font-size: 20px;
     }
     .editar{
-        top:5%;
+        top:50%;
         width: 80vw;
         row-gap: 1.5px;
     }
@@ -578,7 +577,7 @@ textarea{
         font-size: 20px;
     }
     .editar{
-        top:5%;
+        top:50%;
         width: 75vw;
         row-gap: 1.5px;
     }
@@ -647,10 +646,10 @@ textarea{
         font-size: 22px;
     }
     .editar{
-        top:5%;
+        top:50%;
         width: 60vw;
         row-gap: 3px;
-        left: 20%;
+        left: 55%;
     }
     .arteEditar{
         width: 100%;

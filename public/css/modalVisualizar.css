@@ -103,21 +103,24 @@
     display: flex;
     flex-direction: row;
     width: 90%;
-    justify-content: space-between;
-    gap: 3%;
+    gap: 1%;
+    justify-content: center;
+    align-items: flex-end;
+    text-align: start;
 }
 .conteudoTituloVisualizar,
 .conteudoAutorVisualizar,
 .conteudoDescricaoVisualizar,
 .conteudoLocalVisualizar,
 .conteudoDataVisualizar,
-.conteudoMateriaisVisualizar{ /*Altera todos os titulos das divs*/
+.conteudoMateriaisVisualizar,
+.data-visualizar-post{ /*Altera todos os titulos das divs*/
     background-color: #1E3A5F;
     width: 100%;
     padding: 8px 10px;
     border: 2px solid #ccc;
     border-radius: 8px;
-    font-size: 20px;
+    font-size: 18px;
     transition: all 0.3s ease;
     font-family: 'Urbanist', sans-serif;
     color: #F5F5F5;
@@ -134,8 +137,8 @@
     justify-content: center;
     align-items: center;
     cursor: pointer;
-    transition: all 0.2s;
-    white-space: nowrap;
+    transition: all 0.2s ease;
+    box-shadow: none;
     width: 100%;
     text-decoration: none;
 }
@@ -190,6 +193,14 @@
     overflow: hidden;
     min-height: fit-content;
 }
+.data-visualizar-post{
+    text-align: center;
+    width: 100%;
+    margin: 0;
+    padding: 6.5px 6.5px;
+    height: 38px;
+}
+
 
 /*Responsividade*/
 /*Celulares*/
@@ -198,7 +209,7 @@
         font-size: 20px;
     }
     .visualizar{
-        top: 4%;
+        top: 50%;
         width: 70vw;
         row-gap: 1px;
     }
@@ -279,10 +290,10 @@
         font-size: 30px;
     }
     .visualizar{
-        top: 5%;
+        top: 50%;
         width: 55vw;
         row-gap: 4px;
-        left: 22%;
+        left: 55%;
     }
     .arteVisualizar{
         width: 100%;
@@ -350,6 +361,10 @@
     }
     .dataLocalVisualizar{
         flex-direction: column;
+    }
+    .data-visualizar-post{
+        height: 40px;
+        
     }
     .dataVisualizar{
         width: 100%;
