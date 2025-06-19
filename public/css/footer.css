@@ -66,6 +66,7 @@ i.bi-instagram, i.bi-linkedin, i.bi-facebook, i.bi-twitter {
     justify-content: center;
     align-items: center;
     padding: 1vh;
+    z-index: 0;
 }
 
 /* Imagem Mascote Rastros de Rua */
