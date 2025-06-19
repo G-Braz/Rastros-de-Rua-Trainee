@@ -8,8 +8,6 @@
 body{
     background: url('/public/assets/fundo-tabelas.jpg') no-repeat; 
     background-size: cover;
-    height: 100%;
-    width: 100%;
 }
 /* Fundo */
 .pagina {
@@ -226,10 +224,9 @@ button:hover{
 /* Ipad mini / Ipad air / Ipad Pro / Surface Pro 7 / Surface Duo / Asus Zenbook Fold*/
 @media screen and (min-width: 431px) and (max-width: 1124px) and (min-height: 720px) {
     .pagina {
-        padding: 0.5vh 0vw;
+        padding: 2vh 0vw;
         gap: 3vh;
         padding-left: 50px;
-
     }
 
     .descricao {
@@ -239,7 +236,7 @@ button:hover{
     }
 
     .mascote img {
-        width: 18vw;
+        width: 10.8vw;
     }
     
     .nome-tabela {
@@ -260,6 +257,9 @@ button:hover{
     
     .botaoadicionar .texto-botao {
         font-size: 5vw;
+    }
+    .botaoadicionar .icone .bi{
+        font-size: 4vw;
     }
 
     .tabela {
@@ -363,6 +363,9 @@ button:hover{
         margin-left: 0;
         width: 100%;
         padding-top: 80px;
+        align-items: center;
+        justify-content: center;
+        margin-left: 0;
     }
 
     .descricao {
@@ -372,7 +375,7 @@ button:hover{
     }
 
     .mascote img {
-        width: 22vw;
+        width: 10.8vw;
     }
     
     .nome-tabela {
@@ -453,11 +456,14 @@ button:hover{
 }
 
 /* Iphone SE */
-@media screen and (min-width:345px) and (max-width: 375px) {
+@media screen and (min-width:345px) and (max-width: 430px) {
     .pagina {
-        padding: 1vh 0vw;
+        align-items: center;
+        justify-content: center;
+        margin-left: 0;
         gap: 2vh;
     }
+
 
     .descricao {
         width: 95%;
@@ -466,7 +472,7 @@ button:hover{
     }
 
     .mascote img {
-        width: 23vw;
+        width: 15vw;
     }
     
     .nome-tabela {
@@ -487,6 +493,9 @@ button:hover{
     
     .botaoadicionar .texto-botao {
         font-size: 4.6vw;
+    }
+    .botaoadicionar .icone .bi{
+        font-size: 5vw;
     }
 
     .tabela {
@@ -543,96 +552,4 @@ button:hover{
         height: 4.5vh;
     }
 
-}
-
-/* Iphone XR */
-@media screen and (min-width:376px) and (max-width: 430px) {
-    .pagina {
-        padding: 2vh 0vw;
-        gap: 2vh;
-    }
-
-    .descricao {
-        width: 96%;
-        flex-direction: column;
-        gap: 2vh;
-    }
-
-    .mascote img {
-        width: 23vw;
-    }
-    
-    .nome-tabela {
-        gap: 1vw;
-    }
-    
-    h1 {
-        font-size: 12vw;
-    }
-
-    .botaoadicionar {
-        width: 48%;
-        height: 4vh;
-        padding: 0vh;
-        gap: 2vw;
-        border-radius: 0.7vw;
-    }
-    
-    .botaoadicionar .texto-botao {
-        font-size: 5vw;
-    }
-
-    .tabela {
-        width: 96%;
-    }
-    
-    th {
-        font-size: 5vw;
-        padding: 2vh 2vw; 
-    }
-    
-    td {
-        font-size: 4.4vw;
-        padding: 2vh 2vw;
-    }
-
-    .operacoes{
-        gap: 0.8vw; 
-        padding: 3vh 2vw;
-    }
-    
-    button { 
-        width: 7vw;
-        height: 4vh;
-    }
-    
-    button i {
-        font-size: 4vw; 
-    }
-
-    .paginacao {
-        gap: 2vw;
-        padding: 3vh 0;
-    }
-
-    .paginacao a {
-        font-size: 5vw;
-        border-radius: 3vw; 
-    }
-    
-    .paginacao .bi {
-        padding: 2%;
-        font-size: 5vw;
-    }
-    
-    .paginacao .paginas {
-        width: 10%;
-        height: 4vh;
-        padding: 2vh 1vw;
-    }
-    
-    .paginacao .skip {
-        width: 10%;
-        height: 4vh;
-    }
 }
