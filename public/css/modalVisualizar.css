@@ -587,7 +587,7 @@
     }
 }
 /*Laptops*/
-@media only screen and (min-width:1000px) and (max-width: 2000px) and (min-height:700px){
+@media only screen and (min-width:1000px) and (max-width: 1440px) and (min-height:700px){
     .tituloModalVisualizar{
         font-size: 22px;
     }
