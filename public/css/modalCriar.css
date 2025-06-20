@@ -251,6 +251,7 @@ textarea::placeholder {
         max-height: 90%;
         overflow-y: scroll;
         text-align: center;
+        left: 213px;
     }
     .titulo-modal-criar-post {
         font-size: 20px;
@@ -298,6 +299,12 @@ textarea::placeholder {
         padding: 6px 8px;
         border-radius: 8px;
         font-size: 12px;
+    }
+    .btn-mapa-modal-criar{
+        font-size: 12px;
+    }
+    .btn-mapa-modal-criar i {
+            font-size: 20px;
     }
     .input-arte-criar-post,
     .input-tag-criar-post{

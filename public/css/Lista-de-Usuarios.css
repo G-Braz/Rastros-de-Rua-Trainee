@@ -42,7 +42,6 @@ body{
     gap: 1vw;
 }
 
-
 .nome-tabela h1{
     font-family: 'Staatliches', sans-serif;
     font-size: 4.8vw;
@@ -225,7 +224,7 @@ td {
     width: 30%;
     height: fit-content;
     position: absolute;
-    top: 6%;
+    top: 13%;
     left: 35%;
     background: #F5F5F5;
     border-radius: 0.6vw;
@@ -841,7 +840,7 @@ td {
     .modalUsuarioEditar {
         width: 78%;
         left: 11%;
-        top: 17%;
+        top: 13%;
     }
     .modalUsuarioVisualizar {
         width: 70%;
@@ -960,7 +959,7 @@ td {
     .modalUsuarioCriar {
         width: 85%;
         left: 8%;
-        top: 16%;
+        top: 14%;
     }
 
     .modalUsuarioEditar {
