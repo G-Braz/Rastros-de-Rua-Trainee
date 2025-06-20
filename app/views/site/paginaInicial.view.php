@@ -8,48 +8,54 @@
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 	<link rel="stylesheet" href="../../../public/css/paginaInicial.css">
 </head>
-
 <body>
-	<?php include __DIR__ . '/../site/navbar.view.php' ?>
-	<div class="conteudo-pag-inicial">
-		<div class="grade-pag-inicial">
-			<div class="heroSection-pag-inicial">
-				<p class="titulo-pag-inicial">Das Ruas Nascem Novos Rastros</p>
-				<p class="descricao-pag-inicial">Conheça artistas incríveis, veja as intervenções urbanas que transformam paisagens cinzas em verdadeiras galerias a céu aberto e descubra as histórias por trás de cada traço.</p>
-				<form action="/listaPosts" class="caixaBotaoVerMais">
-					<button class="botaoVerMais-pag-inicial">Ver Mais</button>
-				</form>
-			</div>
-			<div class="ultimasPublicacoes-pag-inicial">
-				<h1 class="titulo-carrossel-pag-inicial">Últimas Publicações</h1>
-				<div class="navegacao-cima-pag-inicial swiper-button-prev"></div>
-				<div class="swiper">
-					<div class="swiper-wrapper">
-						<?php
-						$ultimos5 = array_slice($posts, 0, 5);
-						foreach ($ultimos5 as $post) : ?>
-						<div class="swiper-slide">
-							<div class="card-carrossel-pag-inicial">
-								<div class="imagem-card-pag-inicial">
-									<img class="imagem-obra-pag-inicial"
-										src="<?= $post->img_arte ?>">
-								</div>
-								<h2 class="titulo-card-pag-inicial"> <?= $post->titulo ?> </h2>
-								<p class="descricao-card-pag-inicial"> <?= $post->descricao ?></p>
-							</div>
-						</div>
-						<?php endforeach; ?>
-					</div>
+	<div class="tela-fundo" id="tela"></div>
+	<div class="pagina-inicial">
+		<?php include __DIR__ . '/../site/navbar.view.php' ?>
+		<div class="conteudo-pag-inicial">
+			<div class="grade-pag-inicial">
+				<div class="heroSection-pag-inicial">
+					<p class="titulo-pag-inicial">Das Ruas Nascem Novos Rastros</p>
+					<p class="descricao-pag-inicial">Conheça artistas incríveis, veja as intervenções urbanas que transformam paisagens cinzas em verdadeiras galerias a céu aberto e descubra as histórias por trás de cada traço.</p>
+					<form action="/listaPosts" class="caixaBotaoVerMais">
+						<button class="botaoVerMais-pag-inicial">Ver Mais</button>
+					</form>
 				</div>
-				<div class="navegacao-baixo-pag-inicial swiper-button-next"></div>
+				<div class="ultimasPublicacoes-pag-inicial">
+					<h1 class="titulo-carrossel-pag-inicial">Últimas Publicações</h1>
+					<div class="navegacao-cima-pag-inicial swiper-button-prev"></div>
+					<div class="swiper">
+						<div class="swiper-wrapper">
+							<?php
+							$ultimos5 = array_slice($posts, 0, 5);
+							foreach ($ultimos5 as $post) : ?>
+							<div class="swiper-slide">
+								<div class="card-carrossel-pag-inicial">
+									<div class="imagem-card-pag-inicial">
+										<img class="imagem-obra-pag-inicial"
+											src="<?= $post->img_arte ?>">
+									</div>
+									<h2 class="titulo-card-pag-inicial"> <?= $post->titulo ?> </h2>
+									<p class="descricao-card-pag-inicial"> <?= $post->descricao ?></p>
+								</div>
+							</div>
+							<?php endforeach; ?>
+						</div>
+					</div>
+					<div class="navegacao-baixo-pag-inicial swiper-button-next"></div>
+				</div>
 			</div>
 		</div>
+		<div class="pagina-secreta" id="id-pagina-secreta" style="display: none;">
+			<img src="/public/assets/videoplayback-unscreen.gif" alt="Rato Secreto" style="width: 70%; height: auto; margin: 0 auto; display: block;">
+		</div>
+		<?php include __DIR__ . '/../site/footer.view.php' ?>
 	</div>
-	<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-	<script>
-		const postsCount = <? count($ultimos5) ?>;
-	</script>
-	<script src="../../../public/js/paginaInicial.js"></script>
-	<?php include __DIR__ . '/../site/footer.view.php' ?>
 </body>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+		<script>
+			const postsCount = <? count($ultimos5) ?>;
+		</script>
+		<script src="../../../public/js/paginaInicial.js"></script>
+<script src="../../../public/js/paginaSecreta.js"></script>
 </html>

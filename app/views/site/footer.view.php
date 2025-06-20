@@ -26,7 +26,7 @@
             </div>
             <!-- Imagens do mascote e da assinatura rastros -->
             <div class="assinatura">
-                <img src="/public/assets/Mascote.png" alt="Mascote" class="mascote">
+                <img src="/public/assets/Mascote.png" alt="Mascote" class="mascote" id="mascote-secreto">
                 <img src="/public/assets/Logo Branca rastros.png" alt="Logo Branca" class="logo-branca">
             </div>
             <div class="assinatura-ej">
@@ -51,6 +51,6 @@
             </div>
         </div>
     </footer>
-
 </body>
+<script src="../../../public/js/paginaSecreta.js"></script>
 </html>

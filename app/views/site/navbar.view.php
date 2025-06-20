@@ -17,8 +17,10 @@
 <body>
     <header>
         <div class="logo-navbar">
-            <img src="../../../public/assets/Logo Branca.png" alt="Logo Branca">
-            <i class="bi bi-list" onclick="clickMenu()"></i>
+            <a href = "/paginaInicial">
+                <img src="../../../public/assets/Logo Branca.png" alt="Logo Branca">
+                <i class="bi bi-list" onclick="clickMenu()"></i>
+            </a>
         </div>
 
         <div class="links" id="links">
