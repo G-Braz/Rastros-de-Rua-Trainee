@@ -141,7 +141,7 @@
 .inputDescricaoEditar,
 .inputLocalEditar,
 .conteudoDataEditar,
-.inputMateriaisEditar{
+.inputMateriaisEditar, .data-editar-post{
     background-color: #1E3A5F;
     width: 100%;
     padding: 1.214%;
@@ -314,8 +314,14 @@ textarea{
         font-size: 18px;
         text-align: center;
     }
-    .tituloInput,.inputAutor,.inputDescricaoEditar,.inputLocalEditar,p.conteudoDataEditar,.inputMateriaisEditar{
+    .tituloInput,.inputAutor,.inputDescricaoEditar,.inputLocalEditar,p.conteudoDataEditar,.inputMateriaisEditar, .data-editar-post{
         font-size: 18px;
+    }
+    .inputLocalEditar{
+        height: fit-content;
+    }
+    .inputLocalEditar i{
+        font-size: 16px;
     }
     .botaoModal{
         border-radius: 8px;
@@ -430,6 +436,9 @@ textarea{
     }
     .dataLocalEditar{
         flex-direction: column;
+    }
+    .data-editar-post{
+        text-align: center;
     }
     .localEditar,.dataEditar{
         width: 100%;

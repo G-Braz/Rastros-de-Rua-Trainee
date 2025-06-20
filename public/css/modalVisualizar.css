@@ -253,14 +253,17 @@
        justify-content: center;
        padding-left: 2px;
     }
-    .ConteudoLocalVisualizar{
-        width: 60%;
+    .conteudoLocalVisualizar{
+        height: fit-content;
     }
-    p.conteudoAutorVisualizar,.conteudoDescricaoVisualizar,.ConteudoLocalVisualizar,.conteudoLocalVisualizar,.conteudoDataVisualizar,p.conteudoTituloVisualizar,textArea.conteudoMateriaisVisualizar{
+    .conteudoLocalVisualizar i{
+        font-size: 16px;
+    }
+    p.conteudoAutorVisualizar,.conteudoDescricaoVisualizar,.conteudoLocalVisualizar,.conteudoLocalVisualizar,.conteudoDataVisualizar,p.conteudoTituloVisualizar,textArea.conteudoMateriaisVisualizar{
         padding: 2%;
         font-size: 18px;
     }
-    .arteContent,p.tituloAutorVisualizar,.tagVisualizar p,p.tituloDescricaoVisualizar,p.TituloLocalVisualizar,p.visualizarData,p.tituloMateriaisVisualizar,p.TituloTituloVisualizar{
+    .arteContent,p.tituloAutorVisualizar,.tagVisualizar p,p.tituloDescricaoVisualizar,p.tituloLocalVisualizar,p.visualizarData,p.tituloMateriaisVisualizar,p.tituloTituloVisualizar{
         font-size: 20px;
         text-align: center;
     }
@@ -341,7 +344,7 @@
     p.conteudoDataVisualizar{
         width: 100%;
     }
-    p.conteudoAutorVisualizar,p.conteudoTituloVisualizar,.conteudoDescricaoVisualizar,.ConteudoLocalVisualizar,.conteudoLocalVisualizar,.conteudoDataVisualizar,textArea.conteudoMateriaisVisualizar{
+    p.conteudoAutorVisualizar,p.conteudoTituloVisualizar,.conteudoDescricaoVisualizar,.ConteudoLocalVisualizar,.conteudoLocalVisualizar,.conteudoDataVisualizar,textArea.conteudoMateriaisVisualizar, .data-visualizar-post{
         padding: 1%;
         font-size: 23px;
     }

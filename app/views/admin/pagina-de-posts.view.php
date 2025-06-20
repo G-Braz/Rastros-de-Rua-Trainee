@@ -364,7 +364,7 @@
                 </div>
                 <div class="dataEditar">
                     <p>Estilo</p>
-                    <select class="data-criar-post" name="tipo" required>
+                    <select class="data-editar-post" name="tipo" required>
                         <option value="#" selected><?=$post->tipo?></option>
                         <option value="1">Tag / Pixo</option>
                         <option value="2">Throw-up</option>
