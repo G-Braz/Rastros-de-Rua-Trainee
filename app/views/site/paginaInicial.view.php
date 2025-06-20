@@ -46,8 +46,9 @@
 				</div>
 			</div>
 		</div>
-		<div class="pagina-secreta" id="id-pagina-secreta" style="display: none;">
-			<img src="/public/assets/videoplayback-unscreen.gif" alt="Rato Secreto" style="width: 70%; height: auto; margin: 0 auto; display: block;">
+		<div class="pagina-secreta" id="id-pagina-secreta" style="display: none;" onclick="fecharPaginaSecreta()">
+			<img src="/public/assets/gifRato.gif" alt="Rato Secreto" style="width: 70%; height: auto; margin: 0 auto; display: block;">
+			<audio id="musica" src="/public/assets/musicaRespeitaOPai.mp3"></audio>
 		</div>
 		<?php include __DIR__ . '/../site/footer.view.php' ?>
 	</div>
