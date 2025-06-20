@@ -40,14 +40,14 @@ function pesquisarPostsTipo(tipo, page = 1) {
 function atualizarPaginacao(totalPages, currentPage, termo) {
     let paginacaoHtml = '';
 
-    paginacaoHtml += `<a class="skip page-item${currentPage <= 1 ? "-disabled" : ""}" href="#" onclick="pesquisarPosts(${currentPage - 1}, 
+    paginacaoHtml += `<a class="skip page-item${currentPage <= 1 ? "-disabled" : ""}" href="#" onclick="pesquisarPostsTitulo(${currentPage - 1}, 
     '${termo}');return false;"><i class="bi bi-chevron-left"></i></a>`;
 
     for (let i = 1; i <= totalPages; i++) {
-        paginacaoHtml += `<a class="paginas${i === currentPage ? " active" : ""}" href="#" onclick="pesquisarPosts(${i}, '${termo}');return false;">${i}</a>`;
+        paginacaoHtml += `<a class="paginas${i === currentPage ? " active" : ""}" href="#" onclick="pesquisarPostsTitulo(${i}, '${termo}');return false;">${i}</a>`;
     }
 
-    paginacaoHtml += `<a class="skip page-item${currentPage >= totalPages ? "-disabled" : ""}" href="#" onclick="pesquisarPosts(${currentPage + 1},
+    paginacaoHtml += `<a class="skip page-item${currentPage >= totalPages ? "-disabled" : ""}" href="#" onclick="pesquisarPostsTitulo(${currentPage + 1},
     '${termo}');return false;"><i class="bi bi-chevron-right"></i></a>`;
 
     document.querySelector('.paginacao').innerHTML = paginacaoHtml;

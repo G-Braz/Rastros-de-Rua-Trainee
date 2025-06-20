@@ -29,7 +29,7 @@
                     <p class="textoFiltro">Filtro</p>
                 </div>
                 <div class="tiposFiltro" id="tiposFiltro">
-                        <p onclick="pesquisarPostsTipo('')">Todos</p>
+                        <p onclick="pesquisarPostsTipo(''); apagarTexto('idInputPesquisa')">Todos</p>
                         <p onclick="pesquisarPostsTipo('Tag / Pixo')">Tag / Pixo</p>
                         <p onclick="pesquisarPostsTipo('Throw-up')">Throw-up</p>
                         <p onclick="pesquisarPostsTipo('Bubble Style')">Bubble Style</p>

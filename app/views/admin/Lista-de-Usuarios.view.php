@@ -4,8 +4,6 @@
         header('Location: /login');
     }
 ?>
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -63,12 +61,15 @@
                             <div class="btn-operacao">
                                 <i class="bi bi-eye-fill" onclick="abrirModal('visualizar', <?= $usuario->id ?>)"></i>
                             </div>
+                        <?php if ($_SESSION['adm'] == 1 || $usuario->id == $_SESSION['id']): ?>
                             <div class="btn-operacao">
                                 <i class="bi bi-pencil-square" onclick="abrirModal('editar',<?= $usuario->id ?>)"></i>
                             </div>
                             <div class="btn-operacao">
                                 <i class="bi bi-trash-fill" onclick="abrirModal('excluir',<?= $usuario->id ?>)"></i>
                             </div>
+                        <?php else: ?>
+                        <?php endif; ?>
                         </td>
                     </tr>
                     <?php endforeach; ?>
