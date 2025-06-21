@@ -102,9 +102,20 @@ class UsuariosController
     // ------------------------------------------------------------------------
     public function excluir_usuario()
     {
+        session_start(); // garanta que a sessão esteja ativa
+
         $id = $_POST['id'];
-        
+
         App::get('database')->delete('usuarios', $id);
-        header('Location: /usuarios');
+
+        if ($_SESSION['id'] == $id) {
+            // Se o usuário excluiu a si mesmo
+            session_destroy();
+            header('Location: /');
+        } else {
+            // Se foi outro usuário, volta para a lista
+            header('Location: /usuarios');
+        }
+        exit;
     }
 }

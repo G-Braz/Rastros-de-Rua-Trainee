@@ -90,10 +90,8 @@ header {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        margin-left: 0;
-        padding-left: 15px;
-        padding-right: 15px;
-        
+        margin-left: 0;   
+        padding-right: 10px;     
     }
 
     .logo-navbar img{
@@ -167,8 +165,7 @@ header {
         justify-content: space-between;
         align-items: center;
         margin-left: 0;
-        padding-left: 20px;
-        padding-right: 20px;
+        padding-right: 10px;
     }
 
     .logo-navbar img{
@@ -239,8 +236,7 @@ header {
         justify-content: space-between;
         align-items: center;
         margin-left: 0;
-        padding-left: 20px;
-        padding-right: 20px;
+        padding-right: 15px;
     }
 
     .logo-navbar img{
@@ -310,8 +306,7 @@ header {
         justify-content: space-between;
         align-items: center;
         margin-left: 0;
-        padding-left: 20px;
-        padding-right: 20px;
+        padding-right: 10px;
     }
 
     .logo-navbar img{
