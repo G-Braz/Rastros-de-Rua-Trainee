@@ -264,7 +264,7 @@ body {
 /* Surface Duo */
 @media only screen and (max-width: 540px) and (min-width: 540px) and (max-height: 720px) and (min-height: 720px) {
     .logotipo img {
-        height: 65px;
+        height: 63px;
     }
 
     .conteudo-sidebar {
@@ -285,7 +285,7 @@ body {
 @media only screen and (max-width: 853px) and (min-width: 853px) and (max-height: 1280px) and (min-height: 1280px) {
     .conteudo-sidebar {
         gap: 50px;
-        width: 82px;
+        width: 92px;
     }
 
     .conteudo-interno-sidebar {
