@@ -1,4 +1,4 @@
-window.onload = function Carrossel() {
+document.addEventListener('DOMContentLoaded', function () {
     const swiper = new Swiper('.swiper', {
         slidesPerView: 2,
         spaceBetween: 20,
@@ -10,4 +10,4 @@ window.onload = function Carrossel() {
         mousewheel: true,
         loop: true
     });
-};
+});

@@ -7,7 +7,7 @@ body {
 
 .conteudo-pag-inicial {
     background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-        url('../../../public/assets/pagina-inicial-background.jpg') center/cover no-repeat fixed;
+        url('../../../public/assets/pagina-inicial-background (1).jpg') center/cover no-repeat fixed;
     padding: 1% 1%;
     width: 100%;
     height: 100vh;
@@ -762,3 +762,71 @@ body {
         height: 70vh;
     }
 }
+
+/*Ipad Mini Simulador*/
+@media only screen and (max-width: 700px) and (min-width: 800px) and (max-height: 1000px) and (min-height: 1100px) {
+    .conteudo-pag-inicial {
+            padding: 5% 5%;
+            height: fit-content;
+        }
+    
+        .titulo-pag-inicial {
+            margin-top: 0%;
+            margin-bottom: 0%;
+            font-size: 110px;
+        }
+    
+        .heroSection-pag-inicial {
+            padding: 50px 50px;
+        }
+    
+        .grade-pag-inicial {
+            grid-template-columns: 1fr;
+            place-items: center;
+            width: 100%;
+        }
+    
+        .titulo-card-pag-inicial {
+            font-size: 30px;
+            padding: 3px 15px;
+        }
+    
+        .descricao-card-pag-inicial {
+            font-size: 18px;
+            text-align: justify;
+            padding: 0px 10px;
+        }
+    
+        .descricao-pag-inicial {
+            margin-top: 20px;
+            margin-bottom: 20px;
+            font-size: 30px;
+        }
+    
+        .botaoVerMais-pag-inicial {
+            font-size: 40px;
+            padding: 2px 14px;
+            border-radius: 5px;
+        }
+    
+        .ultimasPublicacoes-pag-inicial {
+            width: 65%;
+            height: 70vh;
+            padding: 2% 2%;
+        }
+    
+        .card-carrossel-pag-inicial {
+            width: 85%;
+            height: 24vh;
+            padding: 2%;
+        }
+    
+        .titulo-carrossel-pag-inicial {
+            font-size: 45px;
+        }
+    
+        .grade-pag-inicial {
+            gap: 25px;
+        }
+    
+    }
