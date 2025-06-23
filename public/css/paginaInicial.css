@@ -138,6 +138,9 @@ body {
     border: 1px solid rgba(13, 13, 13, 0.23);
     box-shadow: inset 0px 4px 8px rgba(241, 236, 236, 0.3);
 }
+.card-carrossel-pag-inicial img{
+    cursor: pointer;
+}
 
 .titulo-carrossel-pag-inicial {
     color: #F5F5F5;
