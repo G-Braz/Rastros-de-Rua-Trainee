@@ -28,11 +28,10 @@ function abrirModal(idFundo, idModal, postID = null){
     }
   }, 20);
 
-  if(idModal==='idModalEditar' || idModal==='idModalVisualizar'){ //ajusta o tamanho dos campos descrição e materiais ao abrir o modal editar
+  if(idModal.startsWith('idModalEditar') || idModal.startsWith('idModalVisualizar')) {
     setTimeout(() => {
-            console.log("Tentando ajustar textareas para o modal:", idModal); // Para depuração
-            ajustarTextAreasInicialmente();
-    }, 2);
+      ajustarTextAreasInicialmente();
+    }, 20);
   }
 
   setTimeout(() => {
@@ -65,21 +64,10 @@ function autoResize(el) { // função para ajustar o tamanho
   el.style.height = (el.scrollHeight) + 'px';
 }
 
-function ajustarTextAreasInicialmente() { // executa o reajuste de tamanho
-  const textAreas = [
-    document.getElementById('textAreaDescricao'),
-    document.getElementById('textAreaMateriais'),
-    document.getElementById('textAreaDescricaoEditar'),
-    document.getElementById('textAreaMateriaisEditar')
-  ];
-  
-  textAreas.forEach(textarea => {
-    if (textarea) {
-      // Ajusta inicialmente
-      autoResize(textarea);
-      
-      // Futuras alterações
-      textarea.addEventListener('input', () => autoResize(textarea));
-    }
+function ajustarTextAreasInicialmente() {
+  // Seleciona todos os textareas visíveis no modal aberto
+  document.querySelectorAll('.visualizar[style*="display: flex"] textarea, .editar[style*="display: flex"] textarea').forEach(textarea => {
+    autoResize(textarea);
+    textarea.addEventListener('input', () => autoResize(textarea));
   });
 }
