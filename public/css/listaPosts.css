@@ -98,7 +98,8 @@ body{
     color: #427AC4;
     font-weight: 500;
     cursor: pointer;
-    
+    font-family: "Urbanist", sans-serif;
+
 }
 .tiposFiltro p:hover{
     border: 0.2px solid #427AC4;
@@ -110,6 +111,7 @@ body{
 }
 
 .textoFiltro{
+    font-family: "Urbanist", sans-serif;
     font-size: 18px;
     font-weight: 600;
     color: #427AC4;
@@ -283,9 +285,13 @@ ul{
     justify-content: center;
     align-items: center;
     transition: background 0.2s;
+    font-family: "Urbanist", sans-serif;
+    color: #F5F5F5;
+
 }
 
 .paginacao .bi{
+    font-family: "Urbanist", sans-serif;
     color:#F5F5F5;
     font-weight: 400;
     padding: 2%;
@@ -299,6 +305,7 @@ ul{
     font-weight: 300;
 }
 .paginacao .skip{
+    font-family: "Urbanist", sans-serif;
     width: 4.5%;
     height: 6.5vh;
 }
@@ -308,13 +315,19 @@ ul{
 }
 
 /* Estiliza número selecionado na paginação */
-.paginas.page-link-active {
+.paginas.page-link-active:hover {
     background: rgb(12, 28, 49, 0.8);
     border: 1px solid rgb(245, 245, 245, 0.4);
 }
 
 .skip.page-item-disabled {
-    pointer-events: none;
+    font-family: "Urbanist", sans-serif;
+    font-weight: 400;
+    font-size: 110%;
+}
+.skip.page-item-disabled:hover {
+    background: rgb(12, 28, 49, 0.8);
+    border: 1px solid rgb(245, 245, 245, 0.4);
 }
 
 @media (max-width:345px) {
