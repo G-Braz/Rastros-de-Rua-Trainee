@@ -24,6 +24,7 @@
     <link rel="stylesheet" href="/public/css/modalCriar.css">
     <link rel="stylesheet" href="/public/css/modalExcluir.css">
     <link rel="stylesheet" href="../../../public/css/mapa.css" />
+    <link rel="icon" type="image/png" href="../../../public/assets/ratao.png">
 </head>
 <body>
     <div class="separa-conteudo">

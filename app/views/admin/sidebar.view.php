@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="../../../public/css/sidebar.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
     <title>Sidebar</title>
+    <link rel="icon" type="image/png" href="../../../public/assets/ratao.png">
 </head>
 
 <body>

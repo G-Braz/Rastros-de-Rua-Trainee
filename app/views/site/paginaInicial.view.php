@@ -7,6 +7,8 @@
 	<title>Página Inicial</title>
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 	<link rel="stylesheet" href="../../../public/css/paginaInicial.css">
+
+	<link rel="icon" type="image/png" href="../../../public/assets/ratao.png">
 </head>
 <body>
 	<div class="tela-fundo" id="tela"></div>
@@ -31,12 +33,14 @@
 							foreach ($ultimos5 as $post) : ?>
 							<div class="swiper-slide">
 								<div class="card-carrossel-pag-inicial">
-									<div class="imagem-card-pag-inicial">
-										<img class="imagem-obra-pag-inicial"
-											src="<?= $post->img_arte ?>">
-									</div>
-									<h2 class="titulo-card-pag-inicial"> <?= $post->titulo ?> </h2>
-									<p class="descricao-card-pag-inicial"> <?= $post->descricao ?></p>
+									<a href="/listaPosts/<?=$post->id?>" style="text-decoration: none; color: inherit;">
+										<div class="imagem-card-pag-inicial">
+											<img class="imagem-obra-pag-inicial"
+												src="<?= $post->img_arte ?>">
+										</div>
+										<h2 class="titulo-card-pag-inicial"> <?= $post->titulo ?> </h2>
+										<p class="descricao-card-pag-inicial"> <?= $post->descricao ?></p>
+									</a>
 								</div>
 							</div>
 							<?php endforeach; ?>

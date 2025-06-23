@@ -271,7 +271,7 @@ i.bi-instagram, i.bi-linkedin, i.bi-facebook, i.bi-twitter {
         gap: 1vh;
         width: 90%;
     }
-    .missao:hover .conteudo, .visao:hover .conteudo, .valores:hover .conteudo {
+    .missao:hover .conteudoFooter, .visao:hover .conteudoFooter, .valores:hover .conteudoFooter {
         font-size: 4.5vw;
     }
 }
