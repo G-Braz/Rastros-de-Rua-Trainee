@@ -25,7 +25,7 @@ body{
     margin-left: 45px;
 }
 .descricao img{
-    width: 10%;
+    width: 13%;
     transform: scaleX(-1);
 }
 .descricao {
@@ -554,25 +554,25 @@ td {
     }
 
     .tabela {
-        width: 96%;
+        width: fit-content;
         padding: 1vh 1vw;
     }
 
     th {
-        font-size: 4vw;
+        font-size: 3vw;
         padding: 1vh 1vw;
         height: 8vh;
     }
 
     td {
-        font-size: 3.3vw;
+        font-size: 2.5vw;
         padding: 1vh 1vw;
         height: 10vh;
     }
 
     .operacoes {
         gap: 0.8vw;
-        padding: 2.5vh 1vw;
+        padding: 2.2vh 1vw;
     }
 
     .btn-operacao {
@@ -581,7 +581,7 @@ td {
     }
 
     .btn-operacao i {
-        font-size: 4vw;
+        font-size: 3.5vw;
     }
 
     .paginacao {
@@ -907,12 +907,12 @@ td {
     }
 
     th {
-        font-size: 4vw;
+        font-size: 3.5vw;
         padding: 2vh 2vw;
     }
 
     td {
-        font-size: 3.5vw;
+        font-size: 3vw;
         padding: 2vh 2vw;
     }
 
